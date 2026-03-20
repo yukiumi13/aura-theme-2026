@@ -18,7 +18,7 @@ const commonColors = {
   accent32: '#72dcc6',
   accent57: '#82e2ff',
   accent58: '#b8b4d6',
-  accent59: '#d4d0df',
+  accent59: '#ddd9e7',
   accent33: '#24222c',
   accent34: '#00000000', // fully transparent,
   accent35: '#525156', // activity bar inactive foreground,
@@ -87,5 +87,5 @@ export const commonSoftSyntaxHighlighting = {
   accent32: '#5FAE9A',
   accent57: '#6cb2c7',
   accent58: '#a89fbe',
-  accent59: '#bfb7cb',
+  accent59: '#c9c1d4',
 }
