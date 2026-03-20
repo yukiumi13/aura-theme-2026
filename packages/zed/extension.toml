@@ -1,7 +1,0 @@
-id = "aura-theme-2026"
-name = "Aura Theme 2026"
-schema_version = 1
-version = "1.0.1"
-authors = ["Dalton Menezes <daltonmenezes@outlook.com>"]
-description = "A forked 2026 adaptation of Aura Theme for Zed"
-repository = "https://github.com/yukiumi13/aura-theme-2026"

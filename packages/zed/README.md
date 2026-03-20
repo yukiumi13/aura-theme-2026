@@ -36,13 +36,20 @@
 
 # Installation
 
+This fork is currently intended to be installed locally as a **dev extension**.
+
+> 当前这个 fork 版本建议通过 **本地开发扩展** 的方式安装，暂时不是通过 Zed 官方扩展仓库直接搜索安装。
+
 1. Open the **Command Palette** with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
-2. Open the **Extensions** view with the `zed: extensions` command
-3. Search for `Aura Theme 2026`
-4. Click on **Install**.
-5. Open the **Command Palette** again
-6. Open the **Theme selector** with the `theme selector: toggle` command
-7. Search for `Aura 2026` and choose an `Aura 2026` variant.
+2. Run `zed: install dev extension`
+3. Select the folder `packages/zed` from this repository
+4. Open the **Command Palette** again
+5. Run `theme selector: toggle`
+6. Search for `Aura 2026` and choose an `Aura 2026` variant
+
+If the theme does not appear immediately, restart Zed and check the log with `zed: open log`.
+
+如果主题没有立刻出现，可以重启 Zed，并通过 `zed: open log` 检查加载日志。
 
 # Contributors
 

@@ -27,7 +27,7 @@
         "editor.document_highlight.bracket_background": "{{ accent45 }}",
         "editor.document_highlight.read_background": "{{ accent20 }}",
         "editor.document_highlight.write_background": "{{ accent20 }}",
-        "editor.foreground": "{{ accent7 }}",
+        "editor.foreground": "{{ accent59 }}",
         "editor.gutter.background": "{{ accent12 }}",
         "editor.highlighted_line.background": "{{ accent17 }}",
         "editor.indent_guide": "{{ accent15 }}",
@@ -113,7 +113,7 @@
         "terminal.background": "{{ accent12 }}",
         "terminal.bright_foreground": "{{ accent7 }}",
         "terminal.dim_foreground": "{{ accent10 }}",
-        "terminal.foreground": "{{ accent7 }}",
+        "terminal.foreground": "{{ accent9 }}",
         "error": "{{ accent5 }}",
         "error.background": "{{ accent43 }}",
         "error.border": "{{ accent5 }}",
@@ -236,7 +236,7 @@
             "font_weight": null
           },
           "embedded": {
-            "color": "{{ accent7 }}",
+            "color": "{{ accent59 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -250,7 +250,17 @@
             "font_style": null,
             "font_weight": null
           },
+          "class": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "enum": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "enumMember": {
             "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
@@ -260,9 +270,24 @@
             "font_style": null,
             "font_weight": null
           },
+          "function.definition": {
+            "color": "{{ accent3 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "function.method": {
+            "color": "{{ accent3 }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "hint": {
             "color": "{{ accent32 }}",
             "font_style": null,
+            "font_weight": null
+          },
+          "interface": {
+            "color": "{{ accent32 }}",
+            "font_style": "italic",
             "font_weight": null
           },
           "keyword": {
@@ -285,14 +310,24 @@
             "font_style": null,
             "font_weight": null
           },
+          "method": {
+            "color": "{{ accent3 }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "namespace": {
-            "color": "{{ accent1 }}",
+            "color": "{{ accent57 }}",
             "font_style": null,
             "font_weight": null
           },
           "operator": {
             "color": "{{ accent1 }}",
             "font_style": null,
+            "font_weight": null
+          },
+          "parameter": {
+            "color": "{{ accent58 }}",
+            "font_style": "italic",
             "font_weight": null
           },
           "label": {
@@ -311,7 +346,7 @@
             "font_weight": null
           },
           "primary": {
-            "color": "{{ accent7 }}",
+            "color": "{{ accent59 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -321,7 +356,7 @@
             "font_weight": null
           },
           "punctuation": {
-            "color": "{{ accent7 }}",
+            "color": "{{ accent59 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -405,12 +440,52 @@
             "font_style": null,
             "font_weight": null
           },
+          "type.class": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "type.defaultLibrary": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "type.interface": {
+            "color": "{{ accent32 }}",
+            "font_style": "italic",
+            "font_weight": null
+          },
+          "typeParameter": {
+            "color": "{{ accent32 }}",
+            "font_style": "italic",
+            "font_weight": null
+          },
           "variable": {
-            "color": "{{ accent7 }}",
+            "color": "{{ accent59 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable.defaultLibrary": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable.readonly": {
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },
           "variable.special": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "property.readonly": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "struct": {
             "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
