@@ -105,7 +105,7 @@
     "commandCenter.border": "#3b334b",
     "commandCenter.activeBorder": "#3b334b",
     "editor.background": "#21202e",
-    "editor.foreground": "#bdbdbd",
+    "editor.foreground": "#bfb7cb",
     "editorStickyScroll.background": "#21202e",
     "editorStickyScrollHover.background": "#24222c",
     "editorStickyScroll.border": "#3b334b",
@@ -380,7 +380,7 @@
         "punctuation.dot.dart"
       ],
       "settings": {
-        "foreground": "#bdbdbd"
+        "foreground": "#bfb7cb"
       }
     },
     {
@@ -758,7 +758,7 @@
       "foreground": "#a89fbe",
       "fontStyle": "italic"
     },
-    "variable": "#bdbdbd",
+    "variable": "#bfb7cb",
     "variable.defaultLibrary": "#5FAE9A",
     "variable.readonly": "#5FAE9A",
     "property": "#c17ac8",

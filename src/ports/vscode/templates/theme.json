@@ -105,7 +105,7 @@
     "commandCenter.border": "{{ accent23 }}",
     "commandCenter.activeBorder": "{{ accent23 }}",
     "editor.background": "{{ accent12 }}",
-    "editor.foreground": "{{ accent7 }}",
+    "editor.foreground": "{{ accent59 }}",
     "editorStickyScroll.background": "{{ accent12 }}",
     "editorStickyScrollHover.background": "{{ accent49 }}",
     "editorStickyScroll.border": "{{ accent23 }}",
@@ -380,7 +380,7 @@
         "punctuation.dot.dart"
       ],
       "settings": {
-        "foreground": "{{ accent7 }}"
+        "foreground": "{{ accent59 }}"
       }
     },
     {
@@ -759,7 +759,7 @@
       "foreground": "{{ accent58 }}",
       "fontStyle": "italic"
     },
-    "variable": "{{ accent7 }}",
+    "variable": "{{ accent59 }}",
     "variable.defaultLibrary": "{{ accent32 }}",
     "variable.readonly": "{{ accent32 }}",
     "property": "{{ accent6 }}",
