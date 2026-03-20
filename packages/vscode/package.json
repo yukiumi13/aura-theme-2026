@@ -4,6 +4,7 @@
   "description": "A beautiful dark theme for Visual Studio Code, remapped in the 2026 style",
   "version": "2.1.2",
   "scripts": {
+    "package:vsix": "npx @vscode/vsce package",
     "publish": "vsce publish"
   },
   "publisher": "yukiumi13",

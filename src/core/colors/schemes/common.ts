@@ -15,7 +15,7 @@ const commonColors = {
   accent7: '#edecee', // foreground
   accent8: '#6d6d6d', // comments
   accent31: '#ffca85',
-  accent32: '#82e2ff',
+  accent32: '#72dcc6',
   accent33: '#24222c',
   accent34: '#00000000', // fully transparent,
   accent35: '#525156', // activity bar inactive foreground,
@@ -49,7 +49,7 @@ export const commonUI = {
   accent41: '#61ffca1f', // success surface
   accent42: '#ffca8524', // warning surface
   accent43: '#ff676724', // error surface
-  accent44: '#82e2ff1f', // info surface
+  accent44: '#72dcc61f', // info surface
   accent45: '#a277ff1a', // subtle primary tint
   accent46: '#a277ff2e', // medium primary tint
   accent47: '#a277ff4d', // strong primary tint

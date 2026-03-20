@@ -1,3 +1,11 @@
 {
-    "python.defaultInterpreterPath": ""
+    "python.defaultInterpreterPath": "",
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "hydralance": true
+    }
 }
