@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import { joinReplacements } from 'core/modules/compiler/create-readme/join-replacements'
+import { info as defaultThemeReplacements } from 'shared/constants'
 
 jest.mock('services/file-system', () => ({
   fileSystemService: jest.fn().mockImplementation(() => ({
@@ -37,7 +38,9 @@ describe('joinReplacements test cases', () => {
     expect(props.replacements).toHaveProperty('displayName')
 
     expect(props.replacements).toEqual(
-      expect.objectContaining({ displayName: 'Aura Theme' })
+      expect.objectContaining({
+        displayName: defaultThemeReplacements.displayName,
+      })
     )
   })
 })
