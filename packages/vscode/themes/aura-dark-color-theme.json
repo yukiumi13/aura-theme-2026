@@ -353,6 +353,16 @@
     {
       "scope": [
         "variable.parameter.function",
+        "variable.parameter",
+        "meta.function-call.arguments.python variable.parameter"
+      ],
+      "settings": {
+        "foreground": "#b8b4d6",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
         "meta.jsx.children",
         "meta.block",
         "meta.tag.attributes",
@@ -361,7 +371,6 @@
         "variable",
         "variable.other",
         "markup.list",
-        "variable.parameter",
         "meta.class",
         "meta.method.declaration",
         "parameter.variable.function.elixir",
@@ -746,7 +755,10 @@
     "function": "#ffca85",
     "method": "#ffca85",
     "macro": "#f694ff",
-    "parameter": "#cdccce",
+    "parameter": {
+      "foreground": "#b8b4d6",
+      "fontStyle": "italic"
+    },
     "variable": "#edecee",
     "variable.defaultLibrary": "#72dcc6",
     "variable.readonly": "#72dcc6",

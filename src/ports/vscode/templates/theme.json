@@ -353,6 +353,16 @@
     {
       "scope": [
         "variable.parameter.function",
+        "variable.parameter",
+        "meta.function-call.arguments.python variable.parameter"
+      ],
+      "settings": {
+        "foreground": "{{ accent58 }}",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
         "meta.jsx.children",
         "meta.block",
         "meta.tag.attributes",
@@ -361,7 +371,6 @@
         "variable",
         "variable.other",
         "markup.list",
-        "variable.parameter",
         "meta.class",
         "meta.method.declaration",
         "parameter.variable.function.elixir",
@@ -746,7 +755,10 @@
     "function": "{{ accent3 }}",
     "method": "{{ accent3 }}",
     "macro": "{{ accent6 }}",
-    "parameter": "{{ accent9 }}",
+    "parameter": {
+      "foreground": "{{ accent58 }}",
+      "fontStyle": "italic"
+    },
     "variable": "{{ accent7 }}",
     "variable.defaultLibrary": "{{ accent32 }}",
     "variable.readonly": "{{ accent32 }}",
