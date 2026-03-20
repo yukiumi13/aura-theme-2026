@@ -403,6 +403,38 @@
     },
     {
       "scope": [
+        "keyword.control.import.python",
+        "keyword.control.from.python",
+        "keyword.control.as.python",
+        "storage.modifier.import.python"
+      ],
+      "settings": {
+        "foreground": "#cdccce"
+      }
+    },
+    {
+      "scope": [
+        "meta.import.python support.type",
+        "meta.import.python support.class",
+        "meta.import.python entity.name.module.python",
+        "meta.import.python meta.path.python",
+        "meta.import.python meta.import-name.python"
+      ],
+      "settings": {
+        "foreground": "#72dcc6"
+      }
+    },
+    {
+      "scope": [
+        "meta.import.python punctuation.separator.period.python",
+        "meta.import.python punctuation.separator.comma.python"
+      ],
+      "settings": {
+        "foreground": "#adacae"
+      }
+    },
+    {
+      "scope": [
         "keyword",
         "storage",
         "storage.type",
@@ -731,7 +763,7 @@
       "foreground": "#72dcc6",
       "fontStyle": "italic"
     },
-    "namespace": "#a277ff",
+    "namespace": "#72dcc6",
     "keyword": "#a277ff",
     "modifier": "#a277ff",
     "operator": "#a277ff",

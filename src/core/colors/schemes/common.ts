@@ -81,5 +81,5 @@ export const commonSoftSyntaxHighlighting = {
   accent6: shadeAndDesaturate(commonColors.accent6),
   accent7: shadeAndDesaturate(commonColors.accent7),
   accent31: shadeAndDesaturate(commonColors.accent31),
-  accent32: shadeAndDesaturate(commonColors.accent32),
+  accent32: '#5FAE9A',
 }

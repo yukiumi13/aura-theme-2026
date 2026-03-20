@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-✨ A beautiful dark theme for Zed and other apps
+✨ A forked 2026 adaptation of Aura Theme for Zed
   <br><br>
 
   <!-- Patreon -->
@@ -17,6 +17,10 @@
   </a>
 </p>
 
+> This package is the `yukiumi13` fork/adapted 2026 edition of Aura Theme for Zed.
+>
+> 这是 `yukiumi13` 维护的 Aura Theme Zed 分支版本，按 2026 风格重新映射并补齐了更新的主题字段。
+
 
 
 <p align="center">
@@ -25,20 +29,20 @@
 
 # Themes available
 
-- Aura Dark
-- Aura Dark (Soft Text)
-- Aura Soft Dark
-- Aura Soft Dark (Soft Text)
+- Aura 2026 Dark
+- Aura 2026 Dark (Soft Text)
+- Aura 2026 Soft Dark
+- Aura 2026 Soft Dark (Soft Text)
 
 # Installation
 
 1. Open the **Command Palette** with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
 2. Open the **Extensions** view with the `zed: extensions` command
-3. Search for `Aura theme`
+3. Search for `Aura Theme 2026`
 4. Click on **Install**.
 5. Open the **Command Palette** again
 6. Open the **Theme selector** with the `theme selector: toggle` command
-7. Search for `Aura` and choose an `Aura` variant.
+7. Search for `Aura 2026` and choose an `Aura 2026` variant.
 
 # Contributors
 

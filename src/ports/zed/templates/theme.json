@@ -1,5 +1,5 @@
 {
-  "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
   "name": "{{ shortName }}",
   "author": "{{ author.name }} <{{ author.email }}>",
   "themes": [
@@ -7,32 +7,52 @@
       "appearance": "{{ type }}",
       "name": "{{ name }}",
       "style": {
+        "accents": [
+          "{{ accent1 }}",
+          "{{ accent2 }}",
+          "{{ accent3 }}",
+          "{{ accent6 }}",
+          "{{ accent32 }}",
+          "{{ accent5 }}",
+          "{{ accent31 }}"
+        ],
         "background": "{{ accent12 }}",
+        "background.appearance": "opaque",
         "drop_target.background": "{{ accent38 }}",
         "editor.active_line.background": "{{ accent17 }}",
         "editor.active_line_number": "{{ accent7 }}",
+        "editor.hover_line_number": "{{ accent10 }}",
         "editor.active_wrap_guide": "{{ accent15 }}",
         "editor.background": "{{ accent12 }}",
+        "editor.document_highlight.bracket_background": "{{ accent45 }}",
         "editor.document_highlight.read_background": "{{ accent20 }}",
         "editor.document_highlight.write_background": "{{ accent20 }}",
         "editor.foreground": "{{ accent7 }}",
         "editor.gutter.background": "{{ accent12 }}",
         "editor.highlighted_line.background": "{{ accent17 }}",
+        "editor.indent_guide": "{{ accent15 }}",
+        "editor.indent_guide_active": "{{ accent22 }}",
         "editor.invisible": "{{ accent22 }}",
         "editor.line_number": "{{ accent17 }}",
         "editor.subheader.background": "{{ accent21 }}",
         "editor.wrap_guide": "{{ accent15 }}",
         "elevated_surface.background": "{{ accent21 }}",
         "pane.focused_border": "{{ accent7 }}",
+        "pane_group.border": "{{ accent11 }}",
         "panel.background": "{{ accent21 }}",
         "panel.focused_border": "{{ accent7 }}",
+        "panel.indent_guide": "{{ accent15 }}",
+        "panel.indent_guide_active": "{{ accent22 }}",
+        "panel.indent_guide_hover": "{{ accent23 }}",
         "search.match_background": "{{ accent20 }}",
+        "search.active_match_background": "{{ accent42 }}",
         "status_bar.background": "{{ accent24 }}",
         "surface.background": "{{ accent12 }}",
         "tab.active_background": "{{ accent12 }}",
         "tab.inactive_background": "{{ accent21 }}",
         "tab_bar.background": "{{ accent21 }}",
         "title_bar.background": "{{ accent21 }}",
+        "title_bar.inactive_background": "{{ accent30 }}",
         "toolbar.background": "{{ accent12 }}",
         "text": "{{ accent7 }}",
         "text.accent": "{{ accent1 }}",
@@ -60,71 +80,92 @@
         "icon.disabled": "{{ accent22 }}",
         "icon.muted": "{{ accent10 }}",
         "icon.placeholder": "{{ accent14 }}",
-        "scrollbar.thumb.border": "{{ accent17 }}",
-        "scrollbar.thumb.hover_background": "{{ accent17 }}",
-        "scrollbar.thumb.background": "{{ accent17 }}",
-        "scrollbar.track.border": "{{ accent12 }}",
-        "scrollbar.track.background": "{{ accent12 }}",
+        "scrollbar.thumb.border": "{{ accent23 }}",
+        "scrollbar.thumb.hover_background": "{{ accent53 }}",
+        "scrollbar.thumb.background": "{{ accent52 }}",
+        "scrollbar.track.border": "{{ accent23 }}",
+        "scrollbar.track.background": "{{ accent16 }}",
+        "terminal.ansi.background": "{{ accent12 }}",
         "terminal.ansi.black": "{{ accent12 }}",
-        "terminal.ansi.blue": "{{ accent1 }}",
+        "terminal.ansi.blue": "{{ accent32 }}",
         "terminal.ansi.bright_black": "{{ accent13 }}",
-        "terminal.ansi.bright_blue": "{{ accent1 }}",
+        "terminal.ansi.bright_blue": "{{ accent32 }}",
         "terminal.ansi.bright_cyan": "{{ accent2 }}",
-        "terminal.ansi.bright_green": "{{ accent1 }}",
-        "terminal.ansi.bright_magenta": "{{ accent2 }}",
-        "terminal.ansi.bright_red": "{{ accent3 }}",
+        "terminal.ansi.bright_green": "{{ accent2 }}",
+        "terminal.ansi.bright_magenta": "{{ accent6 }}",
+        "terminal.ansi.bright_red": "{{ accent5 }}",
         "terminal.ansi.bright_white": "{{ accent7 }}",
-        "terminal.ansi.bright_yellow": "{{ accent3 }}",
-        "terminal.ansi.cyan": "{{ accent1 }}",
+        "terminal.ansi.bright_yellow": "{{ accent31 }}",
+        "terminal.ansi.cyan": "{{ accent2 }}",
+        "terminal.ansi.dim_black": "{{ accent15 }}",
+        "terminal.ansi.dim_blue": "{{ accent32 }}",
+        "terminal.ansi.dim_cyan": "{{ accent25 }}",
+        "terminal.ansi.dim_green": "{{ accent25 }}",
+        "terminal.ansi.dim_magenta": "{{ accent1 }}",
+        "terminal.ansi.dim_red": "{{ accent5 }}",
+        "terminal.ansi.dim_white": "{{ accent10 }}",
+        "terminal.ansi.dim_yellow": "{{ accent31 }}",
         "terminal.ansi.green": "{{ accent2 }}",
-        "terminal.ansi.magenta": "{{ accent2 }}",
+        "terminal.ansi.magenta": "{{ accent1 }}",
         "terminal.ansi.red": "{{ accent5 }}",
         "terminal.ansi.white": "{{ accent9 }}",
         "terminal.ansi.yellow": "{{ accent3 }}",
         "terminal.background": "{{ accent12 }}",
+        "terminal.bright_foreground": "{{ accent7 }}",
+        "terminal.dim_foreground": "{{ accent10 }}",
         "terminal.foreground": "{{ accent7 }}",
         "error": "{{ accent5 }}",
-        "error.background": "{{ accent21 }}",
+        "error.background": "{{ accent43 }}",
         "error.border": "{{ accent5 }}",
         "hint": "{{ accent8 }}",
-        "hint.background": "{{ accent21 }}",
-        "hint.border": "{{ accent8 }}",
-        "info": "{{ accent3 }}",
-        "info.background": "{{ accent21 }}",
-        "info.border": "{{ accent3 }}",
+        "hint.background": "{{ accent50 }}",
+        "hint.border": "{{ accent23 }}",
+        "info": "{{ accent32 }}",
+        "info.background": "{{ accent44 }}",
+        "info.border": "{{ accent32 }}",
         "link_text.hover": "{{ accent25 }}",
+        "version_control.added": "{{ accent2 }}",
+        "version_control.modified": "{{ accent3 }}",
+        "version_control.deleted": "{{ accent5 }}",
+        "version_control.renamed": "{{ accent32 }}",
+        "version_control.conflict": "{{ accent1 }}",
+        "version_control.ignored": "{{ accent8 }}",
+        "version_control.word_added": "{{ accent41 }}",
+        "version_control.word_deleted": "{{ accent43 }}",
+        "version_control.conflict_marker.ours": "{{ accent41 }}",
+        "version_control.conflict_marker.theirs": "{{ accent45 }}",
         "predictive": "{{ accent8 }}",
-        "predictive.background": "{{ accent21 }}",
+        "predictive.background": "{{ accent45 }}",
         "predictive.border": "{{ accent33 }}",
         "renamed": "{{ accent32 }}",
-        "renamed.background": "{{ accent21 }}",
+        "renamed.background": "{{ accent44 }}",
         "renamed.border": "{{ accent32 }}",
         "success": "{{ accent2 }}",
-        "success.background": "{{ accent21 }}",
+        "success.background": "{{ accent41 }}",
         "success.border": "{{ accent2 }}",
         "unreachable": "{{ accent5 }}",
-        "unreachable.background": "{{ accent21 }}",
+        "unreachable.background": "{{ accent50 }}",
         "unreachable.border": "{{ accent5 }}",
         "warning": "{{ accent3 }}",
-        "warning.background": "{{ accent21 }}",
+        "warning.background": "{{ accent42 }}",
         "warning.border": "{{ accent3 }}",
         "conflict": "{{ accent1 }}",
-        "conflict.background": "{{ accent21 }}",
+        "conflict.background": "{{ accent45 }}",
         "conflict.border": "{{ accent1 }}",
         "created": "{{ accent2 }}",
-        "created.background": "{{ accent21 }}",
+        "created.background": "{{ accent41 }}",
         "created.border": "{{ accent2 }}",
         "deleted": "{{ accent5 }}",
-        "deleted.background": "{{ accent21 }}",
+        "deleted.background": "{{ accent43 }}",
         "deleted.border": "{{ accent5 }}",
         "hidden": "{{ accent8 }}",
-        "hidden.background": "{{ accent21 }}",
+        "hidden.background": "{{ accent50 }}",
         "hidden.border": "{{ accent8 }}",
         "ignored": "{{ accent22 }}",
-        "ignored.background": "{{ accent21 }}",
+        "ignored.background": "{{ accent50 }}",
         "ignored.border": "{{ accent22 }}",
         "modified": "{{ accent3 }}",
-        "modified.background": "{{ accent21 }}",
+        "modified.background": "{{ accent42 }}",
         "modified.border": "{{ accent3 }}",
         "players": [
           {
@@ -170,7 +211,7 @@
             "font_weight": null
           },
           "boolean": {
-            "color": "{{ accent2 }}",
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -180,7 +221,7 @@
             "font_weight": null
           },
           "comment.doc": {
-            "color": "{{ accent1 }}",
+            "color": "{{ accent10 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -190,7 +231,7 @@
             "font_weight": null
           },
           "constructor": {
-            "color": "{{ accent1 }}",
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -230,17 +271,22 @@
             "font_weight": null
           },
           "link_text": {
-            "color": "{{ accent25 }}",
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },
           "link_uri": {
-            "color": "{{ accent25 }}",
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },
           "number": {
-            "color": "{{ accent2 }}",
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "namespace": {
+            "color": "{{ accent1 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -249,9 +295,19 @@
             "font_style": null,
             "font_weight": null
           },
-          "predictive": {
-            "color": "{{ accent33 }}",
+          "label": {
+            "color": "{{ accent3 }}",
             "font_style": null,
+            "font_weight": null
+          },
+          "preproc": {
+            "color": "{{ accent32 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "predictive": {
+            "color": "{{ accent10 }}",
+            "font_style": "italic",
             "font_weight": null
           },
           "primary": {
@@ -270,21 +326,36 @@
             "font_weight": null
           },
           "punctuation.bracket": {
-            "color": "{{ accent7 }}",
+            "color": "{{ accent10 }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.delimiter": {
-            "color": "{{ accent6 }}",
+            "color": "{{ accent10 }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.list_marker": {
-            "color": "{{ accent32 }}",
+            "color": "{{ accent3 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.markup": {
+            "color": "{{ accent6 }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.special": {
+            "color": "{{ accent5 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "selector": {
+            "color": "{{ accent2 }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "selector.pseudo": {
             "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
@@ -295,27 +366,27 @@
             "font_weight": null
           },
           "string.escape": {
-            "color": "{{ accent2 }}",
+            "color": "{{ accent3 }}",
             "font_style": null,
             "font_weight": null
           },
           "string.regex": {
-            "color": "{{ accent2 }}",
+            "color": "{{ accent3 }}",
             "font_style": null,
             "font_weight": null
           },
           "string.special": {
-            "color": "{{ accent2 }}",
+            "color": "{{ accent3 }}",
             "font_style": null,
             "font_weight": null
           },
           "string.special.symbol": {
-            "color": "{{ accent2 }}",
+            "color": "{{ accent3 }}",
             "font_style": null,
             "font_weight": null
           },
           "tag": {
-            "color": "{{ accent1 }}",
+            "color": "{{ accent2 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -330,7 +401,7 @@
             "font_weight": null
           },
           "type": {
-            "color": "{{ accent1 }}",
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -340,7 +411,7 @@
             "font_weight": null
           },
           "variable.special": {
-            "color": "{{ accent7 }}",
+            "color": "{{ accent32 }}",
             "font_style": null,
             "font_weight": null
           },

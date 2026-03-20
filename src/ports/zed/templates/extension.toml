@@ -3,5 +3,5 @@ name = "{{ displayName }}"
 schema_version = 1
 version = "{{ version }}"
 authors = ["{{ author.name }} <{{ author.email }}>"]
-description = "A beautiful dark theme for {{ portName }}"
+description = "A forked 2026 adaptation of Aura Theme for {{ portName }}"
 repository = "{{{ repository }}}"

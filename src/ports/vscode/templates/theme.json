@@ -403,6 +403,38 @@
     },
     {
       "scope": [
+        "keyword.control.import.python",
+        "keyword.control.from.python",
+        "keyword.control.as.python",
+        "storage.modifier.import.python"
+      ],
+      "settings": {
+        "foreground": "{{ accent9 }}"
+      }
+    },
+    {
+      "scope": [
+        "meta.import.python support.type",
+        "meta.import.python support.class",
+        "meta.import.python entity.name.module.python",
+        "meta.import.python meta.path.python",
+        "meta.import.python meta.import-name.python"
+      ],
+      "settings": {
+        "foreground": "{{ accent32 }}"
+      }
+    },
+    {
+      "scope": [
+        "meta.import.python punctuation.separator.period.python",
+        "meta.import.python punctuation.separator.comma.python"
+      ],
+      "settings": {
+        "foreground": "{{ accent10 }}"
+      }
+    },
+    {
+      "scope": [
         "keyword",
         "storage",
         "storage.type",
@@ -732,7 +764,7 @@
       "foreground": "{{ accent32 }}",
       "fontStyle": "italic"
     },
-    "namespace": "{{ accent1 }}",
+    "namespace": "{{ accent32 }}",
     "keyword": "{{ accent1 }}",
     "modifier": "{{ accent1 }}",
     "operator": "{{ accent1 }}",
