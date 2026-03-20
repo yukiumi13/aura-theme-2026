@@ -80,7 +80,7 @@
     - Markdown
     - CSS
 
-[See full changelog](https://github.com/daltonmenezes/aura-theme/blob/main/packages/vscode/CHANGELOG.md)
+[See full changelog](https://github.com/yukiumi13/aura-theme-2026/blob/main/packages/vscode/CHANGELOG.md)
 
 # Contributors
 <table>

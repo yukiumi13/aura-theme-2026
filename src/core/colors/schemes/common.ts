@@ -45,6 +45,23 @@ export const commonUI = {
   accent37: '#353424', // breakpoint frame highlight
   accent38: '#29263c', // primary-selection without alpha
   accent39: '#211D26',
+  accent40: '#a277ff80', // focused border / active outline
+  accent41: '#61ffca1f', // success surface
+  accent42: '#ffca8524', // warning surface
+  accent43: '#ff676724', // error surface
+  accent44: '#82e2ff1f', // info surface
+  accent45: '#a277ff1a', // subtle primary tint
+  accent46: '#a277ff2e', // medium primary tint
+  accent47: '#a277ff4d', // strong primary tint
+  accent48: '#1a1722', // elevated widget surface
+  accent49: '#24222c', // code / sticky / hover surface
+  accent50: '#edecee0f', // low foreground overlay
+  accent51: '#edecee1a', // high foreground overlay
+  accent52: '#a394f022', // minimap / scrollbar base
+  accent53: '#a394f055', // minimap / scrollbar hover
+  accent54: '#a394f088', // minimap / scrollbar active
+  accent55: '#1c1924', // quick input / notifications surface
+  accent56: '#2a2438', // hover / active surface
 }
 
 export const commonSoftUI = {

@@ -6,7 +6,7 @@
   "scripts": {
     "publish": "vsce publish"
   },
-  "publisher": "DaltonMenezes",
+  "publisher": "yukiumi13",
   "author": {
     "name": "{{ author.name }}",
     "email": "{{ author.email }}",

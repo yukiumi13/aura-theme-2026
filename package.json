@@ -1,10 +1,10 @@
 {
   "name": "aura-theme",
   "theme": {
-    "slug": "aura-theme",
-    "displayName": "Aura Theme",
-    "shortName": "Aura",
-    "repository": "https://github.com/daltonmenezes/aura-theme",
+    "slug": "aura-theme-2026",
+    "displayName": "Aura Theme 2026",
+    "shortName": "Aura 2026",
+    "repository": "https://github.com/yukiumi13/aura-theme-2026",
     "badges": {
       "primaryColor": "1C1E26",
       "secondaryColor": "61ffca"

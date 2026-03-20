@@ -1,12 +1,12 @@
 {
-  "name": "aura-theme",
-  "displayName": "Aura Theme",
-  "description": "A beautiful dark theme for Visual Studio Code",
+  "name": "aura-theme-2026",
+  "displayName": "Aura Theme 2026",
+  "description": "A beautiful dark theme for Visual Studio Code, remapped in the 2026 style",
   "version": "2.1.2",
   "scripts": {
     "publish": "vsce publish"
   },
-  "publisher": "DaltonMenezes",
+  "publisher": "yukiumi13",
   "author": {
     "name": "Dalton Menezes",
     "email": "daltonmenezes@outlook.com",
@@ -33,22 +33,22 @@
   "contributes": {
     "themes": [
       {
-        "label": "Aura Dark (Soft Text)",
+        "label": "Aura 2026 Dark (Soft Text)",
         "uiTheme": "vs-dark",
         "path": "./themes/aura-dark-soft-text-color-theme.json"
       },
       {
-        "label": "Aura Dark",
+        "label": "Aura 2026 Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aura-dark-color-theme.json"
       },
       {
-        "label": "Aura Soft Dark (Soft Text)",
+        "label": "Aura 2026 Soft Dark (Soft Text)",
         "uiTheme": "vs-dark",
         "path": "./themes/aura-soft-dark-soft-text-color-theme.json"
       },
       {
-        "label": "Aura Soft Dark",
+        "label": "Aura 2026 Soft Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aura-soft-dark-color-theme.json"
       }
@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/daltonmenezes/aura-theme.git"
+    "url": "https://github.com/yukiumi13/aura-theme-2026.git"
   },
   "bugs": {
-    "url": "https://github.com/daltonmenezes/aura-theme/issues"
+    "url": "https://github.com/yukiumi13/aura-theme-2026/issues"
   }
 }
