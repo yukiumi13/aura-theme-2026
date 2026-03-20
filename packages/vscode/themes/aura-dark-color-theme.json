@@ -357,7 +357,7 @@
         "meta.function-call.arguments.python variable.parameter"
       ],
       "settings": {
-        "foreground": "#b8b4d6",
+        "foreground": "#c9a7eb",
         "fontStyle": "italic"
       }
     },
@@ -756,7 +756,7 @@
     "method": "#ffca85",
     "macro": "#f694ff",
     "parameter": {
-      "foreground": "#b8b4d6",
+      "foreground": "#c9a7eb",
       "fontStyle": "italic"
     },
     "variable": "#ddd9e7",
