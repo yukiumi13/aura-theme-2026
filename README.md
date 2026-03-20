@@ -24,7 +24,6 @@
 
 > This repository is a fork maintained by **yukiumi13**, adapted from the original Aura Theme project and extended with a **2026-style remapping** for finer VS Code UI and syntax highlighting.
 
-> 这个仓库是 **yukiumi13** 维护的 fork 版本，基于原版 Aura Theme 进行继续适配，并加入了面向 **2026 风格** 的 VS Code 细粒度界面与语法高亮重映射。
 
 <p align="center">
   <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-preview.png?raw=true" >
