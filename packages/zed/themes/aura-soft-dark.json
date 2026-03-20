@@ -296,7 +296,7 @@
             "font_weight": null
           },
           "label": {
-            "color": "#ffca85",
+            "color": "#b8b4d6",
             "font_style": null,
             "font_weight": null
           },
@@ -465,6 +465,11 @@
             "font_style": null,
             "font_weight": null
           },
+            "variable.parameter": {
+              "color": "#b8b4d6",
+              "font_style": "italic",
+              "font_weight": null
+            },
           "variable.defaultLibrary": {
             "color": "#72dcc6",
             "font_style": null,

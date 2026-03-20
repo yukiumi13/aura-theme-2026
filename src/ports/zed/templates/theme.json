@@ -331,7 +331,7 @@
             "font_weight": null
           },
           "label": {
-            "color": "{{ accent3 }}",
+            "color": "{{ accent58 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -465,6 +465,11 @@
             "font_style": null,
             "font_weight": null
           },
+            "variable.parameter": {
+              "color": "{{ accent58 }}",
+              "font_style": "italic",
+              "font_weight": null
+            },
           "variable.defaultLibrary": {
             "color": "{{ accent32 }}",
             "font_style": null,
