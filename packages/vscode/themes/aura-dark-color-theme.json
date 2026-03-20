@@ -409,7 +409,7 @@
         "storage.modifier.import.python"
       ],
       "settings": {
-        "foreground": "#cdccce"
+        "foreground": "#a277ff"
       }
     },
     {
@@ -421,7 +421,7 @@
         "meta.import.python meta.import-name.python"
       ],
       "settings": {
-        "foreground": "#72dcc6"
+        "foreground": "#82e2ff"
       }
     },
     {
@@ -764,7 +764,7 @@
       "foreground": "#72dcc6",
       "fontStyle": "italic"
     },
-    "namespace": "#72dcc6",
+    "namespace": "#82e2ff",
     "keyword": "#a277ff",
     "modifier": "#a277ff",
     "operator": "#a277ff",

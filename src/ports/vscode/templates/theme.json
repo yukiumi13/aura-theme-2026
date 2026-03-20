@@ -409,7 +409,7 @@
         "storage.modifier.import.python"
       ],
       "settings": {
-        "foreground": "{{ accent9 }}"
+        "foreground": "{{ accent1 }}"
       }
     },
     {
@@ -421,7 +421,7 @@
         "meta.import.python meta.import-name.python"
       ],
       "settings": {
-        "foreground": "{{ accent32 }}"
+        "foreground": "{{ accent57 }}"
       }
     },
     {
@@ -764,7 +764,7 @@
       "foreground": "{{ accent32 }}",
       "fontStyle": "italic"
     },
-    "namespace": "{{ accent32 }}",
+    "namespace": "{{ accent57 }}",
     "keyword": "{{ accent1 }}",
     "modifier": "{{ accent1 }}",
     "operator": "{{ accent1 }}",
