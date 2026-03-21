@@ -67,7 +67,7 @@ Its main deliverables are:
 
 - `extension.toml` — the Zed extension manifest
 - `themes/` — the installable Aura 2026 theme variants for Zed
-- `languages/python/` — an experimental Python language overlay that ships a fuller Aura-oriented semantic-token default set for Python
+- `languages/python/` — a Python language overlay that ships Aura-oriented queries and semantic-token defaults while reusing Zed's built-in Python grammar
 
 This package also includes a couple of **optional example settings files** for users who want to further tweak semantic-token behavior:
 
@@ -80,9 +80,11 @@ These example files are supplementary only. They are **not** part of the theme p
 
 In addition to the theme itself, this package now ships a **Python language overlay**:
 
-- It reuses Zed's Python grammar and tree-sitter queries
+- It reuses Zed's built-in Python grammar instead of compiling its own parser during installation
 - It provides `languages/python/semantic_token_rules.json`
 - It bundles a fuller Aura-oriented default mapping for common Python semantic tokens
+
+That design matters because installing a local dev extension should not require compiling `tree-sitter-python` on the target machine.
 
 That means Python call-site keyword arguments such as `project=` and `name=` no longer rely solely on manual user-side `settings.json` overrides to look correct.
 
@@ -117,6 +119,12 @@ will prefer Aura-oriented styles such as:
 - `keyword` / `operator` / `string` / `number` / `comment`
 
 with parameter-family tokens retaining italic styling.
+
+## Why installation is simpler now
+
+Earlier iterations of this fork declared a custom `python` grammar in `extension.toml`, which caused Zed to try compiling the grammar when installing the dev extension.
+
+This package now avoids that installation-time compilation step and instead relies on the Python grammar that already ships with Zed, while still providing Aura-specific query files and semantic token defaults for Python.
 
 ## What still cannot be forced by the extension
 
