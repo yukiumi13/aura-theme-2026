@@ -280,6 +280,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "function.kwargs": {
+            "color": "#e0a6ff",
+            "font_style": "italic",
+            "font_weight": null
+          },
           "hint": {
             "color": "#72dcc6",
             "font_style": null,
@@ -296,7 +301,7 @@
             "font_weight": null
           },
           "label": {
-            "color": "#b8b4d6",
+            "color": "#e0a6ff",
             "font_style": null,
             "font_weight": null
           },
@@ -331,7 +336,7 @@
             "font_weight": null
           },
           "parameter": {
-            "color": "#b8b4d6",
+            "color": "#e0a6ff",
             "font_style": "italic",
             "font_weight": null
           },
@@ -466,7 +471,7 @@
             "font_weight": null
           },
             "variable.parameter": {
-              "color": "#b8b4d6",
+              "color": "#e0a6ff",
               "font_style": "italic",
               "font_weight": null
             },

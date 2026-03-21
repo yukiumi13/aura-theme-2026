@@ -280,6 +280,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "function.kwargs": {
+            "color": "{{ accent61 }}",
+            "font_style": "italic",
+            "font_weight": null
+          },
           "hint": {
             "color": "{{ accent32 }}",
             "font_style": null,
@@ -326,12 +331,12 @@
             "font_weight": null
           },
           "parameter": {
-            "color": "{{ accent58 }}",
+            "color": "{{ accent61 }}",
             "font_style": "italic",
             "font_weight": null
           },
           "label": {
-            "color": "{{ accent58 }}",
+            "color": "{{ accent61 }}",
             "font_style": null,
             "font_weight": null
           },
@@ -466,7 +471,7 @@
             "font_weight": null
           },
             "variable.parameter": {
-              "color": "{{ accent58 }}",
+              "color": "{{ accent61 }}",
               "font_style": "italic",
               "font_weight": null
             },

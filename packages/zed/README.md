@@ -13,13 +13,13 @@
 
   <!-- version -->
   <a href="#">
-    <img alt="version" src="https://img.shields.io/badge/version%20-v1.0.1-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+    <img alt="version" src="https://img.shields.io/badge/version%20-v1.0.4-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
 </p>
 
 > This package is the `yukiumi13` fork/adapted 2026 edition of Aura Theme for Zed.
 >
-> 这是 `yukiumi13` 维护的 Aura Theme Zed 分支版本，按 2026 风格重新映射并补齐了更新的主题字段。
+> This fork is maintained by `yukiumi13` and remaps Aura Theme for Zed with a 2026-style palette and updated theme fields.
 
 
 
@@ -38,7 +38,7 @@
 
 This fork is currently intended to be installed locally as a **dev extension**.
 
-> 当前这个 fork 版本建议通过 **本地开发扩展** 的方式安装，暂时不是通过 Zed 官方扩展仓库直接搜索安装。
+> At the moment, this fork is intended to be installed as a **local dev extension**, rather than through the official Zed extensions registry.
 
 1. Open the **Command Palette** with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
 2. Run `zed: install dev extension`
@@ -48,8 +48,178 @@ This fork is currently intended to be installed locally as a **dev extension**.
 6. Search for `Aura 2026` and choose an `Aura 2026` variant
 
 If the theme does not appear immediately, restart Zed and check the log with `zed: open log`.
+If the theme still does not appear, restart Zed and inspect the extension log via `zed: open log`.
 
-如果主题没有立刻出现，可以重启 Zed，并通过 `zed: open log` 检查加载日志。
+# What this package contains
+
+`packages/zed` is first and foremost a **Zed theme extension package**.
+
+Its main deliverables are:
+
+- `extension.toml` — the Zed extension manifest
+- `themes/` — the installable Aura 2026 theme variants for Zed
+- `languages/python/` — an experimental Python language overlay that ships a fuller Aura-oriented semantic-token default set for Python
+
+This package also includes a couple of **optional example settings files** for users who want to further tweak semantic-token behavior:
+
+- `settings.example.jsonc`
+- `settings.python-minimal.example.jsonc`
+
+These example files are supplementary only. They are **not** part of the theme payload itself and do **not** auto-load in Zed.
+
+# Python semantic tokens
+
+In addition to the theme itself, this package now ships a **Python language overlay**:
+
+- It reuses Zed's Python grammar and tree-sitter queries
+- It provides `languages/python/semantic_token_rules.json`
+- It bundles a fuller Aura-oriented default mapping for common Python semantic tokens
+
+That means Python call-site keyword arguments such as `project=` and `name=` no longer rely solely on manual user-side `settings.json` overrides to look correct.
+
+Python highlighting in Zed is still composed from two layers:
+
+- Tree-sitter syntax highlighting
+- Semantic tokens from the language server
+
+When `semantic_tokens` is enabled, the final appearance may no longer come directly from theme syntax keys such as `syntax.function.kwargs` or `syntax.parameter`; it can instead be driven by semantic token rules.
+
+This package now ships a **default Aura semantic-token rule set for Python**, so switching to Aura no longer requires rewriting a separate Python semantic-token block by hand.
+
+## What is fixed automatically
+
+After installing this package, if semantic tokens are enabled for Python:
+
+- Python parameter definitions
+- Python call-site keyword arguments such as `project=`
+- Common semantic token types such as `namespace`, `property`, `function`, `method`, `type`, and `class`
+
+will prefer Aura-oriented styles such as:
+
+- `function.kwargs`
+- `variable.parameter`
+- `parameter`
+- `namespace`
+- `property`
+- `function`
+- `function.method`
+- `type` / `class`
+- `attribute`
+- `keyword` / `operator` / `string` / `number` / `comment`
+
+with parameter-family tokens retaining italic styling.
+
+## What still cannot be forced by the extension
+
+An extension **cannot modify your Zed user settings for you**, so it still cannot automatically enable:
+
+- `semantic_tokens = "combined"`
+- `semantic_tokens = "full"`
+
+on your behalf.
+
+In practice:
+
+- If `semantic_tokens` remains at the default `"off"`, you will mostly see tree-sitter highlighting
+- If you set Python to `"combined"`, you get richer semantic highlighting together with the bundled Aura mappings
+
+## Recommended workflow
+
+At minimum, we recommend a setting like this:
+
+```json
+{
+  "languages": {
+    "Python": {
+      "semantic_tokens": "combined"
+    }
+  }
+}
+```
+
+If you want more fine-grained semantic-token customization, this package still includes optional example files:
+
+- `packages/zed/settings.example.jsonc`
+- `packages/zed/settings.python-minimal.example.jsonc`
+
+These files are still examples only and do not auto-load. Their purpose is to:
+
+- help you enable `semantic_tokens`
+- or layer your own overrides on top of the bundled defaults
+
+## When manual overrides are still useful
+
+If, in your own Zed + Python LSP combination, some tokens are not reported as `parameter` but as another type instead (for example `property`, `variable`, or a custom modifier combination), manual overrides are still useful:
+
+1. Run `dev: open highlights tree view`
+2. Place the cursor on the token you want to inspect
+3. Check the actual semantic token type and modifiers
+4. Add a user-side override in `settings.json` if needed
+
+For example:
+
+```json
+{
+  "languages": {
+    "Python": {
+      "semantic_tokens": "combined"
+    }
+  },
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "namespace",
+        "style": ["namespace"]
+      },
+      {
+        "token_type": "parameter",
+        "style": ["function.kwargs", "variable.parameter", "parameter"]
+      }
+    ]
+  }
+}
+```
+
+If the highlights tree shows that your `project=` token is **not** `parameter`, replace `"parameter"` above with the actual token type reported in your environment.
+
+## Optional ready-to-copy settings files
+
+If you do not want to assemble the rules by hand, open:
+
+- `packages/zed/settings.example.jsonc`
+- `packages/zed/settings.python-minimal.example.jsonc` (Python-only minimal version)
+
+and merge that file into your Zed user settings if needed. They include:
+
+- `semantic_tokens: "combined"` for Python / JS / TS / TSX
+- Aura-oriented semantic token remapping for `parameter`, `namespace`, `property`, `method`, `type`, etc.
+- a theme selection example pointing to `Aura 2026 Dark`
+
+After saving your Zed settings, run `lsp: restart language servers` if the highlighting does not update immediately.
+
+## Why this is no longer theme-only
+
+This fork is no longer a pure theme package made only of theme JSON files. In order to distribute Python semantic-token defaults with the package, `packages/zed` now includes a small Python language overlay.
+
+The theme files themselves still only define styles such as:
+
+- `function.kwargs`
+- `parameter`
+- `variable.parameter`
+- `namespace`
+
+The default mapping from **semantic token type → theme style** is delivered through `languages/python/semantic_token_rules.json`; it now includes a broader Aura Python default rule set instead of just a one-line `parameter` patch.
+
+Even so, the actual priority order is still:
+
+- your user `settings.json`
+- this extension's bundled Python language rules
+- Zed built-in defaults
+
+So in short:
+
+- common Python parameters / kwargs, plus a range of common Python semantic token types, are now fixed by default in the package
+- more personal or more extreme semantic-token preferences are still best handled by user overrides
 
 # Contributors
 

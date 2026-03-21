@@ -18,7 +18,8 @@ const commonColors = {
   accent32: '#72dcc6',
   accent57: '#82e2ff',
   accent58: '#b8b4d6',
-  accent60: '#c9a7eb',
+  accent60: '#d49dff',
+  accent61: '#e0a6ff',
   accent59: '#ddd9e7',
   accent33: '#24222c',
   accent34: '#00000000', // fully transparent,
@@ -88,6 +89,7 @@ export const commonSoftSyntaxHighlighting = {
   accent32: '#5FAE9A',
   accent57: '#6cb2c7',
   accent58: '#a89fbe',
-  accent60: '#b095cc',
+  accent60: '#bb84db',
+  accent61: '#c68ee7',
   accent59: '#c9c1d4',
 }

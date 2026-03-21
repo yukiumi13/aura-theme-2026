@@ -1,0 +1,28 @@
+{
+  // This file does NOT auto-load.
+  // Copy it into your real Zed user settings.json to make it take effect.
+  // Windows: C:\Users\<you>\AppData\Roaming\Zed\settings.json
+
+  "theme": {
+    "mode": "system",
+    "dark": "Aura 2026 Dark",
+    "light": "One Light"
+  },
+  "languages": {
+    "Python": {
+      "semantic_tokens": "combined"
+    }
+  },
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "namespace",
+        "style": ["namespace"]
+      },
+      {
+        "token_type": "parameter",
+        "style": ["function.kwargs", "variable.parameter", "parameter"]
+      }
+    ]
+  }
+}

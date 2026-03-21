@@ -1,0 +1,113 @@
+{
+  // This file is only an example and does NOT auto-load in Zed.
+  // Copy the relevant parts into your real Zed user settings.json.
+  // Windows: C:\Users\<you>\AppData\Roaming\Zed\settings.json
+  // macOS:   ~/Library/Application Support/Zed/settings.json
+  // Linux:   ~/.config/zed/settings.json
+
+  "theme": {
+    "mode": "system",
+    "dark": "Aura 2026 Dark",
+    "light": "One Light"
+  },
+
+  "languages": {
+    "Python": {
+      "semantic_tokens": "combined"
+    },
+    "JavaScript": {
+      "semantic_tokens": "combined"
+    },
+    "TypeScript": {
+      "semantic_tokens": "combined"
+    },
+    "TSX": {
+      "semantic_tokens": "combined"
+    }
+  },
+
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "parameter",
+        "style": ["function.kwargs", "variable.parameter", "parameter"]
+      },
+      {
+        "token_type": "namespace",
+        "style": ["namespace"]
+      },
+      {
+        "token_type": "property",
+        "style": ["property", "label"]
+      },
+      {
+        "token_type": "variable",
+        "style": ["variable"]
+      },
+      {
+        "token_type": "function",
+        "style": ["function"]
+      },
+      {
+        "token_type": "method",
+        "style": ["function.method", "method", "function"]
+      },
+      {
+        "token_type": "type",
+        "style": ["type", "class"]
+      },
+      {
+        "token_type": "class",
+        "style": ["class", "type"]
+      },
+      {
+        "token_type": "interface",
+        "style": ["type.interface", "interface", "type"]
+      },
+      {
+        "token_type": "enum",
+        "style": ["enum", "type"]
+      },
+      {
+        "token_type": "enumMember",
+        "style": ["enumMember", "constant"]
+      },
+      {
+        "token_type": "typeParameter",
+        "style": ["typeParameter", "type"]
+      },
+      {
+        "token_type": "decorator",
+        "style": ["attribute", "function"]
+      },
+      {
+        "token_type": "macro",
+        "style": ["preproc", "function"]
+      },
+      {
+        "token_type": "keyword",
+        "style": ["keyword"]
+      },
+      {
+        "token_type": "comment",
+        "style": ["comment"]
+      },
+      {
+        "token_type": "string",
+        "style": ["string"]
+      },
+      {
+        "token_type": "number",
+        "style": ["number"]
+      },
+      {
+        "token_type": "regexp",
+        "style": ["string.regex"]
+      },
+      {
+        "token_type": "operator",
+        "style": ["operator"]
+      }
+    ]
+  }
+}

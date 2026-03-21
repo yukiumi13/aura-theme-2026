@@ -24,6 +24,8 @@
 
 > This repository is a fork maintained by **yukiumi13**, adapted from the original Aura Theme project and extended with a **2026-style remapping** for finer VS Code UI and syntax highlighting.
 
+> For the Zed port package itself, see `packages/zed/README.md` for installation details, the experimental Python semantic-token overlay, and optional semantic-token example settings.
+
 
 <p align="center">
   <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-preview.png?raw=true" >
