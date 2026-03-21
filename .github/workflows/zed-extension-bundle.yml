@@ -1,0 +1,51 @@
+name: Build Zed Extension Bundle
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+    paths:
+      - '.github/workflows/zed-extension-bundle.yml'
+      - 'packages/zed/**'
+      - 'package.json'
+      - 'yarn.lock'
+
+permissions:
+  contents: write
+
+jobs:
+  build-zed-extension:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Package Zed extension bundle
+        run: yarn package:zed
+
+      - name: Upload Zed bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aura-theme-2026-zed-extension
+          path: |
+            dist/zed/aura-theme-2026-zed-extension
+            dist/zed/aura-theme-2026-zed-extension.zip
+
+      - name: Attach Zed bundle to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/zed/aura-theme-2026-zed-extension.zip

@@ -24,6 +24,7 @@
     "dev": "DEBUG=aura* NODE_ENV=development yarn aura:dev dev",
     "build": "DEBUG=aura* NODE_ENV=production yarn aura build",
     "make": "yarn aura make",
+    "package:zed": "node scripts/package-zed-bundle.js",
     "tokenize": "yarn aura tokenize",
     "test": "jest --runInBand",
     "aura": "yarn tsnd src/core/cli/aura.ts",

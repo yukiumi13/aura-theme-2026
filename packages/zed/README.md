@@ -40,9 +40,18 @@ This fork is currently intended to be installed locally as a **dev extension**.
 
 > At the moment, this fork is intended to be installed as a **local dev extension**, rather than through the official Zed extensions registry.
 
+If you do not want to clone the whole repository, you can download a ready-to-use bundle from:
+
+- **GitHub Actions artifacts**: the `Build Zed Extension Bundle` workflow uploads a downloadable artifact named `aura-theme-2026-zed-extension`
+- **GitHub Releases**: when a tag like `v1.2.3` is pushed, the workflow also attaches `aura-theme-2026-zed-extension.zip` to the release
+
+After downloading, extract the archive and select the extracted folder `aura-theme-2026-zed-extension` when installing the dev extension in Zed.
+
 1. Open the **Command Palette** with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
 2. Run `zed: install dev extension`
-3. Select the folder `packages/zed` from this repository
+3. Select either:
+   - the folder `packages/zed` from this repository, or
+   - the extracted download folder `aura-theme-2026-zed-extension`
 4. Open the **Command Palette** again
 5. Run `theme selector: toggle`
 6. Search for `Aura 2026` and choose an `Aura 2026` variant
