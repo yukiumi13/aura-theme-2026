@@ -5,7 +5,3 @@ version = "{{ version }}"
 authors = ["{{ author.name }} <{{ author.email }}>"]
 description = "A forked 2026 adaptation of Aura Theme for {{ portName }}"
 repository = "{{{ repository }}}"
-
-[grammars.python]
-repository = "https://github.com/zed-industries/tree-sitter-python"
-rev = "218fcbf3fda3d029225f3dec005cb497d111b35e"

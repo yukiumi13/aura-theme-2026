@@ -1,11 +1,7 @@
 id = "aura-theme-2026"
 name = "Aura Theme 2026"
 schema_version = 1
-version = "1.0.5"
+version = "1.0.6"
 authors = ["Dalton Menezes <daltonmenezes@outlook.com>"]
 description = "A forked 2026 adaptation of Aura Theme for Zed"
 repository = "https://github.com/yukiumi13/aura-theme-2026"
-
-[grammars.python]
-repository = "https://github.com/zed-industries/tree-sitter-python"
-rev = "218fcbf3fda3d029225f3dec005cb497d111b35e"

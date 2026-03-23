@@ -14,7 +14,7 @@ export async function ZedPort(Aura: AuraAPI) {
   console.log(shadeAndDesaturate(colorSchemes.dark.accent1))
 
   const portName: string = 'Zed'
-  const version = '1.0.5'
+  const version = '1.0.6'
   const type = 'dark'
   const templateFolder = resolve(__dirname, 'templates')
   const template = resolve(templateFolder, 'theme.json')
