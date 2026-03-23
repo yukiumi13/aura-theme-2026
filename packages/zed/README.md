@@ -13,7 +13,7 @@
 
   <!-- version -->
   <a href="#">
-    <img alt="version" src="https://img.shields.io/badge/version%20-v1.0.4-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+    <img alt="version" src="https://img.shields.io/badge/version%20-v1.0.5-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
 </p>
 
@@ -67,7 +67,7 @@ Its main deliverables are:
 
 - `extension.toml` — the Zed extension manifest
 - `themes/` — the installable Aura 2026 theme variants for Zed
-- `languages/python/` — a Python language overlay that ships Aura-oriented queries and semantic-token defaults while reusing Zed's built-in Python grammar
+- `languages/python/` — a Python language overlay that ships Aura-oriented queries and semantic-token defaults together with a registered Python grammar so Zed can load the overlay reliably
 
 This package also includes a couple of **optional example settings files** for users who want to further tweak semantic-token behavior:
 
@@ -80,11 +80,11 @@ These example files are supplementary only. They are **not** part of the theme p
 
 In addition to the theme itself, this package now ships a **Python language overlay**:
 
-- It reuses Zed's built-in Python grammar instead of compiling its own parser during installation
+- It registers a Python grammar for the extension so Aura's Python queries can load correctly
 - It provides `languages/python/semantic_token_rules.json`
 - It bundles a fuller Aura-oriented default mapping for common Python semantic tokens
 
-That design matters because installing a local dev extension should not require compiling `tree-sitter-python` on the target machine.
+That design matters because Zed language directories expect their referenced grammar to be registered by the extension. Without that registration, the Python overlay can fail to attach and Python highlighting can disappear entirely.
 
 That means Python call-site keyword arguments such as `project=` and `name=` no longer rely solely on manual user-side `settings.json` overrides to look correct.
 
@@ -120,11 +120,13 @@ will prefer Aura-oriented styles such as:
 
 with parameter-family tokens retaining italic styling.
 
-## Why installation is simpler now
+## Why the Python grammar is registered again
 
-Earlier iterations of this fork declared a custom `python` grammar in `extension.toml`, which caused Zed to try compiling the grammar when installing the dev extension.
+An earlier iteration of this fork removed the `python` grammar registration from `extension.toml` in an attempt to avoid installation-time compilation.
 
-This package now avoids that installation-time compilation step and instead relies on the Python grammar that already ships with Zed, while still providing Aura-specific query files and semantic token defaults for Python.
+In practice, that also removed the grammar binding that Zed needs for the extension's `languages/python/` overlay, which could leave Python files with missing or severely reduced highlighting after installing the dev extension.
+
+This package therefore registers the Python grammar again so the bundled Python queries and semantic-token defaults can actually load.
 
 ## What still cannot be forced by the extension
 
