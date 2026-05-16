@@ -59,13 +59,13 @@ export const auraSemantic2026: AuraSemanticPalette = {
   infoBright: '#67E8F9',
 }
 
-export const auraCyanFamily: AuraVariantFamily = {
-  name: 'Aura Cyan 2026',
-  slug: 'aura-cyan-2026',
-  accent: '#22D3EE',
-  accentBright: '#67E8F9',
-  accentSoft: '#0891B2',
-  companion: '#A78BFA',
-  companionBright: '#C4B5FD',
-  companionSoft: '#7C3AED',
+export const auraDefaultFamily: AuraVariantFamily = {
+  name: 'Aura 2026',
+  slug: 'aura-2026',
+  accent: '#A277FF',
+  accentBright: '#C4B5FD',
+  accentSoft: '#6F4FD8',
+  companion: '#61FFCA',
+  companionBright: '#9FFFE2',
+  companionSoft: '#3EA784',
 }

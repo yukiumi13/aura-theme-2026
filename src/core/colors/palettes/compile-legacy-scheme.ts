@@ -1,5 +1,5 @@
 import { AuraPalette, AuraVariantFamily, LegacyAuraScheme } from './types'
-import { auraInkBase2026 } from './base'
+import { auraDefaultFamily, auraInkBase2026 } from './base'
 import { auraVariantFamilies } from './variants'
 import { createAuraPalette } from './create-aura-palette'
 
@@ -163,14 +163,14 @@ export const variantSchemes = auraVariantFamilies.map((family) => ({
 
 export const inkVariantScheme = {
   family: {
-    ...auraVariantFamilies[0],
+    ...auraDefaultFamily,
     name: 'Aura Ink 2026',
     slug: 'aura-ink-2026',
   },
   scheme: compileLegacyScheme(
     createAuraPalette(
       {
-        ...auraVariantFamilies[0],
+        ...auraDefaultFamily,
         name: 'Aura Ink 2026',
         slug: 'aura-ink-2026',
       },

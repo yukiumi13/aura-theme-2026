@@ -1,7 +1,7 @@
 import { colorsService, functionCompositionService } from 'services'
 
 import {
-  auraVariantFamilies,
+  auraDefaultFamily,
   compileLegacyScheme,
   createAuraPalette,
   inkVariantScheme,
@@ -12,7 +12,7 @@ const { shade, desaturate } = colorsService()
 const { compose } = functionCompositionService()
 const shadeAndDesaturate = compose(shade(0.2), desaturate(0.1))
 
-const defaultPalette = createAuraPalette(auraVariantFamilies[0])
+const defaultPalette = createAuraPalette(auraDefaultFamily)
 
 export const dark = compileLegacyScheme(defaultPalette)
 
