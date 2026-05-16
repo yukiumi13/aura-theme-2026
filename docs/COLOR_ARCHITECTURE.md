@@ -44,8 +44,8 @@ flowchart TD
   - Also owns `auraInkBase2026`, a darker near-black base for `Aura Ink 2026`.
 
 - `src/core/colors/palettes/variants.ts`
-  - Owns accent families such as cyan, blue, violet, rose, amber, teal, and
-    graphite.
+  - Owns accent families such as azure, cyan, blue, violet, rose, amber, teal,
+    and graphite.
   - A variant only supplies accent, bright accent, soft accent, and companion
     colors.
 

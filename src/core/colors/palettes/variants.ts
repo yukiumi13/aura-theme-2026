@@ -2,6 +2,16 @@ import { AuraVariantFamily } from './types'
 
 export const auraVariantFamilies: AuraVariantFamily[] = [
   {
+    name: 'Aura Azure 2026',
+    slug: 'aura-azure-2026',
+    accent: '#22D3EE',
+    accentBright: '#67E8F9',
+    accentSoft: '#0891B2',
+    companion: '#A78BFA',
+    companionBright: '#C4B5FD',
+    companionSoft: '#7C3AED',
+  },
+  {
     name: 'Aura Cyan 2026',
     slug: 'aura-cyan-2026',
     accent: '#22D3EE',
