@@ -12,10 +12,10 @@ export async function VscodePort(Aura: AuraAPI) {
     constants,
   } = Aura
 
-  const { info, folders } = constants
+  const { info, folders, packageVersion } = constants
 
   const portName = 'Visual Studio Code'
-  const version = '2.1.2'
+  const version = packageVersion
   const type = 'dark'
   const templateFolder = resolve(__dirname, 'templates')
   const template = resolve(templateFolder, 'theme.json')

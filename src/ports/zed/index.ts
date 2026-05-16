@@ -11,10 +11,10 @@ const shadeAndDesaturate = compose(shade(0.63), desaturate(0.2))
 
 export async function ZedPort(Aura: AuraAPI) {
   const { createPort, createReadme, colorSchemes, constants } = Aura
-  const { info } = constants
+  const { info, packageVersion } = constants
 
   const portName: string = 'Zed'
-  const version = '1.0.6'
+  const version = packageVersion
   const type = 'dark'
   const templateFolder = resolve(__dirname, 'templates')
   const template = resolve(templateFolder, 'theme.json')
