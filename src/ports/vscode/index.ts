@@ -1,6 +1,8 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
 
+type VariantScheme = typeof import('core/colors/schemes').variants[number]
+
 export async function VscodePort(Aura: AuraAPI) {
   const {
     copyExtraFiles,
@@ -27,6 +29,17 @@ export async function VscodePort(Aura: AuraAPI) {
     auraSoftDarkSoftText: `${info.shortName} Soft Dark (Soft Text)`,
   }
 
+  const variantThemeEntries = [
+    ...colorSchemes.variants,
+    colorSchemes.inkVariant,
+  ].map(
+    ({ family }: VariantScheme) => ({
+      label: family.name,
+      uiTheme: 'vs-dark',
+      path: `./themes/${family.slug}-color-theme.json`,
+    })
+  )
+
   await copyExtraFiles(__dirname)
 
   await createPort({
@@ -35,6 +48,7 @@ export async function VscodePort(Aura: AuraAPI) {
     replacements: {
       ...info,
       ...names,
+      variantThemes: JSON.stringify(variantThemeEntries, null, 8).slice(1, -1),
       type,
       portName,
       version,
@@ -85,6 +99,22 @@ export async function VscodePort(Aura: AuraAPI) {
       name: names.auraSoftDarkSoftText,
     },
   })
+
+  await Promise.all(
+    [...colorSchemes.variants, colorSchemes.inkVariant].map(
+      ({ family, scheme }: VariantScheme) =>
+        createPort({
+          template,
+          outputDist,
+          outputFileName: `${family.slug}-${outputFileNameSuffix}`,
+          replacements: {
+            type,
+            ...scheme,
+            name: family.name,
+          },
+        })
+    )
+  )
 
   await createReadme({
     template: resolve(templateFolder, 'README.md'),

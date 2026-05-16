@@ -86,30 +86,30 @@
         "scrollbar.track.border": "{{ accent23 }}",
         "scrollbar.track.background": "{{ accent16 }}",
         "terminal.ansi.background": "{{ accent12 }}",
-        "terminal.ansi.black": "{{ accent12 }}",
-        "terminal.ansi.blue": "{{ accent32 }}",
-        "terminal.ansi.bright_black": "{{ accent13 }}",
-        "terminal.ansi.bright_blue": "{{ accent32 }}",
-        "terminal.ansi.bright_cyan": "{{ accent2 }}",
-        "terminal.ansi.bright_green": "{{ accent2 }}",
-        "terminal.ansi.bright_magenta": "{{ accent6 }}",
-        "terminal.ansi.bright_red": "{{ accent5 }}",
-        "terminal.ansi.bright_white": "{{ accent7 }}",
-        "terminal.ansi.bright_yellow": "{{ accent31 }}",
-        "terminal.ansi.cyan": "{{ accent2 }}",
-        "terminal.ansi.dim_black": "{{ accent15 }}",
-        "terminal.ansi.dim_blue": "{{ accent32 }}",
-        "terminal.ansi.dim_cyan": "{{ accent25 }}",
-        "terminal.ansi.dim_green": "{{ accent25 }}",
-        "terminal.ansi.dim_magenta": "{{ accent1 }}",
-        "terminal.ansi.dim_red": "{{ accent5 }}",
-        "terminal.ansi.dim_white": "{{ accent10 }}",
-        "terminal.ansi.dim_yellow": "{{ accent31 }}",
-        "terminal.ansi.green": "{{ accent2 }}",
-        "terminal.ansi.magenta": "{{ accent1 }}",
-        "terminal.ansi.red": "{{ accent5 }}",
-        "terminal.ansi.white": "{{ accent9 }}",
-        "terminal.ansi.yellow": "{{ accent3 }}",
+        "terminal.ansi.black": "{{ ansiBlack }}",
+        "terminal.ansi.blue": "{{ ansiBlue }}",
+        "terminal.ansi.bright_black": "{{ ansiBrightBlack }}",
+        "terminal.ansi.bright_blue": "{{ ansiBrightBlue }}",
+        "terminal.ansi.bright_cyan": "{{ ansiBrightCyan }}",
+        "terminal.ansi.bright_green": "{{ ansiBrightGreen }}",
+        "terminal.ansi.bright_magenta": "{{ ansiBrightMagenta }}",
+        "terminal.ansi.bright_red": "{{ ansiBrightRed }}",
+        "terminal.ansi.bright_white": "{{ ansiBrightWhite }}",
+        "terminal.ansi.bright_yellow": "{{ ansiBrightYellow }}",
+        "terminal.ansi.cyan": "{{ ansiCyan }}",
+        "terminal.ansi.dim_black": "{{ ansiDimBlack }}",
+        "terminal.ansi.dim_blue": "{{ ansiDimBlue }}",
+        "terminal.ansi.dim_cyan": "{{ ansiDimCyan }}",
+        "terminal.ansi.dim_green": "{{ ansiDimGreen }}",
+        "terminal.ansi.dim_magenta": "{{ ansiDimMagenta }}",
+        "terminal.ansi.dim_red": "{{ ansiDimRed }}",
+        "terminal.ansi.dim_white": "{{ ansiDimWhite }}",
+        "terminal.ansi.dim_yellow": "{{ ansiDimYellow }}",
+        "terminal.ansi.green": "{{ ansiGreen }}",
+        "terminal.ansi.magenta": "{{ ansiMagenta }}",
+        "terminal.ansi.red": "{{ ansiRed }}",
+        "terminal.ansi.white": "{{ ansiWhite }}",
+        "terminal.ansi.yellow": "{{ ansiYellow }}",
         "terminal.background": "{{ accent12 }}",
         "terminal.bright_foreground": "{{ accent7 }}",
         "terminal.dim_foreground": "{{ accent10 }}",
@@ -206,142 +206,142 @@
         ],
         "syntax": {
           "attribute": {
-            "color": "{{ accent6 }}",
+            "color": "{{ syntaxAttribute }}",
             "font_style": null,
             "font_weight": null
           },
           "boolean": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxBoolean }}",
             "font_style": null,
             "font_weight": null
           },
           "comment": {
-            "color": "{{ accent8 }}",
+            "color": "{{ syntaxComment }}",
             "font_style": null,
             "font_weight": null
           },
           "comment.doc": {
-            "color": "{{ accent10 }}",
+            "color": "{{ syntaxCommentDoc }}",
             "font_style": null,
             "font_weight": null
           },
           "constant": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxConstant }}",
             "font_style": null,
             "font_weight": null
           },
           "constructor": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxConstructor }}",
             "font_style": null,
             "font_weight": null
           },
           "embedded": {
-            "color": "{{ accent59 }}",
+            "color": "{{ syntaxEmbedded }}",
             "font_style": null,
             "font_weight": null
           },
           "emphasis": {
-            "color": "{{ accent1 }}",
+            "color": "{{ syntaxKeyword }}",
             "font_style": null,
             "font_weight": null
           },
           "emphasis.strong": {
-            "color": "{{ accent1 }}",
+            "color": "{{ syntaxKeyword }}",
             "font_style": null,
             "font_weight": null
           },
           "class": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxClass }}",
             "font_style": null,
             "font_weight": null
           },
           "enum": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxEnum }}",
             "font_style": null,
             "font_weight": null
           },
           "enumMember": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxEnumMember }}",
             "font_style": null,
             "font_weight": null
           },
           "function": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxFunction }}",
             "font_style": null,
             "font_weight": null
           },
           "function.definition": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxFunction }}",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxFunction }}",
             "font_style": null,
             "font_weight": null
           },
           "function.kwargs": {
-            "color": "{{ accent61 }}",
+            "color": "{{ syntaxParameter }}",
             "font_style": "italic",
             "font_weight": null
           },
           "hint": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": null,
             "font_weight": null
           },
           "interface": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": "italic",
             "font_weight": null
           },
           "keyword": {
-            "color": "{{ accent1 }}",
+            "color": "{{ syntaxKeyword }}",
             "font_style": null,
             "font_weight": null
           },
           "link_text": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxLink }}",
             "font_style": null,
             "font_weight": null
           },
           "link_uri": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxLink }}",
             "font_style": null,
             "font_weight": null
           },
           "number": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxNumber }}",
             "font_style": null,
             "font_weight": null
           },
           "method": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxFunction }}",
             "font_style": null,
             "font_weight": null
           },
           "namespace": {
-            "color": "{{ accent57 }}",
+            "color": "{{ syntaxNamespace }}",
             "font_style": null,
             "font_weight": null
           },
           "operator": {
-            "color": "{{ accent1 }}",
+            "color": "{{ syntaxOperator }}",
             "font_style": null,
             "font_weight": null
           },
           "parameter": {
-            "color": "{{ accent61 }}",
+            "color": "{{ syntaxParameter }}",
             "font_style": "italic",
             "font_weight": null
           },
           "label": {
-            "color": "{{ accent61 }}",
+            "color": "{{ syntaxLabel }}",
             "font_style": null,
             "font_weight": null
           },
           "preproc": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxMacro }}",
             "font_style": null,
             "font_weight": null
           },
@@ -351,37 +351,37 @@
             "font_weight": null
           },
           "primary": {
-            "color": "{{ accent59 }}",
+            "color": "{{ syntaxVariable }}",
             "font_style": null,
             "font_weight": null
           },
           "property": {
-            "color": "{{ accent6 }}",
+            "color": "{{ syntaxProperty }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation": {
-            "color": "{{ accent59 }}",
+            "color": "{{ syntaxPunctuation }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.bracket": {
-            "color": "{{ accent10 }}",
+            "color": "{{ syntaxPunctuationMuted }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.delimiter": {
-            "color": "{{ accent10 }}",
+            "color": "{{ syntaxPunctuationMuted }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.list_marker": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxTitle }}",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.markup": {
-            "color": "{{ accent6 }}",
+            "color": "{{ syntaxProperty }}",
             "font_style": null,
             "font_weight": null
           },
@@ -391,117 +391,117 @@
             "font_weight": null
           },
           "selector": {
-            "color": "{{ accent2 }}",
+            "color": "{{ syntaxSelector }}",
             "font_style": null,
             "font_weight": null
           },
           "selector.pseudo": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": null,
             "font_weight": null
           },
           "string": {
-            "color": "{{ accent2 }}",
+            "color": "{{ syntaxString }}",
             "font_style": null,
             "font_weight": null
           },
           "string.escape": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxStringEscape }}",
             "font_style": null,
             "font_weight": null
           },
           "string.regex": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxRegexp }}",
             "font_style": null,
             "font_weight": null
           },
           "string.special": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxStringSpecial }}",
             "font_style": null,
             "font_weight": null
           },
           "string.special.symbol": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxStringSpecial }}",
             "font_style": null,
             "font_weight": null
           },
           "tag": {
-            "color": "{{ accent2 }}",
+            "color": "{{ syntaxTag }}",
             "font_style": null,
             "font_weight": null
           },
           "text.literal": {
-            "color": "{{ accent2 }}",
+            "color": "{{ syntaxString }}",
             "font_style": null,
             "font_weight": null
           },
           "title": {
-            "color": "{{ accent3 }}",
+            "color": "{{ syntaxTitle }}",
             "font_style": null,
             "font_weight": null
           },
           "type": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": null,
             "font_weight": null
           },
           "type.class": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxClass }}",
             "font_style": null,
             "font_weight": null
           },
           "type.defaultLibrary": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": null,
             "font_weight": null
           },
           "type.interface": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": "italic",
             "font_weight": null
           },
           "typeParameter": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": "italic",
             "font_weight": null
           },
           "variable": {
-            "color": "{{ accent59 }}",
+            "color": "{{ syntaxVariable }}",
             "font_style": null,
             "font_weight": null
           },
             "variable.parameter": {
-              "color": "{{ accent61 }}",
+              "color": "{{ syntaxParameter }}",
               "font_style": "italic",
               "font_weight": null
             },
           "variable.defaultLibrary": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxVariableSpecial }}",
             "font_style": null,
             "font_weight": null
           },
           "variable.readonly": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxVariableSpecial }}",
             "font_style": null,
             "font_weight": null
           },
           "variable.special": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxVariableSpecial }}",
             "font_style": null,
             "font_weight": null
           },
           "property.readonly": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxVariableSpecial }}",
             "font_style": null,
             "font_weight": null
           },
           "struct": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxType }}",
             "font_style": null,
             "font_weight": null
           },
           "variant": {
-            "color": "{{ accent32 }}",
+            "color": "{{ syntaxEnumMember }}",
             "font_style": null,
             "font_weight": null
           }

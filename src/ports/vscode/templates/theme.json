@@ -251,22 +251,22 @@
     "terminal.tab.activeBorder": "{{ accent16 }}",
     "terminalCursor.foreground": "{{ accent1 }}",
     "terminalCursor.background": "{{ accent12 }}",
-    "terminal.ansiBlack": "{{ accent12 }}",
-    "terminal.ansiBlue": "{{ accent32 }}",
-    "terminal.ansiBrightBlack": "{{ accent13 }}",
-    "terminal.ansiBrightBlue": "{{ accent32 }}",
-    "terminal.ansiBrightCyan": "{{ accent2 }}",
-    "terminal.ansiBrightGreen": "{{ accent2 }}",
-    "terminal.ansiBrightMagenta": "{{ accent6 }}",
-    "terminal.ansiBrightRed": "{{ accent5 }}",
-    "terminal.ansiBrightWhite": "{{ accent7 }}",
-    "terminal.ansiBrightYellow": "{{ accent3 }}",
-    "terminal.ansiCyan": "{{ accent2 }}",
-    "terminal.ansiGreen": "{{ accent2 }}",
-    "terminal.ansiMagenta": "{{ accent1 }}",
-    "terminal.ansiRed": "{{ accent5 }}",
-    "terminal.ansiWhite": "{{ accent9 }}",
-    "terminal.ansiYellow": "{{ accent3 }}",
+    "terminal.ansiBlack": "{{ ansiBlack }}",
+    "terminal.ansiBlue": "{{ ansiBlue }}",
+    "terminal.ansiBrightBlack": "{{ ansiBrightBlack }}",
+    "terminal.ansiBrightBlue": "{{ ansiBrightBlue }}",
+    "terminal.ansiBrightCyan": "{{ ansiBrightCyan }}",
+    "terminal.ansiBrightGreen": "{{ ansiBrightGreen }}",
+    "terminal.ansiBrightMagenta": "{{ ansiBrightMagenta }}",
+    "terminal.ansiBrightRed": "{{ ansiBrightRed }}",
+    "terminal.ansiBrightWhite": "{{ ansiBrightWhite }}",
+    "terminal.ansiBrightYellow": "{{ ansiBrightYellow }}",
+    "terminal.ansiCyan": "{{ ansiCyan }}",
+    "terminal.ansiGreen": "{{ ansiGreen }}",
+    "terminal.ansiMagenta": "{{ ansiMagenta }}",
+    "terminal.ansiRed": "{{ ansiRed }}",
+    "terminal.ansiWhite": "{{ ansiWhite }}",
+    "terminal.ansiYellow": "{{ ansiYellow }}",
     "gitDecoration.addedResourceForeground": "{{ accent2 }}",
     "gitDecoration.modifiedResourceForeground": "{{ accent3 }}",
     "gitDecoration.deletedResourceForeground": "{{ accent5 }}",
@@ -309,7 +309,7 @@
         "string.quoted.docstring.multi.python"
       ],
       "settings": {
-        "foreground": "{{ accent8 }}"
+        "foreground": "{{ syntaxComment }}"
       }
     },
     {
@@ -318,7 +318,7 @@
         "constant.character"
       ],
       "settings": {
-        "foreground": "{{ accent6 }}"
+        "foreground": "{{ syntaxProperty }}"
       }
     },
     {
@@ -334,7 +334,7 @@
         "meta.module-reference"
       ],
       "settings": {
-        "foreground": "{{ accent32 }}"
+        "foreground": "{{ syntaxConstant }}"
       }
     },
     {
@@ -347,7 +347,7 @@
         "support.function"
       ],
       "settings": {
-        "foreground": "{{ accent3 }}"
+        "foreground": "{{ syntaxFunction }}"
       }
     },
     {
@@ -357,7 +357,7 @@
         "meta.function-call.arguments.python variable.parameter"
       ],
       "settings": {
-        "foreground": "{{ accent60 }}",
+        "foreground": "{{ syntaxParameter }}",
         "fontStyle": "italic"
       }
     },
@@ -380,7 +380,7 @@
         "punctuation.dot.dart"
       ],
       "settings": {
-        "foreground": "{{ accent59 }}"
+        "foreground": "{{ syntaxVariable }}"
       }
     },
     {
@@ -391,7 +391,7 @@
         "meta.function-call.generic.python"
       ],
       "settings": {
-        "foreground": "{{ accent3 }}"
+        "foreground": "{{ syntaxFunction }}"
       }
     },
     {
@@ -407,7 +407,7 @@
         "JSXNested"
       ],
       "settings": {
-        "foreground": "{{ accent2 }}"
+        "foreground": "{{ syntaxTag }}"
       }
     },
     {
@@ -418,7 +418,7 @@
         "storage.modifier.import.python"
       ],
       "settings": {
-        "foreground": "{{ accent1 }}"
+        "foreground": "{{ syntaxKeyword }}"
       }
     },
     {
@@ -430,7 +430,7 @@
         "meta.import.python meta.import-name.python"
       ],
       "settings": {
-        "foreground": "{{ accent57 }}"
+        "foreground": "{{ syntaxNamespace }}"
       }
     },
     {
@@ -457,7 +457,7 @@
         "constant.percentage.units.css"
       ],
       "settings": {
-        "foreground": "{{ accent1 }}"
+        "foreground": "{{ syntaxKeyword }}"
       }
     },
     {
@@ -480,7 +480,7 @@
         "markup.raw"
       ],
       "settings": {
-        "foreground": "{{ accent2 }}"
+        "foreground": "{{ syntaxString }}"
       }
     },
     {
@@ -498,7 +498,7 @@
         "support.class.dart"
       ],
       "settings": {
-        "foreground": "{{ accent32 }}"
+        "foreground": "{{ syntaxType }}"
       }
     },
     {
@@ -521,7 +521,7 @@
         "entity.other.attribute-name.class.css"
       ],
       "settings": {
-        "foreground": "{{ accent6 }}"
+        "foreground": "{{ syntaxProperty }}"
       }
     },
     {
@@ -555,7 +555,7 @@
         "string.other.link"
       ],
       "settings": {
-        "foreground": "{{ accent2 }}"
+        "foreground": "{{ syntaxRegexp }}"
       }
     },
     {
@@ -566,26 +566,26 @@
         "string.regexp string.regexp.arbitrary-repitition"
       ],
       "settings": {
-        "foreground": "{{ accent3 }}"
+        "foreground": "{{ syntaxStringEscape }}"
       }
     },
     {
       "scope": "string.regexp constant.character.escape",
       "settings": {
-        "foreground": "{{ accent3 }}",
+        "foreground": "{{ syntaxStringEscape }}",
         "fontStyle": "bold"
       }
     },
     {
       "scope": "support.type.property-name.json",
       "settings": {
-        "foreground": "{{ accent6 }}"
+        "foreground": "{{ syntaxProperty }}"
       }
     },
     {
       "scope": "punctuation.definition.list.begin.markdown",
       "settings": {
-        "foreground": "{{ accent3 }}"
+        "foreground": "{{ syntaxTitle }}"
       }
     },
     {
@@ -594,14 +594,14 @@
         "markup.heading entity.name"
       ],
       "settings": {
-        "foreground": "{{ accent32 }}",
+        "foreground": "{{ syntaxTitle }}",
         "fontStyle": "bold"
       }
     },
     {
       "scope": "markup.quote",
       "settings": {
-        "foreground": "{{ accent2 }}"
+        "foreground": "{{ syntaxString }}"
       }
     },
     {
@@ -633,7 +633,7 @@
     {
       "scope": "markup.inline.raw",
       "settings": {
-        "foreground": "{{ accent32 }}"
+        "foreground": "{{ syntaxLink }}"
       }
     },
     {
@@ -648,7 +648,7 @@
     {
       "scope": "punctuation.section.embedded",
       "settings": {
-        "foreground": "{{ accent1 }}"
+        "foreground": "{{ syntaxKeyword }}"
       }
     },
     {
@@ -694,7 +694,7 @@
         "support.constant.vendored.property-value"
       ],
       "settings": {
-        "foreground": "{{ accent32 }}"
+        "foreground": "{{ syntaxType }}"
       }
     },
     {
@@ -719,7 +719,7 @@
     {
       "scope": "token.info-token",
       "settings": {
-        "foreground": "{{ accent32 }}"
+        "foreground": "{{ syntaxType }}"
       }
     },
     {
@@ -737,51 +737,51 @@
     {
       "scope": "token.debug-token",
       "settings": {
-        "foreground": "{{ accent1 }}"
+        "foreground": "{{ syntaxKeyword }}"
       }
     }
   ],
   "semanticTokenColors": {
-    "comment": "{{ accent8 }}",
-    "string": "{{ accent2 }}",
-    "regexp": "{{ accent2 }}",
+    "comment": "{{ syntaxComment }}",
+    "string": "{{ syntaxString }}",
+    "regexp": "{{ syntaxRegexp }}",
     "regexp.escape": {
-      "foreground": "{{ accent3 }}",
+      "foreground": "{{ syntaxStringEscape }}",
       "fontStyle": "bold"
     },
-    "number": "{{ accent32 }}",
-    "boolean": "{{ accent32 }}",
-    "enumMember": "{{ accent32 }}",
-    "function": "{{ accent3 }}",
-    "method": "{{ accent3 }}",
-    "macro": "{{ accent6 }}",
+    "number": "{{ syntaxNumber }}",
+    "boolean": "{{ syntaxBoolean }}",
+    "enumMember": "{{ syntaxEnumMember }}",
+    "function": "{{ syntaxFunction }}",
+    "method": "{{ syntaxFunction }}",
+    "macro": "{{ syntaxMacro }}",
     "parameter": {
-      "foreground": "{{ accent60 }}",
+      "foreground": "{{ syntaxParameter }}",
       "fontStyle": "italic"
     },
-    "variable": "{{ accent59 }}",
-    "variable.defaultLibrary": "{{ accent32 }}",
-    "variable.readonly": "{{ accent32 }}",
-    "property": "{{ accent6 }}",
-    "property.readonly": "{{ accent32 }}",
-    "class": "{{ accent32 }}",
+    "variable": "{{ syntaxVariable }}",
+    "variable.defaultLibrary": "{{ syntaxVariableSpecial }}",
+    "variable.readonly": "{{ syntaxVariableSpecial }}",
+    "property": "{{ syntaxProperty }}",
+    "property.readonly": "{{ syntaxVariableSpecial }}",
+    "class": "{{ syntaxClass }}",
     "interface": {
-      "foreground": "{{ accent32 }}",
+      "foreground": "{{ syntaxType }}",
       "fontStyle": "italic"
     },
-    "enum": "{{ accent32 }}",
-    "type": "{{ accent32 }}",
-    "type.defaultLibrary": "{{ accent32 }}",
+    "enum": "{{ syntaxEnum }}",
+    "type": "{{ syntaxType }}",
+    "type.defaultLibrary": "{{ syntaxType }}",
     "typeParameter": {
-      "foreground": "{{ accent32 }}",
+      "foreground": "{{ syntaxType }}",
       "fontStyle": "italic"
     },
-    "namespace": "{{ accent57 }}",
-    "keyword": "{{ accent1 }}",
-    "modifier": "{{ accent1 }}",
-    "operator": "{{ accent1 }}",
-    "decorator": "{{ accent6 }}",
-    "label": "{{ accent3 }}"
+    "namespace": "{{ syntaxNamespace }}",
+    "keyword": "{{ syntaxKeyword }}",
+    "modifier": "{{ syntaxKeyword }}",
+    "operator": "{{ syntaxOperator }}",
+    "decorator": "{{ syntaxDecorator }}",
+    "label": "{{ syntaxLabel }}"
   },
   "semanticHighlighting": true
 }

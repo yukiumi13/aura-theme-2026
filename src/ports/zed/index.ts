@@ -3,6 +3,8 @@ import { resolve } from 'path'
 import { colorsService, functionCompositionService } from 'services'
 import { folders } from 'shared/constants'
 
+type VariantScheme = typeof import('core/colors/schemes').variants[number]
+
 const { shade, desaturate } = colorsService()
 const { compose } = functionCompositionService()
 const shadeAndDesaturate = compose(shade(0.63), desaturate(0.2))
@@ -10,8 +12,6 @@ const shadeAndDesaturate = compose(shade(0.63), desaturate(0.2))
 export async function ZedPort(Aura: AuraAPI) {
   const { createPort, createReadme, colorSchemes, constants } = Aura
   const { info } = constants
-
-  console.log(shadeAndDesaturate(colorSchemes.dark.accent1))
 
   const portName: string = 'Zed'
   const version = '1.0.6'
@@ -88,6 +88,24 @@ export async function ZedPort(Aura: AuraAPI) {
       ...createTransparentAccents(colorSchemes.softDarkSoft),
     },
   })
+
+  await Promise.all(
+    [...colorSchemes.variants, colorSchemes.inkVariant].map(
+      ({ family, scheme }: VariantScheme) =>
+        createPort({
+          template,
+          outputDist,
+          outputFileName: family.slug,
+          replacements: {
+            ...info,
+            type,
+            ...scheme,
+            name: family.name,
+            ...createTransparentAccents(scheme),
+          },
+        })
+    )
+  )
 
   await createReadme({
     template: resolve(templateFolder, 'README.md'),

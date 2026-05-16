@@ -1,27 +1,39 @@
-import {
-  commonSyntaxHighlighting,
-  commonSoftSyntaxHighlighting,
-  commonSoftUI,
-  commonUI,
-} from './common'
+import { colorsService, functionCompositionService } from 'services'
 
-export const dark = {
-  ...commonSyntaxHighlighting,
-  ...commonUI,
-  // UI
-  accent11: '#000000',
-  accent12: '#15141b', // background
-  accent21: '#110f18',
-  accent24: '#121016',
-}
+import {
+  auraVariantFamilies,
+  compileLegacyScheme,
+  createAuraPalette,
+  inkVariantScheme,
+  variantSchemes,
+} from '../palettes'
+
+const { shade, desaturate } = colorsService()
+const { compose } = functionCompositionService()
+const shadeAndDesaturate = compose(shade(0.2), desaturate(0.1))
+
+const defaultPalette = createAuraPalette(auraVariantFamilies[0])
+
+export const dark = compileLegacyScheme(defaultPalette)
+
+export const variants = variantSchemes
+
+export const inkVariant = inkVariantScheme
 
 export const darkSoft = {
-  ...commonSoftSyntaxHighlighting,
-  ...commonSoftUI,
-  // UI
-  accent11: dark.accent11,
-  accent12: dark.accent12,
-  accent13: '#2d2d2d',
-  accent21: dark.accent21,
-  accent24: dark.accent24,
+  ...dark,
+  accent1: shadeAndDesaturate(dark.accent1),
+  accent2: shadeAndDesaturate(dark.accent2),
+  accent3: shadeAndDesaturate(dark.accent3),
+  accent4: shadeAndDesaturate(dark.accent4),
+  accent5: shadeAndDesaturate(dark.accent5),
+  accent6: shadeAndDesaturate(dark.accent6),
+  accent7: shadeAndDesaturate(dark.accent7),
+  accent31: shadeAndDesaturate(dark.accent31),
+  accent32: shadeAndDesaturate(dark.accent32),
+  accent57: shadeAndDesaturate(dark.accent57),
+  accent58: shadeAndDesaturate(dark.accent58),
+  accent59: shadeAndDesaturate(dark.accent59),
+  accent60: shadeAndDesaturate(dark.accent60),
+  accent61: shadeAndDesaturate(dark.accent61),
 }
