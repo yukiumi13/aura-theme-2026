@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-heading.png?raw=true" alt="Aura Theme" width="70%" />
+  <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/new-heading.png?raw=true" alt="Aura Theme 2026" width="70%" />
 </p>
 
 <p align="center">
@@ -11,54 +11,40 @@
     <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
   <!-- Preview in vscode.dev -->
-  <a href="https://vscode.dev/theme/daltonmenezes.aura-theme">
+  <a href="https://vscode.dev/theme/daltonmenezes.aura-theme-2026">
     <img alt="preview in vscode.dev" src="https://img.shields.io/badge/preview%20in-vscode.dev-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>  
   <!-- marketplace version -->
-  <a href="https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme">
-    <img alt="marketplace version" src="https://img.shields.io/vscode-marketplace/v/DaltonMenezes.aura-theme.svg?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+  <a href="https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme-2026">
+    <img alt="marketplace version" src="https://img.shields.io/vscode-marketplace/v/DaltonMenezes.aura-theme-2026.svg?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
   <!-- downloads -->
-  <a href="https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme">
-    <img alt="downloads" src="https://img.shields.io/visual-studio-marketplace/d/DaltonMenezes.aura-theme.svg?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+  <a href="https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme-2026">
+    <img alt="downloads" src="https://img.shields.io/visual-studio-marketplace/d/DaltonMenezes.aura-theme-2026.svg?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
   <!-- rating -->
-  <a href="https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme">
-    <img alt="rating" src="https://img.shields.io/visual-studio-marketplace/stars/DaltonMenezes.aura-theme.svg?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+  <a href="https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme-2026">
+    <img alt="rating" src="https://img.shields.io/visual-studio-marketplace/stars/DaltonMenezes.aura-theme-2026.svg?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
 </p>
 
-> This package is a **fork + adapted 2026 edition** maintained by **yukiumi13**. It is based on the original Aura Theme, with a remapped VS Code palette aimed at a more detailed 2026-style UI and syntax-highlighting experience.
-
-> 这个包是 **yukiumi13** 维护的 **fork / adapted 2026** 版本，基于原版 Aura Theme 继续演进，重点在于面向 2026 风格的 VS Code 细粒度 UI 与语法高亮适配。
-
 <p align="center">
-  <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/aura-vscode-preview.png?raw=true" >
+  <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/aura-vscode-preview.png?raw=true" >
 </p>
 
 
 # Themes available
-  - Aura 2026 Dark
-  - Aura 2026 Dark (Soft Text)
-  - Aura 2026 Soft Dark
-  - Aura 2026 Soft Dark (Soft Text)
+  - Aura Dark
+  - Aura Dark (Soft Text)
+  - Aura Soft Dark
+  - Aura Soft Dark (Soft Text)
 
 # Installation
-1. Open the repository on GitHub: `https://github.com/yukiumi13/aura-theme-2026`
-2. Go to **Actions** and open the latest **Build VSCode VSIX** workflow run
-3. Download the artifact named `aura-theme-2026-vsix`
-4. Extract the archive and install the `.vsix` file from **Extensions > ... > Install from VSIX...**
-5. Open **Preferences: Color Theme** and choose an Aura 2026 variant.
-
-# Download VSIX from GitHub
-If you prefer using the private GitHub build instead of the Marketplace version:
-
-1. Open the repository on GitHub: `https://github.com/yukiumi13/aura-theme-2026`
-2. Go to the **Actions** tab and open the latest **Build VSCode VSIX** run
-3. Download the uploaded artifact named `aura-theme-2026-vsix`
-4. Extract it and install the `.vsix` file from VS Code using **Extensions > ... > Install from VSIX...**
-
-If you create a tag like `v2.1.2`, the same workflow will also attach the `.vsix` file to a GitHub Release automatically.
+1. Open the **Extensions** sidebar in VS Code
+2. Search for [Aura Theme](https://marketplace.visualstudio.com/items?itemName=DaltonMenezes.aura-theme-2026)
+3. Click **Install**
+4. Open the **Command Palette** with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>⇧</kbd> + <kbd>⌘</kbd> + <kbd>P</kbd>
+5. Select **Preferences: Color Theme** and choose an Aura variant.
 
 # Getting full experience
 1. Install [Fira Code font](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
@@ -94,7 +80,7 @@ If you create a tag like `v2.1.2`, the same workflow will also attach the `.vsix
     - Markdown
     - CSS
 
-[See full changelog](https://github.com/yukiumi13/aura-theme-2026/blob/main/packages/vscode/CHANGELOG.md)
+[See full changelog](https://github.com/daltonmenezes/aura-theme-2026/blob/main/packages/vscode/CHANGELOG.md)
 
 # Contributors
 <table>
@@ -114,4 +100,4 @@ If you create a tag like `v2.1.2`, the same workflow will also attach the `.vsix
 </table>
 
 # License
-[MIT © Dalton Menezes](https://github.com/daltonmenezes/aura-theme/blob/main/LICENSE)
+[MIT © Dalton Menezes](https://github.com/yukiumi13/aura-theme-2026/blob/main/LICENSE)

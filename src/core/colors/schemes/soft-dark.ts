@@ -9,11 +9,11 @@ const shadeAndDesaturate = compose(shade(0.2), desaturate(0.1))
 
 export const softDark: LegacyAuraScheme = {
   ...dark,
-  accent11: '#141414',
-  accent12: '#21202E',
-  accent13: '#444444',
-  accent21: '#1C1B22',
-  accent24: '#1F1A27',
+  accent11: '#050507',
+  accent12: '#0D0B13',
+  accent13: '#3A344F',
+  accent21: '#121019',
+  accent24: '#100E17',
 }
 
 export const softDarkSoft = {

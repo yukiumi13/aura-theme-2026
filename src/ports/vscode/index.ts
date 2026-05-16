@@ -31,7 +31,6 @@ export async function VscodePort(Aura: AuraAPI) {
 
   const variantThemeEntries = [
     ...colorSchemes.variants,
-    ...colorSchemes.inkVariants,
     colorSchemes.inkVariant,
   ].map(({ family }: VariantScheme) => ({
     label: family.name,
@@ -47,10 +46,9 @@ export async function VscodePort(Aura: AuraAPI) {
     replacements: {
       ...info,
       ...names,
-      variantThemes: JSON.stringify(variantThemeEntries, null, 8).slice(
-        1,
-        -1
-      ),
+      variantThemes: JSON.stringify(variantThemeEntries, null, 8)
+        .slice(1, -1)
+        .trim(),
       type,
       portName,
       version,
@@ -103,21 +101,18 @@ export async function VscodePort(Aura: AuraAPI) {
   })
 
   await Promise.all(
-    [
-      ...colorSchemes.variants,
-      ...colorSchemes.inkVariants,
-      colorSchemes.inkVariant,
-    ].map(({ family, scheme }: VariantScheme) =>
-      createPort({
-        template,
-        outputDist,
-        outputFileName: `${family.slug}-${outputFileNameSuffix}`,
-        replacements: {
-          type,
-          ...scheme,
-          name: family.name,
-        },
-      })
+    [...colorSchemes.variants, colorSchemes.inkVariant].map(
+      ({ family, scheme }: VariantScheme) =>
+        createPort({
+          template,
+          outputDist,
+          outputFileName: `${family.slug}-${outputFileNameSuffix}`,
+          replacements: {
+            type,
+            ...scheme,
+            name: family.name,
+          },
+        })
     )
   )
 

@@ -225,13 +225,33 @@
             "font_style": null,
             "font_weight": null
           },
+          "comment.documentation": {
+            "color": "{{ syntaxCommentDoc }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "constant": {
             "color": "{{ syntaxConstant }}",
             "font_style": null,
             "font_weight": null
           },
+          "constant.builtin": {
+            "color": "{{ syntaxVariableSpecial }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "constant.numeric": {
+            "color": "{{ syntaxNumber }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "constructor": {
             "color": "{{ syntaxConstructor }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "decorator": {
+            "color": "{{ syntaxDecorator }}",
             "font_style": null,
             "font_weight": null
           },
@@ -280,6 +300,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "function.special": {
+            "color": "{{ syntaxFunctionSpecial }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "function.kwargs": {
             "color": "{{ syntaxParameter }}",
             "font_style": "italic",
@@ -296,6 +321,21 @@
             "font_weight": null
           },
           "keyword": {
+            "color": "{{ syntaxKeyword }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.control": {
+            "color": "{{ syntaxKeyword }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.operator": {
+            "color": "{{ syntaxOperator }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword.return": {
             "color": "{{ syntaxKeyword }}",
             "font_style": null,
             "font_weight": null
@@ -317,6 +357,11 @@
           },
           "method": {
             "color": "{{ syntaxFunction }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "module": {
+            "color": "{{ syntaxNamespace }}",
             "font_style": null,
             "font_weight": null
           },
@@ -345,6 +390,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "preproc.directive": {
+            "color": "{{ syntaxMacro }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "predictive": {
             "color": "{{ accent10 }}",
             "font_style": "italic",
@@ -356,6 +406,11 @@
             "font_weight": null
           },
           "property": {
+            "color": "{{ syntaxProperty }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "property.definition": {
             "color": "{{ syntaxProperty }}",
             "font_style": null,
             "font_weight": null
@@ -405,6 +460,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "string.doc": {
+            "color": "{{ syntaxString }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "string.escape": {
             "color": "{{ syntaxStringEscape }}",
             "font_style": null,
@@ -450,6 +510,11 @@
             "font_style": null,
             "font_weight": null
           },
+          "type.builtin": {
+            "color": "{{ syntaxType }}",
+            "font_style": null,
+            "font_weight": null
+          },
           "type.defaultLibrary": {
             "color": "{{ syntaxType }}",
             "font_style": null,
@@ -470,11 +535,26 @@
             "font_style": null,
             "font_weight": null
           },
-            "variable.parameter": {
-              "color": "{{ syntaxParameter }}",
-              "font_style": "italic",
-              "font_weight": null
-            },
+          "variable.builtin": {
+            "color": "{{ syntaxVariableSpecial }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable.member": {
+            "color": "{{ syntaxProperty }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable.mutable": {
+            "color": "{{ syntaxVariable }}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable.parameter": {
+            "color": "{{ syntaxParameter }}",
+            "font_style": "italic",
+            "font_weight": null
+          },
           "variable.defaultLibrary": {
             "color": "{{ syntaxVariableSpecial }}",
             "font_style": null,

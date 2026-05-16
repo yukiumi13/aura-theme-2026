@@ -90,23 +90,20 @@ export async function ZedPort(Aura: AuraAPI) {
   })
 
   await Promise.all(
-    [
-      ...colorSchemes.variants,
-      ...colorSchemes.inkVariants,
-      colorSchemes.inkVariant,
-    ].map(({ family, scheme }: VariantScheme) =>
-      createPort({
-        template,
-        outputDist,
-        outputFileName: family.slug,
-        replacements: {
-          ...info,
-          type,
-          ...scheme,
-          name: family.name,
-          ...createTransparentAccents(scheme),
-        },
-      })
+    [...colorSchemes.variants, colorSchemes.inkVariant].map(
+      ({ family, scheme }: VariantScheme) =>
+        createPort({
+          template,
+          outputDist,
+          outputFileName: family.slug,
+          replacements: {
+            ...info,
+            type,
+            ...scheme,
+            name: family.name,
+            ...createTransparentAccents(scheme),
+          },
+        })
     )
   )
 

@@ -4,9 +4,9 @@ export const auraVariantFamilies: AuraVariantFamily[] = [
   {
     name: 'Aura Azure 2026',
     slug: 'aura-azure-2026',
-    accent: '#22D3EE',
-    accentBright: '#67E8F9',
-    accentSoft: '#0891B2',
+    accent: '#38BDF8',
+    accentBright: '#7DD3FC',
+    accentSoft: '#0284C7',
     companion: '#A78BFA',
     companionBright: '#C4B5FD',
     companionSoft: '#7C3AED',

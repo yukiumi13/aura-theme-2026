@@ -21,6 +21,44 @@
 6. Open the **Theme selector** with the `theme selector: toggle` command
 7. Search for `{{{ shortName }}}` and choose an `{{{ shortName }}}` variant.
 
+# Semantic tokens
+
+This extension is theme-only. It defines Zed theme syntax styles such as
+`function`, `method`, `type.class`, `variable.readonly`, `constant.numeric`,
+and `keyword.operator`, but it does not install language grammars or override
+your Zed settings.
+
+For LSP semantic tokens, enable them in your Zed settings:
+
+```json
+{
+  "semantic_tokens": "combined"
+}
+```
+
+If you want stricter semantic-token mapping, add rules under
+`global_lsp_settings.semantic_token_rules` and point them at the styles exposed
+by this theme. The full recommended mapping lives in
+[`docs/ZED_SEMANTIC_TOKENS.md`]({{{ repository }}}/blob/main/docs/ZED_SEMANTIC_TOKENS.md).
+
+```json
+{
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "variable",
+        "token_modifiers": ["readonly"],
+        "style": ["variable.readonly", "constant", "variable"]
+      },
+      {
+        "token_type": "property",
+        "style": ["variable.member", "property"]
+      }
+    ]
+  }
+}
+```
+
 # Contributors
 
 <table>

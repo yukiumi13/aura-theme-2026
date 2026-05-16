@@ -5,27 +5,6 @@ import {
 } from './types'
 
 export const auraBase2026: AuraBasePalette = {
-  shadow: '#0F0E14',
-  background: '#15141B',
-  appBackground: '#121016',
-  sidebar: '#110F18',
-  panel: '#121016',
-  surface: '#1A1722',
-  surfaceAlt: '#24222C',
-  surfaceHover: '#2A2438',
-  elevated: '#1C1924',
-  border: '#3B334B',
-  borderStrong: '#4D466E',
-  foreground: '#DDD9E7',
-  foregroundStrong: '#EDECEE',
-  foregroundMuted: '#ADACAE',
-  foregroundSubtle: '#6D6D6D',
-  disabled: '#4D4D4D',
-  comment: '#6D6D6D',
-  transparent: '#00000000',
-}
-
-export const auraInkBase2026: AuraBasePalette = {
   shadow: '#000000',
   background: '#09080D',
   appBackground: '#0D0B13',
@@ -44,6 +23,10 @@ export const auraInkBase2026: AuraBasePalette = {
   disabled: '#4D4D4D',
   comment: '#6D6D6D',
   transparent: '#00000000',
+}
+
+export const auraInkBase2026: AuraBasePalette = {
+  ...auraBase2026,
 }
 
 export const auraSemantic2026: AuraSemanticPalette = {

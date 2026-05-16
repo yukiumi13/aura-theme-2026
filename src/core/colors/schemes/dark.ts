@@ -5,7 +5,6 @@ import {
   compileLegacyScheme,
   createAuraPalette,
   inkVariantScheme,
-  inkVariantSchemes,
   variantSchemes,
 } from '../palettes'
 
@@ -18,8 +17,6 @@ const defaultPalette = createAuraPalette(auraDefaultFamily)
 export const dark = compileLegacyScheme(defaultPalette)
 
 export const variants = variantSchemes
-
-export const inkVariants = inkVariantSchemes
 
 export const inkVariant = inkVariantScheme
 

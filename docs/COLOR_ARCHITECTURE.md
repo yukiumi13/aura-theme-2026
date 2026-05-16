@@ -1,6 +1,6 @@
 # Aura 2026 Color Architecture
 
-Aura 2026 keeps the editor background, purple-black neutral surfaces, semantic
+Aura 2026 keeps the editor background, ink-black neutral surfaces, semantic
 status colors, terminal ANSI roles, and syntax roles separate. Variants should
 change the accent family, not the whole theme.
 
@@ -9,7 +9,7 @@ change the accent family, not the whole theme.
 ```mermaid
 flowchart TD
   A[Tailwind/Radix-inspired variant family] --> B[createAuraPalette]
-  C[Fixed Aura purple-black base neutrals] --> B
+  C[Fixed Aura ink-black base neutrals] --> B
   D[Fixed semantic red/green/yellow/orange] --> B
 
   B --> E[AuraPalette]
@@ -39,11 +39,9 @@ flowchart TD
 ## Source Layers
 
 - `src/core/colors/palettes/base.ts`
-  - Owns Aura 2026 fixed purple-black neutrals and status colors.
+  - Owns Aura 2026 fixed ink-black neutrals and status colors.
   - Background and foreground colors should stay stable across variants.
   - Also owns `auraInkBase2026`, a darker near-black base for `Aura Ink 2026`.
-  - Accent families also generate `Ink` variants, such as
-    `Aura Azure Ink 2026` and `Aura Cyan Ink 2026`.
 
 - `src/core/colors/palettes/variants.ts`
   - Owns accent families such as azure, cyan, blue, violet, rose, amber, teal,

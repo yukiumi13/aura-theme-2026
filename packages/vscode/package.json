@@ -1,10 +1,9 @@
 {
   "name": "aura-theme-2026",
   "displayName": "Aura Theme 2026",
-  "description": "A beautiful dark theme for Visual Studio Code, remapped in the 2026 style",
+  "description": "A beautiful dark theme for Visual Studio Code",
   "version": "2.1.2",
   "scripts": {
-    "package:vsix": "npx @vscode/vsce package",
     "publish": "vsce publish"
   },
   "publisher": "yukiumi13",
@@ -15,7 +14,7 @@
   },
   "icon": "logo.png",
   "galleryBanner": {
-    "color": "#15141b",
+    "color": "#09080D",
     "theme": "dark"
   },
   "license": "MIT",
@@ -28,7 +27,7 @@
   "keywords": [
     "theme",
     "dark",
-    "aura-theme",
+    "aura-theme-2026",
     "color-theme"
   ],
   "contributes": {
@@ -52,7 +51,57 @@
         "label": "Aura 2026 Soft Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aura-soft-dark-color-theme.json"
-      }
+      },
+      {
+                "label": "Aura Azure 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-azure-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Cyan 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-cyan-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Blue 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-blue-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Violet 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-violet-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Purple 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-purple-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Rose 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-rose-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Amber 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-amber-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Teal 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-teal-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Graphite 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-graphite-2026-color-theme.json"
+        },
+        {
+                "label": "Aura Ink 2026",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-ink-2026-color-theme.json"
+        }
     ]
   },
   "repository": {
