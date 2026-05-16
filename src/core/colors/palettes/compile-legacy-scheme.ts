@@ -161,6 +161,21 @@ export const variantSchemes = auraVariantFamilies.map((family) => ({
   scheme: createLegacySchemeFromFamily(family),
 }))
 
+export const inkVariantSchemes = auraVariantFamilies.map((family) => {
+  const inkFamily = {
+    ...family,
+    name: family.name.replace(' 2026', ' Ink 2026'),
+    slug: family.slug.replace('-2026', '-ink-2026'),
+  }
+
+  return {
+    family: inkFamily,
+    scheme: compileLegacyScheme(
+      createAuraPalette(inkFamily, auraInkBase2026)
+    ),
+  }
+})
+
 export const inkVariantScheme = {
   family: {
     ...auraDefaultFamily,

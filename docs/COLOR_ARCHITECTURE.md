@@ -42,6 +42,8 @@ flowchart TD
   - Owns Aura 2026 fixed purple-black neutrals and status colors.
   - Background and foreground colors should stay stable across variants.
   - Also owns `auraInkBase2026`, a darker near-black base for `Aura Ink 2026`.
+  - Accent families also generate `Ink` variants, such as
+    `Aura Azure Ink 2026` and `Aura Cyan Ink 2026`.
 
 - `src/core/colors/palettes/variants.ts`
   - Owns accent families such as azure, cyan, blue, violet, rose, amber, teal,
