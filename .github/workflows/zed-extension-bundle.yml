@@ -10,6 +10,9 @@ on:
     paths:
       - '.github/workflows/zed-extension-bundle.yml'
       - 'packages/zed/**'
+      - 'src/ports/zed/**'
+      - 'src/core/colors/schemes/**'
+      - 'src/core/colors/palettes/**'
       - 'package.json'
       - 'yarn.lock'
 
@@ -32,6 +35,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Build Zed port
+        run: yarn build only zed
 
       - name: Package Zed extension bundle
         run: yarn package:zed

@@ -12,6 +12,7 @@ on:
       - 'packages/vscode/**'
       - 'src/ports/vscode/**'
       - 'src/core/colors/schemes/**'
+      - 'src/core/colors/palettes/**'
       - 'package.json'
       - 'yarn.lock'
 
@@ -34,6 +35,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Build VS Code port
+        run: yarn build only vscode
 
       - name: Package VSIX
         working-directory: packages/vscode
