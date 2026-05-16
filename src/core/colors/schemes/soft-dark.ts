@@ -1,12 +1,13 @@
 import { colorsService, functionCompositionService } from 'services'
 
+import { LegacyAuraScheme } from '../palettes'
 import { dark } from './dark'
 
 const { shade, desaturate } = colorsService()
 const { compose } = functionCompositionService()
 const shadeAndDesaturate = compose(shade(0.2), desaturate(0.1))
 
-export const softDark = {
+export const softDark: LegacyAuraScheme = {
   ...dark,
   accent11: '#141414',
   accent12: '#21202E',

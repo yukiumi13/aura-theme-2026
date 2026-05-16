@@ -1,4 +1,4 @@
 export const colorSchemeFixture = {
-  accent1: '#a277ff',
-  accent2: '#61ffca',
+  accent1: '#C4B5FD',
+  accent2: '#6EE7B7',
 }

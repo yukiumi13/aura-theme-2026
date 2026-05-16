@@ -6,8 +6,8 @@ describe('schemeToRgb test cases', () => {
     const scheme = schemeToRgb(colorSchemeFixture)
 
     const expectedScheme = {
-      accent1: [162, 119, 255],
-      accent2: [97, 255, 202],
+      accent1: [196, 181, 253],
+      accent2: [110, 231, 183],
     }
 
     expect(scheme).toStrictEqual(expectedScheme)
