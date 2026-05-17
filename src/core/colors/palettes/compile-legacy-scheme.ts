@@ -63,7 +63,7 @@ export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
     accent53: ui.scrollbarHover,
     accent54: ui.scrollbarActive,
     accent55: base.elevated,
-    accent56: base.surfaceAlt,
+    accent56: base.surfaceHover,
     accent57: syntax.namespace,
     accent58: base.foregroundSubtle,
     accent59: syntax.variable,
