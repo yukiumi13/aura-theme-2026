@@ -38,9 +38,6 @@ export interface AuraVariantFamily {
   accent: string
   accentBright: string
   accentSoft: string
-  uiAccent?: string
-  uiAccentBright?: string
-  uiAccentSoft?: string
   companion: string
   companionBright: string
   companionSoft: string

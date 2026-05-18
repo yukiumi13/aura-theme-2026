@@ -8,9 +8,6 @@ export function createAuraPalette(
 ): AuraPalette {
   const base = baseOverride ?? auraBase2026
   const semantic = auraSemantic2026
-  const uiAccent = family.uiAccent ?? family.accent
-  const uiAccentBright = family.uiAccentBright ?? family.accentBright
-  const uiAccentSoft = family.uiAccentSoft ?? family.accentSoft
 
   return {
     name: family.name,
@@ -19,9 +16,9 @@ export function createAuraPalette(
     semantic,
     family,
     ui: {
-      accent: uiAccent,
-      accentBright: uiAccentBright,
-      accentSoft: uiAccentSoft,
+      accent: family.accent,
+      accentBright: family.accentBright,
+      accentSoft: family.accentSoft,
       companion: family.companion,
       companionBright: family.companionBright,
       companionSoft: family.companionSoft,
@@ -38,7 +35,7 @@ export function createAuraPalette(
       listSelection: withAlpha(family.accentSoft, '2E'),
       listSelectionFocus: withAlpha(family.accentSoft, '44'),
       warning: semantic.yellowBright,
-      modified: uiAccentBright,
+      modified: family.accentBright,
       lineHighlight: base.surfaceAlt,
       link: family.accent,
       linkHover: family.accentBright,
