@@ -147,6 +147,7 @@ export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
     uiListSelectionFocus: ui.listSelectionFocus,
     uiWarning: ui.warning,
     uiModified: ui.modified,
+    uiActionHover: ui.actionHover,
     uiLineHighlight: ui.lineHighlight,
     uiLink: ui.link,
     uiLinkHover: ui.linkHover,

@@ -128,6 +128,7 @@ export interface AuraUiPalette {
   listSelectionFocus: string
   warning: string
   modified: string
+  actionHover: string
   lineHighlight: string
   link: string
   linkHover: string

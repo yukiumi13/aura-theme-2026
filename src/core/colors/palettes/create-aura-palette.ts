@@ -36,6 +36,7 @@ export function createAuraPalette(
       listSelectionFocus: withAlpha(family.accentSoft, '44'),
       warning: semantic.yellowBright,
       modified: family.accentBright,
+      actionHover: '#3EA784',
       lineHighlight: base.surfaceAlt,
       link: family.accent,
       linkHover: family.accentBright,
