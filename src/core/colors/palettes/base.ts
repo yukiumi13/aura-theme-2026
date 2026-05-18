@@ -30,6 +30,7 @@ export const auraInkBase2026: AuraBasePalette = {
 }
 
 export const auraSemantic2026: AuraSemanticPalette = {
+  auraGreen: '#61FFCA',
   red: '#F87171',
   redBright: '#FCA5A5',
   green: '#34D399',

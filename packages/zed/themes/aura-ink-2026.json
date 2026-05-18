@@ -9,7 +9,7 @@
       "style": {
         "accents": [
           "#C4B5FD",
-          "#6EE7B7",
+          "#61FFCA",
           "#C4B5FD",
           "#A277FF",
           "#A277FF",
@@ -64,7 +64,7 @@
         "border.focused": "#6D6D6D33",
         "border.selected": "#C4B5FD",
         "border.disabled": "#6D6D6D",
-        "border.transparent": "#6EE7B7",
+        "border.transparent": "#61FFCA",
         "element.active": "#6F4FD8DD",
         "element.background": "#0A090F",
         "element.disabled": "#6D6D6D",
@@ -76,7 +76,7 @@
         "ghost_element.hover": "#241F31",
         "ghost_element.selected": "#15121C",
         "icon": "#4D4D4D",
-        "icon.accent": "#6EE7B7",
+        "icon.accent": "#61FFCA",
         "icon.disabled": "#6D6D6D",
         "icon.muted": "#ADACAE",
         "icon.placeholder": "#C4B5FD7F",
@@ -91,7 +91,7 @@
         "terminal.ansi.bright_black": "#6D6D6D",
         "terminal.ansi.bright_blue": "#C4B5FD",
         "terminal.ansi.bright_cyan": "#C4B5FD",
-        "terminal.ansi.bright_green": "#6EE7B7",
+        "terminal.ansi.bright_green": "#61FFCA",
         "terminal.ansi.bright_magenta": "#9FFFE2",
         "terminal.ansi.bright_red": "#FCA5A5",
         "terminal.ansi.bright_white": "#F2F0F5",
@@ -124,7 +124,7 @@
         "info.background": "#A277FF1F",
         "info.border": "#A277FF",
         "link_text.hover": "#C4B5FD",
-        "version_control.added": "#6EE7B7",
+        "version_control.added": "#61FFCA",
         "version_control.modified": "#C4B5FD",
         "version_control.deleted": "#F87171",
         "version_control.renamed": "#A277FF",
@@ -140,9 +140,9 @@
         "renamed": "#A277FF",
         "renamed.background": "#A277FF1F",
         "renamed.border": "#A277FF",
-        "success": "#6EE7B7",
+        "success": "#61FFCA",
         "success.background": "#34D3991F",
-        "success.border": "#6EE7B7",
+        "success.border": "#61FFCA",
         "unreachable": "#F87171",
         "unreachable.background": "#1B1724CC",
         "unreachable.border": "#F87171",
@@ -152,9 +152,9 @@
         "conflict": "#C4B5FD",
         "conflict.background": "#6F4FD81A",
         "conflict.border": "#C4B5FD",
-        "created": "#6EE7B7",
+        "created": "#61FFCA",
         "created.background": "#34D3991F",
-        "created.border": "#6EE7B7",
+        "created.border": "#61FFCA",
         "deleted": "#F87171",
         "deleted.background": "#F8717124",
         "deleted.border": "#F87171",
@@ -174,9 +174,9 @@
             "selection": "#6F4FD8DD"
           },
           {
-            "cursor": "#6EE7B7",
-            "background": "#6EE7B7",
-            "selection": "#2e4f427f"
+            "cursor": "#61FFCA",
+            "background": "#61FFCA",
+            "selection": "#2958487f"
           },
           {
             "cursor": "#C4B5FD",
@@ -184,9 +184,9 @@
             "selection": "#4a455a7f"
           },
           {
-            "cursor": "#6EE7B7",
-            "background": "#6EE7B7",
-            "selection": "#2e4f427f"
+            "cursor": "#61FFCA",
+            "background": "#61FFCA",
+            "selection": "#2958487f"
           },
           {
             "cursor": "#F87171",
@@ -446,7 +446,7 @@
             "font_weight": null
           },
           "selector": {
-            "color": "#6EE7B7",
+            "color": "#61FFCA",
             "font_style": null,
             "font_weight": null
           },
@@ -456,12 +456,12 @@
             "font_weight": null
           },
           "string": {
-            "color": "#6EE7B7",
+            "color": "#61FFCA",
             "font_style": null,
             "font_weight": null
           },
           "string.doc": {
-            "color": "#6EE7B7",
+            "color": "#61FFCA",
             "font_style": null,
             "font_weight": null
           },
@@ -486,12 +486,12 @@
             "font_weight": null
           },
           "tag": {
-            "color": "#6EE7B7",
+            "color": "#61FFCA",
             "font_style": null,
             "font_weight": null
           },
           "text.literal": {
-            "color": "#6EE7B7",
+            "color": "#61FFCA",
             "font_style": null,
             "font_weight": null
           },

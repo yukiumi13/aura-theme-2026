@@ -20,6 +20,7 @@ export interface AuraBasePalette {
 }
 
 export interface AuraSemanticPalette {
+  auraGreen: string
   red: string
   redBright: string
   green: string

@@ -9,9 +9,9 @@ describe('schemeToTerminalRgb test cases', () => {
       accent1_red: 0.7686274509803922,
       accent1_green: 0.7098039215686275,
       accent1_blue: 0.9921568627450981,
-      accent2_red: 0.43137254901960786,
-      accent2_green: 0.9058823529411765,
-      accent2_blue: 0.7176470588235294,
+      accent2_red: 0.3803921568627451,
+      accent2_green: 1,
+      accent2_blue: 0.792156862745098,
     }
 
     expect(scheme).toStrictEqual(expectedScheme)

@@ -21,7 +21,7 @@
     "selection.background": "#7C3AEDDD",
     "button.background": "#7C3AED",
     "button.foreground": "#09080D",
-    "button.hoverBackground": "#3EA784",
+    "button.hoverBackground": "#61FFCA",
     "button.border": "#241F31",
     "button.secondaryHoverBackground": "#1B1724CC",
     "checkbox.background": "#0A090F",
@@ -172,7 +172,7 @@
     "peekViewTitleLabel.foreground": "#F2F0F5",
     "editorGutter.background": "#09080D",
     "editorGutter.modifiedBackground": "#C4B5FD",
-    "editorGutter.addedBackground": "#6EE7B7",
+    "editorGutter.addedBackground": "#61FFCA",
     "editorGutter.deletedBackground": "#F87171",
     "diffEditor.insertedLineBackground": "#34D3991F",
     "diffEditor.insertedTextBackground": "#34D39923",
@@ -181,7 +181,7 @@
     "editorOverviewRuler.border": "#241F31",
     "editorOverviewRuler.findMatchForeground": "#A78BFAB3",
     "editorOverviewRuler.modifiedForeground": "#C4B5FD",
-    "editorOverviewRuler.addedForeground": "#6EE7B7",
+    "editorOverviewRuler.addedForeground": "#61FFCA",
     "editorOverviewRuler.deletedForeground": "#F87171",
     "editorOverviewRuler.errorForeground": "#F87171",
     "editorOverviewRuler.warningForeground": "#FFCA85",
@@ -203,7 +203,7 @@
     "statusBarItem.focusBorder": "#A78BFAB3",
     "statusBarItem.prominentBackground": "#A78BFA",
     "statusBarItem.prominentForeground": "#09080D",
-    "statusBarItem.prominentHoverBackground": "#3EA784",
+    "statusBarItem.prominentHoverBackground": "#61FFCA",
     "tab.activeBackground": "#09080D",
     "tab.activeForeground": "#F2F0F5",
     "tab.inactiveBackground": "#0A090F",
@@ -242,7 +242,7 @@
     "activityErrorBadge.background": "#F87171",
     "extensionButton.prominentBackground": "#A78BFA",
     "extensionButton.prominentForeground": "#09080D",
-    "extensionButton.prominentHoverBackground": "#3EA784",
+    "extensionButton.prominentHoverBackground": "#61FFCA",
     "pickerGroup.border": "#241F31",
     "pickerGroup.foreground": "#A78BFA",
     "quickInput.background": "#0D0B13",
@@ -263,7 +263,7 @@
     "terminal.ansiBrightBlack": "#6D6D6D",
     "terminal.ansiBrightBlue": "#C4B5FD",
     "terminal.ansiBrightCyan": "#C4B5FD",
-    "terminal.ansiBrightGreen": "#6EE7B7",
+    "terminal.ansiBrightGreen": "#61FFCA",
     "terminal.ansiBrightMagenta": "#67E8F9",
     "terminal.ansiBrightRed": "#FCA5A5",
     "terminal.ansiBrightWhite": "#F2F0F5",
@@ -274,10 +274,10 @@
     "terminal.ansiRed": "#F87171",
     "terminal.ansiWhite": "#DDD9E7",
     "terminal.ansiYellow": "#F6B86A",
-    "gitDecoration.addedResourceForeground": "#6EE7B7",
+    "gitDecoration.addedResourceForeground": "#61FFCA",
     "gitDecoration.modifiedResourceForeground": "#C4B5FD",
     "gitDecoration.deletedResourceForeground": "#F87171",
-    "gitDecoration.untrackedResourceForeground": "#6EE7B7",
+    "gitDecoration.untrackedResourceForeground": "#61FFCA",
     "gitDecoration.ignoredResourceForeground": "#4D4D4D",
     "gitDecoration.conflictingResourceForeground": "#C4B5FD",
     "gitDecoration.stageModifiedResourceForeground": "#C4B5FD",
@@ -305,7 +305,7 @@
     "charts.red": "#F87171",
     "charts.yellow": "#FFCA85",
     "charts.orange": "#F59E0B",
-    "charts.green": "#6EE7B7",
+    "charts.green": "#61FFCA",
     "charts.purple": "#67E8F9",
     "inlineChat.background": "#0D0B13",
     "inlineChat.border": "#241F31",
@@ -425,7 +425,7 @@
         "JSXNested"
       ],
       "settings": {
-        "foreground": "#6EE7B7"
+        "foreground": "#61FFCA"
       }
     },
     {
@@ -498,7 +498,7 @@
         "markup.raw"
       ],
       "settings": {
-        "foreground": "#6EE7B7"
+        "foreground": "#61FFCA"
       }
     },
     {
@@ -619,7 +619,7 @@
     {
       "scope": "markup.quote",
       "settings": {
-        "foreground": "#6EE7B7"
+        "foreground": "#61FFCA"
       }
     },
     {
@@ -675,7 +675,7 @@
         "punctuation.definition.inserted"
       ],
       "settings": {
-        "foreground": "#6EE7B7"
+        "foreground": "#61FFCA"
       }
     },
     {
@@ -761,7 +761,7 @@
   ],
   "semanticTokenColors": {
     "comment": "#6D6D6D",
-    "string": "#6EE7B7",
+    "string": "#61FFCA",
     "regexp": "#FFCA85",
     "regexp.escape": {
       "foreground": "#FFCA85",

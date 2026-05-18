@@ -7,7 +7,7 @@ describe('schemeToRgb test cases', () => {
 
     const expectedScheme = {
       accent1: [196, 181, 253],
-      accent2: [110, 231, 183],
+      accent2: [97, 255, 202],
     }
 
     expect(scheme).toStrictEqual(expectedScheme)

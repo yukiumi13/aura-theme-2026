@@ -11,7 +11,7 @@ export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
     accent1: ui.accentBright,
     accent2: syntax.string,
     accent3: syntax.function,
-    accent4: semantic.greenBright,
+    accent4: semantic.auraGreen,
     accent5: semantic.red,
     accent6: syntax.property,
     accent7: base.foregroundStrong,
