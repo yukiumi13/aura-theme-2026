@@ -45,7 +45,7 @@
         "panel.indent_guide_active": "#6D6D6D",
         "panel.indent_guide_hover": "#241F31",
         "search.match_background": "#6F4FD8DD",
-        "search.active_match_background": "#FBBF2424",
+        "search.active_match_background": "#F6B86A24",
         "status_bar.background": "#100E17",
         "surface.background": "#0D0B13",
         "tab.active_background": "#0D0B13",
@@ -95,7 +95,7 @@
         "terminal.ansi.bright_magenta": "#9FFFE2",
         "terminal.ansi.bright_red": "#FCA5A5",
         "terminal.ansi.bright_white": "#F2F0F5",
-        "terminal.ansi.bright_yellow": "#FCD34D",
+        "terminal.ansi.bright_yellow": "#FFCA85",
         "terminal.ansi.cyan": "#A277FF",
         "terminal.ansi.dim_black": "#4D4D4D",
         "terminal.ansi.dim_blue": "#6F4FD8",
@@ -109,7 +109,7 @@
         "terminal.ansi.magenta": "#61FFCA",
         "terminal.ansi.red": "#F87171",
         "terminal.ansi.white": "#DDD9E7",
-        "terminal.ansi.yellow": "#FBBF24",
+        "terminal.ansi.yellow": "#F6B86A",
         "terminal.background": "#0D0B13",
         "terminal.bright_foreground": "#F2F0F5",
         "terminal.dim_foreground": "#ADACAE",
@@ -147,7 +147,7 @@
         "unreachable.background": "#1B1724CC",
         "unreachable.border": "#F87171",
         "warning": "#C4B5FD",
-        "warning.background": "#FBBF2424",
+        "warning.background": "#F6B86A24",
         "warning.border": "#C4B5FD",
         "conflict": "#C4B5FD",
         "conflict.background": "#6F4FD81A",
@@ -165,7 +165,7 @@
         "ignored.background": "#1B1724CC",
         "ignored.border": "#6D6D6D",
         "modified": "#C4B5FD",
-        "modified.background": "#FBBF2424",
+        "modified.background": "#F6B86A24",
         "modified.border": "#C4B5FD",
         "players": [
           {
@@ -301,7 +301,7 @@
             "font_weight": null
           },
           "function.special": {
-            "color": "#FCD34D",
+            "color": "#FFCA85",
             "font_style": null,
             "font_weight": null
           },
@@ -466,22 +466,22 @@
             "font_weight": null
           },
           "string.escape": {
-            "color": "#FCD34D",
+            "color": "#FFCA85",
             "font_style": null,
             "font_weight": null
           },
           "string.regex": {
-            "color": "#FCD34D",
+            "color": "#FFCA85",
             "font_style": null,
             "font_weight": null
           },
           "string.special": {
-            "color": "#FCD34D",
+            "color": "#FFCA85",
             "font_style": null,
             "font_weight": null
           },
           "string.special.symbol": {
-            "color": "#FCD34D",
+            "color": "#FFCA85",
             "font_style": null,
             "font_weight": null
           },

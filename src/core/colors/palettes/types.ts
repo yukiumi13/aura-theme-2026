@@ -38,6 +38,9 @@ export interface AuraVariantFamily {
   accent: string
   accentBright: string
   accentSoft: string
+  uiAccent?: string
+  uiAccentBright?: string
+  uiAccentSoft?: string
   companion: string
   companionBright: string
   companionSoft: string
@@ -114,11 +117,20 @@ export interface AuraUiPalette {
   companion: string
   companionBright: string
   companionSoft: string
+  highlight: {
+    base: string
+    bright: string
+    hover: string
+  }
   focusBorder: string
   selection: string
   selectionSoft: string
   selectionStrong: string
   selectionSolid: string
+  listSelection: string
+  listSelectionFocus: string
+  warning: string
+  modified: string
   lineHighlight: string
   link: string
   linkHover: string
