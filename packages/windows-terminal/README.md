@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-heading.png?raw=true" alt="Aura Theme" width="70%" />
+  <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/new-heading.png?raw=true" alt="Aura Theme 2026" width="70%" />
 </p>
 
 <p align="center">
@@ -13,12 +13,12 @@
 
   <!-- version -->
   <a href="#">
-    <img alt="version" src="https://img.shields.io/badge/version%20-v1.0.0-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+    <img alt="version" src="https://img.shields.io/badge/version%20-v0.0.27-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
   </a>
 </p>
 
 <p align="center">
-  <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/aura-windows-terminal-preview.png?raw=true" />
+  <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/aura-windows-terminal-preview.png?raw=true" />
 </p>
 
 
@@ -26,17 +26,13 @@
 1. Start Windows Terminal.
 2. Click on the down arrow icon and select the `Settings` option.
 3. On the left menu, select `Open JSON file`
-4. Pick one of the themes from the list and note the name of the theme:
-   - [aura-theme.json](https://raw.githubusercontent.com/daltonmenezes/aura-theme/main/packages/windows-terminal/aura-theme.json)
-   - [aura-theme-soft-text.json](https://raw.githubusercontent.com/daltonmenezes/aura-theme/main/packages/windows-terminal/aura-theme-soft-text.json)
-   - [aura-theme-soft-dark.json](https://raw.githubusercontent.com/daltonmenezes/aura-theme/main/packages/windows-terminal/aura-theme-soft-dark.json)
-   - [aura-theme-soft-dark-soft-text.json](https://raw.githubusercontent.com/daltonmenezes/aura-theme/main/packages/windows-terminal/aura-theme-soft-dark-soft-text.json)
+4. Pick one of the generated JSON files from `packages/windows-terminal` and note the value of its `name` field.
 5. In the `settings.json` file, find the section called "Schemes" and paste your chosen theme inside of schemes array `[ ]`.
 6. Yet in the `settings.json`file, find the profiles section and set a "colorScheme" value on the `default profile` and write the name you noted, as the following example (if you chose "Aura Dark"):
      ```json
      "profiles": {
          "defaults": {
-             "colorScheme": "Aura Dark"
+             "colorScheme": "Aura 2026 Dark"
          }
      }
      ```
@@ -73,4 +69,4 @@ Done! ✨ 🎉
 </table>
 
 # License
-[MIT © Dalton Menezes](https://github.com/daltonmenezes/aura-theme/blob/main/LICENSE)
+[MIT © Dalton Menezes](https://github.com/yukiumi13/aura-theme-2026/blob/main/LICENSE)

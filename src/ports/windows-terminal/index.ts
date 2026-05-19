@@ -1,60 +1,78 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
 
+type VariantScheme = typeof import('core/colors/schemes').variants[number]
+
 export async function WindowsTerminalPort(Aura: AuraAPI) {
   const { createPort, createReadme, colorSchemes, constants } = Aura
-  const { info } = constants
+  const { info, packageVersion } = constants
 
   const portName = 'Windows Terminal'
-  const version = '1.0.0'
+  const version = packageVersion
   const previewURL = `https://github.com/${info.author.username}/assets/blob/master/images/${info.slug}/aura-windows-terminal-preview.png?raw=true`
   const templateFolder = resolve(__dirname, 'templates')
-
-  // fix: removes the alpha from hex unsupported by Windows Terminal
-  const fixedSelectionBackground = colorSchemes.dark.accent17.slice(0, -2)
+  const template = resolve(templateFolder, 'aura-theme.json')
+  const names = {
+    auraDark: `${info.shortName} Dark`,
+    auraDarkSoftText: `${info.shortName} Dark (Soft Text)`,
+    auraSoftDark: `${info.shortName} Soft Dark`,
+    auraSoftDarkSoftText: `${info.shortName} Soft Dark (Soft Text)`,
+  }
 
   await createPort({
-    template: resolve(templateFolder, `${info.slug}.json`),
+    template,
+    outputFileName: 'aura-theme',
     replacements: {
       ...colorSchemes.dark,
       ...info,
-      accent17: fixedSelectionBackground,
-      displayName: `${info.shortName} Dark`,
+      displayName: names.auraDark,
     },
   })
 
   await createPort({
-    template: resolve(templateFolder, `${info.slug}.json`),
-    outputFileName: `${info.slug}-soft-text`,
+    template,
+    outputFileName: 'aura-theme-soft-text',
     replacements: {
       ...colorSchemes.darkSoft,
       ...info,
-      accent17: fixedSelectionBackground,
-      displayName: `${info.shortName} Dark (Soft Text)`,
+      displayName: names.auraDarkSoftText,
     },
   })
 
   await createPort({
-    template: resolve(templateFolder, `${info.slug}.json`),
-    outputFileName: `${info.slug}-soft-dark`,
+    template,
+    outputFileName: 'aura-theme-soft-dark',
     replacements: {
       ...colorSchemes.softDark,
       ...info,
-      accent17: fixedSelectionBackground,
-      displayName: `${info.shortName} Soft Dark`,
+      displayName: names.auraSoftDark,
     },
   })
 
   await createPort({
-    template: resolve(templateFolder, `${info.slug}.json`),
-    outputFileName: `${info.slug}-soft-dark-soft-text`,
+    template,
+    outputFileName: 'aura-theme-soft-dark-soft-text',
     replacements: {
       ...colorSchemes.softDarkSoft,
       ...info,
-      accent17: fixedSelectionBackground,
-      displayName: `${info.shortName} Soft Dark (Soft Text)`,
+      displayName: names.auraSoftDarkSoftText,
     },
   })
+
+  await Promise.all(
+    [...colorSchemes.variants, colorSchemes.inkVariant].map(
+      ({ family, scheme }: VariantScheme) =>
+        createPort({
+          template,
+          outputFileName: family.slug,
+          replacements: {
+            ...scheme,
+            ...info,
+            displayName: family.name,
+          },
+        })
+    )
+  )
 
   await createReadme({
     template: resolve(templateFolder, 'README.md'),

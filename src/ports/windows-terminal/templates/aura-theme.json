@@ -1,7 +1,7 @@
 {
   "name": "{{ displayName }}",
   "cursorColor": "{{ uiAccentBright }}",
-  "selectionBackground": "{{ accent17 }}",
+  "selectionBackground": "{{ uiSelectionSolidBackground }}",
   "background": "{{ accent12 }}",
   "foreground": "{{ accent7 }}",
   "black": "{{ ansiBlack }}",
