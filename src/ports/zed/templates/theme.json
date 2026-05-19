@@ -123,7 +123,7 @@
         "info": "{{ accent32 }}",
         "info.background": "{{ accent44 }}",
         "info.border": "{{ accent32 }}",
-        "link_text.hover": "{{ accent25 }}",
+        "link_text.hover": "{{ uiLinkHoverForeground }}",
         "version_control.added": "{{ accent2 }}",
         "version_control.modified": "{{ accent3 }}",
         "version_control.deleted": "{{ accent5 }}",

@@ -119,6 +119,55 @@ export interface AuraUiPalette {
   companion: string
   companionBright: string
   companionSoft: string
+  action: {
+    background: string
+    foreground: string
+    hoverBackground: string
+    hoverForeground: string
+    secondaryHoverBackground: string
+  }
+  linkRole: {
+    foreground: string
+    hoverForeground: string
+  }
+  remote: {
+    background: string
+    foreground: string
+    hoverBackground: string
+    hoverForeground: string
+  }
+  selectionRole: {
+    editor: string
+    editorInactive: string
+    editorStrong: string
+    list: string
+    listFocus: string
+    solid: string
+  }
+  status: {
+    modified: string
+    successSurface: string
+    warning: string
+    warningSurface: string
+    errorSurface: string
+    infoSurface: string
+  }
+  surfaceRole: {
+    elevated: string
+    panel: string
+    hover: string
+    hoverOverlay: string
+    strongOverlay: string
+    tile: string
+    tileHover: string
+  }
+  welcome: {
+    background: string
+    tileBackground: string
+    tileHoverBackground: string
+    tileBorder: string
+    stepTitleForeground: string
+  }
   highlight: {
     base: string
     bright: string
