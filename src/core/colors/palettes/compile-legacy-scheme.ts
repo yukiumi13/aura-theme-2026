@@ -5,14 +5,15 @@ import { createAuraPalette } from './create-aura-palette'
 
 export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
   const { base, semantic, ui, syntax, ansi } = palette
+  const { brand, status } = semantic
 
   return {
     accent0: base.shadow,
     accent1: ui.accentBright,
     accent2: syntax.string,
     accent3: syntax.function,
-    accent4: semantic.auraGreen,
-    accent5: semantic.red,
+    accent4: brand.mint,
+    accent5: status.error,
     accent6: syntax.property,
     accent7: base.foregroundStrong,
     accent8: syntax.comment,
@@ -26,19 +27,19 @@ export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
     accent16: base.transparent,
     accent17: `${base.foregroundSubtle}33`,
     accent18: `${base.foregroundSubtle}00`,
-    accent19: `${semantic.green}7F`,
+    accent19: `${status.success}7F`,
     accent20: ui.selection,
     accent21: base.sidebar,
     accent22: base.foregroundSubtle,
     accent23: base.border,
     accent24: base.appBackground,
     accent25: ui.linkHover,
-    accent26: `${semantic.green}23`,
-    accent27: `${semantic.red}20`,
+    accent26: `${status.success}23`,
+    accent27: `${status.error}20`,
     accent28: base.appBackground,
     accent29: base.shadow,
     accent30: base.surface,
-    accent31: semantic.orange,
+    accent31: status.orange,
     accent32: syntax.type,
     accent33: base.surfaceAlt,
     accent34: base.transparent,

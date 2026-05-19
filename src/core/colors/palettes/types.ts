@@ -20,17 +20,21 @@ export interface AuraBasePalette {
 }
 
 export interface AuraSemanticPalette {
-  auraGreen: string
-  red: string
-  redBright: string
-  green: string
-  greenBright: string
-  yellow: string
-  yellowBright: string
-  orange: string
-  orangeBright: string
-  info: string
-  infoBright: string
+  brand: {
+    mint: string
+  }
+  status: {
+    error: string
+    errorBright: string
+    success: string
+    successBright: string
+    warning: string
+    warningBright: string
+    orange: string
+    orangeBright: string
+    info: string
+    infoBright: string
+  }
 }
 
 export interface AuraVariantFamily {

@@ -30,17 +30,21 @@ export const auraInkBase2026: AuraBasePalette = {
 }
 
 export const auraSemantic2026: AuraSemanticPalette = {
-  auraGreen: '#61FFCA',
-  red: '#F87171',
-  redBright: '#FCA5A5',
-  green: '#34D399',
-  greenBright: '#6EE7B7',
-  yellow: '#F6B86A',
-  yellowBright: '#FFCA85',
-  orange: '#F59E0B',
-  orangeBright: '#FFCA85',
-  info: '#48A0C7',
-  infoBright: '#67E8F9',
+  brand: {
+    mint: '#61FFCA',
+  },
+  status: {
+    error: '#F87171',
+    errorBright: '#FCA5A5',
+    success: '#34D399',
+    successBright: '#6EE7B7',
+    warning: '#F6B86A',
+    warningBright: '#FFCA85',
+    orange: '#F59E0B',
+    orangeBright: '#FFCA85',
+    info: '#48A0C7',
+    infoBright: '#67E8F9',
+  },
 }
 
 export const auraDefaultFamily: AuraVariantFamily = {
