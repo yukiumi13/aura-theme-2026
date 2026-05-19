@@ -393,7 +393,7 @@
         "meta.function-call.arguments.python variable.parameter"
       ],
       "settings": {
-        "foreground": "#67E8F9",
+        "foreground": "#ADACAE",
         "fontStyle": "italic"
       }
     },
@@ -792,7 +792,7 @@
     "method": "#FCD34D",
     "macro": "#F59E0B",
     "parameter": {
-      "foreground": "#67E8F9",
+      "foreground": "#ADACAE",
       "fontStyle": "italic"
     },
     "variable": "#DDD9E7",
@@ -817,7 +817,7 @@
     "modifier": "#FCD34D",
     "operator": "#FCD34D",
     "decorator": "#F59E0B",
-    "label": "#67E8F9"
+    "label": "#F59E0B"
   },
   "semanticHighlighting": true
 }
