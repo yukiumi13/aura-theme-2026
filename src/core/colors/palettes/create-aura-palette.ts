@@ -97,6 +97,7 @@ export function createAuraPalette(
         base: brand.mint,
         bright: companionBright,
         hover: companionSoft,
+        foreground: brand.mint,
       },
       focusBorder,
       selection,

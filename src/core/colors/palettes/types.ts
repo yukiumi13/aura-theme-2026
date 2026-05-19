@@ -172,6 +172,7 @@ export interface AuraUiPalette {
     base: string
     bright: string
     hover: string
+    foreground: string
   }
   focusBorder: string
   selection: string
