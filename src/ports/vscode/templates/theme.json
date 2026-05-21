@@ -613,6 +613,22 @@
       }
     },
     {
+      "scope": [
+        "entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.attribute-name.pseudo-element.css",
+        "entity.name.tag.css",
+        "meta.selector.css",
+        "meta.selector.css entity.name.tag",
+        "meta.selector.css entity.other.attribute-name",
+        "punctuation.definition.entity.css"
+      ],
+      "settings": {
+        "foreground": "{{ syntaxSelector }}"
+      }
+    },
+    {
       "scope": "support.type.property-name.json",
       "settings": {
         "foreground": "{{ syntaxProperty }}"

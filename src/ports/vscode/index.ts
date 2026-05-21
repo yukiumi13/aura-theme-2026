@@ -1,5 +1,6 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
+import { withTerminalAuraAnsi } from '../shared/terminal-ansi'
 
 type VariantScheme = typeof import('core/colors/schemes').variants[number]
 
@@ -109,7 +110,7 @@ export async function VscodePort(Aura: AuraAPI) {
           outputFileName: `${family.slug}-${outputFileNameSuffix}`,
           replacements: {
             type,
-            ...scheme,
+            ...withTerminalAuraAnsi(scheme),
             name: family.name,
           },
         })

@@ -354,7 +354,7 @@
         "constant.character"
       ],
       "settings": {
-        "foreground": "#A277FF"
+        "foreground": "#C17AC8"
       }
     },
     {
@@ -466,7 +466,7 @@
         "meta.import.python meta.import-name.python"
       ],
       "settings": {
-        "foreground": "#67E8F9"
+        "foreground": "#82E2FF"
       }
     },
     {
@@ -557,7 +557,7 @@
         "entity.other.attribute-name.class.css"
       ],
       "settings": {
-        "foreground": "#A277FF"
+        "foreground": "#C17AC8"
       }
     },
     {
@@ -613,15 +613,31 @@
       }
     },
     {
+      "scope": [
+        "entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.attribute-name.pseudo-element.css",
+        "entity.name.tag.css",
+        "meta.selector.css",
+        "meta.selector.css entity.name.tag",
+        "meta.selector.css entity.other.attribute-name",
+        "punctuation.definition.entity.css"
+      ],
+      "settings": {
+        "foreground": "#9DFF65"
+      }
+    },
+    {
       "scope": "support.type.property-name.json",
       "settings": {
-        "foreground": "#A277FF"
+        "foreground": "#C17AC8"
       }
     },
     {
       "scope": "punctuation.definition.list.begin.markdown",
       "settings": {
-        "foreground": "#C4B5FD"
+        "foreground": "#E0A6FF"
       }
     },
     {
@@ -630,7 +646,7 @@
         "markup.heading entity.name"
       ],
       "settings": {
-        "foreground": "#C4B5FD",
+        "foreground": "#E0A6FF",
         "fontStyle": "bold"
       }
     },
@@ -796,10 +812,10 @@
       "fontStyle": "italic"
     },
     "variable": "#DDD9E7",
-    "variable.defaultLibrary": "#A277FF",
-    "variable.readonly": "#A277FF",
-    "property": "#A277FF",
-    "property.readonly": "#A277FF",
+    "variable.defaultLibrary": "#F694FF",
+    "variable.readonly": "#F694FF",
+    "property": "#C17AC8",
+    "property.readonly": "#F694FF",
     "class": "#A277FF",
     "interface": {
       "foreground": "#A277FF",
@@ -812,12 +828,12 @@
       "foreground": "#A277FF",
       "fontStyle": "italic"
     },
-    "namespace": "#67E8F9",
+    "namespace": "#82E2FF",
     "keyword": "#C4B5FD",
     "modifier": "#C4B5FD",
     "operator": "#C4B5FD",
-    "decorator": "#A277FF",
-    "label": "#A277FF"
+    "decorator": "#F694FF",
+    "label": "#C17AC8"
   },
   "semanticHighlighting": true
 }

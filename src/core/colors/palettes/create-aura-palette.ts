@@ -15,6 +15,8 @@ export function createAuraPalette(
   const companion = family.companion
   const companionBright = family.companionBright
   const companionSoft = family.companionSoft
+  const pink = brand.pinkSoft
+  const pinkBright = brand.pink
   const focusBorder = withAlpha(accent, 'B3')
   const selection = withAlpha(accentSoft, 'DD')
   const selectionSoft = withAlpha(accentSoft, '60')
@@ -155,6 +157,28 @@ export function createAuraPalette(
       dimCyan: accentSoft,
       dimWhite: base.foregroundMuted,
     },
+    terminal: {
+      background: base.appBackground,
+      foreground: base.foreground,
+      foregroundBright: base.foregroundStrong,
+      muted: base.foregroundSubtle,
+      red: status.error,
+      redBright: status.errorBright,
+      yellow: status.warning,
+      yellowBright: status.warningBright,
+      green: brand.mint,
+      greenDim: status.success,
+      greenBright: brand.lime,
+      mintBright: brand.mint,
+      purple: accent,
+      purpleSoft: accentSoft,
+      purpleBright: accentBright,
+      pink,
+      pinkBright,
+      companionSoft,
+      info: brand.teal,
+      infoBright: brand.blue,
+    },
     syntax: {
       attribute: accent,
       boolean: accent,
@@ -163,33 +187,33 @@ export function createAuraPalette(
       commentDoc: base.foregroundMuted,
       constant: accent,
       constructor: accent,
-      decorator: accent,
+      decorator: pinkBright,
       embedded: base.foreground,
       enum: accent,
       enumMember: accent,
       function: accentBright,
       functionSpecial: status.orangeBright,
       keyword: accentBright,
-      label: accent,
+      label: pink,
       link: accent,
       macro: accent,
-      namespace: status.infoBright,
+      namespace: brand.blue,
       number: status.orange,
       operator: accentBright,
       parameter: base.foregroundMuted,
-      property: accent,
+      property: pink,
       punctuation: base.foreground,
       punctuationMuted: base.foregroundMuted,
       regexp: status.warningBright,
-      selector: brand.mint,
+      selector: brand.lime,
       string: brand.mint,
       stringEscape: status.warningBright,
       stringSpecial: status.warningBright,
       tag: brand.mint,
-      title: accentBright,
+      title: brand.lavenderBright,
       type: accent,
       variable: base.foreground,
-      variableSpecial: accent,
+      variableSpecial: pinkBright,
     },
   }
 }

@@ -11,7 +11,7 @@
           "#9e94c7",
           "#54c59f",
           "#9e94c7",
-          "#8464c6",
+          "#946898",
           "#8464c6",
           "#c06060",
           "#b97c13"
@@ -194,9 +194,9 @@
             "selection": "#3e2b2b7f"
           },
           {
-            "cursor": "#8464c6",
-            "background": "#8464c6",
-            "selection": "#332c417f"
+            "cursor": "#946898",
+            "background": "#946898",
+            "selection": "#2f2f2f7f"
           },
           {
             "cursor": "#8464c6",
@@ -236,7 +236,7 @@
             "font_weight": null
           },
           "constant.builtin": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },
@@ -251,7 +251,7 @@
             "font_weight": null
           },
           "decorator": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },
@@ -361,12 +361,12 @@
             "font_weight": null
           },
           "module": {
-            "color": "#67E8F9",
+            "color": "#82E2FF",
             "font_style": null,
             "font_weight": null
           },
           "namespace": {
-            "color": "#67E8F9",
+            "color": "#82E2FF",
             "font_style": null,
             "font_weight": null
           },
@@ -381,7 +381,7 @@
             "font_weight": null
           },
           "label": {
-            "color": "#A277FF",
+            "color": "#C17AC8",
             "font_style": null,
             "font_weight": null
           },
@@ -406,12 +406,12 @@
             "font_weight": null
           },
           "property": {
-            "color": "#A277FF",
+            "color": "#C17AC8",
             "font_style": null,
             "font_weight": null
           },
           "property.definition": {
-            "color": "#A277FF",
+            "color": "#C17AC8",
             "font_style": null,
             "font_weight": null
           },
@@ -431,12 +431,12 @@
             "font_weight": null
           },
           "punctuation.list_marker": {
-            "color": "#C4B5FD",
+            "color": "#E0A6FF",
             "font_style": null,
             "font_weight": null
           },
           "punctuation.markup": {
-            "color": "#A277FF",
+            "color": "#C17AC8",
             "font_style": null,
             "font_weight": null
           },
@@ -446,12 +446,12 @@
             "font_weight": null
           },
           "selector": {
-            "color": "#61FFCA",
+            "color": "#9DFF65",
             "font_style": null,
             "font_weight": null
           },
           "selector.pseudo": {
-            "color": "#A277FF",
+            "color": "#9DFF65",
             "font_style": null,
             "font_weight": null
           },
@@ -496,7 +496,7 @@
             "font_weight": null
           },
           "title": {
-            "color": "#C4B5FD",
+            "color": "#E0A6FF",
             "font_style": null,
             "font_weight": null
           },
@@ -536,12 +536,12 @@
             "font_weight": null
           },
           "variable.builtin": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },
           "variable.member": {
-            "color": "#A277FF",
+            "color": "#C17AC8",
             "font_style": null,
             "font_weight": null
           },
@@ -556,22 +556,22 @@
             "font_weight": null
           },
           "variable.defaultLibrary": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },
           "variable.readonly": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },
           "variable.special": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },
           "property.readonly": {
-            "color": "#A277FF",
+            "color": "#F694FF",
             "font_style": null,
             "font_weight": null
           },

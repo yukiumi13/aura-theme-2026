@@ -4,7 +4,7 @@ import { auraVariantFamilies } from './variants'
 import { createAuraPalette } from './create-aura-palette'
 
 export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
-  const { base, semantic, ui, syntax, ansi } = palette
+  const { base, semantic, ui, terminal, syntax, ansi } = palette
   const { brand, status } = semantic
 
   return {
@@ -70,6 +70,27 @@ export function compileLegacyScheme(palette: AuraPalette): LegacyAuraScheme {
     accent59: syntax.variable,
     accent60: syntax.parameter,
     accent61: syntax.label,
+
+    terminalBackground: terminal.background,
+    terminalForeground: terminal.foreground,
+    terminalForegroundBright: terminal.foregroundBright,
+    terminalMuted: terminal.muted,
+    terminalRed: terminal.red,
+    terminalRedBright: terminal.redBright,
+    terminalYellow: terminal.yellow,
+    terminalYellowBright: terminal.yellowBright,
+    terminalGreen: terminal.green,
+    terminalGreenDim: terminal.greenDim,
+    terminalGreenBright: terminal.greenBright,
+    terminalMintBright: terminal.mintBright,
+    terminalPurple: terminal.purple,
+    terminalPurpleSoft: terminal.purpleSoft,
+    terminalPurpleBright: terminal.purpleBright,
+    terminalPink: terminal.pink,
+    terminalPinkBright: terminal.pinkBright,
+    terminalCompanionSoft: terminal.companionSoft,
+    terminalInfo: terminal.info,
+    terminalInfoBright: terminal.infoBright,
 
     ansiBlack: ansi.black,
     ansiRed: ansi.red,

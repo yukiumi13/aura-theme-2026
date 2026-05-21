@@ -3,51 +3,71 @@ import { LegacyAuraScheme } from 'core/colors/palettes/types'
 export const terminalAnsiSuffix = 'ansi'
 export const terminalAnsiLabel = 'ANSI'
 
+function createTerminalColors(scheme: LegacyAuraScheme) {
+  return {
+    background: scheme.terminalBackground,
+    foreground: scheme.terminalForeground,
+    foregroundBright: scheme.terminalForegroundBright,
+    muted: scheme.terminalMuted,
+    red: scheme.terminalRed,
+    redBright: scheme.terminalRedBright,
+    yellow: scheme.terminalYellow,
+    yellowBright: scheme.terminalYellowBright,
+    green: scheme.terminalGreen,
+    greenDim: scheme.terminalGreenDim,
+    greenBright: scheme.terminalGreenBright,
+    mintBright: scheme.terminalMintBright,
+    purple: scheme.terminalPurple,
+    purpleSoft: scheme.terminalPurpleSoft,
+    purpleBright: scheme.terminalPurpleBright,
+    pink: scheme.terminalPink,
+    pinkBright: scheme.terminalPinkBright,
+    companionSoft: scheme.terminalCompanionSoft,
+    info: scheme.terminalInfo,
+    infoBright: scheme.terminalInfoBright,
+  }
+}
+
 export function withTerminalAuraAnsi(
   scheme: LegacyAuraScheme
 ): LegacyAuraScheme {
-  const magenta =
-    scheme.uiCompanion === scheme.syntaxString
-      ? '#C084FC'
-      : scheme.uiCompanion
-  const brightMagenta =
-    scheme.uiCompanionBright === '#9FFFE2'
-      ? '#D8B4FE'
-      : scheme.uiCompanionBright
+  const colors = createTerminalColors(scheme)
 
   return {
     ...scheme,
-    ansiGreen: scheme.syntaxString,
-    ansiBlue: scheme.uiAccent,
-    ansiMagenta: magenta,
-    ansiCyan: '#48A0C7',
-    ansiBrightGreen: '#9FFFE2',
-    ansiBrightBlue: scheme.uiAccentBright,
-    ansiBrightMagenta: brightMagenta,
-    ansiBrightCyan: scheme.syntaxNamespace,
-    ansiDimGreen: scheme.uiCompanionSoft,
-    ansiDimBlue: scheme.uiAccentSoft,
-    ansiDimMagenta: scheme.uiAccentSoft,
-    ansiDimCyan: '#2F6F8F',
+    ansiGreen: colors.green,
+    ansiBlue: colors.purple,
+    ansiMagenta: colors.pink,
+    ansiCyan: colors.info,
+    ansiBrightGreen: colors.greenBright,
+    ansiBrightBlue: colors.purpleBright,
+    ansiBrightMagenta: colors.pinkBright,
+    ansiBrightCyan: colors.infoBright,
+    ansiDimGreen: colors.greenDim,
+    ansiDimBlue: colors.purpleSoft,
+    ansiDimMagenta: colors.companionSoft,
+    ansiDimCyan: colors.info,
   }
 }
 
 export function withTerminalSemanticAnsi(
   scheme: LegacyAuraScheme
 ): LegacyAuraScheme {
+  const colors = createTerminalColors(scheme)
+
   return {
     ...scheme,
-    ansiGreen: scheme.syntaxString,
-    ansiBlue: '#7C8CF8',
-    ansiMagenta: '#A277FF',
-    ansiCyan: '#22D3EE',
-    ansiBrightGreen: '#9FFFE2',
-    ansiBrightBlue: '#A5B4FC',
-    ansiBrightMagenta: '#C4B5FD',
-    ansiBrightCyan: '#9FFFE2',
-    ansiDimGreen: '#3EA784',
-    ansiDimBlue: '#4F5BBF',
-    ansiDimMagenta: '#6F4FD8',
-    ansiDimCyan: '#0891B2',
+    ansiGreen: colors.green,
+    ansiBlue: colors.infoBright,
+    ansiMagenta: colors.pink,
+    ansiCyan: colors.info,
+    ansiBrightGreen: colors.greenBright,
+    ansiBrightBlue: colors.infoBright,
+    ansiBrightMagenta: colors.pinkBright,
+    ansiBrightCyan: colors.mintBright,
+    ansiDimGreen: colors.greenDim,
+    ansiDimBlue: colors.info,
+    ansiDimMagenta: colors.pink,
+    ansiDimCyan: colors.info,
   }
 }

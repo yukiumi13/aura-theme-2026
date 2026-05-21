@@ -451,7 +451,7 @@
             "font_weight": null
           },
           "selector.pseudo": {
-            "color": "{{ syntaxType }}",
+            "color": "{{ syntaxSelector }}",
             "font_style": null,
             "font_weight": null
           },

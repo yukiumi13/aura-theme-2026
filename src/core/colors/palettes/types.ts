@@ -22,6 +22,13 @@ export interface AuraBasePalette {
 export interface AuraSemanticPalette {
   brand: {
     mint: string
+    lime: string
+    blue: string
+    teal: string
+    lavender: string
+    lavenderBright: string
+    pink: string
+    pinkSoft: string
   }
   status: {
     error: string
@@ -73,6 +80,29 @@ export interface AuraAnsiPalette {
   dimMagenta: string
   dimCyan: string
   dimWhite: string
+}
+
+export interface AuraTerminalPalette {
+  background: string
+  foreground: string
+  foregroundBright: string
+  muted: string
+  red: string
+  redBright: string
+  yellow: string
+  yellowBright: string
+  green: string
+  greenDim: string
+  greenBright: string
+  mintBright: string
+  purple: string
+  purpleSoft: string
+  purpleBright: string
+  pink: string
+  pinkBright: string
+  companionSoft: string
+  info: string
+  infoBright: string
 }
 
 export interface AuraSyntaxPalette {
@@ -213,6 +243,7 @@ export interface AuraPalette {
   family: AuraVariantFamily
   ui: AuraUiPalette
   ansi: AuraAnsiPalette
+  terminal: AuraTerminalPalette
   syntax: AuraSyntaxPalette
 }
 

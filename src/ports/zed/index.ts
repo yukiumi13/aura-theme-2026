@@ -1,5 +1,6 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
+import { withTerminalAuraAnsi } from '../shared/terminal-ansi'
 import { colorsService, functionCompositionService } from 'services'
 import { folders } from 'shared/constants'
 
@@ -99,7 +100,7 @@ export async function ZedPort(Aura: AuraAPI) {
           replacements: {
             ...info,
             type,
-            ...scheme,
+            ...withTerminalAuraAnsi(scheme),
             name: family.name,
             ...createTransparentAccents(scheme),
           },

@@ -32,6 +32,13 @@ export const auraInkBase2026: AuraBasePalette = {
 export const auraSemantic2026: AuraSemanticPalette = {
   brand: {
     mint: '#61FFCA',
+    lime: '#9DFF65',
+    blue: '#82E2FF',
+    teal: '#72DCC6',
+    lavender: '#D49DFF',
+    lavenderBright: '#E0A6FF',
+    pink: '#F694FF',
+    pinkSoft: '#C17AC8',
   },
   status: {
     error: '#F87171',
