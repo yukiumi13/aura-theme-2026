@@ -27,6 +27,7 @@ export interface AuraSemanticPalette {
     teal: string
     lavender: string
     lavenderBright: string
+    lavenderMuted: string
     pink: string
     pinkSoft: string
   }

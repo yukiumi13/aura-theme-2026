@@ -15,8 +15,8 @@ export function createAuraPalette(
   const companion = family.companion
   const companionBright = family.companionBright
   const companionSoft = family.companionSoft
-  const pink = brand.pinkSoft
-  const pinkBright = brand.pink
+  const pink = brand.pink
+  const pinkMuted = brand.pinkSoft
   const focusBorder = withAlpha(accent, 'B3')
   const selection = withAlpha(accentSoft, 'DD')
   const selectionSoft = withAlpha(accentSoft, '60')
@@ -173,8 +173,8 @@ export function createAuraPalette(
       purple: accent,
       purpleSoft: accentSoft,
       purpleBright: accentBright,
-      pink,
-      pinkBright,
+      pink: pinkMuted,
+      pinkBright: pink,
       companionSoft,
       info: brand.teal,
       infoBright: brand.blue,
@@ -184,10 +184,10 @@ export function createAuraPalette(
       boolean: accent,
       class: accent,
       comment: base.comment,
-      commentDoc: base.foregroundMuted,
+      commentDoc: brand.lavenderMuted,
       constant: accent,
       constructor: accent,
-      decorator: pinkBright,
+      decorator: pink,
       embedded: base.foreground,
       enum: accent,
       enumMember: accent,
@@ -200,7 +200,7 @@ export function createAuraPalette(
       namespace: brand.blue,
       number: status.orange,
       operator: accentBright,
-      parameter: base.foregroundMuted,
+      parameter: brand.lavenderMuted,
       property: pink,
       punctuation: base.foreground,
       punctuationMuted: base.foregroundMuted,
@@ -213,7 +213,7 @@ export function createAuraPalette(
       title: brand.lavenderBright,
       type: accent,
       variable: base.foreground,
-      variableSpecial: pinkBright,
+      variableSpecial: pink,
     },
   }
 }
