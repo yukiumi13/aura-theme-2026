@@ -97,7 +97,7 @@ In practice, new theme quality should come from adjusting the structured roles i
 
 The Zed extension is theme-only. It defines Zed syntax styles, but it does not install grammars or override user settings.
 
-For recommended semantic-token settings, see [docs/ZED_SEMANTIC_TOKENS.md](docs/ZED_SEMANTIC_TOKENS.md).
+For recommended semantic-token settings, use [packages/zed/semantic-token-settings.json](packages/zed/semantic-token-settings.json). That file is generated with the Zed package and is intended to be tracked by dotfile tools such as chezmoi. The mapping is documented in [docs/ZED_SEMANTIC_TOKENS.md](docs/ZED_SEMANTIC_TOKENS.md).
 
 ## Build
 

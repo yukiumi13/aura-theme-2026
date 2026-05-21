@@ -42,7 +42,7 @@ For LSP semantic tokens, enable them in your Zed settings:
 }
 ```
 
-For stricter semantic-token mapping, add rules under `global_lsp_settings.semantic_token_rules` and point them at the styles exposed by this theme. The full recommended mapping lives in [`docs/ZED_SEMANTIC_TOKENS.md`](https://github.com/yukiumi13/aura-theme-2026/blob/main/docs/ZED_SEMANTIC_TOKENS.md).
+For stricter semantic-token mapping, use the packaged [`semantic-token-settings.json`](https://github.com/yukiumi13/aura-theme-2026/blob/main/packages/zed/semantic-token-settings.json) file. It is a machine-readable settings fragment intended for dotfile tools such as chezmoi. The mapping is documented in [`docs/ZED_SEMANTIC_TOKENS.md`](https://github.com/yukiumi13/aura-theme-2026/blob/main/docs/ZED_SEMANTIC_TOKENS.md).
 
 # License
 [MIT © Dalton Menezes](https://github.com/yukiumi13/aura-theme-2026/blob/main/LICENSE)

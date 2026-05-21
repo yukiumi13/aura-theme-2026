@@ -39,6 +39,12 @@ export async function ZedPort(Aura: AuraAPI) {
   })
 
   await createPort({
+    template: resolve(templateFolder, 'semantic-token-settings.json'),
+    outputFileName: `semantic-token-settings`,
+    replacements: {},
+  })
+
+  await createPort({
     template,
     outputDist,
     outputFileName: `aura-dark`,

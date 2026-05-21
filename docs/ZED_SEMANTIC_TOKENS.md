@@ -26,170 +26,22 @@ languages.
 
 ## Full Recommended Rules
 
-Paste this under your Zed `settings.json` if you want Aura's explicit semantic
-mapping instead of relying only on Zed defaults.
+Use [`packages/zed/semantic-token-settings.json`](../packages/zed/semantic-token-settings.json) as the canonical, machine-readable settings fragment. It can be copied directly into `settings.json` or included from a dotfile manager such as chezmoi.
+
+The file contains:
 
 ```json
 {
   "semantic_tokens": "combined",
   "global_lsp_settings": {
     "semantic_token_rules": [
-      {
-        "token_type": "comment",
-        "token_modifiers": ["documentation"],
-        "style": ["comment.documentation", "comment.doc", "comment"]
-      },
-      {
-        "token_type": "variable",
-        "token_modifiers": ["readonly"],
-        "style": ["variable.readonly", "constant", "variable"]
-      },
-      {
-        "token_type": "variable",
-        "token_modifiers": ["constant"],
-        "style": ["constant", "variable.readonly", "variable"]
-      },
-      {
-        "token_type": "variable",
-        "token_modifiers": ["mutable"],
-        "style": ["variable.mutable", "variable"]
-      },
-      {
-        "token_type": "variable",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["variable.defaultLibrary", "variable.builtin", "variable.special", "variable"]
-      },
-      {
-        "token_type": "function",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["function.special", "function"]
-      },
-      {
-        "token_type": "method",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["function.special", "method", "function"]
-      },
-      {
-        "token_type": "type",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["type.defaultLibrary", "type.builtin", "type"]
-      },
-      {
-        "token_type": "class",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["type.defaultLibrary", "type.builtin", "type.class", "class", "type"]
-      },
-      {
-        "token_type": "interface",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["type.defaultLibrary", "type.interface", "interface", "type"]
-      },
-      {
-        "token_type": "property",
-        "token_modifiers": ["readonly"],
-        "style": ["property.readonly", "variable.member", "property"]
-      },
-      {
-        "token_type": "property",
-        "token_modifiers": ["defaultLibrary"],
-        "style": ["variable.defaultLibrary", "variable.member", "property"]
-      },
-      {
-        "token_type": "macro",
-        "style": ["preproc.directive", "preproc", "keyword"]
-      },
-      {
-        "token_type": "namespace",
-        "style": ["namespace", "module"]
-      },
-      {
-        "token_type": "module",
-        "style": ["module", "namespace"]
-      },
-      {
-        "token_type": "type",
-        "style": ["type", "type.builtin"]
-      },
-      {
-        "token_type": "class",
-        "style": ["type.class", "class", "type"]
-      },
-      {
-        "token_type": "enum",
-        "style": ["enum", "type"]
-      },
-      {
-        "token_type": "interface",
-        "style": ["type.interface", "interface", "type"]
-      },
-      {
-        "token_type": "struct",
-        "style": ["struct", "type"]
-      },
-      {
-        "token_type": "typeParameter",
-        "style": ["typeParameter", "type"]
-      },
-      {
-        "token_type": "parameter",
-        "style": ["variable.parameter", "parameter", "variable"]
-      },
-      {
-        "token_type": "variable",
-        "style": ["variable"]
-      },
-      {
-        "token_type": "property",
-        "style": ["variable.member", "property"]
-      },
-      {
-        "token_type": "enumMember",
-        "style": ["enumMember", "variant", "constant"]
-      },
-      {
-        "token_type": "function",
-        "style": ["function.definition", "function"]
-      },
-      {
-        "token_type": "method",
-        "style": ["function.method", "method", "function"]
-      },
-      {
-        "token_type": "decorator",
-        "style": ["decorator", "attribute"]
-      },
-      {
-        "token_type": "keyword",
-        "style": ["keyword"]
-      },
-      {
-        "token_type": "comment",
-        "style": ["comment"]
-      },
-      {
-        "token_type": "string",
-        "style": ["string"]
-      },
-      {
-        "token_type": "number",
-        "style": ["constant.numeric", "number"]
-      },
-      {
-        "token_type": "regexp",
-        "style": ["string.regex", "string"]
-      },
-      {
-        "token_type": "operator",
-        "style": ["keyword.operator", "operator"]
-      },
-      {
-        "token_type": "punctuation",
-        "style": ["punctuation"]
-      }
+      "..."
     ]
   }
 }
 ```
+
+Keep the JSON file as the sync source. This document explains why the mapping exists and lists the Zed style names exposed by the theme.
 
 ## Theme Style Reference
 
@@ -246,7 +98,7 @@ These are the Zed syntax styles exposed by Aura 2026.
 | `punctuation.markup` | `syntaxProperty` | Markup punctuation |
 | `punctuation.special` | `accent5` | Special/error punctuation |
 | `selector` | `syntaxSelector` | CSS selectors |
-| `selector.pseudo` | `syntaxType` | CSS pseudo selectors |
+| `selector.pseudo` | `syntaxSelector` | CSS pseudo selectors |
 | `string` | `syntaxString` | Strings |
 | `string.doc` | `syntaxString` | Doc strings |
 | `string.escape` | `syntaxStringEscape` | Escape sequences |
