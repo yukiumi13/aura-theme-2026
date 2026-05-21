@@ -44,6 +44,12 @@ export const auraSemantic2026: AuraSemanticPalette = {
     orangeBright: '#FFCA85',
     info: '#48A0C7',
     infoBright: '#67E8F9',
+    blue: '#60A5FA',
+    blueBright: '#93C5FD',
+    cyan: '#22D3EE',
+    cyanBright: '#67E8F9',
+    magenta: '#A78BFA',
+    magentaBright: '#C4B5FD',
   },
 }
 

@@ -41,12 +41,36 @@ The maintained ports include the legacy Aura variants plus the 2026 variants gen
 The 2026 system is generated from structured palette roles instead of hand-editing every output theme.
 
 ```text
-src/core/colors/palettes
-  -> base surfaces and foregrounds
-  -> brand and status colors
-  -> variant accent families
-  -> UI roles, syntax roles, ANSI roles
-  -> generated port templates
+base.ts / variants.ts
+  -> create-aura-palette.ts
+  -> compile-legacy-scheme.ts
+  -> port templates
+  -> packages/*
+```
+
+The simplified data flow is:
+
+```text
+Base palette
+  surfaces, foregrounds, borders, comments
+        +
+Semantic palette
+  brand mint, error/success/warning/info
+        +
+Variant family
+  accent, accentBright, accentSoft, companion colors
+        |
+        v
+AuraPalette
+  ui roles + syntax roles + ansi roles
+        |
+        v
+LegacyAuraScheme
+  template variables such as accent12, uiAccent, syntaxString, ansiBrightGreen
+        |
+        v
+Port templates
+  VS Code, Zed, Ghostty, Windows Terminal
 ```
 
 The important design split is:
@@ -56,6 +80,18 @@ The important design split is:
 - `ansi` roles control terminal 16-color schemes for VS Code integrated terminal, Zed terminal, Ghostty, and Windows Terminal.
 
 `ansiBrightGreen` and similar names are terminal ANSI slots, not language semantic tokens.
+
+### Layer Notes
+
+- `base` is the dark surface system. It controls the ink background, panels, borders, foregrounds, muted text, and comments. Most variants should not change this layer.
+- `semantic` is the stable meaning layer. It contains the Aura mint brand color and status colors such as error, success, warning, and info. These colors stay consistent across variants unless there is a deliberate semantic reason to change them.
+- `family` is the variant layer. A family defines the theme flavor, such as cyan, rose, amber, violet, or graphite. It supplies `accent`, `accentBright`, `accentSoft`, and companion colors.
+- `ui` is derived from `base + semantic + family`. It maps colors to interface jobs such as selection, hover, focus border, links, remote status, welcome tiles, and action buttons.
+- `syntax` is derived from the same source palette but targets code highlighting. It maps strings, functions, keywords, parameters, tags, numbers, comments, and punctuation.
+- `ansi` is the terminal layer. It maps the palette to terminal 16-color slots: black, red, green, yellow, blue, magenta, cyan, white, and their bright variants.
+- `compile-legacy-scheme.ts` is a compatibility bridge for the existing Mustache templates. Newer names such as `uiActionHoverBackground`, `syntaxParameter`, and `ansiBrightGreen` are preferred, while older `accent*` names are kept so older templates can still compile.
+
+In practice, new theme quality should come from adjusting the structured roles in `src/core/colors/palettes`, not from editing generated JSON files in `packages/*` by hand.
 
 ## Zed Semantic Tokens
 
