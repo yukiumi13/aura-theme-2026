@@ -34,12 +34,6 @@ export interface AuraSemanticPalette {
     orangeBright: string
     info: string
     infoBright: string
-    blue: string
-    blueBright: string
-    cyan: string
-    cyanBright: string
-    magenta: string
-    magentaBright: string
   }
 }
 
