@@ -1,5 +1,10 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
+import {
+  terminalAnsiLabel,
+  terminalAnsiSuffix,
+  withTerminalSemanticAnsi,
+} from '../shared/terminal-ansi'
 
 type VariantScheme = typeof import('core/colors/schemes').variants[number]
 
@@ -60,8 +65,8 @@ export async function GhosttyPort(Aura: AuraAPI) {
   })
 
   await Promise.all(
-    [...colorSchemes.variants, colorSchemes.inkVariant].map(
-      ({ family, scheme }: VariantScheme) =>
+    [...colorSchemes.variants, colorSchemes.inkVariant].flatMap(
+      ({ family, scheme }: VariantScheme) => [
         createPort({
           template,
           outputFileName: family.slug,
@@ -70,7 +75,17 @@ export async function GhosttyPort(Aura: AuraAPI) {
             ...scheme,
             name: family.name,
           },
-        })
+        }),
+        createPort({
+          template,
+          outputFileName: family.slug + '-' + terminalAnsiSuffix,
+          replacements: {
+            ...info,
+            ...withTerminalSemanticAnsi(scheme),
+            name: family.name + ' ' + terminalAnsiLabel,
+          },
+        }),
+      ]
     )
   )
 

@@ -1,0 +1,23 @@
+{
+  "name": "Aura Rose 2026 ANSI",
+  "cursorColor": "#FDA4AF",
+  "selectionBackground": "#E11D48",
+  "background": "#09080D",
+  "foreground": "#F2F0F5",
+  "black": "#0A090F",
+  "blue": "#7C8CF8",
+  "cyan": "#22D3EE",
+  "green": "#34D399",
+  "purple": "#A277FF",
+  "red": "#F87171",
+  "white": "#DDD9E7",
+  "yellow": "#F6B86A",
+  "brightBlack": "#6D6D6D",
+  "brightBlue": "#A5B4FC",
+  "brightCyan": "#9FFFE2",
+  "brightGreen": "#61FFCA",
+  "brightPurple": "#C4B5FD",
+  "brightRed": "#FCA5A5",
+  "brightWhite": "#F2F0F5",
+  "brightYellow": "#FFCA85"
+}
