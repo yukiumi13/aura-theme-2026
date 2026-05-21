@@ -1,0 +1,65 @@
+name: Build Terminal Theme Bundles
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+    paths:
+      - '.github/workflows/terminal-theme-bundles.yml'
+      - 'packages/ghostty/**'
+      - 'packages/windows-terminal/**'
+      - 'src/ports/ghostty/**'
+      - 'src/ports/windows-terminal/**'
+      - 'src/core/colors/schemes/**'
+      - 'src/core/colors/palettes/**'
+      - 'scripts/package-terminal-bundles.js'
+      - 'package.json'
+      - 'yarn.lock'
+
+permissions:
+  contents: write
+
+jobs:
+  build-terminal-themes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Ghostty port
+        run: yarn build only ghostty
+
+      - name: Build Windows Terminal port
+        run: yarn build only windows-terminal
+
+      - name: Package terminal theme bundles
+        run: yarn package:terminals
+
+      - name: Upload terminal theme artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: aura-theme-2026-terminal-themes
+          path: |
+            dist/ghostty/aura-theme-2026-ghostty-themes.zip
+            dist/windows-terminal/aura-theme-2026-windows-terminal-themes.zip
+
+      - name: Attach terminal theme bundles to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/ghostty/aura-theme-2026-ghostty-themes.zip
+            dist/windows-terminal/aura-theme-2026-windows-terminal-themes.zip

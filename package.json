@@ -17,7 +17,7 @@
       "website": "https://daltonmenezes.github.io"
     }
   },
-  "version": "0.0.27",
+  "version": "0.0.28",
   "license": "MIT",
   "author": "Dalton Menezes <daltonmenezes@outlook.com>",
   "scripts": {
@@ -25,6 +25,7 @@
     "build": "DEBUG=aura* NODE_ENV=production yarn aura build",
     "make": "yarn aura make",
     "package:zed": "node scripts/package-zed-bundle.js",
+    "package:terminals": "node scripts/package-terminal-bundles.js",
     "tokenize": "yarn aura tokenize",
     "test": "jest --runInBand",
     "aura": "yarn tsnd src/core/cli/aura.ts",
