@@ -1,42 +1,29 @@
 {{{ basic-heading }}}
 
-# Installation
-1. Start {{ portName }}.
-2. Click on the down arrow icon and select the `Settings` option.
-3. On the left menu, select `Open JSON file`
-4. Pick one of the generated JSON files from `packages/windows-terminal` and note the value of its `name` field.
-5. In the `settings.json` file, find the section called "Schemes" and paste your chosen theme inside of schemes array `[ ]`.
-6. Yet in the `settings.json`file, find the profiles section and set a "colorScheme" value on the `default profile` and write the name you noted, as the following example (if you chose "Aura Dark"):
-     ```json
-     "profiles": {
-         "defaults": {
-             "colorScheme": "{{ shortName }} Dark"
-         }
-     }
-     ```
+This bundle contains Windows Terminal color schemes generated from the Aura Theme 2026 palette architecture.
 
+## Installation
 
-{{{ done }}}
+1. Download `aura-theme-2026-windows-terminal-themes.zip` from a GitHub Release, or use the generated files in `packages/windows-terminal`.
+2. Open Windows Terminal settings.
+3. Select **Open JSON file**.
+4. Pick one generated JSON file and copy its object into the `schemes` array.
+5. Set your profile's `colorScheme` to the copied scheme's `name`.
 
-# Contributors
-<table>
-  <thead>
-    <tr>
-      {{{ author-thead }}}
-      <td valign="bottom"><p align="center">
-        <a href="https://github.com/DaBultz">
-          <img src="https://github.com/DaBultz.png?size=100" align="center" />
-        </a>
-      </p></td>
-    </tr>
-  </thead>
+Example:
 
-  <tbody>
-    <tr>
-      {{{ author-tbody }}}
-      <td><a href="https://github.com/DaBultz">DaBultz</a></td>
-    </tr>
-  </tbody>
-</table>
+```json
+{
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Aura Ink 2026"
+    }
+  }
+}
+```
+
+## Included Schemes
+
+The bundle includes the legacy Aura schemes and all 2026 color variants.
 
 {{{ footer }}}

@@ -1,481 +1,119 @@
-<p align="center">
-  <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-heading.png?raw=true" alt="Aura Theme" width="70%" />
-</p>
+# Aura Theme 2026
 
-<p align="center">
-:sparkles: A beautiful dark theme for your favorite apps
-  <br><br>
+Aura Theme 2026 is a fork maintained by **yukiumi13**. It is based on the original [Aura Theme](https://github.com/daltonmenezes/aura-theme), but this repository is currently focused on a smaller, actively reworked 2026 theme system rather than the full upstream port matrix.
 
-  <!-- Patreon -->
-  <a href="https://www.patreon.com/daltonmenezes">
-    <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
-  </a>
+The current work is centered on a shared palette/schema that keeps editor UI, syntax colors, and terminal ANSI colors consistent across the ports that are actively maintained here.
 
-  <!-- IssueHunt -->
-  <a href="https://issuehunt.io/r/daltonmenezes/aura-theme?tab=idle">
-    <img alt="issuehunt url" src="https://img.shields.io/badge/fund%20issues-issuehunt-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
-  </a>
+## Current Scope
 
-  <!-- ProductHunt -->
-  <a href="https://www.producthunt.com/posts/aura-theme">
-    <img alt="producthunt url" src="https://img.shields.io/badge/vote%20on-producthunt-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
-  </a>
-</p>
+The 2026 remapping is currently implemented and published for these ports:
 
-> This repository is a fork maintained by **yukiumi13**, adapted from the original Aura Theme project and extended with a **2026-style remapping** for finer VS Code UI and syntax highlighting.
+| Port | Package | Release asset |
+| --- | --- | --- |
+| Visual Studio Code | `packages/vscode` | `aura-theme-2026.vsix` |
+| Zed | `packages/zed` | `aura-theme-2026-zed-extension.zip` |
+| Ghostty | `packages/ghostty` | `aura-theme-2026-ghostty-themes.zip` |
+| Windows Terminal | `packages/windows-terminal` | `aura-theme-2026-windows-terminal-themes.zip` |
 
-> For the Zed port package itself, see `packages/zed/README.md` for installation details, the experimental Python semantic-token overlay, and optional semantic-token example settings.
+Other inherited packages from upstream Aura may still exist in this repository, but they should be treated as legacy/unreviewed until they are explicitly migrated to the 2026 palette architecture.
 
+## Themes
 
-<p align="center">
-  <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-preview.png?raw=true" >
-</p>
+The maintained ports include the legacy Aura variants plus the 2026 variants generated from the shared palette schema:
 
-<br/>
+- Aura 2026 Dark
+- Aura 2026 Dark (Soft Text)
+- Aura 2026 Soft Dark
+- Aura 2026 Soft Dark (Soft Text)
+- Aura Ink 2026
+- Aura Cyan 2026
+- Aura Blue 2026
+- Aura Violet 2026
+- Aura Purple 2026
+- Aura Teal 2026
+- Aura Rose 2026
+- Aura Amber 2026
+- Aura Azure 2026
+- Aura Graphite 2026
 
-### Aura
+## Palette Architecture
 
-<table>
-  <td valign="top">
-    <p align="center">
-      <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/color-palettes">
-        <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/color-palettes-icon.png?raw=true" align="center" />
-      </a>
-      <br/><br/>
-      <span>Color Palettes</span>
-    </p>
-  </td>
-  <td valign="top">
-    <p align="center">
-      <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/wallpapers">
-        <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/wallpapers.png?raw=true" align="center" />
-      </a>
-      <br/><br/>
-      <span>Wallpapers</span>
-    </p>
-  </td>
-  <td valign="top">
-    <p align="center">
-      <a href="./docs/SHOP.md">
-        <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/shop-icon.png?raw=true" align="center" />
-      </a>
-      <br/><br/>
-      <span>Shop</span>
-    </p>
-  </td>
-</table>
+The 2026 system is generated from structured palette roles instead of hand-editing every output theme.
 
-### IDEs and Code Editors
+```text
+src/core/colors/palettes
+  -> base surfaces and foregrounds
+  -> brand and status colors
+  -> variant accent families
+  -> UI roles, syntax roles, ANSI roles
+  -> generated port templates
+```
 
-<table >
-  <tr>
-    <td valign="top">
-     <p align="center">
-      <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/vscode">
-        <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/vscode.png?raw=true" align="center" />
-      </a>
-      <br/><br/>
-      <span>Visual Studio Code</span>
-      </p>
-    </td>
-    <td valign="top">
-     <p align="center">
-      <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/sublime-text">
-        <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/sublime-text.png?raw=true" align="center" />
-      </a>
-      <br/><br/>
-      <span>Sublime Text</span>
-      </p>
-    </td>
-    <td valign="top">
-     <p align="center">
-      <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/code-sandbox">
-        <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/code-sandbox.png?raw=true" align="center" />
-      </a>
-      <br/><br/>
-      <span>CodeSandbox</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/neovim">
-          <img src="https://user-images.githubusercontent.com/1149845/243113045-89c2cfcf-6ff8-42cb-b911-319b2a10bcea.png" align="center" />
-        </a>
-        <br/><br/>
-        <span>Neovim</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/zed">
-          <img src="https://github.com/daltonmenezes/aura-theme/assets/25427808/507b3e6c-1f94-419c-b27a-2e1900277d66" align="center" />
-        </a>
-        <br/><br/>
-        <span>Zed</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/xcode">
-          <img src="https://github.com/user-attachments/assets/51a81780-e96e-440b-93db-a2eac4e56aa5" align="center" />
-        </a>
-        <br/><br/>
-        <span>Xcode</span>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/intellij">
-          <img src="https://github.com/user-attachments/assets/c2707563-66fc-40cd-bc3e-95a63f788349" align="center" />
-        </a>
-        <br/><br/>
-        <span>Intellij</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/npp">
-          <img src="https://github.com/user-attachments/assets/4e507166-2368-46e5-bea6-405a3514fdd8" align="center" />
-        </a>
-        <br/><br/>
-        <span>Notepad++</span>
-      </p>
-    </td>
-  </tr>
- </table>
+The important design split is:
 
-### Terminals
+- `ui` roles control editor chrome, selection, hover, links, status surfaces, and interaction accents.
+- `syntax` roles control code highlighting for VS Code and Zed theme styles.
+- `ansi` roles control terminal 16-color schemes for VS Code integrated terminal, Zed terminal, Ghostty, and Windows Terminal.
 
-<table >
-  <tr>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/hyper">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/hyper.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>Hyper Terminal</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/windows-terminal">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/windows-terminal.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>Windows Terminal</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/alacritty">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/alacritty.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Alacritty</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/iterm">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/iterm.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>iTerm</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/rxvt-unicode">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/rxvt-unicode.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>rxvt-unicode</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/termux">
-          <img src="https://raw.githubusercontent.com/daltonmenezes/assets/master/images/icons/termux.png" align="center" />
-        </a>
-       <br/><br/>
-        <span>Termux</span>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/terminal-app">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/terminal-app.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>Terminal.app</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/gnome-terminal">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/gnome-terminal.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>GNOME Terminal</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/kitty">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/kitty.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>Kitty</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/konsole">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/konsole.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>Konsole</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/tabby">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/tabby.png?raw=true" align="center" />
-        </a>
-       <br/><br/>
-        <span>Tabby.sh</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/tilix">
-          <img src="https://raw.githubusercontent.com/daltonmenezes/assets/master/images/icons/tilix.png" align="center" />
-        </a>
-       <br/><br/>
-        <span>Tilix</span>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/warp">
-          <img src="https://user-images.githubusercontent.com/1149845/277492334-5de78c3b-792c-4f14-8dc6-58dbbe32d14d.png" align="center">
-        </a>
-        <br/><br/>
-        <span>Warp</span>
-      </p>
-    </td>
-  </tr>
- </table>
+`ansiBrightGreen` and similar names are terminal ANSI slots, not language semantic tokens.
 
-### Browsers
+## Zed Semantic Tokens
 
-<table >
-  <tr>
-      <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/chrome">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/chrome.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Chrome</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/firefox">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/firefox.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Firefox</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/vivaldi">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/vivaldi.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Vivaldi</span>
-      </p>
-    </td>
-  </tr>
- </table>
+The Zed extension is theme-only. It defines Zed syntax styles, but it does not install grammars or override user settings.
 
-### Others
+For recommended semantic-token settings, see [docs/ZED_SEMANTIC_TOKENS.md](docs/ZED_SEMANTIC_TOKENS.md).
 
-<table >
-  <tr>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/insomnia">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/insomnia.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Insomnia</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/fig">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/fig.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Fig</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/telegram">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/telegram.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Telegram Desktop</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/slack">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/slack.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Slack</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/icue">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/icue.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>iCue</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/plasma">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/plasma.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>KDE Plasma</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/ngenuity">
-          <img src="https://raw.githubusercontent.com/daltonmenezes/assets/master/images/icons/ngenuity.png" align="center" />
-        </a>
-        <br/><br/>
-        <span>NGenuity</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/mattermost">
-          <img src="https://github.com/daltonmenezes/assets/blob/master/images/icons/mattermost.png?raw=true" align="center" />
-        </a>
-        <br/><br/>
-        <span>Mattermost</span>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/waybar">
-          <img src="https://user-images.githubusercontent.com/1149845/223878470-0c545ad8-faf6-4df5-8d63-5c8547d92b50.png" align="center" />
-        </a>
-        <br/><br/>
-        <span>Waybar</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/sway">
-          <img src="https://user-images.githubusercontent.com/1149845/224836549-d6831bfc-0217-4711-8038-f822d4887bd3.png" align="center" />
-        </a>
-        <br/><br/>
-        <span>Sway</span>
-      </p>
-    </td>
-    <td valign="top">
-      <p align="center">
-        <a href="https://github.com/daltonmenezes/aura-theme/tree/main/packages/raycast">
-          <img src="https://github.com/user-attachments/assets/6ab3fbc9-a407-4f88-b59a-1c185515388f" align="center" />
-        </a>
-        <br/><br/>
-        <span>Raycast</span>
-      </p>
-    </td>
-  </tr>
- </table>
+## Build
 
-# Documentation
+Install dependencies:
 
-<table >
-  <tr>
-    <td valign="bottom">
-      <p align="center">
-        <a href="./docs/CREATING_PORTS.md">
-          <img src="./docs/assets/undraw_science.svg" width="96" align="center" />
-        </a>
-        <br/><br/>
-        <span>Creating Ports</span>
-      </p>
-    </td>
-    <td valign="bottom">
-      <p align="center">
-        <a href="./docs/CLI.md">
-          <img src="./docs/assets/undraw_to_the_moon.svg" width="96" align="center" />
-        </a>
-        <br/><br/>
-        <span>Aura CLI</span>
-      </p>
-    </td>
-    <td valign="bottom">
-      <p align="center">
-        <a href="./docs/API.md">
-          <img src="./docs/assets/undraw_book_lover.svg" width="96" align="center" />
-        </a>
-        <br/><br/>
-        <span>Aura API</span>
-      </p>
-    </td>
-    <td valign="bottom">
-      <p align="center">
-        <a href="./docs/PUBLISHING_PORTS.md">
-          <img src="./docs/assets/undraw_order_delivered.svg" width="96" align="center" />
-        </a>
-        <br/><br/>
-        <span>Publishing Ports</span>
-      </p>
-    </td>
-  </tr>
-</table>
+```sh
+yarn install --frozen-lockfile
+```
 
-# Contributing
+Build the maintained ports:
 
-> Contributions are always welcome, but always **ask first**, — please — before work on a PR.
+```sh
+yarn build only vscode
+yarn build only zed
+yarn build only ghostty
+yarn build only windows-terminal
+```
 
-That said, there's a bunch of ways you can contribute to this project, like by:
+Package release bundles:
 
-- :electric_plug: Making a port of this theme for another apps
-- :wave: Requesting a port
-- :beetle: Reporting a bug
-- :page_facing_up: Improving this documentation
-- :test_tube: Making new tests or improving existing ones
-- :rotating_light: Sharing this project and recommending it to your friends
-- :dollar: Supporting this project on GitHub Sponsors or Patreon
-- :bug: Funding an issue on IssueHunt
-- :star2: Giving a star on this repository
-- :thumbsup: Voting on ProductHunt
+```sh
+yarn package:zed
+yarn package:terminals
+```
 
-# License
+Run tests:
 
-[MIT © Dalton Menezes](https://github.com/daltonmenezes/aura-theme/blob/main/LICENSE)
+```sh
+yarn test
+```
+
+## Release Assets
+
+Tag releases publish the maintained ports through GitHub Actions:
+
+- `.github/workflows/vscode-vsix.yml`
+- `.github/workflows/zed-extension-bundle.yml`
+- `.github/workflows/terminal-theme-bundles.yml`
+
+On `v*` tags, the release should receive:
+
+```text
+aura-theme-2026.vsix
+aura-theme-2026-zed-extension.zip
+aura-theme-2026-ghostty-themes.zip
+aura-theme-2026-windows-terminal-themes.zip
+```
+
+## Credits
+
+This fork builds on the original Aura Theme by Dalton Menezes and contributors. The 2026 palette remapping, expanded variants, Zed mapping, Ghostty output, and Windows Terminal release bundles are maintained in this fork.
+
+## License
+
+[MIT](LICENSE)

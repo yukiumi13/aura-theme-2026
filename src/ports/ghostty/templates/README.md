@@ -1,19 +1,25 @@
 {{{ basic-heading }}}
 
-# Installation
-1. Open one of the generated Ghostty theme files from `packages/ghostty`.
-2. Copy it into your Ghostty themes directory, for example:
-    ```sh
-    mkdir -p ~/.config/ghostty/themes
-    cp packages/ghostty/aura-ink-2026.conf ~/.config/ghostty/themes/
-    ```
+This bundle contains Ghostty themes generated from the Aura Theme 2026 palette architecture.
+
+## Installation
+
+1. Download `aura-theme-2026-ghostty-themes.zip` from a GitHub Release, or use the generated files in `packages/ghostty`.
+2. Copy the desired `.conf` file into your Ghostty themes directory:
+
+```sh
+mkdir -p ~/.config/ghostty/themes
+cp aura-ink-2026.conf ~/.config/ghostty/themes/
+```
+
 3. Set the theme in your Ghostty config:
-    ```ini
-    theme = aura-ink-2026
-    ```
 
-Generated variants include the legacy Aura themes and all 2026 color variants.
+```ini
+theme = aura-ink-2026
+```
 
-{{{ done }}}
+## Included Themes
+
+The bundle includes the legacy Aura themes and all 2026 color variants.
 
 {{{ footer }}}

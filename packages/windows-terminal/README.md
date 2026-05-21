@@ -1,72 +1,38 @@
-<p align="center">
-  <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/new-heading.png?raw=true" alt="Aura Theme 2026" width="70%" />
-</p>
+# Aura Theme 2026 - Windows Terminal
 
-<p align="center">
-✨ A beautiful dark theme for Windows Terminal and other apps
-  <br><br>
-
-  <!-- Patreon -->
-  <a href="https://www.patreon.com/daltonmenezes">
-    <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
-  </a>
-
-  <!-- version -->
-  <a href="#">
-    <img alt="version" src="https://img.shields.io/badge/version%20-v0.0.28-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca">
-  </a>
-</p>
+A maintained Aura Theme 2026 port for Windows Terminal.
+Version: `v0.0.29`
 
 <p align="center">
   <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/aura-windows-terminal-preview.png?raw=true" />
 </p>
 
 
-# Installation
-1. Start Windows Terminal.
-2. Click on the down arrow icon and select the `Settings` option.
-3. On the left menu, select `Open JSON file`
-4. Pick one of the generated JSON files from `packages/windows-terminal` and note the value of its `name` field.
-5. In the `settings.json` file, find the section called "Schemes" and paste your chosen theme inside of schemes array `[ ]`.
-6. Yet in the `settings.json`file, find the profiles section and set a "colorScheme" value on the `default profile` and write the name you noted, as the following example (if you chose "Aura Dark"):
-     ```json
-     "profiles": {
-         "defaults": {
-             "colorScheme": "Aura 2026 Dark"
-         }
-     }
-     ```
+This bundle contains Windows Terminal color schemes generated from the Aura Theme 2026 palette architecture.
 
+## Installation
 
-<br/>
-Done! ✨ 🎉
-<br/>
-<br/>
+1. Download `aura-theme-2026-windows-terminal-themes.zip` from a GitHub Release, or use the generated files in `packages/windows-terminal`.
+2. Open Windows Terminal settings.
+3. Select **Open JSON file**.
+4. Pick one generated JSON file and copy its object into the `schemes` array.
+5. Set your profile's `colorScheme` to the copied scheme's `name`.
 
-# Contributors
-<table>
-  <thead>
-    <tr>
-      <td valign="bottom"><p align="center">
-  <a href="https://github.com/daltonmenezes">
-    <img src="https://github.com/daltonmenezes.png?size=100" align="center" />
-  </a>
-</p></td>
-      <td valign="bottom"><p align="center">
-        <a href="https://github.com/DaBultz">
-          <img src="https://github.com/DaBultz.png?size=100" align="center" />
-        </a>
-      </p></td>
-    </tr>
-  </thead>
+Example:
 
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/daltonmenezes">Dalton Menezes</a></td>
-      <td><a href="https://github.com/DaBultz">DaBultz</a></td>
-    </tr>
-  </tbody>
-</table>
+```json
+{
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Aura Ink 2026"
+    }
+  }
+}
+```
+
+## Included Schemes
+
+The bundle includes the legacy Aura schemes and all 2026 color variants.
 
 # License
 [MIT © Dalton Menezes](https://github.com/yukiumi13/aura-theme-2026/blob/main/LICENSE)

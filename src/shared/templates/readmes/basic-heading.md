@@ -1,24 +1,8 @@
-<p align="center">
-  <img src="https://github.com/{{ author.username }}/assets/blob/master/images/{{ slug }}/new-heading.png?raw=true" alt="{{ displayName }}" width="70%" />
-</p>
+# {{ displayName }} - {{ portName }}
 
-<p align="center">
-{{ #noTagLine }}{{ /noTagLine }}
-{{ ^noTagLine }}
-✨ A beautiful dark theme for {{ portName }} and other apps
-  <br><br>
+{{ #noTagLine }}{{ /noTagLine }}{{ ^noTagLine }}A maintained Aura Theme 2026 port for {{ portName }}.
 {{ /noTagLine }}
-
-  <!-- Patreon -->
-  <a href="https://www.patreon.com/{{ author.username }}">
-    <img alt="patreon url" src="https://img.shields.io/badge/support%20on-patreon-{{ badges.primaryColor }}?style=for-the-badge&labelColor={{ badges.primaryColor }}&color={{ badges.secondaryColor }}">
-  </a>
-
-  <!-- version -->
-  <a href="#">
-    <img alt="version" src="https://img.shields.io/badge/version%20-v{{ version }}-{{ badges.primaryColor }}?style=for-the-badge&labelColor={{ badges.primaryColor }}&color={{ badges.secondaryColor }}">
-  </a>
-</p>
+Version: `v{{ version }}`
 
 {{ #previewURL }}
 <p align="center">
