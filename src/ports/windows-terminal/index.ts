@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import {
   terminalAnsiLabel,
   terminalAnsiSuffix,
+  withTerminalAuraAnsi,
   withTerminalSemanticAnsi,
 } from '../shared/terminal-ansi'
 
@@ -71,7 +72,7 @@ export async function WindowsTerminalPort(Aura: AuraAPI) {
           template,
           outputFileName: family.slug,
           replacements: {
-            ...scheme,
+            ...withTerminalAuraAnsi(scheme),
             ...info,
             displayName: family.name,
           },

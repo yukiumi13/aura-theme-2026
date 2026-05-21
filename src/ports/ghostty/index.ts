@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import {
   terminalAnsiLabel,
   terminalAnsiSuffix,
+  withTerminalAuraAnsi,
   withTerminalSemanticAnsi,
 } from '../shared/terminal-ansi'
 
@@ -72,7 +73,7 @@ export async function GhosttyPort(Aura: AuraAPI) {
           outputFileName: family.slug,
           replacements: {
             ...info,
-            ...scheme,
+            ...withTerminalAuraAnsi(scheme),
             name: family.name,
           },
         }),
