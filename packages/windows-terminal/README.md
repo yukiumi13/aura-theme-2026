@@ -1,7 +1,7 @@
 # Aura Theme 2026 - Windows Terminal
 
 A maintained Aura Theme 2026 port for Windows Terminal.
-Version: `v0.1.1`
+Version: `v0.1.2`
 
 <p align="center">
   <img alt="preview" src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme-2026/aura-windows-terminal-preview.png?raw=true" />
