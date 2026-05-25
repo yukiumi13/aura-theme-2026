@@ -375,7 +375,6 @@
     },
     {
       "scope": [
-        "entity.name",
         "meta.export.default",
         "meta.definition.variable",
         "markup.changed",
@@ -383,7 +382,7 @@
         "support.function"
       ],
       "settings": {
-        "foreground": "#D8B4FE"
+        "foreground": "#D49DFF"
       }
     },
     {
@@ -422,12 +421,19 @@
     {
       "scope": [
         "entity.name.function",
-        "entity.name.function.elixir",
+        "entity.name.function.elixir"
+      ],
+      "settings": {
+        "foreground": "#E0A6FF"
+      }
+    },
+    {
+      "scope": [
         "entity.name.function-call.elixir",
         "meta.function-call.generic.python"
       ],
       "settings": {
-        "foreground": "#D8B4FE"
+        "foreground": "#D49DFF"
       }
     },
     {
@@ -804,8 +810,10 @@
     "number": "#FFCA85",
     "boolean": "#C084FC",
     "enumMember": "#C084FC",
-    "function": "#D8B4FE",
-    "method": "#D8B4FE",
+    "function": "#D49DFF",
+    "function.declaration": "#E0A6FF",
+    "method": "#D49DFF",
+    "method.declaration": "#E0A6FF",
     "macro": "#C084FC",
     "parameter": {
       "foreground": "#B8B4D6",

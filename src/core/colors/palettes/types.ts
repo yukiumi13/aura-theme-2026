@@ -119,11 +119,14 @@ export interface AuraSyntaxPalette {
   enum: string
   enumMember: string
   function: string
+  functionDeclaration: string
   functionSpecial: string
   keyword: string
   label: string
   link: string
   macro: string
+  method: string
+  methodDeclaration: string
   namespace: string
   number: string
   operator: string

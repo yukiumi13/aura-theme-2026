@@ -10,7 +10,7 @@
         "accents": [
           "#93C5FD",
           "#61FFCA",
-          "#93C5FD",
+          "#D49DFF",
           "#F694FF",
           "#60A5FA",
           "#FF6767",
@@ -125,7 +125,7 @@
         "info.border": "#60A5FA",
         "link_text.hover": "#61FFCA",
         "version_control.added": "#61FFCA",
-        "version_control.modified": "#93C5FD",
+        "version_control.modified": "#D49DFF",
         "version_control.deleted": "#FF6767",
         "version_control.renamed": "#60A5FA",
         "version_control.conflict": "#93C5FD",
@@ -146,9 +146,9 @@
         "unreachable": "#FF6767",
         "unreachable.background": "#1B1724CC",
         "unreachable.border": "#FF6767",
-        "warning": "#93C5FD",
+        "warning": "#D49DFF",
         "warning.background": "#FFCA8524",
-        "warning.border": "#93C5FD",
+        "warning.border": "#D49DFF",
         "conflict": "#93C5FD",
         "conflict.background": "#2563EB1A",
         "conflict.border": "#93C5FD",
@@ -164,9 +164,9 @@
         "ignored": "#6D6D6D",
         "ignored.background": "#1B1724CC",
         "ignored.border": "#6D6D6D",
-        "modified": "#93C5FD",
+        "modified": "#D49DFF",
         "modified.background": "#FFCA8524",
-        "modified.border": "#93C5FD",
+        "modified.border": "#D49DFF",
         "players": [
           {
             "cursor": "#93C5FD",
@@ -179,9 +179,9 @@
             "selection": "#2958487f"
           },
           {
-            "cursor": "#93C5FD",
-            "background": "#93C5FD",
-            "selection": "#3a49597f"
+            "cursor": "#D49DFF",
+            "background": "#D49DFF",
+            "selection": "#4e3d5a7f"
           },
           {
             "cursor": "#61FFCA",
@@ -286,17 +286,17 @@
             "font_weight": null
           },
           "function": {
-            "color": "#93C5FD",
+            "color": "#D49DFF",
             "font_style": null,
             "font_weight": null
           },
           "function.definition": {
-            "color": "#93C5FD",
+            "color": "#E0A6FF",
             "font_style": null,
             "font_weight": null
           },
           "function.method": {
-            "color": "#93C5FD",
+            "color": "#E0A6FF",
             "font_style": null,
             "font_weight": null
           },
@@ -356,7 +356,7 @@
             "font_weight": null
           },
           "method": {
-            "color": "#93C5FD",
+            "color": "#D49DFF",
             "font_style": null,
             "font_weight": null
           },

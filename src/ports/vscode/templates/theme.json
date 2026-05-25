@@ -375,7 +375,6 @@
     },
     {
       "scope": [
-        "entity.name",
         "meta.export.default",
         "meta.definition.variable",
         "markup.changed",
@@ -422,7 +421,14 @@
     {
       "scope": [
         "entity.name.function",
-        "entity.name.function.elixir",
+        "entity.name.function.elixir"
+      ],
+      "settings": {
+        "foreground": "{{ syntaxFunctionDeclaration }}"
+      }
+    },
+    {
+      "scope": [
         "entity.name.function-call.elixir",
         "meta.function-call.generic.python"
       ],
@@ -805,7 +811,9 @@
     "boolean": "{{ syntaxBoolean }}",
     "enumMember": "{{ syntaxEnumMember }}",
     "function": "{{ syntaxFunction }}",
-    "method": "{{ syntaxFunction }}",
+    "function.declaration": "{{ syntaxFunctionDeclaration }}",
+    "method": "{{ syntaxMethod }}",
+    "method.declaration": "{{ syntaxMethodDeclaration }}",
     "macro": "{{ syntaxMacro }}",
     "parameter": {
       "foreground": "{{ syntaxParameter }}",

@@ -65,9 +65,9 @@ These are the Zed syntax styles exposed by Aura 2026.
 | `emphasis.strong` | `syntaxKeyword` | Strong markup emphasis |
 | `enum` | `syntaxEnum` | Enum types |
 | `enumMember` | `syntaxEnumMember` | Enum members and variants |
-| `function` | `syntaxFunction` | Functions |
-| `function.definition` | `syntaxFunction` | Function declarations |
-| `function.method` | `syntaxFunction` | Method declarations |
+| `function` | `syntaxFunction` | Function calls |
+| `function.definition` | `syntaxFunctionDeclaration` | Function declarations |
+| `function.method` | `syntaxMethodDeclaration` | Method declarations |
 | `function.special` | `syntaxFunctionSpecial` | Built-in/special functions |
 | `function.kwargs` | `syntaxParameter` | Keyword arguments |
 | `hint` | `syntaxType` | Hints |
@@ -79,7 +79,7 @@ These are the Zed syntax styles exposed by Aura 2026.
 | `label` | `syntaxLabel` | Labels |
 | `link_text` | `syntaxLink` | Link text |
 | `link_uri` | `syntaxLink` | Link URLs |
-| `method` | `syntaxFunction` | Methods |
+| `method` | `syntaxMethod` | Method calls |
 | `module` | `syntaxNamespace` | Modules |
 | `namespace` | `syntaxNamespace` | Namespaces |
 | `number` | `syntaxNumber` | Numeric literals |
