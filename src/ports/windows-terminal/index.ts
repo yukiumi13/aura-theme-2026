@@ -66,8 +66,8 @@ export async function WindowsTerminalPort(Aura: AuraAPI) {
   })
 
   await Promise.all(
-    [...colorSchemes.variants, colorSchemes.inkVariant].flatMap(
-      ({ family, scheme }: VariantScheme) => [
+    [...colorSchemes.variants, colorSchemes.inkVariant]
+      .map(({ family, scheme }: VariantScheme) => [
         createPort({
           template,
           outputFileName: family.slug,
@@ -86,8 +86,8 @@ export async function WindowsTerminalPort(Aura: AuraAPI) {
             displayName: family.name + ' ' + terminalAnsiLabel,
           },
         }),
-      ]
-    )
+      ])
+      .reduce((ports, pair) => [...ports, ...pair], [])
   )
 
   await createReadme({

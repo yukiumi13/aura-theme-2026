@@ -70,6 +70,12 @@ async function main() {
     sourceName: 'windows-terminal',
     bundleName: 'aura-theme-2026-windows-terminal-themes',
   })
+
+  await bundlePort({
+    rootDir,
+    sourceName: 'wezterm',
+    bundleName: 'aura-theme-2026-wezterm-themes',
+  })
 }
 
 main().catch((error) => {

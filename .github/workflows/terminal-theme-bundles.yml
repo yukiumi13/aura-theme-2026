@@ -11,10 +11,15 @@ on:
       - '.github/workflows/terminal-theme-bundles.yml'
       - 'packages/ghostty/**'
       - 'packages/windows-terminal/**'
+      - 'packages/wezterm/**'
       - 'src/ports/ghostty/**'
       - 'src/ports/windows-terminal/**'
+      - 'src/ports/wezterm/**'
       - 'src/core/colors/schemes/**'
       - 'src/core/colors/palettes/**'
+      - 'src/core/colors/roles/**'
+      - 'src/core/colors/source/**'
+      - 'src/core/colors/template-vars/**'
       - 'scripts/package-terminal-bundles.js'
       - 'package.json'
       - 'yarn.lock'
@@ -45,6 +50,9 @@ jobs:
       - name: Build Windows Terminal port
         run: yarn build only windows-terminal
 
+      - name: Build WezTerm port
+        run: yarn build only wezterm
+
       - name: Package terminal theme bundles
         run: yarn package:terminals
 
@@ -55,6 +63,7 @@ jobs:
           path: |
             dist/ghostty/aura-theme-2026-ghostty-themes.zip
             dist/windows-terminal/aura-theme-2026-windows-terminal-themes.zip
+            dist/wezterm/aura-theme-2026-wezterm-themes.zip
 
       - name: Attach terminal theme bundles to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
@@ -63,3 +72,4 @@ jobs:
           files: |
             dist/ghostty/aura-theme-2026-ghostty-themes.zip
             dist/windows-terminal/aura-theme-2026-windows-terminal-themes.zip
+            dist/wezterm/aura-theme-2026-wezterm-themes.zip

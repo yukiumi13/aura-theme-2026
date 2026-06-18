@@ -7,7 +7,7 @@ export default function (Aura: AuraAPI) {
     (acc, [key, value]) => {
       return {
         ...acc,
-        [`${key}WithoutHash`]: value.replace('#', ''),
+        [`${key}WithoutHash`]: String(value).replace('#', ''),
       }
     },
     {}
@@ -46,7 +46,7 @@ export default function (Aura: AuraAPI) {
   ).reduce((acc, [key, value]) => {
     return {
       ...acc,
-      [`${key}SoftWithoutHash`]: value.replace('#', ''),
+      [`${key}SoftWithoutHash`]: String(value).replace('#', ''),
     }
   }, {})
 

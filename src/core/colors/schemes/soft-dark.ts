@@ -1,6 +1,6 @@
 import { colorsService, functionCompositionService } from 'services'
 
-import { LegacyAuraScheme } from '../palettes'
+import { LegacyAuraScheme } from '../roles'
 import { dark } from './dark'
 
 const { shade, desaturate } = colorsService()

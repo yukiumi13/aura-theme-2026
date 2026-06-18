@@ -1,6 +1,9 @@
-export * from './base'
-export * from './compile-legacy-scheme'
-export * from './create-aura-palette'
-export * from './types'
-export * from './utils'
-export * from './variants'
+export * from '../source'
+export * from '../roles'
+export {
+  createTemplateVars,
+  createTemplateVars as compileLegacyScheme,
+  createLegacySchemeFromFamily,
+  variantSchemes,
+  inkVariantScheme,
+} from '../template-vars'

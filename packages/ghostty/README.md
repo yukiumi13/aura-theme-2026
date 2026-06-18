@@ -1,7 +1,7 @@
 # Aura Theme 2026 - Ghostty
 
 A maintained Aura Theme 2026 port for Ghostty.
-Version: `v0.2.1`
+Version: `v0.3.0`
 
 
 

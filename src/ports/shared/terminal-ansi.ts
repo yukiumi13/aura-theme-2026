@@ -1,4 +1,4 @@
-import { LegacyAuraScheme } from 'core/colors/palettes/types'
+import { LegacyAuraScheme } from 'core/colors/roles'
 
 export const terminalAnsiSuffix = 'ansi'
 export const terminalAnsiLabel = 'ANSI'
