@@ -1,7 +1,7 @@
 # Aura Theme 2026 - Zed
 
 A maintained Aura Theme 2026 port for Zed.
-Version: `v0.3.0`
+Version: `v0.3.1`
 
 
 
