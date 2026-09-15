@@ -39,6 +39,13 @@ export async function VscodePort(Aura: AuraAPI) {
     path: `./themes/${family.slug}-color-theme.json`,
   }))
 
+  const lightScheme = colorSchemes.light
+  variantThemeEntries.push({
+    label: lightScheme.paletteName,
+    uiTheme: 'vs',
+    path: `./themes/${lightScheme.paletteSlug}-${outputFileNameSuffix}.json`,
+  })
+
   await copyExtraFiles(__dirname)
 
   await createPort({
@@ -116,6 +123,17 @@ export async function VscodePort(Aura: AuraAPI) {
         })
     )
   )
+
+  await createPort({
+    template,
+    outputDist,
+    outputFileName: `${lightScheme.paletteSlug}-${outputFileNameSuffix}`,
+    replacements: {
+      ...withTerminalAuraAnsi(lightScheme),
+      type: lightScheme.paletteAppearance,
+      name: lightScheme.paletteName,
+    },
+  })
 
   await createReadme({
     template: resolve(templateFolder, 'README.md'),

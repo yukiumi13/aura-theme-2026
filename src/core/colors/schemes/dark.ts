@@ -29,6 +29,7 @@ export const darkSoft = {
   accent5: shadeAndDesaturate(dark.accent5),
   accent6: shadeAndDesaturate(dark.accent6),
   accent7: shadeAndDesaturate(dark.accent7),
+  uiOnError: shadeAndDesaturate(dark.accent7),
   accent31: shadeAndDesaturate(dark.accent31),
   accent32: shadeAndDesaturate(dark.accent32),
   accent57: shadeAndDesaturate(dark.accent57),

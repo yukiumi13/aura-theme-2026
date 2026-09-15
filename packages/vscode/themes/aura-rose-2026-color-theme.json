@@ -514,6 +514,14 @@
     },
     {
       "scope": [
+        "constant.numeric"
+      ],
+      "settings": {
+        "foreground": "#FFCA85"
+      }
+    },
+    {
+      "scope": [
         "meta.export.default",
         "meta.definition.variable",
         "markup.changed",

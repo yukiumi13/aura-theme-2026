@@ -1,7 +1,7 @@
 {
   "name": "{{ slug }}",
   "displayName": "{{ displayName }}",
-  "description": "A beautiful dark theme for {{ portName }}",
+  "description": "Aura-inspired dark and light themes for {{ portName }}",
   "version": "{{ version }}",
   "scripts": {
     "publish": "vsce publish"
@@ -26,7 +26,8 @@
   ],
   "keywords": [
     "theme",
-    "{{ type }}",
+    "dark",
+    "light",
     "{{ slug }}",
     "color-theme"
   ],

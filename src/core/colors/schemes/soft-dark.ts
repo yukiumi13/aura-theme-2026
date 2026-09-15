@@ -14,6 +14,16 @@ export const softDark: LegacyAuraScheme = {
   accent13: '#3A344F',
   accent21: '#121019',
   accent24: '#100E17',
+  uiChromeBorder: '#050507',
+  uiChromeBackground: '#0D0B13',
+  uiTabStripBackground: '#0D0B13',
+  uiInactiveTabBackground: '#121019',
+  uiSectionHeaderBackground: '#0D0B13',
+  uiEditorWhitespace: '#3A344F',
+  uiEditorIndentGuide: '#3A344F',
+  syntaxIgnored: '#0D0B13',
+  uiOnDebug: '#0D0B13',
+  uiOnAccent: '#0D0B13',
 }
 
 export const softDarkSoft = {
@@ -25,6 +35,7 @@ export const softDarkSoft = {
   accent5: shadeAndDesaturate(softDark.accent5),
   accent6: shadeAndDesaturate(softDark.accent6),
   accent7: shadeAndDesaturate(softDark.accent7),
+  uiOnError: shadeAndDesaturate(softDark.accent7),
   accent31: shadeAndDesaturate(softDark.accent31),
   accent32: shadeAndDesaturate(softDark.accent32),
   accent57: shadeAndDesaturate(softDark.accent57),

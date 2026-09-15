@@ -1,6 +1,6 @@
 # Aura 2026 Color Architecture
 
-Aura 2026 is now described as three conceptual layers plus a temporary template-alias adapter. The goal is to keep color decisions centralized while allowing existing Mustache templates to migrate away from numeric `accentXX` variables gradually.
+Aura 2026 maps raw source colors through semantic palettes and role tokens to app-specific tokens, with a temporary template-alias adapter. The goal is to keep color decisions centralized while allowing existing Mustache templates to migrate away from numeric `accentXX` variables gradually.
 
 ## Flow Chart
 
@@ -41,6 +41,11 @@ flowchart TD
 - `src/core/colors/source/variants.ts`
   - Owns accent families such as azure, cyan, blue, violet, rose, amber, teal, and graphite.
   - A variant supplies only accent, bright accent, soft accent, and companion colors.
+
+- `src/core/colors/source/light.ts`
+  - `auraLightColors` contains explicit daylight source colors; no runtime inversion or port-specific color literals.
+  - `auraLightBase2026`, `auraLightSemantic2026`, and `auraLightFamily` map those colors to neutral, brand/status, and accent meanings.
+  - The `Bright` fields mean emphasis within an appearance. For light themes they can be darker, rather than higher-luminance pastels.
 
 ## Role Tokens
 
@@ -98,3 +103,41 @@ Allow these to vary:
 - syntax keyword, operator, type, property, decorator
 
 Do not make every syntax role use the variant accent. Aura variants should feel like the same theme family with different accents, not unrelated themes.
+
+## Light Appearance
+
+`createAuraPalette(family, baseOverride?, appearance = 'dark')` selects the neutral and semantic palette for an appearance. Existing callers continue to use the dark palette. `schemes/light.ts` explicitly selects `auraLightFamily` and the light appearance, then uses the same role resolver and template-variable adapter as the dark variants.
+
+The light theme is currently registered only by the VS Code port, with `type: "light"` and extension `uiTheme: "vs"`. It is not appended to the dark accent-family array, so other ports do not accidentally render a light palette under dark appearance metadata.
+
+The daylight hierarchy is:
+
+| Role | Color | Purpose |
+| --- | --- | --- |
+| Editor | `#FCFBFE` | Near-white paper with a small violet tint |
+| Sidebar, activity bar, status bar | `#F4F2F7` | Slightly darker chrome |
+| Inactive tabs | `#ECE8F1` | Distinct tab strip |
+| Floating widgets | `#FFFFFF` | Elevated surface with a translucent shadow |
+| Main text | `#342C42` | Dark violet-neutral ink |
+| UI accent / types | `#7043C1` | Aura purple |
+| Function calls / declarations | `#8541B2` / `#7934A8` | Lavender family |
+| Strings | `#007A58` | Daylight mint |
+| Properties / decorators | `#A23098` | Daylight pink |
+| Numbers | `#9A5B15` | Warm amber |
+| Comments | `#6D6377` | Muted ink with readable contrast |
+
+Appearance-specific choices live in roles: chrome boundaries are separate from widget shadows; guides and line numbers are separate from disabled text; solid fills have explicit contrast foregrounds; selection and diff opacity is lower on light paper. The shared VS Code template has no hard-coded hex colors. Legacy numeric aliases remain available to inherited ports.
+
+The shared TextMate map now assigns `constant.numeric` to `syntaxNumber`, matching semantic highlighting when no language server supplies number tokens. Existing dark UI colors and pre-existing syntax mappings remain unchanged.
+
+### References and design choices
+
+The references were inspected on September 15, 2026. They inform the surface hierarchy and light/dark translation, while this repository's Aura roles determine the actual hues:
+
+- [Upstream Aura palette](https://github.com/daltonmenezes/aura-theme/blob/main/src/core/colors/schemes/common.ts): original purple, mint, lime, pink, and warm orange relationships.
+- [VS Code Light Modern](https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/light_modern.json) and [Dark Modern](https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json): editor/chrome/tab/widget hierarchy, contrast foregrounds on buttons, and mode-specific selection surfaces.
+- [Coolnight Light](https://github.com/kpatdev/coolnight/blob/HEAD/coolnight-theme/themes/coolnight-light-color-theme.json) (`kpatdev.coolnight-theme`): community Aura-adjacent reference. This implementation keeps the local lavender-function and violet-neutral design instead of its blue-neutral surfaces and orange functions.
+
+### Validation
+
+`tests/unit/ports/vscode/light-theme.spec.ts` renders the actual shared template and verifies generated output and manifest registration. Contrast checks use sRGB relative luminance and alpha compositing, with a 4.5:1 floor for all explicit syntax foregrounds, all 16 ANSI slots, and the tested button/badge/list/menu/status pairs. Syntax checks cover the editor, current line, selection, search match, range highlight, and diff line plus word overlays. This is a bounded color check, not a claim that every possible extension, grammar, or combination of VS Code decorations has been visually tested.

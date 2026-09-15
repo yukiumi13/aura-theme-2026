@@ -11,8 +11,8 @@ on:
       - '.github/workflows/vscode-vsix.yml'
       - 'packages/vscode/**'
       - 'src/ports/vscode/**'
-      - 'src/core/colors/schemes/**'
-      - 'src/core/colors/palettes/**'
+      - 'src/core/colors/**'
+      - 'src/ports/shared/**'
       - 'package.json'
       - 'yarn.lock'
 

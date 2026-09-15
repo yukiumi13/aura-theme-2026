@@ -4,6 +4,7 @@ This is the VS Code port maintained by the `yukiumi13/aura-theme-2026` fork. It 
 
 ## Themes Available
 
+- Aura Light 2026
 - Aura 2026 Dark
 - Aura 2026 Dark (Soft Text)
 - Aura 2026 Soft Dark
@@ -18,6 +19,20 @@ This is the VS Code port maintained by the `yukiumi13/aura-theme-2026` fork. It 
 - Aura Amber 2026
 - Aura Azure 2026
 - Aura Graphite 2026
+
+## Aura Light 2026
+
+The light appearance uses violet-tinted paper, quiet gray-violet chrome, lavender functions, mint strings, pink properties, and warm amber numbers. It retains the existing Aura syntax roles and uses the same template for TextMate, semantic highlighting, UI, and terminal colors.
+
+Light selections and diff highlights use lower opacity to keep code readable. Buttons, badges, diagnostics, and all 16 ANSI colors are tuned for light backgrounds. Select **Aura Light 2026** from **Preferences: Color Theme**, or set it as your preferred light theme:
+
+```json
+{
+  "workbench.preferredLightColorTheme": "Aura Light 2026",
+  "workbench.preferredDarkColorTheme": "Aura 2026 Dark",
+  "window.autoDetectColorScheme": true
+}
+```
 
 ## Installation
 

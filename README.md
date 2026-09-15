@@ -37,13 +37,23 @@ The maintained ports include the legacy Aura variants plus the 2026 variants gen
 - Aura Azure 2026
 - Aura Graphite 2026
 
+VS Code also includes **Aura Light 2026**, a daylight companion built from the same role system. It pairs violet-tinted paper and neutral chrome with Aura's purple, lavender, mint, pink, and amber hues. Other ports currently retain their existing dark variants.
+
+![Aura Light 2026 token preview](docs/assets/aura-light-2026.png)
+
+*Illustrative preview rendered from the generated theme tokens; not a VS Code screenshot.*
+
 ## Palette Architecture
 
-The 2026 system is organized around three conceptual layers plus a temporary template-alias adapter. The generated theme files should be edited through these source files, not by hand in `packages/*`.
+The 2026 system maps source colors to semantic palettes, role tokens, and port tokens through a temporary template-alias adapter. The generated theme files should be edited through these source files, not by hand in `packages/*`.
 
 ```text
 Source palette
-  neutral + brand + status + variant family colors
+  raw neutral and hue colors
+        |
+        v
+Semantic palette
+  neutral surfaces + brand + status + variant family colors
         |
         v
 Role tokens

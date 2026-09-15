@@ -1,5 +1,11 @@
 # Aura Theme Changelog
 
+## 0.4.0 (September 15, 2026)
+
+- Add Aura Light 2026 with a daylight Aura palette, shared UI and syntax roles, and light terminal ANSI colors.
+- Separate chrome borders, widget shadows, guides, solid-fill foregrounds, and selection/diff surfaces for light and dark appearances.
+- Map TextMate numeric constants to the number role when semantic highlighting is unavailable.
+
 ## 2.1.2 (February 19, 2022)
 - Improve status bar colors when debbuging
 - Improve breakpoint frame highlight

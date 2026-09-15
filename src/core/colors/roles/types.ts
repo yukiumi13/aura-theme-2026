@@ -1,3 +1,5 @@
+export type AuraAppearance = 'dark' | 'light'
+
 export interface AuraBasePalette {
   shadow: string
   background: string
@@ -116,6 +118,7 @@ export interface AuraSyntaxPalette {
   constructor: string
   decorator: string
   embedded: string
+  ignored: string
   enum: string
   enumMember: string
   function: string
@@ -147,6 +150,27 @@ export interface AuraSyntaxPalette {
 }
 
 export interface AuraUiPalette {
+  chrome: {
+    background: string
+    border: string
+    titleBorder: string
+    tabStripBackground: string
+    inactiveTabBackground: string
+    sectionHeaderBackground: string
+  }
+  editorDecoration: {
+    lineNumber: string
+    lineHighlight: string
+    whitespace: string
+    treeGuide: string
+    indentGuide: string
+    activeIndentGuide: string
+    rangeHighlight: string
+  }
+  chartGrid: string
+  onAccent: string
+  onError: string
+  onDebug: string
   accent: string
   accentBright: string
   accentSoft: string
@@ -181,6 +205,8 @@ export interface AuraUiPalette {
   status: {
     modified: string
     successSurface: string
+    successTextSurface: string
+    errorTextSurface: string
     warning: string
     warningSurface: string
     errorSurface: string
@@ -240,6 +266,7 @@ export interface AuraUiPalette {
 }
 
 export interface AuraPalette {
+  appearance: AuraAppearance
   name: string
   slug: string
   base: AuraBasePalette
