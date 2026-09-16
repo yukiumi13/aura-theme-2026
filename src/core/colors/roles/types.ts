@@ -159,6 +159,9 @@ export interface AuraUiPalette {
     titleBorder: string
     tabStripBackground: string
     inactiveTabBackground: string
+    unfocusedTabForeground: string
+    tabHoverBackground: string
+    tabHoverBorder: string
     sectionHeaderBackground: string
   }
   editorDecoration: {
@@ -169,11 +172,13 @@ export interface AuraUiPalette {
     indentGuide: string
     activeIndentGuide: string
     rangeHighlight: string
+    inlayHintForeground: string
   }
   chartGrid: string
   onAccent: string
   onError: string
   onDebug: string
+  interactionForeground: string
   accent: string
   accentBright: string
   accentSoft: string
@@ -210,10 +215,14 @@ export interface AuraUiPalette {
     editorStrong: string
     list: string
     listFocus: string
+    listInactive: string
     solid: string
   }
   status: {
     modified: string
+    conflict: string
+    success: string
+    successBright: string
     successSurface: string
     successTextSurface: string
     errorTextSurface: string
@@ -228,6 +237,7 @@ export interface AuraUiPalette {
     hover: string
     hoverOverlay: string
     strongOverlay: string
+    toolbarHover: string
     tile: string
     tileHover: string
   }

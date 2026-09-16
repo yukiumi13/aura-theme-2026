@@ -47,7 +47,9 @@ export function createAuraPalette(
   const subtleAccentSurface = withAlpha(accentSoft, '1A')
   const mediumAccentSurface = withAlpha(accentSoft, '26')
   const strongAccentSurface = withAlpha(accentSoft, '4D')
-  const foregroundOverlayLow = withAlpha(base.surfaceHover, 'CC')
+  const foregroundOverlayLow = isLight
+    ? base.surfaceHover
+    : withAlpha(base.surfaceHover, 'CC')
   const foregroundOverlayHigh = withAlpha(base.borderStrong, '99')
 
   return {
@@ -64,6 +66,11 @@ export function createAuraPalette(
         titleBorder: isLight ? base.border : base.shadow,
         tabStripBackground: isLight ? auraLightColors.tabs : base.background,
         inactiveTabBackground: isLight ? auraLightColors.tabs : base.sidebar,
+        unfocusedTabForeground: isLight
+          ? base.foregroundMuted
+          : base.disabled,
+        tabHoverBackground: isLight ? base.surfaceHover : base.surface,
+        tabHoverBorder: isLight ? base.transparent : base.border,
         sectionHeaderBackground: isLight ? base.sidebar : base.background,
       },
       editorDecoration: {
@@ -80,11 +87,15 @@ export function createAuraPalette(
           ? base.borderStrong
           : base.foregroundSubtle,
         rangeHighlight: isLight ? withAlpha(accentSoft, '0D') : '#24222c88',
+        inlayHintForeground: isLight
+          ? base.foregroundMuted
+          : base.foreground,
       },
       chartGrid: isLight ? withAlpha(base.borderStrong, '80') : '#3b334b80',
       onAccent,
       onError: isLight ? base.elevated : base.foregroundStrong,
       onDebug: isLight ? base.foregroundStrong : base.background,
+      interactionForeground: isLight ? base.foreground : brand.mint,
       accent,
       accentBright,
       accentSoft,
@@ -98,7 +109,7 @@ export function createAuraPalette(
       action: {
         background: actionBackground,
         prominentBackground: isLight ? brand.mint : accent,
-        border: isLight ? auraLightColors.mintOutline : base.border,
+        border: isLight ? base.transparent : base.border,
         foreground: actionForeground,
         hoverBackground: brand.mintHover,
         hoverForeground: actionForeground,
@@ -106,13 +117,13 @@ export function createAuraPalette(
       },
       linkRole: {
         foreground: accent,
-        hoverForeground: brand.mintText,
+        hoverForeground: isLight ? accentBright : brand.mintText,
       },
       remote: {
-        background: isLight ? auraLightColors.inverse : accent,
-        foreground: isLight ? brand.mint : base.background,
-        hoverBackground: isLight ? auraLightColors.inverseHover : brand.mint,
-        hoverForeground: isLight ? brand.mint : base.background,
+        background: isLight ? actionBackground : accent,
+        foreground: actionForeground,
+        hoverBackground: brand.mintHover,
+        hoverForeground: actionForeground,
         compactHoverBackground: isLight ? base.surfaceHover : brand.mint,
       },
       selectionRole: {
@@ -121,10 +132,14 @@ export function createAuraPalette(
         editorStrong: selection,
         list: listSelection,
         listFocus: listSelectionFocus,
+        listInactive: isLight ? selectionSolid : base.surfaceAlt,
         solid: selectionSolid,
       },
       status: {
         modified: accentBright,
+        conflict: isLight ? status.orangeBright : accentBright,
+        success: status.success,
+        successBright: status.successBright,
         successSurface,
         successTextSurface: withAlpha(status.success, isLight ? '0D' : '23'),
         errorTextSurface: withAlpha(status.error, isLight ? '0C' : '20'),
@@ -139,6 +154,7 @@ export function createAuraPalette(
         hover: base.surfaceHover,
         hoverOverlay: foregroundOverlayLow,
         strongOverlay: foregroundOverlayHigh,
+        toolbarHover: isLight ? base.surfaceHover : foregroundOverlayHigh,
         tile: base.surface,
         tileHover: base.surfaceHover,
       },
@@ -153,7 +169,7 @@ export function createAuraPalette(
         base: brand.mint,
         bright: companionBright,
         hover: companionSoft,
-        foreground: isLight ? companionBright : brand.mint,
+        foreground: isLight ? accent : brand.mint,
       },
       focusBorder,
       selection,
@@ -167,7 +183,7 @@ export function createAuraPalette(
       actionHover: brand.mintHover,
       lineHighlight: base.surfaceAlt,
       link: accent,
-      linkHover: brand.mintText,
+      linkHover: isLight ? accentBright : brand.mintText,
       button: actionBackground,
       buttonHover: isLight ? brand.mintHover : accent,
       successSurface,

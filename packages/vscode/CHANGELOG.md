@@ -1,5 +1,16 @@
 # Aura Theme Changelog
 
+## 0.4.2 (September 16, 2026)
+
+- Match Remote/SSH status items to the mint-fill, dark-text action style in normal and hover states.
+- Keep light list, menu, tab, and breadcrumb interactions neutral; use purple for search-match and link emphasis instead of mint text on gray surfaces.
+- Remove persistent borders from primary, secondary, and extension-marketplace buttons while retaining keyboard focus indicators.
+
+- Keep unfocused tab labels readable and preserve a subtle violet selection in an unfocused sidebar.
+- Unify toolbar and tab hover fills with neutral list hover; remove hover-only tab borders.
+- Separate UI success and Git colors from terminal ANSI; use semantic green for additions, purple for modifications, and orange for conflicts.
+- Reduce inlay-hint emphasis to the secondary text level while retaining readable contrast.
+
 ## 0.4.1 (September 16, 2026)
 
 - Refine Aura Light with soft neutral surfaces, darker chrome, and white floating widgets.

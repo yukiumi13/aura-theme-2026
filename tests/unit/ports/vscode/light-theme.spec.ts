@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import Mustache from 'mustache'
 import { light } from 'core/colors/schemes'
 import { auraMint } from 'core/colors/source/aura'
+import { auraLightSemantic2026 } from 'core/colors/source/light'
 import { withTerminalAuraAnsi } from 'ports/shared/terminal-ansi'
 
 type TokenStyle = string | { foreground: string; fontStyle?: string }
@@ -134,21 +135,158 @@ describe('Aura Light 2026', () => {
     expect(colors['sideBar.border']).not.toBe(colors['widget.shadow'])
   })
 
-  it('preserves original mint in filled controls and inverse chrome, independently of text ink', () => {
+  it('preserves original mint fills with dark ink in controls and remote status', () => {
     expect(colors['button.background']).toBe(auraMint)
     expect(colors['badge.background']).toBe(auraMint)
     expect(colors['activityBarBadge.background']).toBe(auraMint)
-    expect(colors['statusBarItem.remoteForeground']).toBe(auraMint)
+    expect(colors['statusBarItem.remoteBackground']).toBe(auraMint)
+    expect(colors['statusBarItem.remoteForeground']).toBe(
+      colors['button.foreground']
+    )
+    expect(colors['statusBarItem.remoteHoverBackground']).toBe(
+      colors['button.hoverBackground']
+    )
+    expect(colors['statusBarItem.remoteHoverForeground']).toBe(
+      colors['button.foreground']
+    )
     expect(luminance(rgb(colors['button.foreground']))).toBeLessThan(0.1)
     expect(theme.semanticTokenColors.string).not.toBe(auraMint)
     expect(colors['terminal.ansiGreen']).not.toBe(auraMint)
-    // Buttons have no separate hover text color in VS Code. Both fills must
-    // work with the same foreground; their outline identifies the control.
+  })
+
+  it('keeps neutral hover labels separate from purple match highlights', () => {
+    for (const key of [
+      'list.hoverForeground',
+      'list.focusForeground',
+      'list.activeSelectionIconForeground',
+      'menu.selectionForeground',
+      'tab.hoverForeground',
+      'breadcrumb.focusForeground',
+      'editorSuggestWidget.selectedIconForeground',
+      'quickInputList.focusIconForeground',
+    ]) {
+      expect(colors[key]).toBe(colors['sideBar.foreground'])
+    }
+    expect(colors['list.hoverBackground']).toMatch(/^#[0-9a-f]{6}$/i)
+    expect(colors['list.highlightForeground']).toBe(
+      colors['textLink.foreground']
+    )
+    expect(colors['list.highlightForeground']).not.toBe(
+      colors['list.hoverForeground']
+    )
+  })
+
+  it('removes decorative button outlines while retaining keyboard focus contrast', () => {
+    for (const key of [
+      'button.border',
+      'button.secondaryBorder',
+      'extensionButton.border',
+    ]) {
+      expect(colors[key]).toBe('#00000000')
+    }
     for (const surface of ['editor.background', 'sideBar.background']) {
       expect(
-        contrast(colors['button.border'], rgb(colors[surface]))
+        contrast(colors.focusBorder, rgb(colors[surface]))
       ).toBeGreaterThanOrEqual(3)
     }
+  })
+
+  it('retains a visible selection after the list loses focus', () => {
+    const sidebar = rgb(colors['sideBar.background'])
+    const inactive = over(
+      colors['list.inactiveSelectionBackground'],
+      sidebar
+    )
+    const active = over(colors['list.activeSelectionBackground'], sidebar)
+    // A subtle filled selection must still separate from the surrounding row.
+    expect(
+      contrast(colors['list.inactiveSelectionBackground'], sidebar)
+    ).toBeGreaterThan(1.1)
+    expect(luminance(active)).toBeLessThan(luminance(inactive))
+    expectReadable(
+      colors['list.inactiveSelectionForeground'],
+      inactive,
+      'inactive selection'
+    )
+  })
+
+  it('uses light neutral hover fills across rows, tools, and tabs without decorative outlines', () => {
+    const hover = colors['list.hoverBackground']
+    for (const key of [
+      'toolbar.hoverBackground',
+      'tab.hoverBackground',
+      'tab.unfocusedHoverBackground',
+    ]) {
+      expect(colors[key]).toBe(hover)
+    }
+    expect(colors['tab.hoverBorder']).toBe('#00000000')
+    expect(colors['tab.unfocusedHoverBorder']).toBe('#00000000')
+    expect(
+      contrast(
+        colors['tab.activeBorderTop'],
+        rgb(colors['tab.activeBackground'])
+      )
+    ).toBeGreaterThanOrEqual(3)
+  })
+
+  it('makes inlay hints subordinate to code while keeping their text readable', () => {
+    const background = rgb(colors['editorInlayHint.background'])
+    expectReadable(
+      colors['editorInlayHint.foreground'],
+      background,
+      'inlay hint'
+    )
+    expect(
+      contrast(colors['editorInlayHint.foreground'], background)
+    ).toBeLessThan(contrast(colors['editor.foreground'], background))
+  })
+
+  it('keeps Git and success indicators independent of terminal ANSI overrides', () => {
+    const altered: Theme = JSON.parse(
+      Mustache.render(template, {
+        ...withTerminalAuraAnsi(light),
+        ansiBrightGreen: '#FF00FF',
+        name: light.paletteName,
+        type: light.paletteAppearance,
+      })
+    )
+    expect(altered.colors['terminal.ansiBrightGreen']).toBe('#FF00FF')
+    for (const key of [
+      'gitDecoration.addedResourceForeground',
+      'gitDecoration.untrackedResourceForeground',
+      'editorGutter.addedBackground',
+      'editorOverviewRuler.addedForeground',
+      'terminalCommandDecoration.successBackground',
+      'chat.linesAddedForeground',
+    ]) {
+      expect(altered.colors[key]).toBe(auraLightSemantic2026.status.success)
+      for (const surface of [
+        'sideBar.background',
+        'list.hoverBackground',
+        'list.activeSelectionBackground',
+        'list.inactiveSelectionBackground',
+      ]) {
+        expectReadable(
+          altered.colors[key],
+          over(colors[surface], rgb(colors['sideBar.background'])),
+          key + ' on ' + surface
+        )
+      }
+    }
+    const conflict = colors['gitDecoration.conflictingResourceForeground']
+    expect(conflict).toBe(auraLightSemantic2026.status.orangeBright)
+    expect(conflict).not.toBe(
+      colors['gitDecoration.modifiedResourceForeground']
+    )
+    expectReadable(
+      conflict,
+      over(
+        colors['list.activeSelectionBackground'],
+        rgb(colors['sideBar.background'])
+      ),
+      'selected Git conflict'
+    )
+    expect(altered.tokenColors).toEqual(theme.tokenColors)
   })
 
   it.each([
@@ -228,6 +366,12 @@ describe('Aura Light 2026', () => {
     ],
     ['statusBarItem.warningForeground', 'statusBarItem.warningBackground'],
     ['statusBarItem.errorForeground', 'statusBarItem.errorBackground'],
+    ['tab.unfocusedInactiveForeground', 'tab.unfocusedInactiveBackground'],
+    ['tab.unfocusedActiveForeground', 'tab.unfocusedActiveBackground'],
+    ['tab.unfocusedHoverForeground', 'tab.unfocusedHoverBackground'],
+    ['list.inactiveSelectionForeground', 'list.inactiveSelectionBackground'],
+    ['editorInlayHint.foreground', 'editorInlayHint.background'],
+    ['icon.foreground', 'toolbar.hoverBackground'],
     ['list.hoverForeground', 'list.hoverBackground'],
     ['list.focusForeground', 'list.focusBackground'],
     ['menu.selectionForeground', 'menu.selectionBackground'],

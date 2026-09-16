@@ -121,7 +121,7 @@ The daylight hierarchy is:
 | Main text | `#30323C` | Neutral ink with a subtle violet bias |
 | Focus / links / types | `#7043C1` | Aura purple |
 | Primary actions / badges | `#61FFCA` fill / `#123B2D` text | Exact original mint with dark ink |
-| Remote status item | `#61FFCA` text on `#282431` | Small inverse surface for the original mint |
+| Remote / SSH status item | `#61FFCA` fill / `#123B2D` text | Same filled action language as buttons and badges |
 | Function calls / declarations | `#8541B2` / `#7934A8` | Lavender family |
 | Strings | `#007A58` | Daylight mint |
 | Properties / decorators | `#A23098` | Daylight pink |
@@ -136,9 +136,17 @@ The shared TextMate map now assigns `constant.numeric` to `syntaxNumber`, matchi
 
 `auraMint` in `source/aura.ts` owns the original `#61FFCA` anchor shared by both appearances. The semantic brand palette exposes four distinct purposes: `mint` (identity), `mintText` (readable ink), `mintHover` (filled-control state), and `onMint` (contrast foreground). Light actions and badges use the original color, while syntax strings/tags, success diagnostics, and terminal green use the ink. Adjusting one must not silently change the others.
 
-Actions have an explicit outline and prominent fill; badges have their own paired foreground/background. A bright fill uses dark ink for both normal and hover states because VS Code does not provide a separate button-hover foreground. The Remote status role uses a small inverse surface with original-mint text. Ordinary compact status items retain a neutral hover surface so their dark text does not inherit the Remote item's inverse background.
+Actions and badges have explicit foreground/background pairs. Primary, secondary, and extension-marketplace buttons use transparent decorative borders in the light appearance; the purple keyboard focus indicator remains. A bright fill uses dark ink for both normal and hover states because VS Code does not provide a separate button-hover foreground. Remote/SSH status items follow the same mint-fill, dark-ink pairing. Ordinary compact status items retain a neutral hover surface.
+
+`ui.interactionForeground` keeps ordinary hovered/focused list labels, menu items, tab titles, and breadcrumbs neutral. `ui.highlight.foreground` is reserved for search-match and other semantic emphasis and uses purple in the light appearance. Light neutral hover fills are opaque so they do not pick up a tint from the underlying surface; links remain purple on hover. Status decorations such as Git additions retain their own semantic colors during ordinary hover states.
 
 The surfaces follow a calm neutral hierarchy, inspired by Material's semantic surface/container roles. Purple is concentrated in focus, links, and syntax rather than a wash across the entire workspace. No text glow, custom CSS injection, or additional runtime extension is required.
+
+### Focus, secondary content, and status
+
+Unfocused tab labels use `ui.chrome.unfocusedTabForeground`, a readable secondary ink rather than disabled text. `ui.selectionRole.listInactive` keeps a subtle violet selection after focus moves to the editor. Tab and toolbar hover roles share the neutral row hover fill, with transparent tab hover borders; active and keyboard focus indicators remain purple. `ui.editorDecoration.inlayHintForeground` uses secondary text so generated hints remain subordinate to source code.
+
+UI success indicators, Git additions, chat additions, and inserted diff text use `ui.status.success` from semantic status green. Git conflicts use `ui.status.conflict` (strong orange for light); ordinary modifications remain purple. Neither depends on an ANSI slot. The VS Code port explicitly keeps the existing dark accent variants on `ui.status.successBright` to preserve their historical lime success color, independently of terminal ANSI. All 16 integrated-terminal ANSI slots remain unchanged.
 
 ### References and design choices
 
@@ -153,4 +161,4 @@ The references were inspected on September 15, 2026. They inform the surface hie
 
 ### Validation
 
-`tests/unit/ports/vscode/light-theme.spec.ts` renders the actual shared template and verifies generated output and manifest registration. Contrast checks use sRGB relative luminance and alpha compositing, with a 4.5:1 floor for all explicit syntax foregrounds, all 16 ANSI slots, and the tested button/badge/list/menu/status pairs, including prominent and hover states. Primary control outlines are also checked at 3:1 against the editor and chrome backgrounds. Syntax checks cover the editor, current line, selection, search match, range highlight, and diff line plus word overlays. This is a bounded color check, not a claim that every possible extension, grammar, or combination of VS Code decorations has been visually tested.
+`tests/unit/ports/vscode/light-theme.spec.ts` renders the actual shared template and verifies generated output and manifest registration. Contrast checks use sRGB relative luminance and alpha compositing, with a 4.5:1 floor for all explicit syntax foregrounds, all 16 ANSI slots, and the tested button/badge/list/menu/status pairs, including prominent and hover states. Keyboard focus indicators are checked at 3:1 against the editor and chrome backgrounds; primary, secondary, and marketplace button borders are checked to remain transparent. Syntax checks cover the editor, current line, selection, search match, range highlight, and diff line plus word overlays. Further checks cover unfocused tab text, persistent inactive selection, readable Git decorations on selected/hovered rows, secondary inlay text, and independence from ANSI overrides. This is a bounded color check, not a claim that every possible extension, grammar, or combination of VS Code decorations has been visually tested.

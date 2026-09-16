@@ -118,6 +118,9 @@ export async function VscodePort(Aura: AuraAPI) {
           replacements: {
             type,
             ...withTerminalAuraAnsi(scheme),
+            // Preserve the historical bright success color of dark variants
+            // using semantic status roles, independently of terminal ANSI.
+            uiStatusSuccess: scheme.uiStatusSuccessBright,
             name: family.name,
           },
         })
