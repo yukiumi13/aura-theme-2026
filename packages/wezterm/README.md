@@ -1,7 +1,7 @@
 # Aura Theme 2026 - WezTerm
 
 A maintained Aura Theme 2026 port for WezTerm.
-Version: `v0.4.0`
+Version: `v0.4.1`
 
 
 

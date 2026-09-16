@@ -114,21 +114,31 @@ The daylight hierarchy is:
 
 | Role | Color | Purpose |
 | --- | --- | --- |
-| Editor | `#FCFBFE` | Near-white paper with a small violet tint |
-| Sidebar, activity bar, status bar | `#F4F2F7` | Slightly darker chrome |
-| Inactive tabs | `#ECE8F1` | Distinct tab strip |
+| Editor | `#F8F9FA` | Soft neutral canvas |
+| Sidebar, activity bar, status bar | `#F0F2F5` | Slightly darker chrome |
+| Inactive tabs | `#E7EBF0` | Distinct tab strip |
 | Floating widgets | `#FFFFFF` | Elevated surface with a translucent shadow |
-| Main text | `#342C42` | Dark violet-neutral ink |
-| UI accent / types | `#7043C1` | Aura purple |
+| Main text | `#30323C` | Neutral ink with a subtle violet bias |
+| Focus / links / types | `#7043C1` | Aura purple |
+| Primary actions / badges | `#61FFCA` fill / `#123B2D` text | Exact original mint with dark ink |
+| Remote status item | `#61FFCA` text on `#282431` | Small inverse surface for the original mint |
 | Function calls / declarations | `#8541B2` / `#7934A8` | Lavender family |
 | Strings | `#007A58` | Daylight mint |
 | Properties / decorators | `#A23098` | Daylight pink |
 | Numbers | `#9A5B15` | Warm amber |
-| Comments | `#6D6377` | Muted ink with readable contrast |
+| Comments | `#606C78` | Quiet neutral ink with readable contrast |
 
 Appearance-specific choices live in roles: chrome boundaries are separate from widget shadows; guides and line numbers are separate from disabled text; solid fills have explicit contrast foregrounds; selection and diff opacity is lower on light paper. The shared VS Code template has no hard-coded hex colors. Legacy numeric aliases remain available to inherited ports.
 
 The shared TextMate map now assigns `constant.numeric` to `syntaxNumber`, matching semantic highlighting when no language server supplies number tokens. Existing dark UI colors and pre-existing syntax mappings remain unchanged.
+
+### Brand mint versus text ink
+
+`auraMint` in `source/aura.ts` owns the original `#61FFCA` anchor shared by both appearances. The semantic brand palette exposes four distinct purposes: `mint` (identity), `mintText` (readable ink), `mintHover` (filled-control state), and `onMint` (contrast foreground). Light actions and badges use the original color, while syntax strings/tags, success diagnostics, and terminal green use the ink. Adjusting one must not silently change the others.
+
+Actions have an explicit outline and prominent fill; badges have their own paired foreground/background. A bright fill uses dark ink for both normal and hover states because VS Code does not provide a separate button-hover foreground. The Remote status role uses a small inverse surface with original-mint text. Ordinary compact status items retain a neutral hover surface so their dark text does not inherit the Remote item's inverse background.
+
+The surfaces follow a calm neutral hierarchy, inspired by Material's semantic surface/container roles. Purple is concentrated in focus, links, and syntax rather than a wash across the entire workspace. No text glow, custom CSS injection, or additional runtime extension is required.
 
 ### References and design choices
 
@@ -136,8 +146,11 @@ The references were inspected on September 15, 2026. They inform the surface hie
 
 - [Upstream Aura palette](https://github.com/daltonmenezes/aura-theme/blob/main/src/core/colors/schemes/common.ts): original purple, mint, lime, pink, and warm orange relationships.
 - [VS Code Light Modern](https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/light_modern.json) and [Dark Modern](https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json): editor/chrome/tab/widget hierarchy, contrast foregrounds on buttons, and mode-specific selection surfaces.
-- [Coolnight Light](https://github.com/kpatdev/coolnight/blob/HEAD/coolnight-theme/themes/coolnight-light-color-theme.json) (`kpatdev.coolnight-theme`): community Aura-adjacent reference. This implementation keeps the local lavender-function and violet-neutral design instead of its blue-neutral surfaces and orange functions.
+- [Coolnight Light](https://github.com/kpatdev/coolnight/blob/HEAD/coolnight-theme/themes/coolnight-light-color-theme.json) (`kpatdev.coolnight-theme`): community Aura-adjacent reference. This implementation keeps the local lavender-function design and Aura hue relationships.
+
+- [Material 3 color roles](https://m3.material.io/styles/color/roles): separate surfaces, containers, and their contrast foregrounds. The specific neutral values in this repository are design choices for Aura, not a claimed universal Google palette.
+- [Google Colab's redesigned editor](https://developers.googleblog.com/fully-reimagined-ai-first-google-colab/): a Google code-interface reference; this is not a port of its theme.
 
 ### Validation
 
-`tests/unit/ports/vscode/light-theme.spec.ts` renders the actual shared template and verifies generated output and manifest registration. Contrast checks use sRGB relative luminance and alpha compositing, with a 4.5:1 floor for all explicit syntax foregrounds, all 16 ANSI slots, and the tested button/badge/list/menu/status pairs. Syntax checks cover the editor, current line, selection, search match, range highlight, and diff line plus word overlays. This is a bounded color check, not a claim that every possible extension, grammar, or combination of VS Code decorations has been visually tested.
+`tests/unit/ports/vscode/light-theme.spec.ts` renders the actual shared template and verifies generated output and manifest registration. Contrast checks use sRGB relative luminance and alpha compositing, with a 4.5:1 floor for all explicit syntax foregrounds, all 16 ANSI slots, and the tested button/badge/list/menu/status pairs, including prominent and hover states. Primary control outlines are also checked at 3:1 against the editor and chrome backgrounds. Syntax checks cover the editor, current line, selection, search match, range highlight, and diff line plus word overlays. This is a bounded color check, not a claim that every possible extension, grammar, or combination of VS Code decorations has been visually tested.

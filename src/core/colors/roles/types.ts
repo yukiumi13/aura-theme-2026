@@ -24,6 +24,9 @@ export interface AuraBasePalette {
 export interface AuraSemanticPalette {
   brand: {
     mint: string
+    mintText: string
+    mintHover: string
+    onMint: string
     lime: string
     blue: string
     teal: string
@@ -177,8 +180,14 @@ export interface AuraUiPalette {
   companion: string
   companionBright: string
   companionSoft: string
+  badge: {
+    background: string
+    foreground: string
+  }
   action: {
     background: string
+    prominentBackground: string
+    border: string
     foreground: string
     hoverBackground: string
     hoverForeground: string
@@ -189,6 +198,7 @@ export interface AuraUiPalette {
     hoverForeground: string
   }
   remote: {
+    compactHoverBackground: string
     background: string
     foreground: string
     hoverBackground: string

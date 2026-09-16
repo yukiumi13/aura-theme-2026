@@ -3,30 +3,37 @@ import {
   AuraSemanticPalette,
   AuraVariantFamily,
 } from '../roles/types'
+import { auraMint } from './aura'
 
 // Hand-tuned daylight companions to Aura's existing hues. These are source
 // colors, not an inversion of the dark theme or colors sampled from a port.
 export const auraLightColors = {
-  paper: '#FCFBFE',
+  paper: '#F8F9FA',
   white: '#FFFFFF',
-  chrome: '#F4F2F7',
-  surface: '#F1EEF5',
-  line: '#F5F3F8',
-  hover: '#E8E3EF',
-  tabs: '#ECE8F1',
-  border: '#E2DCE9',
-  borderStrong: '#C7BED3',
-  ink: '#342C42',
-  inkStrong: '#241B30',
-  inkMuted: '#60576D',
-  inkSubtle: '#746A80',
-  disabled: '#A398AE',
-  comment: '#6D6377',
+  chrome: '#F0F2F5',
+  surface: '#EEF1F4',
+  line: '#F2F4F6',
+  hover: '#E5E9EF',
+  tabs: '#E7EBF0',
+  border: '#DCE1E7',
+  borderStrong: '#BFC7D2',
+  ink: '#30323C',
+  inkStrong: '#22242E',
+  inkMuted: '#59616F',
+  inkSubtle: '#687381',
+  disabled: '#A0A8B4',
+  comment: '#606C78',
   purple: '#7043C1',
   purpleStrong: '#5F35AB',
   purpleSoft: '#8659CF',
-  selection: '#E7DFF5',
-  mint: '#007A58',
+  selection: '#E9E5F3',
+  mint: auraMint,
+  mintText: '#007A58',
+  mintHover: '#48E8B5',
+  mintOutline: '#148765',
+  onMint: '#123B2D',
+  inverse: '#282431',
+  inverseHover: '#373042',
   mintStrong: '#006B4D',
   mintSoft: '#2F8869',
   lime: '#43751E',
@@ -48,7 +55,7 @@ export const auraLightColors = {
 }
 
 export const auraLightBase2026: AuraBasePalette = {
-  shadow: '#241B3018',
+  shadow: '#20263214',
   background: auraLightColors.paper,
   appBackground: auraLightColors.chrome,
   sidebar: auraLightColors.chrome,
@@ -71,6 +78,9 @@ export const auraLightBase2026: AuraBasePalette = {
 export const auraLightSemantic2026: AuraSemanticPalette = {
   brand: {
     mint: auraLightColors.mint,
+    mintText: auraLightColors.mintText,
+    mintHover: auraLightColors.mintHover,
+    onMint: auraLightColors.onMint,
     lime: auraLightColors.lime,
     blue: auraLightColors.blue,
     teal: auraLightColors.teal,
@@ -83,7 +93,7 @@ export const auraLightSemantic2026: AuraSemanticPalette = {
   status: {
     error: auraLightColors.red,
     errorBright: auraLightColors.redStrong,
-    success: auraLightColors.mint,
+    success: auraLightColors.mintText,
     successBright: auraLightColors.lime,
     warning: auraLightColors.amber,
     warningBright: auraLightColors.amberStrong,
@@ -100,7 +110,7 @@ export const auraLightFamily: AuraVariantFamily = {
   accent: auraLightColors.purple,
   accentBright: auraLightColors.purpleStrong,
   accentSoft: auraLightColors.purpleSoft,
-  companion: auraLightColors.mint,
+  companion: auraLightColors.mintText,
   companionBright: auraLightColors.mintStrong,
   companionSoft: auraLightColors.mintSoft,
 }

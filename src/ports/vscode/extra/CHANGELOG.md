@@ -1,5 +1,11 @@
 # Aura Theme Changelog
 
+## 0.4.1 (September 16, 2026)
+
+- Refine Aura Light with soft neutral surfaces, darker chrome, and white floating widgets.
+- Restore original Aura mint in actions and badges, plus mint text on a dark-violet Remote status item; keep syntax and terminal ink separate.
+- Add explicit badge, prominent-action, action-border, and compact-hover roles so foreground/background pairs remain readable.
+
 ## 0.4.0 (September 15, 2026)
 
 - Add Aura Light 2026 with a daylight Aura palette, shared UI and syntax roles, and light terminal ANSI colors.

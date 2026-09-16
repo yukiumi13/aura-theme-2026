@@ -24,6 +24,7 @@ export const softDark: LegacyAuraScheme = {
   syntaxIgnored: '#0D0B13',
   uiOnDebug: '#0D0B13',
   uiOnAccent: '#0D0B13',
+  uiBadgeForeground: '#0D0B13',
 }
 
 export const softDarkSoft = {

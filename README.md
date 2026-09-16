@@ -37,7 +37,7 @@ The maintained ports include the legacy Aura variants plus the 2026 variants gen
 - Aura Azure 2026
 - Aura Graphite 2026
 
-VS Code also includes **Aura Light 2026**, a daylight companion built from the same role system. It pairs violet-tinted paper and neutral chrome with Aura's purple, lavender, mint, pink, and amber hues. Other ports currently retain their existing dark variants.
+VS Code also includes **Aura Light 2026**, a daylight companion built from the same role system. It pairs soft neutral surfaces with original Aura mint actions, purple focus accents, lavender functions, pink properties, and amber numbers. Other ports currently retain their existing dark variants.
 
 ![Aura Light 2026 token preview](docs/assets/aura-light-2026.png)
 

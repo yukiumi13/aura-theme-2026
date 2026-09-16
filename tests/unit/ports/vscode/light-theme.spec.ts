@@ -2,6 +2,7 @@ import { readFileSync } from 'fs'
 import { resolve } from 'path'
 import Mustache from 'mustache'
 import { light } from 'core/colors/schemes'
+import { auraMint } from 'core/colors/source/aura'
 import { withTerminalAuraAnsi } from 'ports/shared/terminal-ansi'
 
 type TokenStyle = string | { foreground: string; fontStyle?: string }
@@ -119,7 +120,8 @@ describe('Aura Light 2026', () => {
   })
 
   it('separates paper, chrome, tab strip, and floating widgets', () => {
-    expect(luminance(editor)).toBeGreaterThan(0.95)
+    expect(luminance(editor)).toBeGreaterThan(0.9)
+    expect(luminance(editor)).toBeLessThan(1)
     expect(luminance(rgb(colors['sideBar.background']))).toBeLessThan(
       luminance(editor)
     )
@@ -130,6 +132,23 @@ describe('Aura Light 2026', () => {
       luminance(rgb(colors['editorHoverWidget.background']))
     ).toBeGreaterThan(luminance(editor))
     expect(colors['sideBar.border']).not.toBe(colors['widget.shadow'])
+  })
+
+  it('preserves original mint in filled controls and inverse chrome, independently of text ink', () => {
+    expect(colors['button.background']).toBe(auraMint)
+    expect(colors['badge.background']).toBe(auraMint)
+    expect(colors['activityBarBadge.background']).toBe(auraMint)
+    expect(colors['statusBarItem.remoteForeground']).toBe(auraMint)
+    expect(luminance(rgb(colors['button.foreground']))).toBeLessThan(0.1)
+    expect(theme.semanticTokenColors.string).not.toBe(auraMint)
+    expect(colors['terminal.ansiGreen']).not.toBe(auraMint)
+    // Buttons have no separate hover text color in VS Code. Both fills must
+    // work with the same foreground; their outline identifies the control.
+    for (const surface of ['editor.background', 'sideBar.background']) {
+      expect(
+        contrast(colors['button.border'], rgb(colors[surface]))
+      ).toBeGreaterThanOrEqual(3)
+    }
   })
 
   it.each([
@@ -178,6 +197,27 @@ describe('Aura Light 2026', () => {
     ['button.foreground', 'button.hoverBackground'],
     ['button.secondaryForeground', 'button.secondaryHoverBackground'],
     ['badge.foreground', 'badge.background'],
+    ['activityBarBadge.foreground', 'activityBarBadge.background'],
+    ['panelTitleBadge.foreground', 'panelTitleBadge.background'],
+    ['extensionButton.foreground', 'extensionButton.background'],
+    ['extensionButton.foreground', 'extensionButton.hoverBackground'],
+    [
+      'extensionButton.prominentForeground',
+      'extensionButton.prominentBackground',
+    ],
+    [
+      'extensionButton.prominentForeground',
+      'extensionButton.prominentHoverBackground',
+    ],
+    [
+      'statusBarItem.prominentForeground',
+      'statusBarItem.prominentBackground',
+    ],
+    [
+      'statusBarItem.prominentHoverForeground',
+      'statusBarItem.prominentHoverBackground',
+    ],
+    ['statusBar.foreground', 'statusBarItem.compactHoverBackground'],
     ['activityErrorBadge.foreground', 'activityErrorBadge.background'],
     ['activityWarningBadge.foreground', 'activityWarningBadge.background'],
     ['statusBar.debuggingForeground', 'statusBar.debuggingBackground'],

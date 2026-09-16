@@ -29,9 +29,15 @@ export const auraInkBase2026: AuraBasePalette = {
   ...auraBase2026,
 }
 
+// Shared brand anchor: appearance-specific ink colors must not replace it.
+export const auraMint = '#61FFCA'
+
 export const auraSemantic2026: AuraSemanticPalette = {
   brand: {
-    mint: '#61FFCA',
+    mint: auraMint,
+    mintText: auraMint,
+    mintHover: auraMint,
+    onMint: auraBase2026.background,
     lime: '#9DFF65',
     blue: '#82E2FF',
     teal: '#72DCC6',
@@ -44,7 +50,7 @@ export const auraSemantic2026: AuraSemanticPalette = {
   status: {
     error: '#FF6767',
     errorBright: '#FF6767',
-    success: '#61FFCA',
+    success: auraMint,
     successBright: '#9DFF65',
     warning: '#FFCA85',
     warningBright: '#FFCA85',
@@ -61,7 +67,7 @@ export const auraDefaultFamily: AuraVariantFamily = {
   accent: '#A277FF',
   accentBright: '#C4B5FD',
   accentSoft: '#6F4FD8',
-  companion: '#61FFCA',
+  companion: auraMint,
   companionBright: '#9FFFE2',
   companionSoft: '#3EA784',
 }

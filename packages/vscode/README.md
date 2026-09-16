@@ -22,7 +22,9 @@ This is the VS Code port maintained by the `yukiumi13/aura-theme-2026` fork. It 
 
 ## Aura Light 2026
 
-The light appearance uses violet-tinted paper, quiet gray-violet chrome, lavender functions, mint strings, pink properties, and warm amber numbers. It retains the existing Aura syntax roles and uses the same template for TextMate, semantic highlighting, UI, and terminal colors.
+The light appearance uses a soft neutral editor surface, slightly darker chrome, white floating widgets, lavender functions, mint strings, pink properties, and warm amber numbers. It retains the existing Aura syntax roles and uses the same template for TextMate, semantic highlighting, UI, and terminal colors.
+
+Original Aura mint (`#61FFCA`) is preserved in primary actions and badges with dark text, and as the foreground of the dark-violet Remote status item. Syntax, diagnostics, and terminal colors use a separate readable mint ink. Purple remains the focus, link, and type accent.
 
 Light selections and diff highlights use lower opacity to keep code readable. Buttons, badges, diagnostics, and all 16 ANSI colors are tuned for light backgrounds. Select **Aura Light 2026** from **Preferences: Color Theme**, or set it as your preferred light theme:
 
