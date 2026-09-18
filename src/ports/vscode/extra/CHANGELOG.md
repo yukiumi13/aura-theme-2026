@@ -1,5 +1,10 @@
 # Aura Theme Changelog
 
+## 0.6.2 (September 18, 2026)
+
+- Simplify the Marketplace description and group previews into Aura, Aqua, and Azure dark/light pairs.
+- Move upgrade guidance into the changelog. Theme colors are unchanged.
+
 ## 0.6.1 (September 18, 2026)
 
 - Rebase Aqua Dark on Aura Dark's near-black violet surfaces, foreground hierarchy, syntax palette, and terminal colors.
@@ -15,6 +20,7 @@
 - Retire Cyan, Blue, Violet, Purple, Rose, Amber, Teal, Graphite, Ink, and the three Soft Dark/Soft Text entries from the VS Code package.
 - Add Microsoft's MIT attribution for the selected Fluent color tokens.
 
+**Upgrading from 0.5.x:** Saved selections for the retained Dark, Light, Aqua, and Azure themes continue to work under their new display names. If you used a retired variant, open **Preferences: Color Theme** and choose one of the six themes listed above.
 
 ## 0.5.5 (September 18, 2026)
 
