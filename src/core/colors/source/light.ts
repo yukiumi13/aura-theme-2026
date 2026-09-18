@@ -103,7 +103,7 @@ export const auraLightSemantic2026: AuraSemanticPalette = {
 }
 
 export const auraLightFamily: AuraVariantFamily = {
-  name: 'Aura Light 2026',
+  name: 'Aura 2026 Light',
   slug: 'aura-light-2026',
   accent: auraLightColors.purple,
   accentBright: auraLightColors.purpleStrong,

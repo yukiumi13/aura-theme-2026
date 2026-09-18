@@ -183,7 +183,7 @@ export const auraAquaDarkSemantic: AuraSemanticPalette = {
 }
 
 export const auraAquaLightFamily: AuraVariantFamily = {
-  name: 'Aura Aqua Light 2026',
+  name: 'Aura 2026 Aqua Light',
   slug: 'aura-aqua-light-2026',
   accent: syntax.light.blue,
   accentBright: syntax.light.blueStrong,
@@ -194,7 +194,7 @@ export const auraAquaLightFamily: AuraVariantFamily = {
 }
 
 export const auraAquaDarkFamily: AuraVariantFamily = {
-  name: 'Aura Aqua Dark 2026',
+  name: 'Aura 2026 Aqua Dark',
   slug: 'aura-aqua-dark-2026',
   accent: auraAquaColors.aqua,
   accentBright: auraAquaColors.aquaBright,

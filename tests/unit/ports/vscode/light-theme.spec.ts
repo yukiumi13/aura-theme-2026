@@ -64,6 +64,7 @@ describe('Aura Light 2026', () => {
       readFileSync(resolve('packages/vscode/package.json'), 'utf8')
     )
     expect(manifest.contributes.themes).toContainEqual({
+      id: 'Aura Light 2026',
       label: theme.name,
       uiTheme: 'vs',
       path: './themes/aura-light-2026-color-theme.json',

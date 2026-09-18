@@ -1,8 +1,8 @@
 {
   "name": "aura-theme-2026",
   "displayName": "Aura Theme 2026 (Unofficial Fork)",
-  "description": "An independently maintained Aura Theme fork with Aqua, light, and dark palettes. Based on the original theme by Dalton Menezes.",
-  "version": "0.5.5",
+  "description": "An independent Aura fork with paired Aura, Aqua, and Fluent-inspired Azure themes. Based on the original theme by Dalton Menezes.",
+  "version": "0.6.0",
   "scripts": {
     "publish": "vsce publish"
   },
@@ -27,95 +27,48 @@
     "theme",
     "dark",
     "light",
+    "aqua",
+    "azure",
     "aura-theme-2026",
     "color-theme"
   ],
   "contributes": {
     "themes": [
       {
-        "label": "Aura 2026 Dark (Soft Text)",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-dark-soft-text-color-theme.json"
-      },
-      {
-        "label": "Aura 2026 Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-dark-color-theme.json"
-      },
-      {
-        "label": "Aura 2026 Soft Dark (Soft Text)",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-soft-dark-soft-text-color-theme.json"
-      },
-      {
-        "label": "Aura 2026 Soft Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-soft-dark-color-theme.json"
-      },
-      {
-                "label": "Aura Azure 2026",
+                "id": "Aura 2026 Dark",
+                "label": "Aura 2026 Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/aura-azure-2026-color-theme.json"
+                "path": "./themes/aura-dark-color-theme.json"
         },
         {
-                "label": "Aura Cyan 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-cyan-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Blue 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-blue-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Violet 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-violet-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Purple 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-purple-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Rose 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-rose-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Amber 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-amber-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Teal 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-teal-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Graphite 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-graphite-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Ink 2026",
-                "uiTheme": "vs-dark",
-                "path": "./themes/aura-ink-2026-color-theme.json"
-        },
-        {
-                "label": "Aura Light 2026",
+                "id": "Aura Light 2026",
+                "label": "Aura 2026 Light",
                 "uiTheme": "vs",
                 "path": "./themes/aura-light-2026-color-theme.json"
         },
         {
-                "label": "Aura Aqua Light 2026",
+                "id": "Aura Aqua Light 2026",
+                "label": "Aura 2026 Aqua Light",
                 "uiTheme": "vs",
                 "path": "./themes/aura-aqua-light-2026-color-theme.json"
         },
         {
-                "label": "Aura Aqua Dark 2026",
+                "id": "Aura Aqua Dark 2026",
+                "label": "Aura 2026 Aqua Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/aura-aqua-dark-2026-color-theme.json"
+        },
+        {
+                "id": "Aura 2026 Azure Light",
+                "label": "Aura 2026 Azure Light",
+                "uiTheme": "vs",
+                "path": "./themes/aura-azure-light-2026-color-theme.json"
+        },
+        {
+                "id": "Aura Azure 2026",
+                "label": "Aura 2026 Azure Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-azure-2026-color-theme.json"
         }
     ]
   },

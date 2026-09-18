@@ -1,5 +1,14 @@
 # Aura Theme Changelog
 
+## 0.6.0 (September 18, 2026)
+
+- Rebuild Azure Dark and add Azure Light using Microsoft Fluent color ramps and explicit surface, syntax, interaction, and status roles.
+- Curate the VS Code picker to six themes: Aura, Aqua, and Azure, each in Dark and Light.
+- Normalize display names to Aura 2026 followed by family and appearance; retain the five existing selection IDs.
+- Retire Cyan, Blue, Violet, Purple, Rose, Amber, Teal, Graphite, Ink, and the three Soft Dark/Soft Text entries from the VS Code package.
+- Add Microsoft's MIT attribution for the selected Fluent color tokens.
+
+
 ## 0.5.5 (September 18, 2026)
 
 - Add real VS Code screenshots for Dark, Light, and Aqua Light, captured from a fictional sample workspace in an isolated profile.

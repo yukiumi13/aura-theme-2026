@@ -18,44 +18,26 @@ The 2026 remapping is currently implemented and published for these ports:
 
 Inherited upstream Aura ports are retained under `legacy/ports` and `legacy/packages`. They are not part of the maintained 2026 build/release path unless they are explicitly migrated back into `src/ports` and `packages`.
 
-## Themes
+## VS Code themes
 
-The maintained ports include the legacy Aura variants plus the 2026 variants generated from the shared palette schema:
+The VS Code package contains three paired families, with consistent names:
 
-- Aura 2026 Dark
-- Aura 2026 Dark (Soft Text)
-- Aura 2026 Soft Dark
-- Aura 2026 Soft Dark (Soft Text)
-- Aura Ink 2026
-- Aura Cyan 2026
-- Aura Blue 2026
-- Aura Violet 2026
-- Aura Purple 2026
-- Aura Teal 2026
-- Aura Rose 2026
-- Aura Amber 2026
-- Aura Azure 2026
-- Aura Graphite 2026
+| Family | Dark | Light |
+| --- | --- | --- |
+| Aura | Aura 2026 Dark | Aura 2026 Light |
+| Aqua | Aura 2026 Aqua Dark | Aura 2026 Aqua Light |
+| Azure | Aura 2026 Azure Dark | Aura 2026 Azure Light |
 
-VS Code also includes **Aura Light 2026**, a daylight companion built from the same role system. It pairs soft neutral surfaces with original Aura mint actions, purple focus accents, lavender functions, pink properties, and amber numbers. Other ports currently retain their existing dark variants.
+See the [VS Code preview gallery](packages/vscode/README.md) for real screenshots
+from a fictional sample workspace in an isolated profile.
 
-### VS Code screenshots
+Azure uses Microsoft Fluent color ramps and explicit surface, interaction, syntax,
+and status roles. [Azure design and migration](docs/AZURE_DESIGN.md) records the
+sources and decisions. [Aqua design](docs/AQUA_DESIGN.md) documents the cyan pair.
 
-The following screenshots use the same fictional sample workspace in a separate, unsigned-in VS Code profile.
-
-**Aura 2026 Dark**
-
-![Aura 2026 Dark in VS Code](docs/assets/aura-2026-dark-vscode.jpg)
-
-**Aura Light 2026**
-
-![Aura Light 2026 in VS Code](docs/assets/aura-2026-light-vscode.jpg)
-
-**Aura Aqua Light 2026**
-
-![Aura Aqua Light 2026 in VS Code](docs/assets/aura-2026-aqua-light-vscode.jpg)
-
-VS Code additionally includes **Aura Aqua Light 2026** and **Aura Aqua Dark 2026**, a paired cyan variation with near-white and deep blue surfaces. The palette assessment and pixel-sampling method are documented in [Aqua design](docs/AQUA_DESIGN.md).
+The twelve redundant VS Code variants were retired in 0.6.0. Existing IDs for
+the retained themes continue to work. The terminal and Zed ports currently keep
+their existing dark variant sets.
 
 ## Palette Architecture
 

@@ -1,7 +1,7 @@
 {
   "name": "{{ slug }}",
   "displayName": "Aura Theme 2026 (Unofficial Fork)",
-  "description": "An independently maintained Aura Theme fork with Aqua, light, and dark palettes. Based on the original theme by Dalton Menezes.",
+  "description": "An independent Aura fork with paired Aura, Aqua, and Fluent-inspired Azure themes. Based on the original theme by Dalton Menezes.",
   "version": "{{ version }}",
   "scripts": {
     "publish": "vsce publish"
@@ -27,31 +27,13 @@
     "theme",
     "dark",
     "light",
+    "aqua",
+    "azure",
     "{{ slug }}",
     "color-theme"
   ],
   "contributes": {
     "themes": [
-      {
-        "label": "{{ auraDarkSoftText }}",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-dark-soft-text-color-theme.json"
-      },
-      {
-        "label": "{{ auraDark }}",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-dark-color-theme.json"
-      },
-      {
-        "label": "{{ auraSoftDarkSoftText }}",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-soft-dark-soft-text-color-theme.json"
-      },
-      {
-        "label": "{{ auraSoftDark }}",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aura-soft-dark-color-theme.json"
-      },
       {{{ variantThemes }}}
     ]
   },

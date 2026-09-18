@@ -2,8 +2,6 @@ import { AuraAPI } from 'core'
 import { resolve } from 'path'
 import { withTerminalAuraAnsi } from '../shared/terminal-ansi'
 
-type VariantScheme = typeof import('core/colors/schemes').variants[number]
-
 export async function VscodePort(Aura: AuraAPI) {
   const {
     copyExtraFiles,
@@ -12,139 +10,78 @@ export async function VscodePort(Aura: AuraAPI) {
     colorSchemes,
     constants,
   } = Aura
-
   const { info, folders, packageVersion } = constants
-
-  const portName = 'Visual Studio Code'
-  const version = packageVersion
-  const type = 'dark'
   const templateFolder = resolve(__dirname, 'templates')
-  const template = resolve(templateFolder, 'theme.json')
   const outputDist = resolve(folders.distFolder, 'vscode', 'themes')
-  const outputFileNameSuffix = 'color-theme'
-
-  const names = {
-    auraDark: `${info.shortName} Dark`,
-    auraDarkSoftText: `${info.shortName} Dark (Soft Text)`,
-    auraSoftDark: `${info.shortName} Soft Dark`,
-    auraSoftDarkSoftText: `${info.shortName} Soft Dark (Soft Text)`,
-  }
-
-  const variantThemeEntries = [
-    ...colorSchemes.variants,
-    colorSchemes.inkVariant,
-  ].map(({ family }: VariantScheme) => ({
-    label: family.name,
-    uiTheme: 'vs-dark',
-    path: `./themes/${family.slug}-color-theme.json`,
-  }))
-
-  const appearanceSchemes = [
-    colorSchemes.light,
-    ...colorSchemes.aquaVariants,
+  // IDs preserve saved selections and theme-specific customizations across renames.
+  const themes = [
+    {
+      id: 'Aura 2026 Dark',
+      slug: 'aura-dark',
+      scheme: colorSchemes.dark,
+      name: 'Aura 2026 Dark',
+      appearance: 'dark',
+    },
+    {
+      id: 'Aura Light 2026',
+      slug: colorSchemes.light.paletteSlug,
+      scheme: withTerminalAuraAnsi(colorSchemes.light),
+      name: colorSchemes.light.paletteName,
+      appearance: 'light',
+    },
+    ...colorSchemes.aquaVariants.map((scheme) => ({
+      id:
+        scheme.paletteAppearance === 'light'
+          ? 'Aura Aqua Light 2026'
+          : 'Aura Aqua Dark 2026',
+      slug: scheme.paletteSlug,
+      scheme: withTerminalAuraAnsi(scheme),
+      name: scheme.paletteName,
+      appearance: scheme.paletteAppearance,
+    })),
+    ...colorSchemes.azureVariants.map((scheme) => ({
+      id:
+        scheme.paletteAppearance === 'light'
+          ? 'Aura 2026 Azure Light'
+          : 'Aura Azure 2026',
+      slug: scheme.paletteSlug,
+      scheme: withTerminalAuraAnsi(scheme),
+      name: scheme.paletteName,
+      appearance: scheme.paletteAppearance,
+    })),
   ]
-  for (const scheme of appearanceSchemes) {
-    variantThemeEntries.push({
-      label: scheme.paletteName,
-      uiTheme: scheme.paletteAppearance === 'light' ? 'vs' : 'vs-dark',
-      path: `./themes/${scheme.paletteSlug}-${outputFileNameSuffix}.json`,
-    })
-  }
-
   await copyExtraFiles(__dirname)
-
   await createPort({
     template: resolve(templateFolder, 'package.json'),
-    outputFileName: `package`,
+    outputFileName: 'package',
     replacements: {
       ...info,
-      ...names,
-      variantThemes: JSON.stringify(variantThemeEntries, null, 8)
+      type: 'dark',
+      portName: 'Visual Studio Code',
+      version: packageVersion,
+      accent12: colorSchemes.dark.accent12,
+      variantThemes: JSON.stringify(
+        themes.map(({ id, slug, name, appearance }) => ({
+          id,
+          label: name,
+          uiTheme: appearance === 'light' ? 'vs' : 'vs-dark',
+          path: './themes/' + slug + '-color-theme.json',
+        })),
+        null,
+        8
+      )
         .slice(1, -1)
         .trim(),
-      type,
-      portName,
-      version,
-      accent12: colorSchemes.dark.accent12,
     },
   })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-dark-${outputFileNameSuffix}`,
-    replacements: {
-      type,
-      ...colorSchemes.dark,
-      name: names.auraDark,
-    },
-  })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-dark-soft-text-${outputFileNameSuffix}`,
-    replacements: {
-      type,
-      ...colorSchemes.darkSoft,
-      name: names.auraDarkSoftText,
-    },
-  })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-soft-dark-${outputFileNameSuffix}`,
-    replacements: {
-      type,
-      ...colorSchemes.softDark,
-      name: names.auraSoftDark,
-    },
-  })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-soft-dark-soft-text-${outputFileNameSuffix}`,
-    replacements: {
-      type,
-      ...colorSchemes.softDarkSoft,
-      name: names.auraSoftDarkSoftText,
-    },
-  })
-
-  await Promise.all(
-    [...colorSchemes.variants, colorSchemes.inkVariant].map(
-      ({ family, scheme }: VariantScheme) =>
-        createPort({
-          template,
-          outputDist,
-          outputFileName: `${family.slug}-${outputFileNameSuffix}`,
-          replacements: {
-            type,
-            ...withTerminalAuraAnsi(scheme),
-            // Preserve the historical bright success color of dark variants
-            // using semantic status roles, independently of terminal ANSI.
-            uiStatusSuccess: scheme.uiStatusSuccessBright,
-            name: family.name,
-          },
-        })
-    )
-  )
-
-  for (const scheme of appearanceSchemes) {
+  for (const { slug, scheme, name, appearance } of themes) {
     await createPort({
-      template,
+      template: resolve(templateFolder, 'theme.json'),
       outputDist,
-      outputFileName: `${scheme.paletteSlug}-${outputFileNameSuffix}`,
-      replacements: {
-        ...withTerminalAuraAnsi(scheme),
-        type: scheme.paletteAppearance,
-        name: scheme.paletteName,
-      },
+      outputFileName: slug + '-color-theme',
+      replacements: { ...scheme, name, type: appearance },
     })
   }
-
   await createReadme({
     template: resolve(templateFolder, 'README.md'),
     replacements: {},

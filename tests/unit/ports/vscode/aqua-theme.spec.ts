@@ -59,6 +59,7 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
         readFileSync(resolve('packages/vscode/package.json'), 'utf8')
       )
       expect(manifest.contributes.themes).toContainEqual({
+        id: isLight ? 'Aura Aqua Light 2026' : 'Aura Aqua Dark 2026',
         label: scheme.paletteName,
         uiTheme: isLight ? 'vs' : 'vs-dark',
         path,
