@@ -1,6 +1,8 @@
-# Aura Theme 2026 for Visual Studio Code
+# Aura Theme 2026 (Unofficial Fork)
 
-This is the VS Code port maintained by the `yukiumi13/aura-theme-2026` fork. It uses the 2026 palette architecture for editor UI colors, syntax scopes, semantic token colors, and integrated terminal ANSI colors.
+An independently maintained fork of [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme), maintained by [yukiumi13](https://github.com/yukiumi13/aura-theme-2026). This extension is not an official release from the original Aura project.
+
+The original Aura variants remain credited to Dalton and contributors. This fork adds the 2026 palette system, new light and Aqua appearances, additional dark variants, and coordinated UI, syntax, and terminal colors. Its source and issue tracker are in the [fork repository](https://github.com/yukiumi13/aura-theme-2026).
 
 ## Themes Available
 

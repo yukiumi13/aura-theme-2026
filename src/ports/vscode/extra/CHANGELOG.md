@@ -1,5 +1,11 @@
 # Aura Theme Changelog
 
+## 0.5.4 (September 18, 2026)
+
+- Identify the extension as an independently maintained, unofficial Aura fork in its name and description.
+- Credit Dalton Menezes and the original project prominently while identifying yukiumi13 as this fork's maintainer.
+- Replace the inherited Aura icon with a distinct 2026 palette icon.
+
 ## 0.5.3 (September 18, 2026)
 
 - Soften Aqua Light's ordinary UI text and syntax colors for the airy, low-contrast Aura feel.

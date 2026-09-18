@@ -1,23 +1,22 @@
 {
   "name": "{{ slug }}",
-  "displayName": "{{ displayName }}",
-  "description": "Aura-inspired dark and light themes for {{ portName }}",
+  "displayName": "Aura Theme 2026 (Unofficial Fork)",
+  "description": "An independently maintained Aura Theme fork with Aqua, light, and dark palettes. Based on the original theme by Dalton Menezes.",
   "version": "{{ version }}",
   "scripts": {
     "publish": "vsce publish"
   },
   "publisher": "yukiumi13",
   "author": {
-    "name": "{{ author.name }}",
-    "email": "{{ author.email }}",
-    "url": "{{{ author.website }}}"
+    "name": "yukiumi13",
+    "url": "https://github.com/yukiumi13"
   },
   "icon": "logo.png",
   "galleryBanner": {
     "color": "{{ accent12 }}",
     "theme": "{{ type }}"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "vscode": "^1.47.0"
   },

@@ -1,23 +1,22 @@
 {
   "name": "aura-theme-2026",
-  "displayName": "Aura Theme 2026",
-  "description": "Aura-inspired dark and light themes for Visual Studio Code",
-  "version": "0.5.3",
+  "displayName": "Aura Theme 2026 (Unofficial Fork)",
+  "description": "An independently maintained Aura Theme fork with Aqua, light, and dark palettes. Based on the original theme by Dalton Menezes.",
+  "version": "0.5.4",
   "scripts": {
     "publish": "vsce publish"
   },
   "publisher": "yukiumi13",
   "author": {
-    "name": "Dalton Menezes",
-    "email": "daltonmenezes@outlook.com",
-    "url": "https://daltonmenezes.github.io"
+    "name": "yukiumi13",
+    "url": "https://github.com/yukiumi13"
   },
   "icon": "logo.png",
   "galleryBanner": {
     "color": "#09080D",
     "theme": "dark"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "vscode": "^1.47.0"
   },

@@ -1,6 +1,6 @@
 # Aura Theme 2026
 
-Aura Theme 2026 is a fork maintained by **yukiumi13**. It is based on the original [Aura Theme](https://github.com/daltonmenezes/aura-theme), but this repository is currently focused on a smaller, actively reworked 2026 theme system rather than the full upstream port matrix.
+Aura Theme 2026 is an unofficial fork maintained by **yukiumi13**. It is based on [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme) and is not an official release from that project. This repository focuses on a smaller, actively reworked 2026 theme system rather than the full upstream port matrix.
 
 The current work is centered on a shared palette/schema that keeps editor UI, syntax colors, and terminal ANSI colors consistent across the ports that are actively maintained here.
 
