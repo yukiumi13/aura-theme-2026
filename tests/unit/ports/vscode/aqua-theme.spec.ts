@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 import Mustache from 'mustache'
-import { aquaVariants } from 'core/colors/schemes'
+import { aquaVariants, dark } from 'core/colors/schemes'
 import { auraMint } from 'core/colors/source/aura'
 import { withTerminalAuraAnsi } from 'ports/shared/terminal-ansi'
 import {
@@ -25,6 +25,38 @@ const render = (scheme: Record<string, string>): Theme =>
     })
   )
 
+it('keeps Aqua Dark rooted in Aura Dark while giving interactions an aqua identity', () => {
+  const aura = render(withTerminalAuraAnsi(dark))
+  const aqua = render(withTerminalAuraAnsi(aquaVariants[1]))
+  expect(aqua.semanticTokenColors).toEqual(aura.semanticTokenColors)
+  for (const key of [
+    'editor.background',
+    'editor.foreground',
+    'sideBar.background',
+    'activityBar.background',
+    'panel.background',
+    'titleBar.activeBackground',
+    'input.background',
+    'dropdown.background',
+    'editorWidget.background',
+    'editor.lineHighlightBackground',
+    'editorLineNumber.foreground',
+    'tab.inactiveBackground',
+    'gitDecoration.modifiedResourceForeground',
+    'terminal.background',
+    'terminal.foreground',
+    ...Object.keys(aura.colors).filter((key) =>
+      key.startsWith('terminal.ansi')
+    ),
+  ]) {
+    expect(aqua.colors[key]).toBeDefined()
+    expect(aqua.colors[key]).toBe(aura.colors[key])
+  }
+  expect(aqua.colors['button.background']).toBe('#12DADD')
+  expect(aqua.colors['tab.activeBackground']).toBe('#12DADD')
+  expect(aqua.colors['activityBar.activeBackground']).toBe('#12DADD')
+})
+
 describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
   '%s',
   (_name, value) => {
@@ -45,8 +77,15 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
         }, []),
       ])
     )
-    const expectPaletteText = (foreground: string, background: number[], context: string) => {
-      if (isLight) {
+    const expectPaletteText = (
+      foreground: string,
+      background: number[],
+      context: string,
+      subdued = false
+    ) => {
+      // Retain Aura Dark's quiet comments and dim terminal text. The 3:1
+      // design floor for these roles is not a WCAG normal-text claim.
+      if (isLight || subdued) {
         expect(contrast(foreground, background)).toBeGreaterThanOrEqual(3)
       } else {
         expectReadable(foreground, background, context)
@@ -184,7 +223,14 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       'diffEditor.removedLineBackground',
     ])('keeps syntax readable on %s after compositing', (surface) => {
       const background = over(colors[surface], editor)
-      syntax.forEach((fg) => expectPaletteText(fg, background, surface))
+      syntax.forEach((fg) =>
+        expectPaletteText(
+          fg,
+          background,
+          surface,
+          fg === theme.semanticTokenColors.comment
+        )
+      )
     })
 
     it.each(['inserted', 'removed'])(
@@ -192,7 +238,14 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       (kind) => {
         const line = over(colors[`diffEditor.${kind}LineBackground`], editor)
         const word = over(colors[`diffEditor.${kind}TextBackground`], line)
-        syntax.forEach((fg) => expectPaletteText(fg, word, `diff ${kind}`))
+        syntax.forEach((fg) =>
+          expectPaletteText(
+            fg,
+            word,
+            `diff ${kind}`,
+            fg === theme.semanticTokenColors.comment
+          )
+        )
       }
     )
 
@@ -253,7 +306,12 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       for (const [key, color] of slots) {
         // Dark ANSI black also serves as a TUI background, as in built-in themes.
         if (!isLight && key === 'terminal.ansiBlack') continue
-        expectPaletteText(color, editor, key)
+        expectPaletteText(
+          color,
+          rgb(colors['terminal.background']),
+          key,
+          key === 'terminal.ansiBrightBlack'
+        )
       }
       if (!isLight)
         expect(

@@ -29,50 +29,50 @@ Aqua is a distinct **interaction response** color. The light default keeps mint-
 
 ## Implemented variant language
 
-Each variant is evaluated for its own visual quality: surface hierarchy, code legibility, role separation, and the balance of cool and warm hues. Matching the default Aura syntax is not an acceptance criterion. The shared role function reuses the language mapping, while the Aqua source palette supplies independently tuned syntax accents and semantic colors for each appearance.
+The appearances share an interaction language, with different palette foundations. Aqua Light uses its independently tuned ink colors on the sampled cold paper. Since v0.6.1, Aqua Dark derives its surfaces, foregrounds, syntax, and terminal colors directly from Aura Dark. This prevents the dark appearance from drifting into a blue-green inversion of the light reference.
 
-The VS Code extension adds **Aura Aqua Light 2026** and **Aura Aqua Dark 2026**. These are distinct from the older Aura Cyan dark-only accent variant: they have paired surfaces, shared aqua actions, neutral interaction labels, and explicit status meanings.
+The VS Code extension offers **Aura 2026 Aqua Light** and **Aura 2026 Aqua Dark**, with shared aqua actions, neutral interaction labels, and explicit status meanings. Their previous selection IDs remain stable.
 
 | Meaning | Aqua Light | Aqua Dark |
 | --- | --- | --- |
-| Filled actions, active tabs, activity items, badges, Remote/SSH | `#12DADD` with white text | `#12DADD` with `#07363A` text |
+| Filled actions, active tabs, activity items, badges, Remote/SSH | `#12DADD` with white text | `#12DADD` with Aura ink `#09080D` text |
 | UI links / hover | Soft blue `#4A80A7` / `#39749D` | Aqua `#12DADD` / `#76E9EC` |
-| Types / constants | Soft blue `#4A80A7` | Sky blue `#64D8F3` |
+| Types / constants | Soft blue `#4A80A7` | Aura purple `#A277FF` |
 | Information icons | Soft blue `#4A80A7` | Aqua `#12DADD` |
-| Control flow and operators | Soft violet `#8669BA` | Violet `#B6A0FF` |
-| Function calls / properties | Orchid `#A36CAF` / rose `#AD6B91` | Orchid `#DDA7FF` / rose `#FF9BCF` |
-| Numbers | Muted amber `#9C7954` | Warm sand `#FFC98A` |
+| Control flow and operators | Soft violet `#8669BA` | Aura lavender `#C4B5FD` |
+| Function calls / properties | Orchid `#A36CAF` / rose `#AD6B91` | Aura lavender `#D49DFF` / pink `#F694FF` |
+| Numbers | Muted amber `#9C7954` | Aura amber `#FFCA85` |
 | Strings / success | Readable Aura mint ink | Original Aura mint |
-| Canvas | Sampled cold paper `#F8FCFE` | Designed deep blue canvas `#182C36` |
-| Chrome | Designed `#F5F9FB` | Designed `#142630` |
+| Canvas | Sampled cold paper `#F8FCFE` | Aura Dark ink `#09080D` |
+| Sidebar | Designed `#F5F9FB` | Aura Dark sidebar `#0A090F` |
 | Ordinary hover | Neutral surface and foreground | Neutral surface and foreground |
 
-Only the aqua anchor and cold-paper background are direct reference samples. Hover, dark canvas, surface, and selection shades are design choices; they are not attributed to the reference UI. Aqua Light keeps the pale chrome and softens its foreground and syntax hues instead of adding a dark banner to imitate the reference's artwork. White on vivid aqua is reserved for active UI elements; subdued blue, violet, orchid, rose, and amber carry code meaning without making every token a hard accent. Dark syntax remains luminous against its deep blue canvas.
+Only the aqua anchor and cold-paper background are direct reference samples. Aqua Light's supporting colors and both appearances' aqua selection tints are design choices. Aqua Dark's base and syntax come from the existing Aura Dark source palette. White on vivid aqua is reserved for active light UI elements; Aqua Dark uses its near-black ink for the same controls.
 
 ## Visual quality review
 
-The v0.5.0 pair was readable but visually too subdued: gray-blue chrome, small isolated cyan controls, and softened syntax made the sampled aqua feel incidental. The revision evaluates more than brightness:
+The v0.5.0 pair made aqua feel incidental. Later revisions gave it a clearer interaction identity, but the lifted blue-green dark surfaces and brighter syntax drifted away from Aura Dark. The v0.6.1 correction restores Aura's foundations and evaluates these relationships:
 
 - **Identity and color distribution:** aqua is visible in active tabs, activity items, progress, badges, and actions. It is concentrated in meaningful locations rather than tinting every surface or label.
 - **Hierarchy:** the editor stays the largest calm surface; selected navigation has a solid aqua fill, floating surfaces remain distinct, and secondary content stays neutral. Unfocused groups lose the strong active fill.
-- **Color purity:** near-white light chrome and a clearer blue dark canvas replace the gray-blue/near-black pairing. Aqua Light uses softer blue, violet, orchid, rose, mint, and amber syntax roles.
+- **Color purity:** Aqua Dark directly inherits Aura's near-black violet canvas and surface ramp. Aqua stays concentrated in interaction roles. Aqua Light retains its near-white surfaces and soft ink colors.
 - **Interaction clarity:** buttons brighten on hover; ordinary rows use neutral opaque hover. Active foreground/background pairs are explicit. Graphic aqua accents are separate from readable light links and keyboard focus.
-- **Reading quality:** check syntax and UI on their actual backgrounds, including selected, hovered, unfocused, and layered diff states. Aqua Light accepts a lower 3:1 floor for ordinary colored text, and deliberately exempts white text on vivid aqua from that floor. Aqua Dark retains the 4.5:1 text floor.
+- **Reading quality:** check syntax and UI on their actual backgrounds, including selected, hovered, unfocused, and layered diff states. Aqua Light accepts a 3:1 design floor for ordinary colored text and deliberately exempts white text on vivid aqua. Aqua Dark uses 4.5:1 for primary text and 3:1 for its inherited subdued comments and dim terminal text. The latter is a visual design tradeoff, not a WCAG normal-text conformance claim.
 
-VS Code's current tab hover rules exclude selected tabs, so a selected aqua tab keeps its fill during hover. The preview follows this behavior. No custom CSS is installed into VS Code. The new role aliases preserve the outputs of the 15 non-Aqua themes, including Aura Light 2026.
+VS Code's tab hover rules exclude selected tabs, so a selected aqua tab keeps its fill during hover. No custom CSS is installed into VS Code. The v0.6.1 correction changes only Aqua Dark's generated theme; the other five shipped themes retain their existing colors.
 
 ## Implementation and validation
 
-- `source/aqua.ts` owns the anchor, tonal colors, neutral palettes, UI families, syntax accents, and semantic brand/action/status assignments. Original Aura mint remains a separate brand anchor.
+- `source/aqua.ts` owns the aqua interaction colors, light palette, and selection tints. Aqua Dark references `auraBase2026`, `auraSemantic2026`, and `auraDefaultFamily` instead of keeping separate background and syntax literals. Original Aura mint remains a separate brand anchor.
 - `createAuraPalette` consumes independent action and interaction semantics. Default hover uses the interaction accent, and custom Aqua action fills keep their own hover treatment.
-- `create-aura-syntax.ts` owns the shared syntax role mapping within the existing role layer. `create-aqua-roles.ts` supplies Aqua's own type/control accents and appearance-specific semantic palette, and assigns neutral hover, readable hints/inactive labels, cool selections, and bounded diff tints. UI and syntax can be tuned separately without fixing either to the default theme. Compatibility aliases follow the structured roles.
+- `create-aura-syntax.ts` owns the shared syntax mapping. `create-aqua-roles.ts` applies the light ink palette or the inherited Aura Dark syntax, retains Aura Dark's terminal/ANSI roles, and adds Aqua interactions, neutral hover, readable hints/inactive labels, restrained selections, and bounded diff tints. Compatibility aliases follow the structured roles.
 - The same VS Code template generates all themes. The two new appearances are registered separately from legacy dark-only families, so other ports do not accidentally receive light metadata.
-- Tests render the actual template, check manifest/output agreement, composite selections and diff layers, verify contrast for explicit syntax and interaction pairs, check agreement between TextMate and semantic highlighting, and confirm status colors are independent of ANSI overrides. ANSI black remains a dark TUI background slot in the dark appearance; other foreground slots and the black/white pair are checked for readability.
+- Tests render the actual template, check manifest/output agreement, composite selections and diff layers, verify contrast for explicit syntax and interaction pairs, check agreement between TextMate and semantic highlighting, and confirm status colors are independent of ANSI overrides. A regression check compares Aqua Dark's semantic syntax, core surfaces, and terminal colors with Aura Dark. ANSI black remains a dark TUI background slot; dim text keeps Aura's subdued hierarchy.
 
-The accompanying preview is an illustration rendered from the generated theme values, not a screenshot of a running VS Code instance.
+## Real VS Code previews
 
-## Rendered previews
+These screenshots use a fictional sample workspace in an isolated, unsigned-in profile. Older illustrative PNGs in the assets directory are historical and do not represent the current Aqua Dark palette.
 
-![Aura Aqua Light soft-contrast preview](assets/aura-aqua-soft-light-2026.png)
+![Aura 2026 Aqua Light in VS Code](assets/aura-2026-aqua-light-vscode.jpg)
 
-![Aura Aqua Dark token preview](assets/aura-aqua-dark-2026.png)
+![Aura 2026 Aqua Dark in VS Code](assets/aura-2026-aqua-dark-vscode.jpg)

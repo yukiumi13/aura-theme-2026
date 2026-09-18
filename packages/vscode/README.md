@@ -20,6 +20,10 @@ These are screenshots of the published themes in VS Code, captured from the same
 
 ![Aura 2026 Aqua Light in VS Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-light-vscode.jpg)
 
+### Aura 2026 Aqua Dark
+
+![Aura 2026 Aqua Dark in VS Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-dark-vscode.jpg)
+
 ## Six themes, three pairs
 
 | Family | Dark | Light |
@@ -60,7 +64,9 @@ Light selections and diff highlights use lower opacity to keep code readable. Bu
 
 ## Aura Aqua
 
-**Aura 2026 Aqua Light** and **Aura 2026 Aqua Dark** pair vivid cyan active tabs, navigation, and actions with near-white or deep blue surfaces. Aqua Light intentionally uses white text on its vivid aqua active controls and softer blue links, UI text, and syntax colors. Aqua Dark keeps dark text on aqua controls and luminous syntax over a lifted blue canvas. Both appearances use blue types, violet control flow, orchid functions, mint strings, rose properties, amber numbers, neutral hover labels, and borderless filled actions.
+**Aura 2026 Aqua Light** and **Aura 2026 Aqua Dark** share vivid cyan active tabs, navigation, and actions. Aqua Light intentionally uses white text on its vivid aqua controls, near-white surfaces, and soft blue, violet, orchid, mint, rose, and amber syntax.
+
+Aqua Dark builds directly on Aura Dark: near-black violet surfaces, soft lavender-white text, subdued comments, purple types, lavender functions, mint strings, pink properties, and amber numbers. It inherits Aura Dark's terminal colors and uses aqua for interaction emphasis with dark text on filled controls. The two appearances share an interaction language while keeping palettes designed for their respective backgrounds.
 
 ## Installation
 

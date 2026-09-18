@@ -1,5 +1,12 @@
 # Aura Theme Changelog
 
+## 0.6.1 (September 18, 2026)
+
+- Rebase Aqua Dark on Aura Dark's near-black violet surfaces, foreground hierarchy, syntax palette, and terminal colors.
+- Keep vivid aqua for active tabs, navigation, actions, focus, and restrained selection tints; remove the blue-green cast from the reading surfaces.
+- Preserve subdued Aura comments and dim terminal text, with separate checks for secondary and primary text.
+- Add a real Aqua Dark screenshot from the isolated fictional sample workspace.
+
 ## 0.6.0 (September 18, 2026)
 
 - Rebuild Azure Dark and add Azure Light using Microsoft Fluent color ramps and explicit surface, syntax, interaction, and status roles.

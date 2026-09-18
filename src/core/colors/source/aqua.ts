@@ -3,6 +3,7 @@ import {
   auraSemantic2026,
   auraMint,
   auraInteractionAqua,
+  auraDefaultFamily,
 } from './aura'
 import { auraLightBase2026, auraLightSemantic2026 } from './light'
 import { AuraSemanticPalette, AuraVariantFamily } from '../roles/types'
@@ -16,8 +17,8 @@ export const auraAquaColors = {
   selectionTint: '#277D87',
   // The light variant deliberately follows the reference's soft white-on-aqua UI.
   onAquaLight: '#FFFFFF',
-  onAquaDark: '#07363A',
-  // Tuned against each appearance's surfaces; not copied from default syntax.
+  onAquaDark: auraBase2026.background,
+  // Light has its own ink palette; dark inherits Aura's existing syntax.
   syntax: {
     light: {
       blue: '#4A80A7',
@@ -30,17 +31,6 @@ export const auraAquaColors = {
       amber: '#9C7954',
       blueMuted: '#5F829B',
       slate: '#71848D',
-    },
-    dark: {
-      blue: '#64D8F3',
-      violet: '#B6A0FF',
-      orchid: '#DDA7FF',
-      orchidStrong: '#E9BEFF',
-      rose: '#FF9BCF',
-      roseMuted: '#DD85B5',
-      amber: '#FFC98A',
-      blueMuted: '#96D0EC',
-      slate: '#B4C8D3',
     },
   },
   light: {
@@ -62,24 +52,10 @@ export const auraAquaColors = {
     shadow: '#14384410',
   },
   dark: {
-    background: '#182C36',
-    chrome: '#142630',
-    surface: '#203642',
-    line: '#1C333E',
-    hover: '#293D48',
-    tabs: '#172A35',
-    elevated: '#243D49',
-    border: '#304955',
-    borderStrong: '#4C6775',
-    foreground: '#E0F0F5',
-    foregroundStrong: '#F0FAFD',
-    foregroundMuted: '#B6CDD8',
-    foregroundSubtle: '#90ABB9',
-    disabled: '#617F8F',
-    comment: '#9DB9C6',
-    selection: '#19434D',
-    selectionInactive: '#1B3B46',
-    shadow: '#00000040',
+    // Only interaction tints are Aqua-specific. The dark base is inherited.
+    tabs: auraBase2026.background,
+    selection: '#13282D',
+    selectionInactive: auraBase2026.surfaceAlt,
   },
 }
 
@@ -89,7 +65,10 @@ const syntax = auraAquaColors.syntax
 // Type/constant and control-flow accents can differ from the UI family.
 export const auraAquaSyntaxAccents = {
   light: { accent: syntax.light.blue, accentBright: syntax.light.violet },
-  dark: { accent: syntax.dark.blue, accentBright: syntax.dark.violet },
+  dark: {
+    accent: auraDefaultFamily.accent,
+    accentBright: auraDefaultFamily.accentBright,
+  },
 }
 
 export const auraAquaLightBase = {
@@ -112,26 +91,7 @@ export const auraAquaLightBase = {
   comment: light.comment,
 }
 
-export const auraAquaDarkBase = {
-  ...auraBase2026,
-  shadow: dark.shadow,
-  background: dark.background,
-  appBackground: dark.chrome,
-  sidebar: dark.chrome,
-  panel: dark.chrome,
-  surface: dark.surface,
-  surfaceAlt: dark.line,
-  surfaceHover: dark.hover,
-  elevated: dark.elevated,
-  border: dark.border,
-  borderStrong: dark.borderStrong,
-  foreground: dark.foreground,
-  foregroundStrong: dark.foregroundStrong,
-  foregroundMuted: dark.foregroundMuted,
-  foregroundSubtle: dark.foregroundSubtle,
-  disabled: dark.disabled,
-  comment: dark.comment,
-}
+export const auraAquaDarkBase = auraBase2026
 
 const aquaAction = (foreground: string) => ({
   background: auraAquaColors.aqua,
@@ -163,20 +123,8 @@ export const auraAquaLightSemantic: AuraSemanticPalette = {
 export const auraAquaDarkSemantic: AuraSemanticPalette = {
   ...auraSemantic2026,
   action: aquaAction(auraAquaColors.onAquaDark),
-  brand: {
-    ...auraSemantic2026.brand,
-    blue: syntax.dark.blueMuted,
-    lavender: syntax.dark.orchid,
-    lavenderBright: syntax.dark.orchidStrong,
-    lavenderMuted: syntax.dark.slate,
-    pink: syntax.dark.rose,
-    pinkSoft: syntax.dark.roseMuted,
-  },
   status: {
     ...auraSemantic2026.status,
-    error: '#FF9485',
-    errorBright: '#FF9485',
-    orange: syntax.dark.amber,
     info: auraAquaColors.aqua,
     infoBright: auraAquaColors.aquaBright,
   },
