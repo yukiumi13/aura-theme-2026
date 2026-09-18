@@ -42,6 +42,7 @@ export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
     },
     ui: {
       ...ui,
+      accent: auraAquaColors.aqua,
       interactionForeground: base.foreground,
       onError: isLight ? base.elevated : base.background,
       listSelectionFocus: isLight ? ui.listSelectionFocus : colors.selection,
@@ -53,6 +54,11 @@ export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
       infoSurface,
       chrome: {
         ...ui.chrome,
+        background: base.appBackground,
+        activeTabBackground: auraAquaColors.aqua,
+        activeTabForeground: auraAquaColors.onAqua,
+        activeActivityBackground: auraAquaColors.aqua,
+        activeActivityForeground: auraAquaColors.onAqua,
         tabStripBackground: colors.tabs,
         inactiveTabBackground: colors.tabs,
         unfocusedTabForeground: base.foregroundMuted,

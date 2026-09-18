@@ -35,19 +35,31 @@ The VS Code extension adds **Aura Aqua Light 2026** and **Aura Aqua Dark 2026**.
 
 | Meaning | Aqua Light | Aqua Dark |
 | --- | --- | --- |
-| Filled actions, badges, Remote/SSH | `#12DADD` with `#07363A` text | Same pairing |
-| UI links / hover | Clear blue `#215FA6` / `#174D8C` | Aqua `#12DADD` / `#76E9EC` |
-| Types / constants | Blue `#215FA6` | Sky blue `#7DCDE9` |
-| Information icons | Blue `#215FA6` | Aqua `#12DADD` |
-| Control flow and operators | Violet `#6550AE` | Soft violet `#B9A4EF` |
-| Function calls / properties | Orchid `#874D9D` / rose `#A13F70` | Orchid `#D6B1F0` / rose `#EDABC8` |
-| Numbers | Amber `#905C19` | Warm sand `#EDC58F` |
+| Filled actions, active tabs, activity items, badges, Remote/SSH | `#12DADD` with `#07363A` text | Same pairing |
+| UI links / hover | Clear blue `#0868AF` / `#005B9B` | Aqua `#12DADD` / `#76E9EC` |
+| Types / constants | Blue `#0868AF` | Sky blue `#64D8F3` |
+| Information icons | Blue `#0868AF` | Aqua `#12DADD` |
+| Control flow and operators | Violet `#7441CC` | Violet `#B6A0FF` |
+| Function calls / properties | Orchid `#9A3FA9` / rose `#B23177` | Orchid `#DDA7FF` / rose `#FF9BCF` |
+| Numbers | Amber `#A15315` | Warm sand `#FFC98A` |
 | Strings / success | Readable Aura mint ink | Original Aura mint |
-| Canvas | Sampled cold paper `#F8FCFE` | Designed charcoal `#111A1E` |
-| Chrome | Designed `#EEF4F6` | Designed `#0C1418` |
+| Canvas | Sampled cold paper `#F8FCFE` | Designed deep blue canvas `#182C36` |
+| Chrome | Designed `#F5F9FB` | Designed `#142630` |
 | Ordinary hover | Neutral surface and foreground | Neutral surface and foreground |
 
-Only the aqua anchor and cold-paper background are direct reference samples. Hover, charcoal, surface, and selection shades are design choices; they are not attributed to the reference UI. The initial deep-aqua ink proposal was removed from light text. Clear blue types and links give the cold paper a crisp accent without requiring deep teal ink. Violet control flow, orchid functions, rose properties, and amber numbers break up the earlier concentration of purple/pink code. Dark syntax uses brighter, softer accents against charcoal; vivid mint remains a deliberate string accent. The more luminous dark syntax also permits clearer selection and diff surfaces. Parameters and documentation comments use subdued slate ink to avoid turning secondary information into another competing hue.
+Only the aqua anchor and cold-paper background are direct reference samples. Hover, dark canvas, surface, and selection shades are design choices; they are not attributed to the reference UI. The initial deep-aqua ink proposal was removed from light text. Clear blue types and links give the cold paper a crisp accent without requiring deep teal ink. Violet control flow, orchid functions, rose properties, and amber numbers break up the earlier concentration of purple/pink code. Dark syntax uses luminous, saturated accents against a deep blue canvas; vivid mint remains a deliberate string accent. The more luminous dark syntax also permits clearer selection and diff surfaces. Parameters and documentation comments use subdued slate ink to avoid turning secondary information into another competing hue.
+
+## Visual quality review
+
+The v0.5.0 pair was readable but visually too subdued: gray-blue chrome, small isolated cyan controls, and softened syntax made the sampled aqua feel incidental. The revision evaluates more than brightness:
+
+- **Identity and color distribution:** aqua is visible in active tabs, activity items, progress, badges, and actions. It is concentrated in meaningful locations rather than tinting every surface or label.
+- **Hierarchy:** the editor stays the largest calm surface; selected navigation has a solid aqua fill, floating surfaces remain distinct, and secondary content stays neutral. Unfocused groups lose the strong active fill.
+- **Color purity:** near-white light chrome and a clearer blue dark canvas replace the gray-blue/near-black pairing. Syntax uses stronger chroma with separated blue, violet, orchid, rose, mint, and amber roles.
+- **Interaction clarity:** buttons brighten on hover; ordinary rows use neutral opaque hover. Active foreground/background pairs are explicit. Graphic aqua accents are separate from readable light links and keyboard focus.
+- **Reading quality:** check explicit syntax and UI contrast on their actual backgrounds, including selected, hovered, unfocused, and layered diff states. These measurements establish a legibility floor; visual balance and long-session comfort still require judgment and use.
+
+VS Code's current tab hover rules exclude selected tabs, so a selected aqua tab keeps its fill during hover. The preview follows this behavior. No custom CSS is installed into VS Code. The new role aliases preserve the outputs of the 15 non-Aqua themes, including Aura Light 2026.
 
 ## Implementation and validation
 

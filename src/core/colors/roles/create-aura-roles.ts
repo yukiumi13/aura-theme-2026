@@ -74,6 +74,10 @@ export function createAuraPalette(
         border: isLight ? base.border : base.shadow,
         titleBorder: isLight ? base.border : base.shadow,
         tabStripBackground: isLight ? auraLightColors.tabs : base.background,
+        activeTabBackground: base.background,
+        activeTabForeground: base.foregroundStrong,
+        activeActivityBackground: base.surface,
+        activeActivityForeground: base.foregroundStrong,
         inactiveTabBackground: isLight ? auraLightColors.tabs : base.sidebar,
         unfocusedTabForeground: isLight
           ? base.foregroundMuted

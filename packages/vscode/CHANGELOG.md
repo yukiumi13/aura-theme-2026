@@ -1,5 +1,13 @@
 # Aura Theme Changelog
 
+## 0.5.1 (September 17, 2026)
+
+- Rebalance Aqua around vivid cyan active tabs, activity items, progress indicators, actions, and badges, with dark foregrounds on filled controls.
+- Lift Aqua Light chrome toward white and replace the near-black Aqua Dark canvas with a lighter blue background and clearer surface levels.
+- Increase syntax chroma, preserve neutral secondary content, and brighten dark error ink for readable layered diffs.
+- Separate graphic accents from readable links/focus, retain neutral ordinary hover, and make filled-action hover brighter.
+- Add contrast coverage for active activity items and focused, hovered, and unfocused tabs. Aura Light 2026 and all other non-Aqua theme colors remain unchanged.
+
 ## 0.5.0 (September 17, 2026)
 
 - Add Aura Aqua Light 2026 and Aura Aqua Dark 2026 with sampled cyan actions, cold-paper/charcoal surfaces, and independently tuned syntax palettes.

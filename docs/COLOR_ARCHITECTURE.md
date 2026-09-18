@@ -166,3 +166,5 @@ The references were inspected on September 15, 2026. They inform the surface hie
 ## Paired Aqua variants
 
 The Aqua pair uses the same source-to-semantic-to-role-to-template flow. Its optional `semantic.action` supplies filled-action background, foreground, hover, and border colors, leaving `brand.mint` intact. The optional semantic input allows independent normal-action and hover accents. Default themes now consume aqua interaction feedback while preserving their code and ANSI colors. `create-aqua-roles.ts` assigns the pair's neutral interaction behavior and aqua surfaces without editing generated JSON. See [Aqua design](AQUA_DESIGN.md) and [pixel evidence](aqua-color-sampling.json).
+
+Aqua uses explicit active-tab and activity-item foreground/background roles to pair dark labels with vivid filled selections. Graphic accents can use sampled aqua independently of readable link and keyboard-focus ink. See the [visual quality review](AQUA_DESIGN.md#visual-quality-review) for the evaluation criteria.

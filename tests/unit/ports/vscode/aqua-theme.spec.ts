@@ -101,6 +101,9 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
         expect(colors[key]).toBe('#00000000')
       }
       expect(contrast(colors.focusBorder, editor)).toBeGreaterThanOrEqual(3)
+      expect(
+        contrast(colors.focusBorder, rgb(colors['sideBar.background']))
+      ).toBeGreaterThanOrEqual(3)
       const oldPaletteText = render({
         ...withTerminalAuraAnsi(scheme),
         ansiBrightGreen: '#FF00FF',
@@ -189,6 +192,11 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
         'list.inactiveSelectionBackground',
       ],
       ['menu.selectionForeground', 'menu.selectionBackground'],
+      ['activityBar.foreground', 'activityBar.activeBackground'],
+      ['activityBarTop.foreground', 'activityBarTop.activeBackground'],
+      ['tab.activeForeground', 'tab.activeBackground'],
+      ['tab.hoverForeground', 'tab.hoverBackground'],
+      ['tab.unfocusedActiveForeground', 'tab.unfocusedActiveBackground'],
       ['tab.unfocusedInactiveForeground', 'tab.unfocusedInactiveBackground'],
       ['editorInlayHint.foreground', 'editorInlayHint.background'],
     ])('keeps %s readable on %s', (fg, bg) => {

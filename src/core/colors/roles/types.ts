@@ -169,6 +169,10 @@ export interface AuraUiPalette {
     border: string
     titleBorder: string
     tabStripBackground: string
+    activeTabBackground: string
+    activeTabForeground: string
+    activeActivityBackground: string
+    activeActivityForeground: string
     inactiveTabBackground: string
     unfocusedTabForeground: string
     tabHoverBackground: string
