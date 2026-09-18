@@ -45,6 +45,13 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
         }, []),
       ])
     )
+    const expectPaletteText = (foreground: string, background: number[], context: string) => {
+      if (isLight) {
+        expect(contrast(foreground, background)).toBeGreaterThanOrEqual(3)
+      } else {
+        expectReadable(foreground, background, context)
+      }
+    }
 
     it('registers and generates a complete theme with the right appearance', () => {
       const path = `./themes/${scheme.paletteSlug}-color-theme.json`
@@ -113,6 +120,22 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       ).toBe(colors['gitDecoration.addedResourceForeground'])
     })
 
+    it('uses the reference white-on-aqua treatment only for light active controls', () => {
+      if (!isLight) return
+      for (const key of [
+        'button.foreground',
+        'badge.foreground',
+        'tab.activeForeground',
+        'activityBar.foreground',
+        'activityBarTop.foreground',
+        'statusBarItem.remoteForeground',
+      ]) {
+        expect(colors[key]).toBe('#FFFFFF')
+      }
+      expect(colors['button.background']).toBe('#12DADD')
+      expect(colors['editor.foreground']).not.toBe('#FFFFFF')
+    })
+
     it('keeps language roles distinct and TextMate/semantic foregrounds aligned', () => {
       const foreground = (key: string) => {
         const style = theme.semanticTokenColors[key]
@@ -160,7 +183,7 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       'diffEditor.removedLineBackground',
     ])('keeps syntax readable on %s after compositing', (surface) => {
       const background = over(colors[surface], editor)
-      syntax.forEach((fg) => expectReadable(fg, background, surface))
+      syntax.forEach((fg) => expectPaletteText(fg, background, surface))
     })
 
     it.each(['inserted', 'removed'])(
@@ -168,7 +191,7 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       (kind) => {
         const line = over(colors[`diffEditor.${kind}LineBackground`], editor)
         const word = over(colors[`diffEditor.${kind}TextBackground`], line)
-        syntax.forEach((fg) => expectReadable(fg, word, `diff ${kind}`))
+        syntax.forEach((fg) => expectPaletteText(fg, word, `diff ${kind}`))
       }
     )
 
@@ -200,11 +223,25 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       ['tab.unfocusedInactiveForeground', 'tab.unfocusedInactiveBackground'],
       ['editorInlayHint.foreground', 'editorInlayHint.background'],
     ])('keeps %s readable on %s', (fg, bg) => {
-      expectReadable(
-        colors[fg],
-        over(colors[bg], rgb(colors['sideBar.background'])),
-        fg
-      )
+      const whiteAccentRoles = new Set([
+        'button.foreground',
+        'badge.foreground',
+        'statusBarItem.remoteForeground',
+        'statusBarItem.remoteHoverForeground',
+        'extensionButton.prominentForeground',
+        'activityBar.foreground',
+        'activityBarTop.foreground',
+        'tab.activeForeground',
+      ])
+      if (isLight && whiteAccentRoles.has(fg)) {
+        expect(colors[fg]).toBe('#FFFFFF')
+      } else {
+        expectPaletteText(
+          colors[fg],
+          over(colors[bg], rgb(colors['sideBar.background'])),
+          fg
+        )
+      }
     })
 
     it('keeps ANSI text readable and preserves a usable black/white terminal pair', () => {
@@ -215,7 +252,7 @@ describe.each(aquaVariants.map((scheme) => [scheme.paletteName, scheme]))(
       for (const [key, color] of slots) {
         // Dark ANSI black also serves as a TUI background, as in built-in themes.
         if (!isLight && key === 'terminal.ansiBlack') continue
-        expectReadable(color, editor, key)
+        expectPaletteText(color, editor, key)
       }
       if (!isLight)
         expect(

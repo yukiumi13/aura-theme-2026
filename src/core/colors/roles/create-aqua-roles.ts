@@ -56,9 +56,13 @@ export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
         ...ui.chrome,
         background: base.appBackground,
         activeTabBackground: auraAquaColors.aqua,
-        activeTabForeground: auraAquaColors.onAqua,
+        activeTabForeground: isLight
+          ? auraAquaColors.onAquaLight
+          : auraAquaColors.onAquaDark,
         activeActivityBackground: auraAquaColors.aqua,
-        activeActivityForeground: auraAquaColors.onAqua,
+        activeActivityForeground: isLight
+          ? auraAquaColors.onAquaLight
+          : auraAquaColors.onAquaDark,
         tabStripBackground: colors.tabs,
         inactiveTabBackground: colors.tabs,
         unfocusedTabForeground: base.foregroundMuted,

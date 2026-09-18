@@ -42,7 +42,7 @@ Light selections and diff highlights use lower opacity to keep code readable. Bu
 
 ## Aura Aqua
 
-**Aura Aqua Light 2026** and **Aura Aqua Dark 2026** pair vivid cyan active tabs, navigation, and actions with near-white or deep blue surfaces. Aqua carries graphic and filled-control accents; light links/focus use clear blue, while dark UI emphasis uses bright aqua. Each appearance has independently tuned syntax: blue types, violet control flow, orchid functions, mint strings, rose properties, amber numbers, and subdued slate parameters. The dark palette uses saturated luminous accents over a lifted blue canvas; the light palette uses crisp inks and lighter chrome. Both use neutral hover labels and borderless filled actions.
+**Aura Aqua Light 2026** and **Aura Aqua Dark 2026** pair vivid cyan active tabs, navigation, and actions with near-white or deep blue surfaces. Aqua Light intentionally uses white text on its vivid aqua active controls and softer blue links, UI text, and syntax colors. Aqua Dark keeps dark text on aqua controls and luminous syntax over a lifted blue canvas. Both appearances use blue types, violet control flow, orchid functions, mint strings, rose properties, amber numbers, neutral hover labels, and borderless filled actions.
 
 ## Installation
 

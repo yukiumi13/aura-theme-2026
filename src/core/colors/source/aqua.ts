@@ -14,20 +14,22 @@ export const auraAquaColors = {
   aquaHover: '#46E4E6',
   aquaBright: '#76E9EC',
   selectionTint: '#277D87',
-  onAqua: '#07363A',
+  // The light variant deliberately follows the reference's soft white-on-aqua UI.
+  onAquaLight: '#FFFFFF',
+  onAquaDark: '#07363A',
   // Tuned against each appearance's surfaces; not copied from default syntax.
   syntax: {
     light: {
-      blue: '#0868AF',
-      blueStrong: '#005B9B',
-      violet: '#7441CC',
-      orchid: '#9A3FA9',
-      orchidStrong: '#883399',
-      rose: '#B23177',
-      roseMuted: '#A23870',
-      amber: '#A15315',
-      blueMuted: '#355F87',
-      slate: '#576979',
+      blue: '#4A80A7',
+      blueStrong: '#39749D',
+      violet: '#8669BA',
+      orchid: '#A36CAF',
+      orchidStrong: '#955FA4',
+      rose: '#AD6B91',
+      roseMuted: '#A06A89',
+      amber: '#9C7954',
+      blueMuted: '#5F829B',
+      slate: '#71848D',
     },
     dark: {
       blue: '#64D8F3',
@@ -50,12 +52,12 @@ export const auraAquaColors = {
     tabs: '#EFF5F8',
     border: '#E1E9ED',
     borderStrong: '#BDCFD8',
-    foreground: '#29343C',
-    foregroundStrong: '#1D2B34',
-    foregroundMuted: '#536471',
-    foregroundSubtle: '#657781',
-    disabled: '#91A5AC',
-    comment: '#596C75',
+    foreground: '#4A5861',
+    foregroundStrong: '#394952',
+    foregroundMuted: '#6B7D86',
+    foregroundSubtle: '#80919A',
+    disabled: '#AAB7BD',
+    comment: '#72858E',
     selection: '#DDF6F7',
     shadow: '#14384410',
   },
@@ -131,16 +133,16 @@ export const auraAquaDarkBase = {
   comment: dark.comment,
 }
 
-const aquaAction = {
+const aquaAction = (foreground: string) => ({
   background: auraAquaColors.aqua,
-  foreground: auraAquaColors.onAqua,
+  foreground,
   hoverBackground: auraAquaColors.aquaHover,
   border: '#00000000',
-}
+})
 
 export const auraAquaLightSemantic: AuraSemanticPalette = {
   ...auraLightSemantic2026,
-  action: aquaAction,
+  action: aquaAction(auraAquaColors.onAquaLight),
   brand: {
     ...auraLightSemantic2026.brand,
     blue: syntax.light.blueMuted,
@@ -160,7 +162,7 @@ export const auraAquaLightSemantic: AuraSemanticPalette = {
 
 export const auraAquaDarkSemantic: AuraSemanticPalette = {
   ...auraSemantic2026,
-  action: aquaAction,
+  action: aquaAction(auraAquaColors.onAquaDark),
   brand: {
     ...auraSemantic2026.brand,
     blue: syntax.dark.blueMuted,

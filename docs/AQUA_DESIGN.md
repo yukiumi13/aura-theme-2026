@@ -19,7 +19,7 @@ The supplied screenshot's cyan and Aura mint can form a coherent analogous palet
 python scripts/sample-image-palette.py /path/to/reference.png --output /tmp/aqua-sampling.json
 ```
 
-The anchor's HSV hue is approximately 180.9°, versus Aura mint's 159.9°. These are adjacent hues, not a complementary pair. White text on the sampled aqua has only about 1.74:1 contrast. The variants therefore use dark text on the vivid aqua fill. The reference's glow, double outlines, low-contrast disabled labels, and artwork are not copied into the themes.
+The anchor's HSV hue is approximately 180.9°, versus Aura mint's 159.9°. These are adjacent hues, not a complementary pair. White text on the sampled aqua has about 1.74:1 contrast. Aqua Light intentionally uses that white-on-aqua pairing for its high-emphasis controls to preserve the reference's airy Aura character. This sacrifices small-label legibility; ordinary text stays on pale surfaces. Aqua Dark retains dark text on aqua. The reference's artwork is not copied into the themes.
 
 ## Adopted interaction language for the default themes
 
@@ -35,19 +35,19 @@ The VS Code extension adds **Aura Aqua Light 2026** and **Aura Aqua Dark 2026**.
 
 | Meaning | Aqua Light | Aqua Dark |
 | --- | --- | --- |
-| Filled actions, active tabs, activity items, badges, Remote/SSH | `#12DADD` with `#07363A` text | Same pairing |
-| UI links / hover | Clear blue `#0868AF` / `#005B9B` | Aqua `#12DADD` / `#76E9EC` |
-| Types / constants | Blue `#0868AF` | Sky blue `#64D8F3` |
-| Information icons | Blue `#0868AF` | Aqua `#12DADD` |
-| Control flow and operators | Violet `#7441CC` | Violet `#B6A0FF` |
-| Function calls / properties | Orchid `#9A3FA9` / rose `#B23177` | Orchid `#DDA7FF` / rose `#FF9BCF` |
-| Numbers | Amber `#A15315` | Warm sand `#FFC98A` |
+| Filled actions, active tabs, activity items, badges, Remote/SSH | `#12DADD` with white text | `#12DADD` with `#07363A` text |
+| UI links / hover | Soft blue `#4A80A7` / `#39749D` | Aqua `#12DADD` / `#76E9EC` |
+| Types / constants | Soft blue `#4A80A7` | Sky blue `#64D8F3` |
+| Information icons | Soft blue `#4A80A7` | Aqua `#12DADD` |
+| Control flow and operators | Soft violet `#8669BA` | Violet `#B6A0FF` |
+| Function calls / properties | Orchid `#A36CAF` / rose `#AD6B91` | Orchid `#DDA7FF` / rose `#FF9BCF` |
+| Numbers | Muted amber `#9C7954` | Warm sand `#FFC98A` |
 | Strings / success | Readable Aura mint ink | Original Aura mint |
 | Canvas | Sampled cold paper `#F8FCFE` | Designed deep blue canvas `#182C36` |
 | Chrome | Designed `#F5F9FB` | Designed `#142630` |
 | Ordinary hover | Neutral surface and foreground | Neutral surface and foreground |
 
-Only the aqua anchor and cold-paper background are direct reference samples. Hover, dark canvas, surface, and selection shades are design choices; they are not attributed to the reference UI. The initial deep-aqua ink proposal was removed from light text. Clear blue types and links give the cold paper a crisp accent without requiring deep teal ink. Violet control flow, orchid functions, rose properties, and amber numbers break up the earlier concentration of purple/pink code. Dark syntax uses luminous, saturated accents against a deep blue canvas; vivid mint remains a deliberate string accent. The more luminous dark syntax also permits clearer selection and diff surfaces. Parameters and documentation comments use subdued slate ink to avoid turning secondary information into another competing hue.
+Only the aqua anchor and cold-paper background are direct reference samples. Hover, dark canvas, surface, and selection shades are design choices; they are not attributed to the reference UI. Aqua Light keeps the pale chrome and softens its foreground and syntax hues instead of adding a dark banner to imitate the reference's artwork. White on vivid aqua is reserved for active UI elements; subdued blue, violet, orchid, rose, and amber carry code meaning without making every token a hard accent. Dark syntax remains luminous against its deep blue canvas.
 
 ## Visual quality review
 
@@ -55,9 +55,9 @@ The v0.5.0 pair was readable but visually too subdued: gray-blue chrome, small i
 
 - **Identity and color distribution:** aqua is visible in active tabs, activity items, progress, badges, and actions. It is concentrated in meaningful locations rather than tinting every surface or label.
 - **Hierarchy:** the editor stays the largest calm surface; selected navigation has a solid aqua fill, floating surfaces remain distinct, and secondary content stays neutral. Unfocused groups lose the strong active fill.
-- **Color purity:** near-white light chrome and a clearer blue dark canvas replace the gray-blue/near-black pairing. Syntax uses stronger chroma with separated blue, violet, orchid, rose, mint, and amber roles.
+- **Color purity:** near-white light chrome and a clearer blue dark canvas replace the gray-blue/near-black pairing. Aqua Light uses softer blue, violet, orchid, rose, mint, and amber syntax roles.
 - **Interaction clarity:** buttons brighten on hover; ordinary rows use neutral opaque hover. Active foreground/background pairs are explicit. Graphic aqua accents are separate from readable light links and keyboard focus.
-- **Reading quality:** check explicit syntax and UI contrast on their actual backgrounds, including selected, hovered, unfocused, and layered diff states. These measurements establish a legibility floor; visual balance and long-session comfort still require judgment and use.
+- **Reading quality:** check syntax and UI on their actual backgrounds, including selected, hovered, unfocused, and layered diff states. Aqua Light accepts a lower 3:1 floor for ordinary colored text, and deliberately exempts white text on vivid aqua from that floor. Aqua Dark retains the 4.5:1 text floor.
 
 VS Code's current tab hover rules exclude selected tabs, so a selected aqua tab keeps its fill during hover. The preview follows this behavior. No custom CSS is installed into VS Code. The new role aliases preserve the outputs of the 15 non-Aqua themes, including Aura Light 2026.
 
@@ -73,6 +73,6 @@ The accompanying preview is an illustration rendered from the generated theme va
 
 ## Rendered previews
 
-![Aura Aqua Light token preview](assets/aura-aqua-light-2026.png)
+![Aura Aqua Light soft-contrast preview](assets/aura-aqua-soft-light-2026.png)
 
 ![Aura Aqua Dark token preview](assets/aura-aqua-dark-2026.png)

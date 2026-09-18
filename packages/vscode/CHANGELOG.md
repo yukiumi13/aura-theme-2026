@@ -1,5 +1,11 @@
 # Aura Theme Changelog
 
+## 0.5.3 (September 18, 2026)
+
+- Soften Aqua Light's ordinary UI text and syntax colors for the airy, low-contrast Aura feel.
+- Use white foregrounds on vivid aqua active tabs, activity items, buttons, badges, and Remote status controls, matching the reference's intended color pairing.
+- Keep Aqua Dark's dark-on-aqua controls and the other 15 variants unchanged.
+
 ## 0.5.1 (September 17, 2026)
 
 - Rebalance Aqua around vivid cyan active tabs, activity items, progress indicators, actions, and badges, with dark foregrounds on filled controls.
