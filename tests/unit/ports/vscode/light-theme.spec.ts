@@ -2,22 +2,17 @@ import { readFileSync } from 'fs'
 import { resolve } from 'path'
 import Mustache from 'mustache'
 import { light } from 'core/colors/schemes'
-import { auraMint } from 'core/colors/source/aura'
+import { auraMint, auraInteractionAqua } from 'core/colors/source/aura'
 import { auraLightSemantic2026 } from 'core/colors/source/light'
 import { withTerminalAuraAnsi } from 'ports/shared/terminal-ansi'
-
-type TokenStyle = string | { foreground: string; fontStyle?: string }
-interface Theme {
-  name: string
-  type: string
-  colors: Record<string, string>
-  tokenColors: {
-    scope: string | string[]
-    settings: { foreground?: string; background?: string }
-  }[]
-  semanticTokenColors: Record<string, TokenStyle>
-  semanticHighlighting: boolean
-}
+import {
+  Theme,
+  rgb,
+  over,
+  luminance,
+  contrast,
+  expectReadable,
+} from '../../../helpers/theme'
 
 const template = readFileSync(
   resolve('src/ports/vscode/templates/theme.json'),
@@ -30,51 +25,6 @@ const rendered = Mustache.render(template, {
 })
 const theme: Theme = JSON.parse(rendered)
 const colors = theme.colors
-
-function rgb(hex: string): number[] {
-  return [1, 3, 5].map((offset) =>
-    parseInt(hex.slice(offset, offset + 2), 16)
-  )
-}
-
-function over(hex: string, background: number[]): number[] {
-  const alpha = hex.length === 9 ? parseInt(hex.slice(7), 16) / 255 : 1
-  return rgb(hex).map(
-    (value, i) => value * alpha + background[i] * (1 - alpha)
-  )
-}
-
-function luminance(color: number[]): number {
-  const linear = color.map((channel) => {
-    const value = channel / 255
-    return value <= 0.04045
-      ? value / 12.92
-      : ((value + 0.055) / 1.055) ** 2.4
-  })
-  return linear[0] * 0.2126 + linear[1] * 0.7152 + linear[2] * 0.0722
-}
-
-function contrast(foreground: string, background: number[]): number {
-  const values = [
-    luminance(over(foreground, background)),
-    luminance(background),
-  ].sort((a, b) => a - b)
-  return (values[1] + 0.05) / (values[0] + 0.05)
-}
-
-function expectReadable(
-  foreground: string,
-  background: number[],
-  context: string
-) {
-  const ratio = contrast(foreground, background)
-  if (ratio < 4.5)
-    throw new Error(
-      `${context}: ${foreground} has contrast ${ratio.toFixed(
-        2
-      )}:1 (expected >= 4.5:1)`
-    )
-}
 
 const editor = rgb(colors['editor.background'])
 const textMateColors = theme.tokenColors.reduce<string[]>(
@@ -137,6 +87,7 @@ describe('Aura Light 2026', () => {
 
   it('preserves original mint fills with dark ink in controls and remote status', () => {
     expect(colors['button.background']).toBe(auraMint)
+    expect(colors['button.hoverBackground']).toBe(auraInteractionAqua)
     expect(colors['badge.background']).toBe(auraMint)
     expect(colors['activityBarBadge.background']).toBe(auraMint)
     expect(colors['statusBarItem.remoteBackground']).toBe(auraMint)

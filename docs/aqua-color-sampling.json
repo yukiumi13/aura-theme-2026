@@ -1,0 +1,265 @@
+{
+  "source_sha256": "3482f6e9eb49773c5953f63b39029d759e6bc52cf57cfa31ab5b872037690fc0",
+  "size": [
+    654,
+    1098
+  ],
+  "mode": "RGBA",
+  "srgb_rendering_intent": 0,
+  "gamma": 0.45455,
+  "embedded_icc_profile": false,
+  "method": "Count stored RGB pixels at native resolution; no image transformations.",
+  "regions": {
+    "task_button": {
+      "box_xyxy": [
+        333,
+        339,
+        614,
+        373
+      ],
+      "most_common": [
+        {
+          "rgb": "#0EDADD",
+          "pixels": 1298
+        },
+        {
+          "rgb": "#0FDADD",
+          "pixels": 1150
+        },
+        {
+          "rgb": "#F8FCFE",
+          "pixels": 1102
+        },
+        {
+          "rgb": "#0CDADD",
+          "pixels": 989
+        },
+        {
+          "rgb": "#10DADD",
+          "pixels": 915
+        },
+        {
+          "rgb": "#11DADD",
+          "pixels": 708
+        },
+        {
+          "rgb": "#0DDADD",
+          "pixels": 693
+        },
+        {
+          "rgb": "#12DADD",
+          "pixels": 655
+        },
+        {
+          "rgb": "#13DADD",
+          "pixels": 347
+        },
+        {
+          "rgb": "#14DADD",
+          "pixels": 242
+        }
+      ]
+    },
+    "purchase_button": {
+      "box_xyxy": [
+        457,
+        267,
+        634,
+        301
+      ],
+      "most_common": [
+        {
+          "rgb": "#12DADD",
+          "pixels": 710
+        },
+        {
+          "rgb": "#11DADD",
+          "pixels": 573
+        },
+        {
+          "rgb": "#F8FCFE",
+          "pixels": 569
+        },
+        {
+          "rgb": "#13DADD",
+          "pixels": 441
+        },
+        {
+          "rgb": "#14DADD",
+          "pixels": 374
+        },
+        {
+          "rgb": "#15DADD",
+          "pixels": 326
+        },
+        {
+          "rgb": "#10DADD",
+          "pixels": 322
+        },
+        {
+          "rgb": "#16DADD",
+          "pixels": 198
+        },
+        {
+          "rgb": "#0FDADD",
+          "pixels": 164
+        },
+        {
+          "rgb": "#17DADD",
+          "pixels": 161
+        }
+      ]
+    },
+    "progress_bar": {
+      "box_xyxy": [
+        156,
+        294,
+        327,
+        306
+      ],
+      "most_common": [
+        {
+          "rgb": "#1ADBDE",
+          "pixels": 919
+        },
+        {
+          "rgb": "#1BDBDE",
+          "pixels": 510
+        },
+        {
+          "rgb": "#1EDBDE",
+          "pixels": 154
+        },
+        {
+          "rgb": "#4AE4E7",
+          "pixels": 143
+        },
+        {
+          "rgb": "#19DBDE",
+          "pixels": 122
+        },
+        {
+          "rgb": "#1CDBDE",
+          "pixels": 59
+        },
+        {
+          "rgb": "#19DBDD",
+          "pixels": 45
+        },
+        {
+          "rgb": "#19DADD",
+          "pixels": 29
+        },
+        {
+          "rgb": "#4BE4E7",
+          "pixels": 28
+        },
+        {
+          "rgb": "#1ADBDD",
+          "pixels": 21
+        }
+      ]
+    },
+    "paper": {
+      "box_xyxy": [
+        196,
+        247,
+        359,
+        261
+      ],
+      "most_common": [
+        {
+          "rgb": "#F8FCFE",
+          "pixels": 1956
+        },
+        {
+          "rgb": "#313737",
+          "pixels": 9
+        },
+        {
+          "rgb": "#D3CFD4",
+          "pixels": 6
+        },
+        {
+          "rgb": "#323736",
+          "pixels": 5
+        },
+        {
+          "rgb": "#303535",
+          "pixels": 5
+        },
+        {
+          "rgb": "#303536",
+          "pixels": 5
+        },
+        {
+          "rgb": "#E7E9F1",
+          "pixels": 4
+        },
+        {
+          "rgb": "#E4E8F0",
+          "pixels": 4
+        },
+        {
+          "rgb": "#F1F7FA",
+          "pixels": 4
+        },
+        {
+          "rgb": "#333737",
+          "pixels": 4
+        }
+      ]
+    }
+  },
+  "cyan_filter": {
+    "hue_fraction": [
+      0.46,
+      0.53
+    ],
+    "min_saturation": 0.65,
+    "min_value": 0.65
+  },
+  "cyan_most_common": [
+    {
+      "rgb": "#12DADD",
+      "pixels": 1869
+    },
+    {
+      "rgb": "#11DADD",
+      "pixels": 1596
+    },
+    {
+      "rgb": "#13DADD",
+      "pixels": 1453
+    },
+    {
+      "rgb": "#10DADD",
+      "pixels": 1373
+    },
+    {
+      "rgb": "#0FDADD",
+      "pixels": 1368
+    },
+    {
+      "rgb": "#0EDADD",
+      "pixels": 1337
+    },
+    {
+      "rgb": "#1ADBDE",
+      "pixels": 1333
+    },
+    {
+      "rgb": "#14DADD",
+      "pixels": 1182
+    },
+    {
+      "rgb": "#0CDADD",
+      "pixels": 989
+    },
+    {
+      "rgb": "#1BDBDE",
+      "pixels": 837
+    }
+  ],
+  "interpretation": "Pixel evidence, not a recovery of the original application design tokens."
+}

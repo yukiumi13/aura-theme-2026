@@ -1,5 +1,14 @@
 # Aura Theme Changelog
 
+## 0.5.0 (September 17, 2026)
+
+- Add Aura Aqua Light 2026 and Aura Aqua Dark 2026 with sampled cyan actions, cold-paper/charcoal surfaces, and independently tuned syntax palettes.
+- Use aqua for default action/Remote hover and dark UI interaction emphasis, independently of mint syntax and success colors.
+- Use clear blue Aqua Light links, types, and focus, with neutral ordinary text and vivid aqua filled actions.
+- Tune Aqua syntax for each appearance: blue types, violet control flow, orchid functions, mint strings, rose properties, amber numbers, and slate secondary text. Reuse role mappings without requiring default-theme color parity.
+- Improve dark button normal-state contrast and keep compact status hover neutral.
+- Preserve all pre-existing TextMate, semantic syntax, and terminal ANSI colors; include the MIT license in the VSIX.
+
 ## 0.4.2 (September 16, 2026)
 
 - Match Remote/SSH status items to the mint-fill, dark-text action style in normal and hover states.

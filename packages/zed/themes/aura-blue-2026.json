@@ -123,7 +123,7 @@
         "info": "#60A5FA",
         "info.background": "#60A5FA1F",
         "info.border": "#60A5FA",
-        "link_text.hover": "#61FFCA",
+        "link_text.hover": "#12DADD",
         "version_control.added": "#61FFCA",
         "version_control.modified": "#D49DFF",
         "version_control.deleted": "#FF6767",

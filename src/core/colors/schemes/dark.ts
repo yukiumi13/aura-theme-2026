@@ -23,6 +23,7 @@ export const inkVariant = inkVariantScheme
 export const darkSoft = {
   ...dark,
   accent1: shadeAndDesaturate(dark.accent1),
+  syntaxDiffRange: shadeAndDesaturate(dark.accent1),
   accent2: shadeAndDesaturate(dark.accent2),
   accent3: shadeAndDesaturate(dark.accent3),
   accent4: shadeAndDesaturate(dark.accent4),
@@ -30,6 +31,7 @@ export const darkSoft = {
   accent6: shadeAndDesaturate(dark.accent6),
   accent7: shadeAndDesaturate(dark.accent7),
   uiOnError: shadeAndDesaturate(dark.accent7),
+  uiStatusInfoBorder: shadeAndDesaturate(dark.accent32),
   accent31: shadeAndDesaturate(dark.accent31),
   accent32: shadeAndDesaturate(dark.accent32),
   accent57: shadeAndDesaturate(dark.accent57),

@@ -46,13 +46,13 @@ return {
   },
 
   compose_cursor = "#F694FF",
-  copy_mode_active_highlight_bg = { Color = "#61FFCA" },
+  copy_mode_active_highlight_bg = { Color = "#12DADD" },
   copy_mode_active_highlight_fg = { Color = "#09080D" },
   copy_mode_inactive_highlight_bg = { Color = "#6F4FD82E" },
   copy_mode_inactive_highlight_fg = { Color = "#F2F0F5" },
   quick_select_label_bg = { Color = "#6F4FD8" },
   quick_select_label_fg = { Color = "#0D0B13" },
-  quick_select_match_bg = { Color = "#61FFCA" },
+  quick_select_match_bg = { Color = "#12DADD" },
   quick_select_match_fg = { Color = "#09080D" },
 
   tab_bar = {
@@ -68,7 +68,7 @@ return {
     },
     inactive_tab_hover = {
       bg_color = "#1B1724",
-      fg_color = "#61FFCA",
+      fg_color = "#12DADD",
     },
     new_tab = {
       bg_color = "#0D0B13",
@@ -76,7 +76,7 @@ return {
     },
     new_tab_hover = {
       bg_color = "#1B1724",
-      fg_color = "#61FFCA",
+      fg_color = "#12DADD",
     },
   },
 }

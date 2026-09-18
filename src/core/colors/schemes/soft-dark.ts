@@ -30,6 +30,7 @@ export const softDark: LegacyAuraScheme = {
 export const softDarkSoft = {
   ...softDark,
   accent1: shadeAndDesaturate(softDark.accent1),
+  syntaxDiffRange: shadeAndDesaturate(softDark.accent1),
   accent2: shadeAndDesaturate(softDark.accent2),
   accent3: shadeAndDesaturate(softDark.accent3),
   accent4: shadeAndDesaturate(softDark.accent4),
@@ -37,6 +38,7 @@ export const softDarkSoft = {
   accent6: shadeAndDesaturate(softDark.accent6),
   accent7: shadeAndDesaturate(softDark.accent7),
   uiOnError: shadeAndDesaturate(softDark.accent7),
+  uiStatusInfoBorder: shadeAndDesaturate(softDark.accent32),
   accent31: shadeAndDesaturate(softDark.accent31),
   accent32: shadeAndDesaturate(softDark.accent32),
   accent57: shadeAndDesaturate(softDark.accent57),

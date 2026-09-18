@@ -43,6 +43,8 @@ VS Code also includes **Aura Light 2026**, a daylight companion built from the s
 
 *Illustrative preview rendered from the generated theme tokens; not a VS Code screenshot.*
 
+VS Code additionally includes **Aura Aqua Light 2026** and **Aura Aqua Dark 2026**, a paired cyan variation with cold-paper and charcoal surfaces. The palette assessment and pixel-sampling method are documented in [Aqua design](docs/AQUA_DESIGN.md).
+
 ## Palette Architecture
 
 The 2026 system maps source colors to semantic palettes, role tokens, and port tokens through a temporary template-alias adapter. The generated theme files should be edited through these source files, not by hand in `packages/*`.

@@ -3,7 +3,7 @@ import {
   AuraSemanticPalette,
   AuraVariantFamily,
 } from '../roles/types'
-import { auraMint } from './aura'
+import { auraMint, auraInteractionAqua } from './aura'
 
 // Hand-tuned daylight companions to Aura's existing hues. These are source
 // colors, not an inversion of the dark theme or colors sampled from a port.
@@ -73,6 +73,7 @@ export const auraLightBase2026: AuraBasePalette = {
 }
 
 export const auraLightSemantic2026: AuraSemanticPalette = {
+  interaction: { accent: auraInteractionAqua },
   brand: {
     mint: auraLightColors.mint,
     mintText: auraLightColors.mintText,

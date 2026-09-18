@@ -22,6 +22,16 @@ export interface AuraBasePalette {
 }
 
 export interface AuraSemanticPalette {
+  interaction?: {
+    accent: string
+  }
+  // A family may assign its own filled-action colors while retaining Aura mint.
+  action?: {
+    background: string
+    foreground: string
+    hoverBackground: string
+    border: string
+  }
   brand: {
     mint: string
     mintText: string
@@ -120,6 +130,7 @@ export interface AuraSyntaxPalette {
   constant: string
   constructor: string
   decorator: string
+  diffRange: string
   embedded: string
   ignored: string
   enum: string
@@ -221,6 +232,7 @@ export interface AuraUiPalette {
   status: {
     modified: string
     conflict: string
+    info: string
     success: string
     successBright: string
     successSurface: string

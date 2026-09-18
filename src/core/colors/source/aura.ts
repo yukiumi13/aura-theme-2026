@@ -31,8 +31,10 @@ export const auraInkBase2026: AuraBasePalette = {
 
 // Shared brand anchor: appearance-specific ink colors must not replace it.
 export const auraMint = '#61FFCA'
+export const auraInteractionAqua = '#12DADD'
 
 export const auraSemantic2026: AuraSemanticPalette = {
+  interaction: { accent: auraInteractionAqua },
   brand: {
     mint: auraMint,
     mintText: auraMint,

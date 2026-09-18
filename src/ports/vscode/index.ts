@@ -39,12 +39,17 @@ export async function VscodePort(Aura: AuraAPI) {
     path: `./themes/${family.slug}-color-theme.json`,
   }))
 
-  const lightScheme = colorSchemes.light
-  variantThemeEntries.push({
-    label: lightScheme.paletteName,
-    uiTheme: 'vs',
-    path: `./themes/${lightScheme.paletteSlug}-${outputFileNameSuffix}.json`,
-  })
+  const appearanceSchemes = [
+    colorSchemes.light,
+    ...colorSchemes.aquaVariants,
+  ]
+  for (const scheme of appearanceSchemes) {
+    variantThemeEntries.push({
+      label: scheme.paletteName,
+      uiTheme: scheme.paletteAppearance === 'light' ? 'vs' : 'vs-dark',
+      path: `./themes/${scheme.paletteSlug}-${outputFileNameSuffix}.json`,
+    })
+  }
 
   await copyExtraFiles(__dirname)
 
@@ -127,16 +132,18 @@ export async function VscodePort(Aura: AuraAPI) {
     )
   )
 
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `${lightScheme.paletteSlug}-${outputFileNameSuffix}`,
-    replacements: {
-      ...withTerminalAuraAnsi(lightScheme),
-      type: lightScheme.paletteAppearance,
-      name: lightScheme.paletteName,
-    },
-  })
+  for (const scheme of appearanceSchemes) {
+    await createPort({
+      template,
+      outputDist,
+      outputFileName: `${scheme.paletteSlug}-${outputFileNameSuffix}`,
+      replacements: {
+        ...withTerminalAuraAnsi(scheme),
+        type: scheme.paletteAppearance,
+        name: scheme.paletteName,
+      },
+    })
+  }
 
   await createReadme({
     template: resolve(templateFolder, 'README.md'),

@@ -4,6 +4,8 @@ This is the VS Code port maintained by the `yukiumi13/aura-theme-2026` fork. It 
 
 ## Themes Available
 
+- Aura Aqua Light 2026
+- Aura Aqua Dark 2026
 - Aura Light 2026
 - Aura 2026 Dark
 - Aura 2026 Dark (Soft Text)
@@ -24,7 +26,7 @@ This is the VS Code port maintained by the `yukiumi13/aura-theme-2026` fork. It 
 
 The light appearance uses a soft neutral editor surface, slightly darker chrome, white floating widgets, lavender functions, mint strings, pink properties, and warm amber numbers. It retains the existing Aura syntax roles and uses the same template for TextMate, semantic highlighting, UI, and terminal colors.
 
-Original Aura mint (`#61FFCA`) is preserved in primary actions, badges, and the Remote/SSH status item, consistently paired with dark text. Buttons have no decorative outline. Neutral list/menu/tab hover states keep normal dark text, while search matches and links use purple. Syntax, diagnostics, and terminal colors use a separate readable mint ink. Purple remains the focus, link, and type accent.
+Original Aura mint (`#61FFCA`) is preserved in primary actions, badges, and the Remote/SSH status item, consistently paired with dark text. Their hover state uses aqua (`#12DADD`). Buttons have no decorative outline. Neutral list/menu/tab hover states keep normal dark text, while search matches and links use purple. Syntax, diagnostics, and terminal colors use a separate readable mint ink. Purple remains the focus, link, and type accent.
 
 Unfocused tabs stay readable, and selected sidebar rows retain a subtle violet fill after focus moves to the editor. Toolbar and tab hover states share the neutral list fill. Git additions use semantic green, modifications purple, and conflicts orange; inlay hints use secondary text.
 
@@ -37,6 +39,10 @@ Light selections and diff highlights use lower opacity to keep code readable. Bu
   "window.autoDetectColorScheme": true
 }
 ```
+
+## Aura Aqua
+
+**Aura Aqua Light 2026** and **Aura Aqua Dark 2026** pair vivid cyan actions with cold-paper or charcoal surfaces. Aqua carries filled-action accents; light links/focus use clear blue, while dark UI emphasis uses bright aqua. Each appearance has independently tuned syntax: blue types, violet control flow, orchid functions, mint strings, rose properties, amber numbers, and subdued slate parameters. The dark palette uses softer luminous accents; the light palette uses crisp inks. Both use neutral hover labels and borderless filled actions.
 
 ## Installation
 

@@ -48,7 +48,7 @@
     "inputOption.activeBorder": "{{ uiAccent }}",
     "inputOption.hoverBackground": "{{ uiSurfaceHoverOverlay }}",
     "inputValidation.infoBackground": "{{ uiStatusInfoSurface }}",
-    "inputValidation.infoBorder": "{{ accent32 }}",
+    "inputValidation.infoBorder": "{{ uiStatusInfoBorder }}",
     "inputValidation.infoForeground": "{{ accent7 }}",
     "inputValidation.warningBackground": "{{ uiStatusWarningSurface }}",
     "inputValidation.warningBorder": "{{ uiStatusWarning }}",
@@ -335,7 +335,7 @@
     "notificationLink.foreground": "{{ uiLinkForeground }}",
     "notificationsWarningIcon.foreground": "{{ uiStatusWarning }}",
     "notificationsErrorIcon.foreground": "{{ accent5 }}",
-    "notificationsInfoIcon.foreground": "{{ uiAccent }}",
+    "notificationsInfoIcon.foreground": "{{ uiStatusInfoForeground }}",
     "activityWarningBadge.foreground": "{{ uiOnAccent }}",
     "activityWarningBadge.background": "{{ uiStatusWarning }}",
     "activityErrorBadge.foreground": "{{ uiOnError }}",
@@ -883,7 +883,7 @@
     {
       "scope": "meta.diff.range",
       "settings": {
-        "foreground": "{{ accent1 }}",
+        "foreground": "{{ syntaxDiffRange }}",
         "fontStyle": "bold"
       }
     },
