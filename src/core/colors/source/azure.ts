@@ -105,7 +105,7 @@ export function azureSource(appearance: AuraAppearance): {
     },
   }
   const family: AuraVariantFamily = {
-    name: `Aura 2026 Azure ${light ? 'Light' : 'Dark'}`,
+    name: `Aura Azure ${light ? 'Light' : 'Dark'}`,
     slug: light ? 'aura-azure-light-2026' : 'aura-azure-2026',
     accent: light ? fluentBlue[80] : fluentBlue[110],
     accentBright: light ? '#6656D1' : '#A79CF1',

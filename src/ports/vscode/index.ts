@@ -19,7 +19,7 @@ export async function VscodePort(Aura: AuraAPI) {
       id: 'Aura 2026 Dark',
       slug: 'aura-dark',
       scheme: colorSchemes.dark,
-      name: 'Aura 2026 Dark',
+      name: 'Aura Dark',
       appearance: 'dark',
     },
     {

@@ -2,8 +2,8 @@
   "name": "aura-theme",
   "theme": {
     "slug": "aura-theme-2026",
-    "displayName": "Aura Theme 2026",
-    "shortName": "Aura 2026",
+    "displayName": "Aura Theme",
+    "shortName": "Aura",
     "repository": "https://github.com/yukiumi13/aura-theme-2026",
     "badges": {
       "primaryColor": "1C1E26",
@@ -17,7 +17,7 @@
       "website": "https://daltonmenezes.github.io"
     }
   },
-  "version": "0.6.2",
+  "version": "0.6.3",
   "license": "MIT",
   "author": "Dalton Menezes <daltonmenezes@outlook.com>",
   "scripts": {

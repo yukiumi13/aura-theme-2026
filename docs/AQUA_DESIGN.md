@@ -31,7 +31,7 @@ Aqua is a distinct **interaction response** color. The light default keeps mint-
 
 The appearances share an interaction language, with different palette foundations. Aqua Light uses its independently tuned ink colors on the sampled cold paper. Since v0.6.1, Aqua Dark derives its surfaces, foregrounds, syntax, and terminal colors directly from Aura Dark. This prevents the dark appearance from drifting into a blue-green inversion of the light reference.
 
-The VS Code extension offers **Aura 2026 Aqua Light** and **Aura 2026 Aqua Dark**, with shared aqua actions, neutral interaction labels, and explicit status meanings. Their previous selection IDs remain stable.
+The VS Code extension offers **Aura Aqua Light** and **Aura Aqua Dark**, with shared aqua actions, neutral interaction labels, and explicit status meanings. Their previous selection IDs remain stable.
 
 | Meaning | Aqua Light | Aqua Dark |
 | --- | --- | --- |
@@ -73,6 +73,6 @@ VS Code's tab hover rules exclude selected tabs, so a selected aqua tab keeps it
 
 These screenshots use a fictional sample workspace in an isolated, unsigned-in profile. Older illustrative PNGs in the assets directory are historical and do not represent the current Aqua Dark palette.
 
-![Aura 2026 Aqua Light in VS Code](assets/aura-2026-aqua-light-vscode.jpg)
+![Aura Aqua Light in VS Code](assets/aura-2026-aqua-light-vscode.jpg)
 
-![Aura 2026 Aqua Dark in VS Code](assets/aura-2026-aqua-dark-vscode.jpg)
+![Aura Aqua Dark in VS Code](assets/aura-2026-aqua-dark-vscode.jpg)

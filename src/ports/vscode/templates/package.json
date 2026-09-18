@@ -1,6 +1,6 @@
 {
   "name": "{{ slug }}",
-  "displayName": "Aura Theme 2026 (Unofficial Fork)",
+  "displayName": "Aura Theme",
   "description": "An independent Aura fork with paired Aura, Aqua, and Fluent-inspired Azure themes. Based on the original theme by Dalton Menezes.",
   "version": "{{ version }}",
   "scripts": {

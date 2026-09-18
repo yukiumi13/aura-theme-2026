@@ -44,7 +44,7 @@ const syntaxColors = Array.from(
   ])
 )
 
-describe('Aura Light 2026', () => {
+describe('Aura Light', () => {
   it('renders a complete light theme and ships the same generated output', () => {
     expect(rendered).not.toMatch(/\{\{|\}\}/)
     expect(theme.type).toBe('light')

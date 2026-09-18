@@ -1,4 +1,6 @@
-# Aura Theme 2026
+# Aura Theme
+
+![Aura Modern — Aqua Dark in Visual Studio Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-teaser-zoom.png)
 
 Six color themes for Visual Studio Code: **Aura**, **Aqua**, and **Azure**, each with a dark and light appearance.
 
@@ -6,7 +8,7 @@ An unofficial fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/
 
 ## Install
 
-Install [Aura Theme 2026 from the Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then open **Preferences: Color Theme** from the Command Palette and choose an **Aura 2026** theme.
+Install [Aura Theme from the Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then open **Preferences: Color Theme** from the Command Palette and choose an **Aura** theme.
 
 To switch with your system appearance, enable **Window: Auto Detect Color Scheme** in Settings and choose your preferred light and dark themes.
 
@@ -18,37 +20,37 @@ All screenshots show the same sample project in VS Code.
 
 Aura's purple and mint palette.
 
-#### Aura 2026 Dark
+#### Aura Dark
 
-![Aura 2026 Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-dark-vscode.jpg)
+![Aura Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-dark-vscode.jpg)
 
-#### Aura 2026 Light
+#### Aura Light
 
-![Aura 2026 Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-light-vscode.jpg)
+![Aura Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-light-vscode.jpg)
 
 ### Aqua
 
 Bright cyan accents on Aura's dark background or a soft white workspace.
 
-#### Aura 2026 Aqua Dark
+#### Aura Aqua Dark
 
-![Aura 2026 Aqua Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-dark-vscode.jpg)
+![Aura Aqua Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-dark-vscode.jpg)
 
-#### Aura 2026 Aqua Light
+#### Aura Aqua Light
 
-![Aura 2026 Aqua Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-light-vscode.jpg)
+![Aura Aqua Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-light-vscode.jpg)
 
 ### Azure
 
 Blues inspired by Microsoft Fluent, with neutral backgrounds.
 
-#### Aura 2026 Azure Dark
+#### Aura Azure Dark
 
-![Aura 2026 Azure Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-azure-dark-vscode.jpg)
+![Aura Azure Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-azure-dark-vscode.jpg)
 
-#### Aura 2026 Azure Light
+#### Aura Azure Light
 
-![Aura 2026 Azure Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-azure-light-vscode.jpg)
+![Aura Azure Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-azure-light-vscode.jpg)
 
 ## Feedback
 

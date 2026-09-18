@@ -1,8 +1,8 @@
 {
   "name": "aura-theme-2026",
-  "displayName": "Aura Theme 2026 (Unofficial Fork)",
+  "displayName": "Aura Theme",
   "description": "An independent Aura fork with paired Aura, Aqua, and Fluent-inspired Azure themes. Based on the original theme by Dalton Menezes.",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "scripts": {
     "publish": "vsce publish"
   },
@@ -36,37 +36,37 @@
     "themes": [
       {
                 "id": "Aura 2026 Dark",
-                "label": "Aura 2026 Dark",
+                "label": "Aura Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/aura-dark-color-theme.json"
         },
         {
                 "id": "Aura Light 2026",
-                "label": "Aura 2026 Light",
+                "label": "Aura Light",
                 "uiTheme": "vs",
                 "path": "./themes/aura-light-2026-color-theme.json"
         },
         {
                 "id": "Aura Aqua Light 2026",
-                "label": "Aura 2026 Aqua Light",
+                "label": "Aura Aqua Light",
                 "uiTheme": "vs",
                 "path": "./themes/aura-aqua-light-2026-color-theme.json"
         },
         {
                 "id": "Aura Aqua Dark 2026",
-                "label": "Aura 2026 Aqua Dark",
+                "label": "Aura Aqua Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/aura-aqua-dark-2026-color-theme.json"
         },
         {
                 "id": "Aura 2026 Azure Light",
-                "label": "Aura 2026 Azure Light",
+                "label": "Aura Azure Light",
                 "uiTheme": "vs",
                 "path": "./themes/aura-azure-light-2026-color-theme.json"
         },
         {
                 "id": "Aura Azure 2026",
-                "label": "Aura 2026 Azure Dark",
+                "label": "Aura Azure Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/aura-azure-2026-color-theme.json"
         }

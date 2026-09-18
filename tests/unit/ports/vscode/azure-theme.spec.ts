@@ -13,8 +13,9 @@ const template = readFileSync(
   'utf8'
 )
 
-it('ships only three complete pairs and preserves the five existing selection IDs', () => {
+it('ships three pairs with simple names and preserves all six selection IDs', () => {
   const entries = manifest.contributes.themes
+  expect(manifest.displayName).toBe('Aura Theme')
   expect(entries).toHaveLength(6)
   expect(
     entries.filter((entry: any) => entry.uiTheme === 'vs')
@@ -26,9 +27,18 @@ it('ships only three complete pairs and preserves the five existing selection ID
       'Aura Aqua Light 2026',
       'Aura Aqua Dark 2026',
       'Aura Azure 2026',
+      'Aura 2026 Azure Light',
     ])
   )
   expect(new Set(entries.map((entry: any) => entry.id)).size).toBe(6)
+  expect(entries.map((entry: any) => entry.label).sort()).toEqual([
+    'Aura Aqua Dark',
+    'Aura Aqua Light',
+    'Aura Azure Dark',
+    'Aura Azure Light',
+    'Aura Dark',
+    'Aura Light',
+  ])
   expect(readdirSync('packages/vscode/themes').sort()).toEqual(
     entries.map((entry: any) => entry.path.split('/').pop()).sort()
   )

@@ -1,12 +1,14 @@
-# Aura Theme 2026
+# Aura Theme
 
-Aura Theme 2026 is an unofficial fork maintained by **yukiumi13**. It is based on [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme) and is not an official release from that project. This repository focuses on a smaller, actively reworked 2026 theme system rather than the full upstream port matrix.
+![Aura Modern — Aqua Dark in Visual Studio Code](docs/assets/aura-teaser-zoom.png)
+
+Aura Theme is an unofficial fork maintained by **yukiumi13**. It is based on [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme) and is not an official release from that project. This repository focuses on a smaller, actively maintained theme system rather than the full upstream port matrix.
 
 The current work is centered on a shared palette/schema that keeps editor UI, syntax colors, and terminal ANSI colors consistent across the ports that are actively maintained here.
 
 ## Current Scope
 
-The 2026 remapping is currently implemented and published for these ports:
+The palette is available for these ports:
 
 | Port | Package | Release asset |
 | --- | --- | --- |
@@ -16,7 +18,7 @@ The 2026 remapping is currently implemented and published for these ports:
 | Windows Terminal | `packages/windows-terminal` | `aura-theme-2026-windows-terminal-themes.zip` |
 | WezTerm | `packages/wezterm` | `aura-theme-2026-wezterm-themes.zip` |
 
-Inherited upstream Aura ports are retained under `legacy/ports` and `legacy/packages`. They are not part of the maintained 2026 build/release path unless they are explicitly migrated back into `src/ports` and `packages`.
+Inherited upstream Aura ports are retained under `legacy/ports` and `legacy/packages`. They are not part of the maintained build/release path unless they are explicitly migrated back into `src/ports` and `packages`.
 
 ## VS Code themes
 
@@ -24,9 +26,9 @@ The VS Code package contains three paired families, with consistent names:
 
 | Family | Dark | Light |
 | --- | --- | --- |
-| Aura | Aura 2026 Dark | Aura 2026 Light |
-| Aqua | Aura 2026 Aqua Dark | Aura 2026 Aqua Light |
-| Azure | Aura 2026 Azure Dark | Aura 2026 Azure Light |
+| Aura | Aura Dark | Aura Light |
+| Aqua | Aura Aqua Dark | Aura Aqua Light |
+| Azure | Aura Azure Dark | Aura Azure Light |
 
 See the [VS Code preview gallery](packages/vscode/README.md) for real screenshots
 from a fictional sample workspace in an isolated profile.
@@ -41,7 +43,7 @@ their existing dark variant sets.
 
 ## Palette Architecture
 
-The 2026 system maps source colors to semantic palettes, role tokens, and port tokens through a temporary template-alias adapter. The generated theme files should be edited through these source files, not by hand in `packages/*`.
+The theme system maps source colors to semantic palettes, role tokens, and port tokens through a temporary template-alias adapter. The generated theme files should be edited through these source files, not by hand in `packages/*`.
 
 ```text
 Source palette
@@ -141,7 +143,10 @@ aura-theme-2026-wezterm-themes.zip
 
 ## Credits
 
-This fork builds on the original Aura Theme by Dalton Menezes and contributors. The 2026 palette remapping, expanded variants, Zed mapping, Ghostty output, Windows Terminal output, and WezTerm output are maintained in this fork.
+This fork builds on the original Aura Theme by Dalton Menezes and contributors. The palette updates, expanded variants, Zed mapping, Ghostty output, Windows Terminal output, and WezTerm output are maintained in this fork.
+
+The wordmark uses Smooch and Jost, both under the SIL Open Font License.
+See [branding sources and licenses](design/branding/README.md).
 
 ## License
 

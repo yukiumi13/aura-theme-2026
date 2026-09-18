@@ -56,10 +56,10 @@ real-window review determines visual balance.
 ## Theme selection migration
 
 VS Code now exposes six themes: Dark / Light, Aqua Dark / Light, Azure Dark / Light.
-Display names consistently begin with `Aura 2026`. Existing IDs remain unchanged:
-`Aura Light 2026`, `Aura Aqua Light 2026`, `Aura Aqua Dark 2026`, and
-`Aura Azure 2026` continue to resolve. Azure's existing file path is also retained.
-Azure Light uses the new ID `Aura 2026 Azure Light`.
+Display names begin with `Aura` and omit the year. All six saved selection IDs
+remain unchanged: `Aura 2026 Dark`, `Aura Light 2026`, `Aura Aqua Light 2026`,
+`Aura Aqua Dark 2026`, `Aura Azure 2026`, and `Aura 2026 Azure Light`.
+The extension identifier and theme file paths are retained for compatibility.
 
 The other twelve entries are retired from the VS Code package. Their source families
 remain available to the existing terminal and Zed ports; those ports have their own
