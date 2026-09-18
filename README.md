@@ -39,9 +39,21 @@ The maintained ports include the legacy Aura variants plus the 2026 variants gen
 
 VS Code also includes **Aura Light 2026**, a daylight companion built from the same role system. It pairs soft neutral surfaces with original Aura mint actions, purple focus accents, lavender functions, pink properties, and amber numbers. Other ports currently retain their existing dark variants.
 
-![Aura Light 2026 token preview](docs/assets/aura-light-2026.png)
+### VS Code screenshots
 
-*Illustrative preview rendered from the generated theme tokens; not a VS Code screenshot.*
+The following screenshots use the same fictional sample workspace in a separate, unsigned-in VS Code profile.
+
+**Aura 2026 Dark**
+
+![Aura 2026 Dark in VS Code](docs/assets/aura-2026-dark-vscode.jpg)
+
+**Aura Light 2026**
+
+![Aura Light 2026 in VS Code](docs/assets/aura-2026-light-vscode.jpg)
+
+**Aura Aqua Light 2026**
+
+![Aura Aqua Light 2026 in VS Code](docs/assets/aura-2026-aqua-light-vscode.jpg)
 
 VS Code additionally includes **Aura Aqua Light 2026** and **Aura Aqua Dark 2026**, a paired cyan variation with near-white and deep blue surfaces. The palette assessment and pixel-sampling method are documented in [Aqua design](docs/AQUA_DESIGN.md).
 

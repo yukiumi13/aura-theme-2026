@@ -2,7 +2,7 @@
   "name": "aura-theme-2026",
   "displayName": "Aura Theme 2026 (Unofficial Fork)",
   "description": "An independently maintained Aura Theme fork with Aqua, light, and dark palettes. Based on the original theme by Dalton Menezes.",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "scripts": {
     "publish": "vsce publish"
   },

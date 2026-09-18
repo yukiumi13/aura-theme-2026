@@ -1,5 +1,10 @@
 # Aura Theme Changelog
 
+## 0.5.5 (September 18, 2026)
+
+- Add real VS Code screenshots for Dark, Light, and Aqua Light, captured from a fictional sample workspace in an isolated profile.
+- Link directly to the VS Code Marketplace from the extension description.
+
 ## 0.5.4 (September 18, 2026)
 
 - Identify the extension as an independently maintained, unofficial Aura fork in its name and description.

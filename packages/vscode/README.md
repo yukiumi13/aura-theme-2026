@@ -4,6 +4,22 @@ An independently maintained fork of [Dalton Menezes's original Aura Theme](https
 
 The original Aura variants remain credited to Dalton and contributors. This fork adds the 2026 palette system, new light and Aqua appearances, additional dark variants, and coordinated UI, syntax, and terminal colors. Its source and issue tracker are in the [fork repository](https://github.com/yukiumi13/aura-theme-2026).
 
+## Preview in VS Code
+
+These are screenshots of the published themes in VS Code, captured from the same fictional sample workspace with a separate, unsigned-in VS Code profile.
+
+### Aura 2026 Dark
+
+![Aura 2026 Dark in VS Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-dark-vscode.jpg)
+
+### Aura Light 2026
+
+![Aura Light 2026 in VS Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-light-vscode.jpg)
+
+### Aura Aqua Light 2026
+
+![Aura Aqua Light 2026 in VS Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-light-vscode.jpg)
+
 ## Themes Available
 
 - Aura Aqua Light 2026
@@ -48,7 +64,7 @@ Light selections and diff highlights use lower opacity to keep code readable. Bu
 
 ## Installation
 
-Install the release VSIX from GitHub Releases, or build the package locally:
+Install [Aura Theme 2026 from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), download a release VSIX from GitHub Releases, or build the package locally:
 
 ```sh
 yarn build only vscode
