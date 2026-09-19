@@ -1,4 +1,4 @@
-# Aura Theme
+# Aura Modern
 
 ![Aura Modern — Aqua Dark in Visual Studio Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-teaser-zoom.png)
 
@@ -8,7 +8,7 @@ An unofficial fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/
 
 ## Install
 
-Install [Aura Theme from the Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then open **Preferences: Color Theme** from the Command Palette and choose an **Aura** theme.
+Install [Aura Modern from the Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then open **Preferences: Color Theme** from the Command Palette and choose an **Aura** theme.
 
 To switch with your system appearance, enable **Window: Auto Detect Color Scheme** in Settings and choose your preferred light and dark themes.
 

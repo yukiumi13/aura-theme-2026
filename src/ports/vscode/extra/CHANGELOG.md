@@ -1,10 +1,10 @@
-# Aura Theme Changelog
+# Aura Modern Changelog
 
 ## 0.6.3 (September 18, 2026)
 
 - Introduce a four-color Aura wordmark and Modern subtitle, using the open-source Smooch and Jost fonts.
 - Replace the extension icon and add a README header composed with a real VS Code screenshot.
-- Simplify the extension title to Aura Theme and remove 2026 from the six theme display names. Saved theme selections remain compatible; theme colors are unchanged.
+- Name the extension Aura Modern and remove 2026 from the six theme display names. Saved theme selections remain compatible; theme colors are unchanged.
 
 ## 0.6.2 (September 18, 2026)
 

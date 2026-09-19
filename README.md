@@ -1,8 +1,8 @@
-# Aura Theme
+# Aura Modern
 
 ![Aura Modern — Aqua Dark in Visual Studio Code](docs/assets/aura-teaser-zoom.png)
 
-Aura Theme is an unofficial fork maintained by **yukiumi13**. It is based on [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme) and is not an official release from that project. This repository focuses on a smaller, actively maintained theme system rather than the full upstream port matrix.
+Aura Modern is an unofficial fork maintained by **yukiumi13**. It is based on [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme) and is not an official release from that project. This repository focuses on a smaller, actively maintained theme system rather than the full upstream port matrix.
 
 The current work is centered on a shared palette/schema that keeps editor UI, syntax colors, and terminal ANSI colors consistent across the ports that are actively maintained here.
 

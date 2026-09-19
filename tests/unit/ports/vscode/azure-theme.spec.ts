@@ -15,7 +15,7 @@ const template = readFileSync(
 
 it('ships three pairs with simple names and preserves all six selection IDs', () => {
   const entries = manifest.contributes.themes
-  expect(manifest.displayName).toBe('Aura Theme')
+  expect(manifest.displayName).toBe('Aura Modern')
   expect(entries).toHaveLength(6)
   expect(
     entries.filter((entry: any) => entry.uiTheme === 'vs')
