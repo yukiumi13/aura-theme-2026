@@ -1,5 +1,24 @@
 # Aura Aqua: design assessment and paired variants
 
+## 0.7.0 update
+
+Aqua retains its original cold-white light surfaces, Aura Dark foundation,
+cyan active tabs, and syntax. Actions and Remote/SSH use cyan `#12DADD` with
+slightly deeper cyan hover `#0FC9CE`. Mint `#64EBAF` is reserved for badges;
+pale citrus `#E4EF82` marks selected edges and button borders. Aqua Light
+adds a subtle title divider `#DCEAB0`.
+
+Activity icons must work on two surfaces: VS Code reuses
+`activityBar.foreground` for unchecked hover/focus as well as selected icons.
+Light therefore uses slate icons on its pale rail and cyan active fill.
+Dark uses cyan icons on the dark rail and a restrained cyan-tinted active
+surface `#13282D`. The top activity bar follows the same rule. Editor tabs
+and action labels keep their existing white/light or ink/dark treatment.
+
+The green-white summer prototype is a separate [Lime pair](LIME_DESIGN.md),
+with its own selections and mint navigation. The sections below document the
+earlier Aqua design and the reasoning retained by the current version.
+
 The supplied screenshot's cyan and Aura mint can form a coherent analogous palette. The cyan is cooler and more synthetic; mint is greener and softer. Their closeness is useful for cohesion, but makes them a weak pair for distinguishing unrelated meanings by hue alone. Meaning should also come from placement, lightness, labels, and icons.
 
 ## What was measured
@@ -70,6 +89,20 @@ VS Code's tab hover rules exclude selected tabs, so a selected aqua tab keeps it
 - Tests render the actual template, check manifest/output agreement, composite selections and diff layers, verify contrast for explicit syntax and interaction pairs, check agreement between TextMate and semantic highlighting, and confirm status colors are independent of ANSI overrides. A regression check compares Aqua Dark's semantic syntax, core surfaces, and terminal colors with Aura Dark. ANSI black remains a dark TUI background slot; dim text keeps Aura's subdued hierarchy.
 
 ## Real VS Code previews
+
+### Modern UI activity states (0.7.0)
+
+VS Code's experimental Modern UI exposes independent selected and hovered
+activity icon colors. Aqua Light uses white on cyan for selection and slate
+`#394952` on pale cyan `#E8F4F5` for unchecked hover. The classic activity
+foreground stays slate for unchecked keyboard focus and the traditional UI.
+Aqua Dark keeps cyan icons on the `#13282D` selected surface, with a neutral
+`#1B1724` hover surface. Reading surfaces and syntax are unchanged.
+
+The stored classic and Modern UI selected backgrounds agree because VS Code
+1.138 can apply its later classic background rule over the Modern UI rule.
+See the [native interaction review](reviews/2026-09-19-modern-activity-review.md)
+for actual hover and selection evidence.
 
 These screenshots use a fictional sample workspace in an isolated, unsigned-in profile. Older illustrative PNGs in the assets directory are historical and do not represent the current Aqua Dark palette.
 

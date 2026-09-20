@@ -164,11 +164,23 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     uiChromeBackground: ui.chrome.background,
     uiChromeBorder: ui.chrome.border,
     uiTitleBorder: ui.chrome.titleBorder,
+    uiActiveBorder: ui.chrome.activeBorder,
     uiTabStripBackground: ui.chrome.tabStripBackground,
     uiActiveTabBackground: ui.chrome.activeTabBackground,
     uiActiveTabForeground: ui.chrome.activeTabForeground,
     uiActiveActivityBackground: ui.chrome.activeActivityBackground,
     uiActiveActivityForeground: ui.chrome.activeActivityForeground,
+    uiModernActivityActiveBackground:
+      ui.chrome.modernActivity?.activeBackground ??
+      ui.chrome.activeActivityBackground,
+    uiModernActivityActiveForeground:
+      ui.chrome.modernActivity?.activeForeground ??
+      ui.chrome.activeActivityForeground,
+    uiModernActivityHoverBackground:
+      ui.chrome.modernActivity?.hoverBackground ?? base.surfaceHover,
+    uiModernActivityHoverForeground:
+      ui.chrome.modernActivity?.hoverForeground ??
+      ui.chrome.activeActivityForeground,
     uiInactiveTabBackground: ui.chrome.inactiveTabBackground,
     uiUnfocusedTabForeground: ui.chrome.unfocusedTabForeground,
     uiTabHoverBackground: ui.chrome.tabHoverBackground,

@@ -1,4 +1,10 @@
-import { AuraAppearance, AuraPalette } from './types'
+import {
+  AuraAppearance,
+  AuraBasePalette,
+  AuraPalette,
+  AuraSemanticPalette,
+  AuraVariantFamily,
+} from './types'
 import { createAuraPalette } from './create-aura-roles'
 import { createAuraSyntax } from './create-aura-syntax'
 import { withAlpha } from './utils'
@@ -14,17 +20,41 @@ import {
   auraAquaDarkSemantic,
 } from '../source/aqua'
 
-export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
+// Lime shares Aqua's interaction layout and syntax. Resolve its source inputs
+// before deriving roles, so nested surfaces and terminal colors stay coherent.
+interface AquaPaletteOptions {
+  base?: AuraBasePalette
+  family?: AuraVariantFamily
+  semantic?: AuraSemanticPalette
+  tabs?: string
+  titleBorder?: string
+  activityAccent?: string
+  activityHoverBackground?: string
+  selection?: string
+  inactiveSelection?: string
+  focusBorder?: string
+}
+
+export function createAquaPalette(
+  appearance: AuraAppearance,
+  options: AquaPaletteOptions = {}
+): AuraPalette {
   const isLight = appearance === 'light'
   const auraDark = isLight ? undefined : createAuraPalette(auraDefaultFamily)
   const colors = isLight ? auraAquaColors.light : auraAquaColors.dark
   const palette = createAuraPalette(
-    isLight ? auraAquaLightFamily : auraAquaDarkFamily,
-    isLight ? auraAquaLightBase : auraAquaDarkBase,
+    options.family ?? (isLight ? auraAquaLightFamily : auraAquaDarkFamily),
+    options.base ?? (isLight ? auraAquaLightBase : auraAquaDarkBase),
     appearance,
-    isLight ? auraAquaLightSemantic : auraAquaDarkSemantic
+    options.semantic ??
+      (isLight ? auraAquaLightSemantic : auraAquaDarkSemantic)
   )
   const { base, ui, family, semantic } = palette
+  const selection = options.selection ?? colors.selection
+  const listFocus =
+    options.selection ?? (isLight ? ui.listSelectionFocus : selection)
+  const tabs = options.tabs ?? colors.tabs
+  const activityAccent = options.activityAccent ?? auraAquaColors.aqua
   const syntaxAccents = auraAquaSyntaxAccents[appearance]
   const infoSurface = withAlpha(semantic.status.info, '1F')
   const successSurface = isLight
@@ -34,7 +64,8 @@ export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
     ? ui.errorSurface
     : withAlpha(semantic.status.error, '0F')
 
-  // Both appearances use neutral interaction text and understated chrome.
+  // Badges have their own accent instead of inheriting every action's fill.
+  // Preserve Aura Dark's reading surfaces, syntax, and terminal foundation.
   // Keep the compatibility aliases consistent with the structured roles.
   return {
     ...palette,
@@ -48,30 +79,56 @@ export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
     ui: {
       ...ui,
       accent: auraAquaColors.aqua,
+      focusBorder: options.focusBorder ?? ui.focusBorder,
       interactionForeground: base.foreground,
       onError: isLight ? base.elevated : base.background,
-      listSelectionFocus: isLight ? ui.listSelectionFocus : colors.selection,
+      listSelectionFocus: listFocus,
       foregroundOverlayLow: base.surfaceHover,
       linkHover: family.accentBright,
-      selectionSolid: colors.selection,
+      selectionSolid: selection,
       successSurface,
       errorSurface,
       infoSurface,
       modified: auraDark?.ui.modified ?? ui.modified,
+      badge: { ...ui.badge, background: auraAquaColors.mint },
       chrome: {
         ...ui.chrome,
         background: isLight ? base.appBackground : ui.chrome.background,
+        titleBorder:
+          options.titleBorder ??
+          (isLight
+            ? auraAquaColors.light.titleBorder
+            : ui.chrome.titleBorder),
+        activeBorder: auraAquaColors.lime,
         activeTabBackground: auraAquaColors.aqua,
         activeTabForeground: isLight
           ? auraAquaColors.onAquaLight
           : auraAquaColors.onAquaDark,
-        activeActivityBackground: auraAquaColors.aqua,
+        // VS Code reuses the active icon foreground for unchecked hover/focus.
+        // It must work on both the bare rail and the selected item's surface.
+        activeActivityBackground: isLight ? activityAccent : selection,
         activeActivityForeground: isLight
-          ? auraAquaColors.onAquaLight
-          : auraAquaColors.onAquaDark,
-        tabStripBackground: colors.tabs,
+          ? base.foregroundStrong
+          : activityAccent,
+        // Modern UI separates unchecked hover from selection. Keep keyboard
+        // focus readable through the classic foreground on the unfilled rail.
+        modernActivity: {
+          // VS Code 1.138's later classic active-background rule can override
+          // the Modern UI fill; both paths must share the selected surface.
+          activeBackground: isLight ? activityAccent : selection,
+          activeForeground: isLight
+            ? auraAquaColors.onAquaLight
+            : activityAccent,
+          hoverBackground:
+            options.activityHoverBackground ??
+            (isLight
+              ? auraAquaColors.light.activityHover
+              : base.surfaceHover),
+          hoverForeground: isLight ? base.foregroundStrong : activityAccent,
+        },
+        tabStripBackground: tabs,
         inactiveTabBackground: isLight
-          ? colors.tabs
+          ? tabs
           : ui.chrome.inactiveTabBackground,
         unfocusedTabForeground: base.foregroundMuted,
         tabHoverBackground: base.surfaceHover,
@@ -96,11 +153,11 @@ export function createAquaPalette(appearance: AuraAppearance): AuraPalette {
       highlight: { ...ui.highlight, foreground: family.accent },
       selectionRole: {
         ...ui.selectionRole,
-        solid: colors.selection,
-        listFocus: isLight ? ui.listSelectionFocus : colors.selection,
-        listInactive: isLight
-          ? colors.selection
-          : auraAquaColors.dark.selectionInactive,
+        solid: selection,
+        listFocus,
+        listInactive:
+          options.inactiveSelection ??
+          (isLight ? selection : auraAquaColors.dark.selectionInactive),
       },
       status: {
         ...ui.status,

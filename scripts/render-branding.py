@@ -86,7 +86,7 @@ def brand_teaser(word):
     image.paste(mark, (55, 65), mark)
     subtitle = tracked("MODERN", 44, 14, "#ADACAE", 500)
     paste_center(image, subtitle, 590, 442)
-    draw.text((1160, 155), "Aura. Aqua. Azure.", font=font(29), fill="#EDECEE")
+    draw.text((1160, 155), "Aura. Aqua. Lime. Azure.", font=font(25), fill="#EDECEE")
     draw.text((1160, 204), "Dark & light", font=font(25), fill="#ADACAE")
     draw.text((1160, 243), "for Visual Studio Code", font=font(25), fill="#ADACAE")
     for x, family, title, color in [
@@ -123,9 +123,9 @@ def zoom_teaser(word):
     subtitle = tracked("MODERN", 45, 14, "#ADACAE", 500)
     paste_center(image, subtitle, 560, 577)
     draw = ImageDraw.Draw(image)
-    label = tracked("AURA / AQUA / AZURE", 22, 3, "#C6C3CE")
+    label = tracked("AURA / AQUA / LIME / AZURE", 22, 3, "#C6C3CE")
     image.paste(label, (72, 727), label)
-    draw.text((72, 766), "Six color themes for Visual Studio Code", font=font(24), fill="#ADACAE")
+    draw.text((72, 766), "Eight color themes for Visual Studio Code", font=font(24), fill="#ADACAE")
     image.convert("RGB").save(ASSETS / "aura-teaser-zoom.png", optimize=True)
 
 

@@ -2,9 +2,11 @@
 
 ![Aura Modern — Aqua Dark in Visual Studio Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-teaser-zoom.png)
 
-Six color themes for Visual Studio Code: **Aura**, **Aqua**, and **Azure**, each with a dark and light appearance.
+Eight color themes for Visual Studio Code: **Aura**, **Aqua**, **Lime**, and **Azure**, each with a dark and light appearance.
 
 An unofficial fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/aura-theme), maintained by [yukiumi13](https://github.com/yukiumi13/aura-theme-2026).
+
+> **0.7.0 development preview.** Lime and the new Modern UI activity states are included in this branch. For a preview build, download the VSIX artifact from a successful [Build VSCode VSIX run](https://github.com/yukiumi13/aura-theme-2026/actions/workflows/vscode-vsix.yml) and choose **Extensions: Install from VSIX…**.
 
 ## Install
 
@@ -14,7 +16,7 @@ To switch with your system appearance, enable **Window: Auto Detect Color Scheme
 
 ## Previews
 
-All screenshots show the same sample project in VS Code.
+Real VS Code screenshots of a fictional sample project. Aqua and Lime show the experimental Modern UI; Aura and Azure show the traditional interface.
 
 ### Aura
 
@@ -30,15 +32,27 @@ Aura's purple and mint palette.
 
 ### Aqua
 
-Bright cyan accents on Aura's dark background or a soft white workspace.
+Cyan actions and navigation, mint badges, and a touch of citrus on cool white or Aura's violet-black background.
 
 #### Aura Aqua Dark
 
-![Aura Aqua Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-dark-vscode.jpg)
+![Aura Aqua Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-aqua-dark-modern-vscode.png)
 
 #### Aura Aqua Light
 
-![Aura Aqua Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-aqua-light-vscode.jpg)
+![Aura Aqua Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-aqua-light-modern-vscode.png)
+
+### Lime
+
+Cyan and mint with a touch of lemon. Lime Light has a pale green-white workspace; Lime Dark keeps Aura's violet-black background.
+
+#### Aura Lime Dark
+
+![Aura Lime Dark](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-lime-dark-modern-vscode.png)
+
+#### Aura Lime Light
+
+![Aura Lime Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-lime-light-modern-vscode.png)
 
 ### Azure
 
@@ -51,6 +65,18 @@ Blues inspired by Microsoft Fluent, with neutral backgrounds.
 #### Aura Azure Light
 
 ![Aura Azure Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-2026-azure-light-vscode.jpg)
+
+## Modern UI
+
+On supported VS Code versions, enable **Workbench › Experimental: Modern UI**:
+
+```json
+{
+  "workbench.experimental.modernUI": true
+}
+```
+
+Aqua and Lime Light use white icons on the selected cyan or mint activity tile, and dark icons on a pale tile when hovering over an unselected item. Their dark appearances use bright icons on subdued surfaces. The traditional interface is also supported; this experimental setting changes parts of VS Code's layout and styling too.
 
 ## Feedback
 

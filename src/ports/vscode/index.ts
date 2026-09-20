@@ -39,6 +39,13 @@ export async function VscodePort(Aura: AuraAPI) {
       name: scheme.paletteName,
       appearance: scheme.paletteAppearance,
     })),
+    ...colorSchemes.limeVariants.map((scheme) => ({
+      id: scheme.paletteName,
+      slug: scheme.paletteSlug,
+      scheme: withTerminalAuraAnsi(scheme),
+      name: scheme.paletteName,
+      appearance: scheme.paletteAppearance,
+    })),
     ...colorSchemes.azureVariants.map((scheme) => ({
       id:
         scheme.paletteAppearance === 'light'

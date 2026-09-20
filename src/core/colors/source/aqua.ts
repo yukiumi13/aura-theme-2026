@@ -8,11 +8,14 @@ import {
 import { auraLightBase2026, auraLightSemantic2026 } from './light'
 import { AuraSemanticPalette, AuraVariantFamily } from '../roles/types'
 
-// Representative of the supplied image's cyan buttons (#0CDADD–#15DADD).
-// Only the color relationships are adapted; no reference artwork is bundled.
+// Cyan navigation and actions, mint badges, and small citrus edge highlights.
+// The reference's claim-all control supplies the mint direction; citrus is
+// designed for editor chrome. No reference artwork is bundled.
 export const auraAquaColors = {
   aqua: auraInteractionAqua,
-  aquaHover: '#46E4E6',
+  aquaHover: '#0FC9CE',
+  mint: '#64EBAF',
+  lime: '#E4EF82',
   aquaBright: '#76E9EC',
   selectionTint: '#277D87',
   // The light variant deliberately follows the reference's soft white-on-aqua UI.
@@ -39,9 +42,11 @@ export const auraAquaColors = {
     surface: '#F0F5F8',
     line: '#F0FAFB',
     hover: '#ECF1F5',
+    activityHover: '#E8F4F5',
     tabs: '#EFF5F8',
     border: '#E1E9ED',
     borderStrong: '#BDCFD8',
+    titleBorder: '#DCEAB0',
     foreground: '#4A5861',
     foregroundStrong: '#394952',
     foregroundMuted: '#6B7D86',
@@ -97,7 +102,7 @@ const aquaAction = (foreground: string) => ({
   background: auraAquaColors.aqua,
   foreground,
   hoverBackground: auraAquaColors.aquaHover,
-  border: '#00000000',
+  border: auraAquaColors.lime,
 })
 
 export const auraAquaLightSemantic: AuraSemanticPalette = {

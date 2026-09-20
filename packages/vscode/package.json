@@ -1,8 +1,8 @@
 {
   "name": "aura-theme-2026",
   "displayName": "Aura Modern",
-  "description": "An independent Aura fork with paired Aura, Aqua, and Fluent-inspired Azure themes. Based on the original theme by Dalton Menezes.",
-  "version": "0.6.3",
+  "description": "Eight dark and light themes: Aura, Aqua, summer-inspired Lime, and Fluent-inspired Azure. An independent fork of Aura by Dalton Menezes.",
+  "version": "0.7.0",
   "scripts": {
     "publish": "vsce publish"
   },
@@ -28,6 +28,7 @@
     "dark",
     "light",
     "aqua",
+    "lime",
     "azure",
     "aura-theme-2026",
     "color-theme"
@@ -57,6 +58,18 @@
                 "label": "Aura Aqua Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/aura-aqua-dark-2026-color-theme.json"
+        },
+        {
+                "id": "Aura Lime Light",
+                "label": "Aura Lime Light",
+                "uiTheme": "vs",
+                "path": "./themes/aura-lime-light-color-theme.json"
+        },
+        {
+                "id": "Aura Lime Dark",
+                "label": "Aura Lime Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aura-lime-dark-color-theme.json"
         },
         {
                 "id": "Aura 2026 Azure Light",

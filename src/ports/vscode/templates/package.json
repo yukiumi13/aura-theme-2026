@@ -1,7 +1,7 @@
 {
   "name": "{{ slug }}",
   "displayName": "Aura Modern",
-  "description": "An independent Aura fork with paired Aura, Aqua, and Fluent-inspired Azure themes. Based on the original theme by Dalton Menezes.",
+  "description": "Eight dark and light themes: Aura, Aqua, summer-inspired Lime, and Fluent-inspired Azure. An independent fork of Aura by Dalton Menezes.",
   "version": "{{ version }}",
   "scripts": {
     "publish": "vsce publish"
@@ -28,6 +28,7 @@
     "dark",
     "light",
     "aqua",
+    "lime",
     "azure",
     "{{ slug }}",
     "color-theme"

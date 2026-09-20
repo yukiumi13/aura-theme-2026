@@ -2,152 +2,82 @@
 
 ![Aura Modern — Aqua Dark in Visual Studio Code](docs/assets/aura-teaser-zoom.png)
 
-Aura Modern is an unofficial fork maintained by **yukiumi13**. It is based on [Dalton Menezes's original Aura Theme](https://github.com/daltonmenezes/aura-theme) and is not an official release from that project. This repository focuses on a smaller, actively maintained theme system rather than the full upstream port matrix.
+Eight themes for Visual Studio Code, with dark and light appearances in four families:
 
-The current work is centered on a shared palette/schema that keeps editor UI, syntax colors, and terminal ANSI colors consistent across the ports that are actively maintained here.
+- **Aura** — purple and mint, with soft syntax colors.
+- **Aqua** — cyan interactions, mint badges, and small citrus accents.
+- **Lime** — mint and green-cyan, a touch of lemon, and pale green-white light surfaces.
+- **Azure** — Microsoft Fluent blues on neutral surfaces.
 
-## Current Scope
+An independent fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/aura-theme), maintained by [yukiumi13](https://github.com/yukiumi13). The original project's MIT license is preserved.
 
-The palette is available for these ports:
+> **0.7.0 development preview.** This branch includes the new Lime pair and Modern UI activity states. Preview builds are available as VSIX artifacts from successful [Build VSCode VSIX runs](https://github.com/yukiumi13/aura-theme-2026/actions/workflows/vscode-vsix.yml).
 
-| Port | Package | Release asset |
-| --- | --- | --- |
-| Visual Studio Code | `packages/vscode` | `aura-theme-2026.vsix` |
-| Zed | `packages/zed` | `aura-theme-2026-zed-extension.zip` |
-| Ghostty | `packages/ghostty` | `aura-theme-2026-ghostty-themes.zip` |
-| Windows Terminal | `packages/windows-terminal` | `aura-theme-2026-windows-terminal-themes.zip` |
-| WezTerm | `packages/wezterm` | `aura-theme-2026-wezterm-themes.zip` |
+## Install
 
-Inherited upstream Aura ports are retained under `legacy/ports` and `legacy/packages`. They are not part of the maintained build/release path unless they are explicitly migrated back into `src/ports` and `packages`.
+Install [Aura Modern from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then run **Preferences: Color Theme** and choose an Aura theme. For a downloaded preview package, use **Extensions: Install from VSIX…**.
 
-## VS Code themes
+To follow your system appearance, enable **Window: Auto Detect Color Scheme** and choose your preferred light and dark themes in Settings. Saved selections for the six existing themes remain compatible; Lime is a separate choice.
 
-The VS Code package contains three paired families, with consistent names:
+## Previews
 
-| Family | Dark | Light |
-| --- | --- | --- |
-| Aura | Aura Dark | Aura Light |
-| Aqua | Aura Aqua Dark | Aura Aqua Light |
-| Azure | Aura Azure Dark | Aura Azure Light |
+See [all eight themes in the VS Code gallery](packages/vscode/README.md#previews). The screenshots use a fictional sample workspace, with no personal files or account details.
 
-See the [VS Code preview gallery](packages/vscode/README.md) for real screenshots
-from a fictional sample workspace in an isolated profile.
+### Aqua Light
 
-Azure uses Microsoft Fluent color ramps and explicit surface, interaction, syntax,
-and status roles. [Azure design and migration](docs/AZURE_DESIGN.md) records the
-sources and decisions. [Aqua design](docs/AQUA_DESIGN.md) documents the cyan pair.
+![Aura Aqua Light in VS Code](docs/assets/aura-aqua-light-modern-vscode.png)
 
-The twelve redundant VS Code variants were retired in 0.6.0. Existing IDs for
-the retained themes continue to work. The terminal and Zed ports currently keep
-their existing dark variant sets.
+### Lime Light
 
-## Palette Architecture
+![Aura Lime Light in VS Code](docs/assets/aura-lime-light-modern-vscode.png)
 
-The theme system maps source colors to semantic palettes, role tokens, and port tokens through a temporary template-alias adapter. The generated theme files should be edited through these source files, not by hand in `packages/*`.
+## Modern UI
 
-```text
-Source palette
-  raw neutral and hue colors
-        |
-        v
-Semantic palette
-  neutral surfaces + brand + status + variant family colors
-        |
-        v
-Role tokens
-  ui + syntax + terminal/ansi roles
-        |
-        v
-Template variables
-  explicit role aliases plus legacy accentXX aliases
-        |
-        v
-Port mappings
-  VS Code, Zed, Ghostty, Windows Terminal, WezTerm
-        |
-        v
-packages/*
+On supported VS Code versions, enable **Workbench › Experimental: Modern UI**:
+
+```json
+{
+  "workbench.experimental.modernUI": true
+}
 ```
 
-The code layout follows that model:
+Aqua and Lime Light use white icons on the selected cyan or mint activity tile. Hovering over an unselected icon uses dark ink on a pale tile. Their dark appearances keep bright icons on subdued surfaces. The traditional interface is also supported; enabling Modern UI changes some of VS Code's layout and styling as well as these activity states.
 
-- `src/core/colors/source` owns raw Aura colors: ink neutrals, brand colors, status colors, and variant accent families.
-- `src/core/colors/roles` turns source colors into meaning-bearing theme roles such as `ui`, `syntax`, `terminal`, and `ansi`.
-- `src/core/colors/template-vars` exposes the flat Mustache variables consumed by templates. Explicit names such as `syntaxFunctionDeclaration`, `uiActionHoverBackground`, and `ansiBrightGreen` are preferred. Numeric `accentXX` names are compatibility aliases for inherited templates, not design tokens.
-- `src/ports/*/templates` maps app-specific theme keys to those variables.
+## Other editors
 
-The important design split is:
+This repository also maintains [Zed](packages/zed), [Ghostty](packages/ghostty), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) packages. These ports retain their existing dark variant sets; the eight-theme lineup above is for VS Code.
 
-- `ui` roles control editor chrome, selection, hover, links, status surfaces, and interaction accents.
-- `syntax` roles control code highlighting for VS Code and Zed theme styles.
-- `terminal` and `ansi` roles control terminal foreground/background, cursor, selection, and 16-color slots for VS Code integrated terminal, Zed terminal, Ghostty, Windows Terminal, and WezTerm.
+See [GitHub Releases](https://github.com/yukiumi13/aura-theme-2026/releases) for bundles. Inherited upstream ports remain under `legacy/` and are outside the maintained build path.
 
-`ansiBrightGreen` and similar names are terminal ANSI slots, not language semantic tokens.
+## Development
 
-In practice, new theme quality should come from adjusting source colors and role tokens under `src/core/colors`, not from editing generated JSON/config files in `packages/*` by hand.
-
-## Zed Semantic Tokens
-
-The Zed extension is theme-only. It defines Zed syntax styles, but it does not install grammars or override user settings.
-
-For recommended semantic-token settings, use [packages/zed/semantic-token-settings.json](packages/zed/semantic-token-settings.json). That file is generated with the Zed package and is intended to be tracked by dotfile tools such as chezmoi. The mapping is documented in [docs/ZED_SEMANTIC_TOKENS.md](docs/ZED_SEMANTIC_TOKENS.md).
-
-## Build
-
-Install dependencies:
+Edit source palettes and roles under `src/core/colors`, then generate the packages:
 
 ```sh
 yarn install --frozen-lockfile
-```
-
-Build the maintained ports:
-
-```sh
 yarn build only vscode
-yarn build only zed
-yarn build only ghostty
-yarn build only windows-terminal
-yarn build only wezterm
-```
-
-Package release bundles:
-
-```sh
-yarn package:zed
-yarn package:terminals
-```
-
-Run tests:
-
-```sh
 yarn test
+node scripts/review-vscode-themes.js
 ```
 
-## Release Assets
+The shared pipeline is **source colors → semantic roles → template variables → port templates → generated packages**. UI, syntax, and terminal ANSI colors have separate roles. Generated files in `packages/` should be rebuilt from source.
 
-Tag releases publish the maintained ports through GitHub Actions:
+Every design iteration includes a review of the full generated configuration and actual UI against the relevant reference. The [review workflow](docs/THEME_REVIEW.md) covers visual hierarchy, color distribution, interaction states, syntax, and light/dark pairing.
 
-- `.github/workflows/vscode-vsix.yml`
-- `.github/workflows/zed-extension-bundle.yml`
-- `.github/workflows/terminal-theme-bundles.yml`
+- Design notes: [Aqua](docs/AQUA_DESIGN.md), [Lime](docs/LIME_DESIGN.md), [Azure](docs/AZURE_DESIGN.md).
+- Latest interaction review: [Modern UI hover and selection](docs/reviews/2026-09-19-modern-activity-review.md).
+- Zed setup: [semantic-token settings](packages/zed/semantic-token-settings.json) and [mapping notes](docs/ZED_SEMANTIC_TOKENS.md).
+- Other builds: `yarn build only zed`, `ghostty`, `windows-terminal`, or `wezterm`.
+- Release bundles: `yarn package:zed` and `yarn package:terminals`. The workflows under `.github/workflows` attach bundles to `v*` tag releases.
 
-On `v*` tags, the release should receive:
+## Feedback
 
-```text
-aura-theme-2026.vsix
-aura-theme-2026-zed-extension.zip
-aura-theme-2026-ghostty-themes.zip
-aura-theme-2026-windows-terminal-themes.zip
-aura-theme-2026-wezterm-themes.zip
-```
+[Report an issue](https://github.com/yukiumi13/aura-theme-2026/issues) with the theme name, file type, and a screenshot. See the [VS Code changelog](packages/vscode/CHANGELOG.md) for release and upgrade notes.
 
-## Credits
+## Credits and license
 
-This fork builds on the original Aura Theme by Dalton Menezes and contributors. The palette updates, expanded variants, Zed mapping, Ghostty output, Windows Terminal output, and WezTerm output are maintained in this fork.
+Based on Aura by Dalton Menezes and contributors. This fork maintains its own palette updates, paired appearances, port mappings, and branding.
 
-The wordmark uses Smooch and Jost, both under the SIL Open Font License.
-See [branding sources and licenses](design/branding/README.md).
+The wordmark uses **Smooch** and **Jost**, both under the SIL Open Font License. See [branding sources and licenses](design/branding/README.md). Azure uses selected Microsoft Fluent color tokens; see [third-party notices](packages/vscode/THIRD_PARTY_NOTICES.md).
 
-## License
-
-[MIT](LICENSE)
+[MIT](LICENSE).

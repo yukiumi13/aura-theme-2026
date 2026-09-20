@@ -1,0 +1,309 @@
+{
+  "source_sha256": "8cce1c0fa9c51d0e515c75305518fbc0bca0483624c328eaeb4e4588b1e88612",
+  "size": [
+    661,
+    1182
+  ],
+  "srgb": 0,
+  "gamma": 0.45455,
+  "embedded_icc_profile": false,
+  "method": "Stored RGB samples at native resolution. Colors are screenshot evidence, not recovered design tokens.",
+  "regions": {
+    "task_button": {
+      "box_xyxy": [
+        364,
+        342,
+        635,
+        381
+      ],
+      "most_common": [
+        {
+          "color": "#00DDDF",
+          "pixels": 8963
+        },
+        {
+          "color": "#FEFEFE",
+          "pixels": 427
+        },
+        {
+          "color": "#80EDEF",
+          "pixels": 123
+        },
+        {
+          "color": "#01DDDF",
+          "pixels": 29
+        },
+        {
+          "color": "#02DDDF",
+          "pixels": 28
+        },
+        {
+          "color": "#E5FBFB",
+          "pixels": 25
+        },
+        {
+          "color": "#FDFDFB",
+          "pixels": 24
+        },
+        {
+          "color": "#FDFEFE",
+          "pixels": 22
+        }
+      ]
+    },
+    "progress_bar": {
+      "box_xyxy": [
+        155,
+        292,
+        387,
+        305
+      ],
+      "most_common": [
+        {
+          "color": "#00DDDF",
+          "pixels": 2782
+        },
+        {
+          "color": "#3FE5E7",
+          "pixels": 192
+        },
+        {
+          "color": "#40E5E7",
+          "pixels": 40
+        },
+        {
+          "color": "#00DBDB",
+          "pixels": 2
+        }
+      ]
+    },
+    "reward_inner": {
+      "box_xyxy": [
+        481,
+        421,
+        628,
+        478
+      ],
+      "most_common": [
+        {
+          "color": "#00DDDF",
+          "pixels": 4938
+        },
+        {
+          "color": "#2AE1E3",
+          "pixels": 1037
+        },
+        {
+          "color": "#FEFEFE",
+          "pixels": 191
+        },
+        {
+          "color": "#FDFDFB",
+          "pixels": 70
+        },
+        {
+          "color": "#02DDDF",
+          "pixels": 66
+        },
+        {
+          "color": "#01DDDF",
+          "pixels": 65
+        },
+        {
+          "color": "#FBFDFB",
+          "pixels": 57
+        },
+        {
+          "color": "#06DDDF",
+          "pixels": 54
+        }
+      ]
+    },
+    "reward_outer_top": {
+      "box_xyxy": [
+        466,
+        408,
+        641,
+        418
+      ],
+      "most_common": [
+        {
+          "color": "#1BBBC7",
+          "pixels": 766
+        },
+        {
+          "color": "#00BBDF",
+          "pixels": 763
+        },
+        {
+          "color": "#84DDEB",
+          "pixels": 66
+        },
+        {
+          "color": "#88DDE7",
+          "pixels": 66
+        },
+        {
+          "color": "#12BBCF",
+          "pixels": 23
+        },
+        {
+          "color": "#08BBD7",
+          "pixels": 20
+        },
+        {
+          "color": "#16BBCB",
+          "pixels": 9
+        },
+        {
+          "color": "#05BBD7",
+          "pixels": 5
+        }
+      ]
+    },
+    "claim_all": {
+      "box_xyxy": [
+        178,
+        1121,
+        489,
+        1169
+      ],
+      "most_common": [
+        {
+          "color": "#07DDD7",
+          "pixels": 294
+        },
+        {
+          "color": "#06DDD7",
+          "pixels": 279
+        },
+        {
+          "color": "#FEFEFE",
+          "pixels": 216
+        },
+        {
+          "color": "#17DFD3",
+          "pixels": 204
+        },
+        {
+          "color": "#08DDD7",
+          "pixels": 188
+        },
+        {
+          "color": "#1FE1CF",
+          "pixels": 186
+        },
+        {
+          "color": "#10DFD7",
+          "pixels": 173
+        },
+        {
+          "color": "#12DFD3",
+          "pixels": 171
+        }
+      ]
+    },
+    "title_art": {
+      "box_xyxy": [
+        297,
+        0,
+        661,
+        197
+      ],
+      "most_common": [
+        {
+          "color": "#FEFEFE",
+          "pixels": 12832
+        },
+        {
+          "color": "#000000",
+          "pixels": 4076
+        },
+        {
+          "color": "#FDFDFB",
+          "pixels": 393
+        },
+        {
+          "color": "#FDFEFE",
+          "pixels": 190
+        },
+        {
+          "color": "#FBFBFB",
+          "pixels": 176
+        },
+        {
+          "color": "#000101",
+          "pixels": 153
+        },
+        {
+          "color": "#010101",
+          "pixels": 151
+        },
+        {
+          "color": "#FDFDFE",
+          "pixels": 143
+        }
+      ]
+    },
+    "bottle": {
+      "box_xyxy": [
+        583,
+        51,
+        660,
+        195
+      ],
+      "most_common": [
+        {
+          "color": "#FEFEFE",
+          "pixels": 1208
+        },
+        {
+          "color": "#000000",
+          "pixels": 766
+        },
+        {
+          "color": "#FDFDFB",
+          "pixels": 87
+        },
+        {
+          "color": "#000101",
+          "pixels": 62
+        },
+        {
+          "color": "#FED532",
+          "pixels": 53
+        },
+        {
+          "color": "#B7B7B7",
+          "pixels": 49
+        },
+        {
+          "color": "#010101",
+          "pixels": 40
+        },
+        {
+          "color": "#000001",
+          "pixels": 33
+        }
+      ]
+    }
+  },
+  "sample_points": {
+    "mint_corner": {
+      "xy": [
+        184,
+        1126
+      ],
+      "color": "#64EBAF",
+      "hue": 153.3
+    },
+    "aqua_center": {
+      "xy": [
+        333,
+        1127
+      ],
+      "color": "#06DDD7",
+      "hue": 178.3
+    }
+  }
+}

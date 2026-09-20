@@ -1,0 +1,77 @@
+{
+  "version": "0.7.0",
+  "themes": [
+    {
+      "id": "Aura 2026 Dark",
+      "label": "Aura Dark",
+      "path": "./themes/aura-dark-color-theme.json",
+      "sha256": "6ee6cc8a98f108283b8383bb95aa6cc4bb6981b96c00daa047d339e45fee2690",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Light 2026",
+      "label": "Aura Light",
+      "path": "./themes/aura-light-2026-color-theme.json",
+      "sha256": "1eb764d8ef2bfdb4286c008dffb696061e94516d4dcdfa361102f56d2cb8b844",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Aqua Light 2026",
+      "label": "Aura Aqua Light",
+      "path": "./themes/aura-aqua-light-2026-color-theme.json",
+      "sha256": "3b95c875bae9339f6416e593dd4cc56bc19d80885c82fc79572ae3ab32b567ae",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Aqua Dark 2026",
+      "label": "Aura Aqua Dark",
+      "path": "./themes/aura-aqua-dark-2026-color-theme.json",
+      "sha256": "a6f7b49a11e507bb7b37ad5da70b8526034d5ef12a0a9252c72ea34b854c05ad",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Lime Light",
+      "label": "Aura Lime Light",
+      "path": "./themes/aura-lime-light-color-theme.json",
+      "sha256": "64ab3ef7f5a6094216e0ec6f19500ec1385985a0b79cfe0465dad94061cb6680",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Lime Dark",
+      "label": "Aura Lime Dark",
+      "path": "./themes/aura-lime-dark-color-theme.json",
+      "sha256": "6e50208bf2d99d298a7e56a8c3b122b11d7219b8613950b68ed345afc9ebe648",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura 2026 Azure Light",
+      "label": "Aura Azure Light",
+      "path": "./themes/aura-azure-light-2026-color-theme.json",
+      "sha256": "c6372c8374894e7ae90a239f7009361312dc6dbbedb7e5ff2285bc238e8eba3d",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Azure 2026",
+      "label": "Aura Azure Dark",
+      "path": "./themes/aura-azure-2026-color-theme.json",
+      "sha256": "d90f10c329255a16c762756029210efedbd992cc3e56c71773341ac1caf7cdde",
+      "ui": 472,
+      "textMate": 46,
+      "semantic": 30
+    }
+  ]
+}
