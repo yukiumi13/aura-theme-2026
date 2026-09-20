@@ -1,10 +1,10 @@
 # Aura Modern Changelog
 
-## 0.7.0 (Unreleased)
+## 0.7.0 (September 19, 2026)
 
-- Add Aura Lime Light and Aura Lime Dark: cyan navigation, mint actions, green-cyan hover, and small citrus accents. Light uses pale green-white surfaces; Dark retains Aura's violet-black foundation.
+- Add Aura Lime Light and Aura Lime Dark: cyan tabs, mint navigation and actions, green-cyan hover, and small citrus accents. Light uses pale green-white surfaces; Dark retains Aura's violet-black foundation.
 - Keep Aqua actions and Remote/SSH cyan, with mint reserved for badges and fine citrus edge accents.
-- Fix invisible activity icons on unchecked hover/focus in Aqua and Lime. Light uses dark icons; Dark uses bright icons on tinted active surfaces. Editor backgrounds and syntax are unchanged.
+- Fix invisible activity icons on unchecked hover/focus in Aqua and Lime's traditional activity bar. Light uses dark icons; Dark uses bright icons on tinted active surfaces. Editor backgrounds and syntax are unchanged.
 - Keep all six existing theme selection IDs. Lime is available as a separate choice in Preferences: Color Theme.
 - Support independent activity-bar hover and selection colors in VS Code's experimental Modern UI. Aqua and Lime Light restore white selected icons while keeping unchecked hover and keyboard focus readable; Dark retains bright icons on tinted selected surfaces.
 

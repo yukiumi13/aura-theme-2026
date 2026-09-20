@@ -11,8 +11,6 @@ Eight themes for Visual Studio Code, with dark and light appearances in four fam
 
 An independent fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/aura-theme), maintained by [yukiumi13](https://github.com/yukiumi13). The original project's MIT license is preserved.
 
-> **0.7.0 development preview.** This branch includes the new Lime pair and Modern UI activity states. Preview builds are available as VSIX artifacts from successful [Build VSCode VSIX runs](https://github.com/yukiumi13/aura-theme-2026/actions/workflows/vscode-vsix.yml).
-
 ## Install
 
 Install [Aura Modern from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then run **Preferences: Color Theme** and choose an Aura theme. For a downloaded preview package, use **Extensions: Install from VSIX…**.

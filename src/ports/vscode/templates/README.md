@@ -6,8 +6,6 @@ Eight color themes for Visual Studio Code: **Aura**, **Aqua**, **Lime**, and **A
 
 An unofficial fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/aura-theme), maintained by [yukiumi13](https://github.com/yukiumi13/aura-theme-2026).
 
-> **0.7.0 development preview.** Lime and the new Modern UI activity states are included in this branch. For a preview build, download the VSIX artifact from a successful [Build VSCode VSIX run](https://github.com/yukiumi13/aura-theme-2026/actions/workflows/vscode-vsix.yml) and choose **Extensions: Install from VSIX…**.
-
 ## Install
 
 Install [Aura Modern from the Marketplace](https://marketplace.visualstudio.com/items?itemName=yukiumi13.aura-theme-2026), then open **Preferences: Color Theme** from the Command Palette and choose an **Aura** theme.
