@@ -2,10 +2,11 @@
 
 ![Aura Modern — Aqua Dark in Visual Studio Code](docs/assets/aura-teaser-zoom.png)
 
-Eight themes for Visual Studio Code, with dark and light appearances in four families:
+Nine themes for Visual Studio Code, with four dark/light pairs and an Aqua syntax variation:
 
 - **Aura** — purple and mint, with soft syntax colors.
 - **Aqua** — cyan interactions, mint badges, and small citrus accents.
+- **Aqua Lime Light** — Aqua Light's interface with brighter summer syntax.
 - **Lime** — mint and green-cyan, a touch of lemon, and pale green-white light surfaces.
 - **Azure** — Microsoft Fluent blues on neutral surfaces.
 
@@ -19,7 +20,7 @@ To follow your system appearance, enable **Window: Auto Detect Color Scheme** an
 
 ## Previews
 
-See [all eight themes in the VS Code gallery](packages/vscode/README.md#previews). The screenshots use a fictional sample workspace, with no personal files or account details.
+See the [VS Code theme gallery](packages/vscode/README.md#previews). The screenshots use a fictional sample workspace, with no personal files or account details.
 
 ### Aqua Light
 
@@ -43,7 +44,7 @@ Aqua and Lime Light use white icons on the selected cyan or mint activity tile. 
 
 ## Other editors
 
-This repository also maintains [Zed](packages/zed), [Ghostty](packages/ghostty), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) packages. These ports retain their existing dark variant sets; the eight-theme lineup above is for VS Code.
+This repository also maintains [Zed](packages/zed), [Ghostty](packages/ghostty), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) packages. These ports retain their existing dark variant sets; the nine-theme lineup above is for VS Code.
 
 See [GitHub Releases](https://github.com/yukiumi13/aura-theme-2026/releases) for bundles. Inherited upstream ports remain under `legacy/` and are outside the maintained build path.
 

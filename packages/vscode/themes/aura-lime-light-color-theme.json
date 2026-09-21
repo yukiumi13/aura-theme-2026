@@ -70,7 +70,7 @@
     "list.hoverBackground": "#EDF5EA",
     "list.hoverForeground": "#4A5861",
     "list.dropBackground": "#568E6912",
-    "toolbar.hoverBackground": "#EDF5EA",
+    "toolbar.hoverBackground": "#39495214",
     "list.focusBackground": "#E8F5D6",
     "list.focusForeground": "#4A5861",
     "list.focusOutline": "#397C76",
@@ -107,6 +107,30 @@
     "modernActivityBarItem.activeForeground": "#FFFFFF",
     "modernActivityBarItem.hoverBackground": "#EDF5EA",
     "modernActivityBarItem.hoverForeground": "#394952",
+    "modernActivityBar.background": "#F5F9F3",
+    "modernActivityBar.inactiveBackground": "#F5F9F3",
+    "modernActivityBar.activeBackground": "#64EBAF",
+    "modernActivityBar.activeForeground": "#FFFFFF",
+    "modernActivityBar.hoverBackground": "#EDF5EA",
+    "modernActivityBar.hoverForeground": "#394952",
+    "modernActivityBar.border": "#E2EBCF",
+    "modernPanel.border": "#E2EBCF",
+    "modernUI.shellBackground": "#F5F9F3",
+    "modernUI.inactiveShellBackground": "#F0F6F0",
+    "modernTab.activeBackground": "#E8F5D6",
+    "modernTab.activeForeground": "#394952",
+    "modernTab.hoverBackground": "#EDF5EA",
+    "modernTab.hoverForeground": "#4A5861",
+    "modernEditorTab.activeBackground": "#12DADD",
+    "modernEditorTab.activeForeground": "#FFFFFF",
+    "modernEditorTab.inactiveBackground": "#F1F6ED",
+    "modernEditorTab.hoverBackground": "#EDF5EA",
+    "modernEditorTab.hoverForeground": "#4A5861",
+    "modernEditorTab.activeHoverBackground": "#12DADD",
+    "modernEditorTab.activeActionBackground": "#12DADD",
+    "modernEditorTab.hoverActionBackground": "#EDF5EA",
+    "modernEditorTab.activeHoverActionBackground": "#12DADD",
+    "modernEditorTab.selectedActionBackground": "#F0F6F0",
     "activityBarTop.background": "#F5F9F3",
     "activityBarTop.foreground": "#394952",
     "activityBarTop.inactiveForeground": "#6B7D86",
@@ -447,7 +471,7 @@
     "charts.yellow": "#80540A",
     "charts.orange": "#9C7954",
     "charts.green": "#006B4D",
-    "charts.purple": "#006B4D",
+    "charts.purple": "#A36CAF",
     "inlineChat.background": "#FFFFFF",
     "inlineChat.foreground": "#4A5861",
     "inlineChat.border": "#E2EBCF",
@@ -522,6 +546,23 @@
       ],
       "settings": {
         "foreground": "#9C7954"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.json",
+        "constant.language.boolean.toml",
+        "constant.language.boolean.yaml"
+      ],
+      "settings": {
+        "foreground": "#4A80A7"
+      }
+    },
+    {
+      "scope": ["variable.other.enummember"],
+      "settings": {
+        "foreground": "#4A80A7"
       }
     },
     {

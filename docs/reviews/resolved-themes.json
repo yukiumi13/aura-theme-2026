@@ -1,76 +1,85 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "themes": [
     {
       "id": "Aura 2026 Dark",
       "label": "Aura Dark",
       "path": "./themes/aura-dark-color-theme.json",
-      "sha256": "c51b4ed37e35d9e23c7775b770da69cdcd395e9042066a8fb790627421242c7f",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura Light 2026",
       "label": "Aura Light",
       "path": "./themes/aura-light-2026-color-theme.json",
-      "sha256": "72a4702ef3dfee6b3155257b624fccac9a1e9c874a31204bbfd13430869c27c8",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura Aqua Light 2026",
       "label": "Aura Aqua Light",
       "path": "./themes/aura-aqua-light-2026-color-theme.json",
-      "sha256": "221d9170f4527576229df9366580ae7e96590dbe76247cc9f4955bcd219a6c9a",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "db9ae16c8b2be9ef0233b792f9fc31cdc85ff32a63835de65010caabb1329cc5",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura Aqua Dark 2026",
       "label": "Aura Aqua Dark",
       "path": "./themes/aura-aqua-dark-2026-color-theme.json",
-      "sha256": "995022a83e79d8865a44ba76139dc950a067b2c0144e9d61b7c0b26cedafce78",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "184e4b30ae447381e752f5c116102dea8d8bbb0252c25887c7bdebd63e34d0f1",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30
+    },
+    {
+      "id": "Aura Aqua Lime Light",
+      "label": "Aura Aqua Lime Light",
+      "path": "./themes/aura-aqua-lime-light-color-theme.json",
+      "sha256": "38e998c730f9a1fbe8841da1a837242a2d66a6a53daca4174df4779607beb35a",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura Lime Light",
       "label": "Aura Lime Light",
       "path": "./themes/aura-lime-light-color-theme.json",
-      "sha256": "01c5b47f8c78a7e248f6df567c1696759ca8894be77699a49bd1c1ba1d66b18e",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "b0c8f9536de3c0968794fc1950be00d9f6912b2e0c2befe706096daf1f5a47c3",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura Lime Dark",
       "label": "Aura Lime Dark",
       "path": "./themes/aura-lime-dark-color-theme.json",
-      "sha256": "c01685c6f1e5bb0a7957d2d58fa5e4dcab5d3b3c61e3da4964a514c50724e9ad",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "c4881bcabad5726763feb43b11774e20178882d8464d9048cd9834945e8bef9a",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura 2026 Azure Light",
       "label": "Aura Azure Light",
       "path": "./themes/aura-azure-light-2026-color-theme.json",
-      "sha256": "708203ad64566d15536ddd2927ff8a9d9f0f23afb11446d037065bf12316ae73",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     },
     {
       "id": "Aura Azure 2026",
       "label": "Aura Azure Dark",
       "path": "./themes/aura-azure-2026-color-theme.json",
-      "sha256": "9f77f6fc1fde346bf33ffa70a16fdc8efc5120da2ea697fe293bc3c6be0314c4",
-      "ui": 476,
-      "textMate": 46,
+      "sha256": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b",
+      "ui": 500,
+      "textMate": 48,
       "semantic": 30
     }
   ]

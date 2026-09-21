@@ -5,7 +5,11 @@ export interface Theme {
   colors: Record<string, string>
   tokenColors: {
     scope: string | string[]
-    settings: { foreground?: string; background?: string }
+    settings: {
+      foreground?: string
+      background?: string
+      fontStyle?: string
+    }
   }[]
   semanticTokenColors: Record<string, TokenStyle>
   semanticHighlighting: boolean

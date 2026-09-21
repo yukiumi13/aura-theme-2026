@@ -248,7 +248,10 @@ describe.each(
         colors['toolbar.hoverBackground'],
       ]) {
         expect(
-          contrast(colors[`${bar}.foreground`], rgb(bg))
+          contrast(
+            colors[`${bar}.foreground`],
+            over(bg, rgb(colors[`${bar}.background`]))
+          )
         ).toBeGreaterThanOrEqual(3)
       }
     }
@@ -279,6 +282,23 @@ describe.each(
     }
   })
 
+  it('preserves the active tab fill underneath close-action hover', () => {
+    const fill = rgb(colors['tab.activeBackground'])
+    const hovered = over(colors['toolbar.hoverBackground'], fill)
+    expect(
+      contrast(colors['tab.activeForeground'], hovered)
+    ).toBeGreaterThanOrEqual(contrast(colors['tab.activeForeground'], fill))
+    expect(
+      contrast(
+        colors['editor.foreground'],
+        over(
+          colors['toolbar.hoverBackground'],
+          rgb(colors['sideBar.background'])
+        )
+      )
+    ).toBeGreaterThanOrEqual(3)
+  })
+
   it('keeps language roles distinct and TextMate/semantic foregrounds aligned', () => {
     const foreground = (key: string) => {
       const style = theme.semanticTokenColors[key]
@@ -295,6 +315,8 @@ describe.each(
     expect(new Set(roles.map(foreground)).size).toBe(roles.length)
     for (const [role, scope] of [
       ['type', 'entity'],
+      ['boolean', 'constant.language.boolean'],
+      ['enumMember', 'variable.other.enummember'],
       ['keyword', 'keyword'],
       ['function', 'support.function'],
       ['function.declaration', 'entity.name.function'],
@@ -302,11 +324,14 @@ describe.each(
       ['number', 'constant.numeric'],
       ['parameter', 'variable.parameter'],
     ]) {
-      const rule = theme.tokenColors.find((token) =>
-        (Array.isArray(token.scope) ? token.scope : [token.scope]).includes(
-          scope
+      const rule = [...theme.tokenColors]
+        .reverse()
+        .find((token) =>
+          (Array.isArray(token.scope)
+            ? token.scope
+            : [token.scope]
+          ).includes(scope)
         )
-      )
       expect(rule?.settings.foreground).toBe(foreground(role))
     }
     if (isLight) {

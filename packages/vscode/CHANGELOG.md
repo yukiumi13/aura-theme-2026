@@ -1,5 +1,14 @@
 # Aura Modern Changelog
 
+## 0.8.0 (September 20, 2026)
+
+- Add Aura Aqua Lime Light, with brighter summer syntax and the same UI and terminal palette as Aqua Light.
+- Keep Aqua Light's original syntax roles and palette; the brighter option is a separate theme.
+- Preserve the colored tab beneath close-button hover in Aqua and Lime, avoiding a pale hover tile behind a white close icon.
+- Extend palette mappings to Modern UI tabs, panels, and shell surfaces so they follow the selected theme.
+- Keep unfocused modified-tab indicators in each theme's modification color and restore the purple chart color.
+- Align boolean and enum highlighting across TextMate and semantic tokens without splitting the shared syntax roles.
+
 ## 0.7.0 (September 19, 2026)
 
 - Add Aura Lime Light and Aura Lime Dark: cyan tabs, mint navigation and actions, green-cyan hover, and small citrus accents. Light uses pale green-white surfaces; Dark retains Aura's violet-black foundation.

@@ -1,5 +1,5 @@
 {
-  "name": "Aura Aqua Light",
+  "name": "Aura Aqua Lime Light",
   "type": "light",
   "colors": {
     "focusBorder": "#4A80A7",
@@ -537,7 +537,7 @@
         "meta.module-reference"
       ],
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
@@ -545,7 +545,7 @@
         "constant.numeric"
       ],
       "settings": {
-        "foreground": "#9C7954"
+        "foreground": "#DCB547"
       }
     },
     {
@@ -556,13 +556,13 @@
         "constant.language.boolean.yaml"
       ],
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
       "scope": ["variable.other.enummember"],
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
@@ -641,7 +641,7 @@
         "JSXNested"
       ],
       "settings": {
-        "foreground": "#007A58"
+        "foreground": "#47C491"
       }
     },
     {
@@ -714,7 +714,7 @@
         "markup.raw"
       ],
       "settings": {
-        "foreground": "#007A58"
+        "foreground": "#47C491"
       }
     },
     {
@@ -732,7 +732,7 @@
         "support.class.dart"
       ],
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
@@ -823,7 +823,7 @@
         "punctuation.definition.entity.css"
       ],
       "settings": {
-        "foreground": "#43751E"
+        "foreground": "#A9CD6E"
       }
     },
     {
@@ -851,7 +851,7 @@
     {
       "scope": "markup.quote",
       "settings": {
-        "foreground": "#007A58"
+        "foreground": "#47C491"
       }
     },
     {
@@ -883,7 +883,7 @@
     {
       "scope": "markup.inline.raw",
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
@@ -944,7 +944,7 @@
         "support.constant.vendored.property-value"
       ],
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
@@ -969,7 +969,7 @@
     {
       "scope": "token.info-token",
       "settings": {
-        "foreground": "#4A80A7"
+        "foreground": "#35BDCC"
       }
     },
     {
@@ -993,20 +993,20 @@
   ],
   "semanticTokenColors": {
     "comment": "#72858E",
-    "string": "#007A58",
+    "string": "#47C491",
     "regexp": "#80540A",
     "regexp.escape": {
       "foreground": "#80540A",
       "fontStyle": "bold"
     },
-    "number": "#9C7954",
-    "boolean": "#4A80A7",
-    "enumMember": "#4A80A7",
+    "number": "#DCB547",
+    "boolean": "#35BDCC",
+    "enumMember": "#35BDCC",
     "function": "#A36CAF",
     "function.declaration": "#955FA4",
     "method": "#A36CAF",
     "method.declaration": "#955FA4",
-    "macro": "#4A80A7",
+    "macro": "#35BDCC",
     "parameter": {
       "foreground": "#71848D",
       "fontStyle": "italic"
@@ -1016,16 +1016,16 @@
     "variable.readonly": "#AD6B91",
     "property": "#AD6B91",
     "property.readonly": "#AD6B91",
-    "class": "#4A80A7",
+    "class": "#35BDCC",
     "interface": {
-      "foreground": "#4A80A7",
+      "foreground": "#35BDCC",
       "fontStyle": "italic"
     },
-    "enum": "#4A80A7",
-    "type": "#4A80A7",
-    "type.defaultLibrary": "#4A80A7",
+    "enum": "#35BDCC",
+    "type": "#35BDCC",
+    "type.defaultLibrary": "#35BDCC",
     "typeParameter": {
-      "foreground": "#4A80A7",
+      "foreground": "#35BDCC",
       "fontStyle": "italic"
     },
     "namespace": "#5F829B",

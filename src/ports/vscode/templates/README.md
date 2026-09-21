@@ -2,7 +2,7 @@
 
 ![Aura Modern — Aqua Dark in Visual Studio Code](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-teaser-zoom.png)
 
-Eight color themes for Visual Studio Code: **Aura**, **Aqua**, **Lime**, and **Azure**, each with a dark and light appearance.
+Nine color themes for Visual Studio Code: **Aura**, **Aqua**, **Lime**, and **Azure** in dark and light, plus **Aqua Lime Light**.
 
 An unofficial fork of [Aura by Dalton Menezes](https://github.com/daltonmenezes/aura-theme), maintained by [yukiumi13](https://github.com/yukiumi13/aura-theme-2026).
 
@@ -39,6 +39,10 @@ Cyan actions and navigation, mint badges, and a touch of citrus on cool white or
 #### Aura Aqua Light
 
 ![Aura Aqua Light](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/main/docs/assets/aura-aqua-light-modern-vscode.png)
+
+#### Aura Aqua Lime Light
+
+Aqua's cool white workspace with brighter cyan, mint, yellow-green, and warm yellow syntax. It shares Aqua Light's interface and terminal colors; strings, tags, and quotes retain one consistent green.
 
 ### Lime
 

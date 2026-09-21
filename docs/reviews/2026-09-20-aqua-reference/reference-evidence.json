@@ -1,0 +1,35 @@
+{
+  "imageSha256": "8cce1c0fa9c51d0e515c75305518fbc0bca0483624c328eaeb4e4588b1e88612",
+  "limeTransitionSample": "#DFFB97",
+  "locations": [
+    [
+      315,
+      24
+    ],
+    [
+      316,
+      24
+    ],
+    [
+      317,
+      24
+    ],
+    [
+      315,
+      25
+    ],
+    [
+      316,
+      25
+    ],
+    [
+      317,
+      25
+    ],
+    [
+      318,
+      25
+    ]
+  ],
+  "note": "Seven exact pixels in the title artwork; minor transition evidence, not a dominant UI fill or original design token. Other source samples are documented in docs/lime-color-sampling.json."
+}

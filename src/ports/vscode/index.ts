@@ -39,6 +39,13 @@ export async function VscodePort(Aura: AuraAPI) {
       name: scheme.paletteName,
       appearance: scheme.paletteAppearance,
     })),
+    {
+      id: colorSchemes.aquaLimeLight.paletteName,
+      slug: colorSchemes.aquaLimeLight.paletteSlug,
+      scheme: withTerminalAuraAnsi(colorSchemes.aquaLimeLight),
+      name: colorSchemes.aquaLimeLight.paletteName,
+      appearance: colorSchemes.aquaLimeLight.paletteAppearance,
+    },
     ...colorSchemes.limeVariants.map((scheme) => ({
       id: scheme.paletteName,
       slug: scheme.paletteSlug,

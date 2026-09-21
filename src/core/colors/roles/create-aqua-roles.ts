@@ -177,7 +177,10 @@ export function createAquaPalette(
       surfaceRole: {
         ...ui.surfaceRole,
         hoverOverlay: base.surfaceHover,
-        toolbarHover: base.surfaceHover,
+        // A close icon retains the active tab's white foreground. An opaque
+        // neutral hover would hide it; this overlay preserves the cyan fill
+        // while also working with dark icons on an ordinary toolbar.
+        toolbarHover: withAlpha(base.foregroundStrong, '14'),
       },
     },
   }

@@ -107,6 +107,30 @@
     "modernActivityBarItem.activeForeground": "#F2F0F5",
     "modernActivityBarItem.hoverBackground": "#1B1724",
     "modernActivityBarItem.hoverForeground": "#F2F0F5",
+    "modernActivityBar.background": "#09080D",
+    "modernActivityBar.inactiveBackground": "#09080D",
+    "modernActivityBar.activeBackground": "#0F0D16",
+    "modernActivityBar.activeForeground": "#F2F0F5",
+    "modernActivityBar.hoverBackground": "#1B1724",
+    "modernActivityBar.hoverForeground": "#F2F0F5",
+    "modernActivityBar.border": "#000000",
+    "modernPanel.border": "#000000",
+    "modernUI.shellBackground": "#0A090F",
+    "modernUI.inactiveShellBackground": "#0F0D16",
+    "modernTab.activeBackground": "#6F4FD844",
+    "modernTab.activeForeground": "#F2F0F5",
+    "modernTab.hoverBackground": "#0F0D16",
+    "modernTab.hoverForeground": "#12DADD",
+    "modernEditorTab.activeBackground": "#09080D",
+    "modernEditorTab.activeForeground": "#F2F0F5",
+    "modernEditorTab.inactiveBackground": "#0A090F",
+    "modernEditorTab.hoverBackground": "#0F0D16",
+    "modernEditorTab.hoverForeground": "#12DADD",
+    "modernEditorTab.activeHoverBackground": "#09080D",
+    "modernEditorTab.activeActionBackground": "#09080D",
+    "modernEditorTab.hoverActionBackground": "#0F0D16",
+    "modernEditorTab.activeHoverActionBackground": "#09080D",
+    "modernEditorTab.selectedActionBackground": "#0F0D16",
     "activityBarTop.background": "#09080D",
     "activityBarTop.foreground": "#F2F0F5",
     "activityBarTop.inactiveForeground": "#ADACAE",
@@ -447,7 +471,7 @@
     "charts.yellow": "#FFCA85",
     "charts.orange": "#FFCA85",
     "charts.green": "#61FFCA",
-    "charts.purple": "#9FFFE2",
+    "charts.purple": "#D49DFF",
     "inlineChat.background": "#0D0B13",
     "inlineChat.foreground": "#DDD9E7",
     "inlineChat.border": "#241F31",
@@ -522,6 +546,23 @@
       ],
       "settings": {
         "foreground": "#FFCA85"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.json",
+        "constant.language.boolean.toml",
+        "constant.language.boolean.yaml"
+      ],
+      "settings": {
+        "foreground": "#A277FF"
+      }
+    },
+    {
+      "scope": ["variable.other.enummember"],
+      "settings": {
+        "foreground": "#A277FF"
       }
     },
     {

@@ -1,0 +1,64 @@
+{
+  "branch": "feat/aqua-lime-light",
+  "themes": [
+    {
+      "name": "Aura Dark",
+      "path": "./themes/aura-dark-color-theme.json",
+      "sha256": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767"
+    },
+    {
+      "name": "Aura Light",
+      "path": "./themes/aura-light-2026-color-theme.json",
+      "sha256": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320"
+    },
+    {
+      "name": "Aura Aqua Light",
+      "path": "./themes/aura-aqua-light-2026-color-theme.json",
+      "sha256": "db9ae16c8b2be9ef0233b792f9fc31cdc85ff32a63835de65010caabb1329cc5"
+    },
+    {
+      "name": "Aura Aqua Dark",
+      "path": "./themes/aura-aqua-dark-2026-color-theme.json",
+      "sha256": "184e4b30ae447381e752f5c116102dea8d8bbb0252c25887c7bdebd63e34d0f1"
+    },
+    {
+      "name": "Aura Aqua Lime Light",
+      "path": "./themes/aura-aqua-lime-light-color-theme.json",
+      "sha256": "38e998c730f9a1fbe8841da1a837242a2d66a6a53daca4174df4779607beb35a"
+    },
+    {
+      "name": "Aura Lime Light",
+      "path": "./themes/aura-lime-light-color-theme.json",
+      "sha256": "b0c8f9536de3c0968794fc1950be00d9f6912b2e0c2befe706096daf1f5a47c3"
+    },
+    {
+      "name": "Aura Lime Dark",
+      "path": "./themes/aura-lime-dark-color-theme.json",
+      "sha256": "c4881bcabad5726763feb43b11774e20178882d8464d9048cd9834945e8bef9a"
+    },
+    {
+      "name": "Aura Azure Light",
+      "path": "./themes/aura-azure-light-2026-color-theme.json",
+      "sha256": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f"
+    },
+    {
+      "name": "Aura Azure Dark",
+      "path": "./themes/aura-azure-2026-color-theme.json",
+      "sha256": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b"
+    }
+  ],
+  "installedPayloadsMatch": true,
+  "sharedUIEntryCount": 500,
+  "acceptedSource": "Aqua Sample C - 67 Percent",
+  "syntaxContrastAgainstEditor": {
+    "type": 2.1872561596126965,
+    "string": 2.125469780531656,
+    "number": 1.8938235020445056
+  },
+  "tests": {
+    "suites": 4,
+    "passed": 237
+  },
+  "toolbarHoverBackground": "#39495214",
+  "modernTabBorderSupport": "Installed VS Code CSS forces border variables transparent; no modernEditorTab.border token is registered."
+}

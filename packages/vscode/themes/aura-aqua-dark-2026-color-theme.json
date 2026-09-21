@@ -70,7 +70,7 @@
     "list.hoverBackground": "#1B1724",
     "list.hoverForeground": "#DDD9E7",
     "list.dropBackground": "#13282D2E",
-    "toolbar.hoverBackground": "#1B1724",
+    "toolbar.hoverBackground": "#F2F0F514",
     "list.focusBackground": "#13282D",
     "list.focusForeground": "#DDD9E7",
     "list.focusOutline": "#12DADDB3",
@@ -107,6 +107,30 @@
     "modernActivityBarItem.activeForeground": "#12DADD",
     "modernActivityBarItem.hoverBackground": "#1B1724",
     "modernActivityBarItem.hoverForeground": "#12DADD",
+    "modernActivityBar.background": "#09080D",
+    "modernActivityBar.inactiveBackground": "#09080D",
+    "modernActivityBar.activeBackground": "#13282D",
+    "modernActivityBar.activeForeground": "#12DADD",
+    "modernActivityBar.hoverBackground": "#1B1724",
+    "modernActivityBar.hoverForeground": "#12DADD",
+    "modernActivityBar.border": "#000000",
+    "modernPanel.border": "#000000",
+    "modernUI.shellBackground": "#0A090F",
+    "modernUI.inactiveShellBackground": "#0F0D16",
+    "modernTab.activeBackground": "#13282D",
+    "modernTab.activeForeground": "#F2F0F5",
+    "modernTab.hoverBackground": "#1B1724",
+    "modernTab.hoverForeground": "#DDD9E7",
+    "modernEditorTab.activeBackground": "#12DADD",
+    "modernEditorTab.activeForeground": "#09080D",
+    "modernEditorTab.inactiveBackground": "#0A090F",
+    "modernEditorTab.hoverBackground": "#1B1724",
+    "modernEditorTab.hoverForeground": "#DDD9E7",
+    "modernEditorTab.activeHoverBackground": "#12DADD",
+    "modernEditorTab.activeActionBackground": "#12DADD",
+    "modernEditorTab.hoverActionBackground": "#1B1724",
+    "modernEditorTab.activeHoverActionBackground": "#12DADD",
+    "modernEditorTab.selectedActionBackground": "#0F0D16",
     "activityBarTop.background": "#09080D",
     "activityBarTop.foreground": "#12DADD",
     "activityBarTop.inactiveForeground": "#ADACAE",
@@ -314,8 +338,8 @@
     "tab.unfocusedHoverBorder": "#00000000",
     "tab.activeModifiedBorder": "#C4B5FD",
     "tab.inactiveModifiedBorder": "#C4B5FD",
-    "tab.unfocusedActiveModifiedBorder": "#76E9EC7F",
-    "tab.unfocusedInactiveModifiedBorder": "#76E9EC7F",
+    "tab.unfocusedActiveModifiedBorder": "#C4B5FD7F",
+    "tab.unfocusedInactiveModifiedBorder": "#C4B5FD7F",
     "tab.selectedBackground": "#0F0D16",
     "tab.selectedForeground": "#F2F0F5",
     "tab.selectedBorderTop": "#E4EF82",
@@ -447,7 +471,7 @@
     "charts.yellow": "#FFCA85",
     "charts.orange": "#FFCA85",
     "charts.green": "#61FFCA",
-    "charts.purple": "#9FFFE2",
+    "charts.purple": "#D49DFF",
     "inlineChat.background": "#0D0B13",
     "inlineChat.foreground": "#DDD9E7",
     "inlineChat.border": "#241F31",
@@ -522,6 +546,23 @@
       ],
       "settings": {
         "foreground": "#FFCA85"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.json",
+        "constant.language.boolean.toml",
+        "constant.language.boolean.yaml"
+      ],
+      "settings": {
+        "foreground": "#A277FF"
+      }
+    },
+    {
+      "scope": ["variable.other.enummember"],
+      "settings": {
+        "foreground": "#A277FF"
       }
     },
     {

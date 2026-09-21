@@ -107,6 +107,30 @@
     "modernActivityBarItem.activeForeground": "{{ uiModernActivityActiveForeground }}",
     "modernActivityBarItem.hoverBackground": "{{ uiModernActivityHoverBackground }}",
     "modernActivityBarItem.hoverForeground": "{{ uiModernActivityHoverForeground }}",
+    "modernActivityBar.background": "{{ uiChromeBackground }}",
+    "modernActivityBar.inactiveBackground": "{{ uiChromeBackground }}",
+    "modernActivityBar.activeBackground": "{{ uiModernActivityActiveBackground }}",
+    "modernActivityBar.activeForeground": "{{ uiModernActivityActiveForeground }}",
+    "modernActivityBar.hoverBackground": "{{ uiModernActivityHoverBackground }}",
+    "modernActivityBar.hoverForeground": "{{ uiModernActivityHoverForeground }}",
+    "modernActivityBar.border": "{{ uiChromeBorder }}",
+    "modernPanel.border": "{{ uiChromeBorder }}",
+    "modernUI.shellBackground": "{{ accent24 }}",
+    "modernUI.inactiveShellBackground": "{{ accent30 }}",
+    "modernTab.activeBackground": "{{ uiListSelectionFocusBackground }}",
+    "modernTab.activeForeground": "{{ accent7 }}",
+    "modernTab.hoverBackground": "{{ uiTabHoverBackground }}",
+    "modernTab.hoverForeground": "{{ uiInteractionForeground }}",
+    "modernEditorTab.activeBackground": "{{ uiActiveTabBackground }}",
+    "modernEditorTab.activeForeground": "{{ uiActiveTabForeground }}",
+    "modernEditorTab.inactiveBackground": "{{ uiInactiveTabBackground }}",
+    "modernEditorTab.hoverBackground": "{{ uiTabHoverBackground }}",
+    "modernEditorTab.hoverForeground": "{{ uiInteractionForeground }}",
+    "modernEditorTab.activeHoverBackground": "{{ uiActiveTabBackground }}",
+    "modernEditorTab.activeActionBackground": "{{ uiActiveTabBackground }}",
+    "modernEditorTab.hoverActionBackground": "{{ uiTabHoverBackground }}",
+    "modernEditorTab.activeHoverActionBackground": "{{ uiActiveTabBackground }}",
+    "modernEditorTab.selectedActionBackground": "{{ accent30 }}",
     "activityBarTop.background": "{{ uiChromeBackground }}",
     "activityBarTop.foreground": "{{ uiActiveActivityForeground }}",
     "activityBarTop.inactiveForeground": "{{ accent10 }}",
@@ -314,8 +338,8 @@
     "tab.unfocusedHoverBorder": "{{ uiTabHoverBorder }}",
     "tab.activeModifiedBorder": "{{ uiStatusModified }}",
     "tab.inactiveModifiedBorder": "{{ uiStatusModified }}",
-    "tab.unfocusedActiveModifiedBorder": "{{ accent14 }}",
-    "tab.unfocusedInactiveModifiedBorder": "{{ accent14 }}",
+    "tab.unfocusedActiveModifiedBorder": "{{ uiStatusModifiedUnfocused }}",
+    "tab.unfocusedInactiveModifiedBorder": "{{ uiStatusModifiedUnfocused }}",
     "tab.selectedBackground": "{{ uiSurfaceTile }}",
     "tab.selectedForeground": "{{ accent7 }}",
     "tab.selectedBorderTop": "{{ uiActiveBorder }}",
@@ -447,7 +471,7 @@
     "charts.yellow": "{{ uiStatusWarning }}",
     "charts.orange": "{{ accent31 }}",
     "charts.green": "{{ uiStatusSuccess }}",
-    "charts.purple": "{{ uiCompanionBright }}",
+    "charts.purple": "{{ uiChartPurple }}",
     "inlineChat.background": "{{ uiSurfaceElevated }}",
     "inlineChat.foreground": "{{ accent9 }}",
     "inlineChat.border": "{{ accent23 }}",
@@ -522,6 +546,23 @@
       ],
       "settings": {
         "foreground": "{{ syntaxNumber }}"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.json",
+        "constant.language.boolean.toml",
+        "constant.language.boolean.yaml"
+      ],
+      "settings": {
+        "foreground": "{{ syntaxBoolean }}"
+      }
+    },
+    {
+      "scope": ["variable.other.enummember"],
+      "settings": {
+        "foreground": "{{ syntaxEnumMember }}"
       }
     },
     {

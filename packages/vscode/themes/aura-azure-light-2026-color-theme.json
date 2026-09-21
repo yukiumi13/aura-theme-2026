@@ -107,6 +107,30 @@
     "modernActivityBarItem.activeForeground": "#0F6CBD",
     "modernActivityBarItem.hoverBackground": "#EBEBEB",
     "modernActivityBarItem.hoverForeground": "#0F6CBD",
+    "modernActivityBar.background": "#F0F0F0",
+    "modernActivityBar.inactiveBackground": "#F0F0F0",
+    "modernActivityBar.activeBackground": "#EBF3FC",
+    "modernActivityBar.activeForeground": "#0F6CBD",
+    "modernActivityBar.hoverBackground": "#EBEBEB",
+    "modernActivityBar.hoverForeground": "#0F6CBD",
+    "modernActivityBar.border": "#E0E0E0",
+    "modernPanel.border": "#E0E0E0",
+    "modernUI.shellBackground": "#F0F0F0",
+    "modernUI.inactiveShellBackground": "#F0F0F0",
+    "modernTab.activeBackground": "#EBF3FC",
+    "modernTab.activeForeground": "#292929",
+    "modernTab.hoverBackground": "#EBEBEB",
+    "modernTab.hoverForeground": "#424242",
+    "modernEditorTab.activeBackground": "#0F6CBD",
+    "modernEditorTab.activeForeground": "#FFFFFF",
+    "modernEditorTab.inactiveBackground": "#F5F5F5",
+    "modernEditorTab.hoverBackground": "#EBEBEB",
+    "modernEditorTab.hoverForeground": "#424242",
+    "modernEditorTab.activeHoverBackground": "#0F6CBD",
+    "modernEditorTab.activeActionBackground": "#0F6CBD",
+    "modernEditorTab.hoverActionBackground": "#EBEBEB",
+    "modernEditorTab.activeHoverActionBackground": "#0F6CBD",
+    "modernEditorTab.selectedActionBackground": "#F0F0F0",
     "activityBarTop.background": "#F0F0F0",
     "activityBarTop.foreground": "#0F6CBD",
     "activityBarTop.inactiveForeground": "#616161",
@@ -314,8 +338,8 @@
     "tab.unfocusedHoverBorder": "#00000000",
     "tab.activeModifiedBorder": "#0F6CBD",
     "tab.inactiveModifiedBorder": "#0F6CBD",
-    "tab.unfocusedActiveModifiedBorder": "#6656D17F",
-    "tab.unfocusedInactiveModifiedBorder": "#6656D17F",
+    "tab.unfocusedActiveModifiedBorder": "#0F6CBD7F",
+    "tab.unfocusedInactiveModifiedBorder": "#0F6CBD7F",
     "tab.selectedBackground": "#F0F0F0",
     "tab.selectedForeground": "#292929",
     "tab.selectedBorderTop": "#0F6CBD",
@@ -447,7 +471,7 @@
     "charts.yellow": "#835B00",
     "charts.orange": "#963A08",
     "charts.green": "#00723B",
-    "charts.purple": "#00723B",
+    "charts.purple": "#7C52AB",
     "inlineChat.background": "#FFFFFF",
     "inlineChat.foreground": "#424242",
     "inlineChat.border": "#E0E0E0",
@@ -522,6 +546,23 @@
       ],
       "settings": {
         "foreground": "#963A08"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.json",
+        "constant.language.boolean.toml",
+        "constant.language.boolean.yaml"
+      ],
+      "settings": {
+        "foreground": "#0F6CBD"
+      }
+    },
+    {
+      "scope": ["variable.other.enummember"],
+      "settings": {
+        "foreground": "#0F6CBD"
       }
     },
     {

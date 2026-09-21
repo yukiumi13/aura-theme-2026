@@ -1,0 +1,142 @@
+{
+  "baselineGit": "0438faa0313222d1cd8d9dc2f9f12b58e9b076ea",
+  "method": "Interpolate in OKLab from published source colors to exact screenshot samples. Lightness changes naturally; endpoints are exact RGB. Feed semantic/family inputs to createAuraSyntax, createTemplateVars, and Mustache. No role/scope redistribution.",
+  "inputs": {
+    "blue": {
+      "base": "#4A80A7",
+      "reference": "#00DDDF",
+      "context": "Cyan task button / progress fill"
+    },
+    "mint": {
+      "base": "#007A58",
+      "reference": "#64EBAF",
+      "context": "Mint corner of the claim-all control"
+    },
+    "lime": {
+      "base": "#43751E",
+      "reference": "#DFFB97",
+      "context": "Small yellow-green transition in the title artwork; a local screenshot sample, not a recovered UI token"
+    },
+    "amber": {
+      "base": "#9C7954",
+      "reference": "#FED532",
+      "context": "Small lemon highlight in the drink bottle"
+    }
+  },
+  "variants": [
+    {
+      "letter": "A",
+      "label": "Aqua Sample A - Published",
+      "amount": 0,
+      "colors": {
+        "blue": "#4A80A7",
+        "mint": "#007A58",
+        "lime": "#43751E",
+        "amber": "#9C7954"
+      },
+      "sha256": "61fc3e171aa71c8fa8dfcbaf6001c6c72ffbbac78d2db45085b9c0312a9006a4",
+      "editorContrast": {
+        "blue": 4.121,
+        "mint": 5.184,
+        "lime": 5.352,
+        "amber": 3.856
+      }
+    },
+    {
+      "letter": "B",
+      "label": "Aqua Sample B - 33 Percent",
+      "amount": 0.3333333333333333,
+      "colors": {
+        "blue": "#449EBA",
+        "mint": "#2A9E74",
+        "lime": "#75A047",
+        "amber": "#BC9751"
+      },
+      "sha256": "16b71610470b58428c1726dcfcf5892b5a73812d44d3f287054c0ba0e13554be",
+      "editorContrast": {
+        "blue": 2.972,
+        "mint": 3.26,
+        "lime": 2.959,
+        "amber": 2.648
+      }
+    },
+    {
+      "letter": "C",
+      "label": "Aqua Sample C - 67 Percent",
+      "amount": 0.6666666666666666,
+      "colors": {
+        "blue": "#35BDCC",
+        "mint": "#47C491",
+        "lime": "#A9CD6E",
+        "amber": "#DCB547"
+      },
+      "sha256": "77719aba7c499a7bba48988c99d8289e4bbcb7d3645ce6dc52ac34b9f2279b10",
+      "editorContrast": {
+        "blue": 2.187,
+        "mint": 2.125,
+        "lime": 1.747,
+        "amber": 1.894
+      }
+    },
+    {
+      "letter": "D",
+      "label": "Aqua Sample D - Raw Reference",
+      "amount": 1,
+      "colors": {
+        "blue": "#00DDDF",
+        "mint": "#64EBAF",
+        "lime": "#DFFB97",
+        "amber": "#FED532"
+      },
+      "sha256": "564d9e181f80edc823c8c0097f80e1ba22300827eaf28289e80f50ae75e4f15c",
+      "editorContrast": {
+        "blue": 1.64,
+        "mint": 1.449,
+        "lime": 1.107,
+        "amber": 1.377
+      }
+    }
+  ],
+  "shippingSnapshot": [
+    {
+      "label": "Aura Dark",
+      "path": "./themes/aura-dark-color-theme.json",
+      "sha256": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767"
+    },
+    {
+      "label": "Aura Light",
+      "path": "./themes/aura-light-2026-color-theme.json",
+      "sha256": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320"
+    },
+    {
+      "label": "Aura Aqua Light",
+      "path": "./themes/aura-aqua-light-2026-color-theme.json",
+      "sha256": "548ab157d15aca440d46379bd0f195b14256a401e35701a1c8f395ae05030872"
+    },
+    {
+      "label": "Aura Aqua Dark",
+      "path": "./themes/aura-aqua-dark-2026-color-theme.json",
+      "sha256": "9ab9886726e4d3f7017cb9ed96229ba876705cf66c5346c9f0f4bd6d7c55d507"
+    },
+    {
+      "label": "Aura Lime Light",
+      "path": "./themes/aura-lime-light-color-theme.json",
+      "sha256": "df883f13ae29a4250bd89e583176215e4496300adebca0166955d0e1504e356c"
+    },
+    {
+      "label": "Aura Lime Dark",
+      "path": "./themes/aura-lime-dark-color-theme.json",
+      "sha256": "169b6eb4d4b6442f57666aa9e6251860a81d2799cd89248905e4bf059a845d41"
+    },
+    {
+      "label": "Aura Azure Light",
+      "path": "./themes/aura-azure-light-2026-color-theme.json",
+      "sha256": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f"
+    },
+    {
+      "label": "Aura Azure Dark",
+      "path": "./themes/aura-azure-2026-color-theme.json",
+      "sha256": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b"
+    }
+  ]
+}

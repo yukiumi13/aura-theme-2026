@@ -22,6 +22,16 @@ individual diffs, or test results. Follow `docs/THEME_REVIEW.md`.
   focus and older UI. Verify the Modern UI setting is enabled before judging
   the independent activity state tokens.
 - Aqua keeps cyan actions/navigation, mint badges, and small citrus accents.
+  Citrus edges should remain subtle at normal viewing size. Modern UI hides
+  several legacy tab/selection borders; verify rendered controls before
+  increasing color intensity or spreading decoration into reading surfaces.
+  Preserve the reference's sampled accent hues when revising summer details;
+  first adjust their placement, area, adjacency, and interaction state. The
+  user rejected making new darker/desaturated lime hues just to reveal edges.
+  Distinguish direct pixel samples from earlier designed adaptations. Read the
+  actual regional pairing: cyan or mint fills with white inner edges, neutral
+  cards, and small isolated lemon highlights; do not infer a universal yellow
+  border from the palette alone.
   Its reading surfaces stay cold white or Aura Dark. Lime is a separate pair
   with green-white light surfaces and mint/green-cyan/citrus interactions;
   its dark reading foundation stays Aura Dark.
