@@ -227,6 +227,15 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     uiButtonHover: ui.buttonHover,
     uiBadgeBackground: ui.badge.background,
     uiBadgeForeground: ui.badge.foreground,
+    // Structured effect data remains color decisions from roles. The port
+    // chooses CSS syntax/geometry; legacy schemes remain string dictionaries.
+    ...(ui.badge.emphasis
+      ? { uiBadgeEmphasis: JSON.stringify(ui.badge.emphasis) }
+      : {}),
+    ...(ui.action.enhancement
+      ? { uiActionEnhancement: JSON.stringify(ui.action.enhancement) }
+      : {}),
+    uiFocusBorder: ui.focusBorder,
     uiActionBackground: ui.action.background,
     uiActionProminentBackground: ui.action.prominentBackground,
     uiActionBorder: ui.action.border,
@@ -249,7 +258,7 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     uiListSelectionInactiveBackground: ui.selectionRole.listInactive,
     uiSelectionSolidBackground: ui.selectionRole.solid,
     uiStatusModified: ui.status.modified,
-    uiStatusModifiedUnfocused: `${ui.status.modified}7F`,
+    uiStatusModifiedUnfocused: ui.status.modifiedUnfocused,
     uiStatusConflict: ui.status.conflict,
     uiStatusInfoForeground: ui.status.info,
     uiStatusInfoBorder: ui.status.info,

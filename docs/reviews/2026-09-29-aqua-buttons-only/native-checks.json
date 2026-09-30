@@ -1,0 +1,59 @@
+{
+  "on": {
+    "tabs": [
+      {
+        "selected": true,
+        "background": "none",
+        "foreground": "rgb(57, 73, 82)",
+        "weight": "600"
+      },
+      {
+        "selected": true,
+        "background": "none",
+        "foreground": "rgb(57, 73, 82)",
+        "weight": "600"
+      }
+    ],
+    "buttons": []
+  },
+  "off": {
+    "tabs": [
+      {
+        "selected": true,
+        "background": "none",
+        "foreground": "rgb(57, 73, 82)",
+        "weight": "600"
+      },
+      {
+        "selected": true,
+        "background": "none",
+        "foreground": "rgb(57, 73, 82)",
+        "weight": "600"
+      }
+    ],
+    "buttons": []
+  },
+  "buttons": [
+    {
+      "text": "Initialize Repository",
+      "background": "linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+      "weight": "400"
+    },
+    {
+      "text": "Publish to GitHub",
+      "background": "linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+      "weight": "400"
+    },
+    {
+      "text": "More Information",
+      "background": "linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+      "weight": "400"
+    }
+  ],
+  "runtime": {
+    "vscode": "1.131.0",
+    "loader": "7.5.1",
+    "aura": "0.9.1",
+    "profile": "isolated review only"
+  }
+}

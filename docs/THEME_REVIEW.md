@@ -33,6 +33,13 @@ every generated JSON file, records their hashes, displays explicit state pairs,
 and includes **every UI color, TextMate rule in source order, and semantic
 token**. It makes no aesthetic pass/fail decision.
 
+The same sheet also reads the generated effect inventory and stylesheet. It
+checks CSS hashes and declarations, lists every resolved effect group and its
+theme scope, and shows normal/hover/focus and CSS-off specimens. Rebuild the
+VS Code port first; stale or missing effect output must fail the review rather
+than silently omitting the enhancement. Review role independence and derived
+theme scope as well as the rendered appearance.
+
 Read RGBA as a composited color on the actual receiving surface. Check stacked
 diff backgrounds and syntax foregrounds together. Generic color chips show raw
 colors over a checkerboard; they do not assert the actual UI parent surface.

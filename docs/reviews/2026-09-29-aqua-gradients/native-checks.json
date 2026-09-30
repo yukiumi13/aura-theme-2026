@@ -1,0 +1,97 @@
+{
+  "vscode": "1.131.0",
+  "loader": "7.5.1",
+  "extension": "0.9.0",
+  "button": {
+    "background": "linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 0px 0px inset, rgba(20, 56, 68, 0.094) 0px 1px 3px 0px",
+    "outline": "rgb(255, 255, 255)",
+    "outlineWidth": "3px"
+  },
+  "tab": {
+    "background": "linear-gradient(105deg, rgba(255, 255, 255, 0.79), rgba(255, 255, 255, 0.68)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(74, 88, 97)",
+    "shadow": "none",
+    "outline": "rgb(74, 88, 97)",
+    "outlineWidth": "3px"
+  },
+  "buttonHover": {
+    "background": "linear-gradient(rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.086)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 0px 0px inset, rgba(20, 56, 68, 0.094) 0px 1px 3px 0px",
+    "outline": "rgb(255, 255, 255)",
+    "outlineWidth": "3px"
+  },
+  "buttonFocus": {
+    "background": "linear-gradient(rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.086)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 0px 0px inset, rgba(100, 235, 175, 0.376) 0px 0px 7px 0px",
+    "outline": "rgb(74, 128, 167)",
+    "outlineWidth": "1px"
+  },
+  "disabledDomProbe": {
+    "background": "none",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "none",
+    "outline": "rgb(74, 128, 167)",
+    "outlineWidth": "1px"
+  },
+  "secondaryDomProbe": {
+    "background": "none",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "none",
+    "outline": "rgb(74, 128, 167)",
+    "outlineWidth": "1px"
+  },
+  "dark": {
+    "background": "none",
+    "foreground": "rgb(9, 8, 13)",
+    "shadow": "none",
+    "outline": "rgba(162, 119, 255, 0.7)",
+    "outlineWidth": "1px"
+  },
+  "aquaLime": {
+    "background": "linear-gradient(rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.086)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 0px 0px inset, rgba(100, 235, 175, 0.376) 0px 0px 7px 0px",
+    "outline": "rgb(74, 128, 167)",
+    "outlineWidth": "1px"
+  },
+  "classicTab": {
+    "background": "linear-gradient(105deg, rgba(255, 255, 255, 0.79), rgba(255, 255, 255, 0.68)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(74, 88, 97)",
+    "shadow": "rgba(255, 255, 255, 0.7) 0px 0px 0px 1px inset",
+    "outline": "rgb(74, 88, 97)",
+    "outlineWidth": "3px"
+  },
+  "off": {
+    "background": "none",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "none",
+    "outline": "rgb(255, 255, 255)",
+    "outlineWidth": "3px"
+  },
+  "onAgain": {
+    "background": "linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)",
+    "foreground": "rgb(255, 255, 255)",
+    "shadow": "rgba(255, 255, 255, 0.44) 0px 1px 0px 0px inset, rgba(20, 56, 68, 0.094) 0px 1px 3px 0px",
+    "outline": "rgb(255, 255, 255)",
+    "outlineWidth": "3px"
+  },
+  "splitGroups": [
+    {
+      "active": false,
+      "tabBackground": "none"
+    },
+    {
+      "active": true,
+      "tabBackground": "linear-gradient(105deg, rgba(255, 255, 255, 0.79), rgba(255, 255, 255, 0.68)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)"
+    }
+  ],
+  "activeCloseHover": {
+    "foreground": "rgb(74, 88, 97)",
+    "background": "rgba(57, 73, 82, 0.08)",
+    "tabBackground": "linear-gradient(105deg, rgba(255, 255, 255, 0.79), rgba(255, 255, 255, 0.68)), linear-gradient(105deg, rgb(100, 235, 175) 0%, rgb(18, 218, 221) 46%, rgb(18, 218, 221) 58%, rgb(100, 235, 175) 100%)"
+  }
+}

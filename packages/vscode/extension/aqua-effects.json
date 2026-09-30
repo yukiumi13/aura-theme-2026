@@ -1,0 +1,503 @@
+{
+  "version": "0.9.4",
+  "stylesheet": "./extension/aqua-gradients.css",
+  "sha256": "ba21eee97916c4565eeeb48be9e8e9b04f67861c36a3fe18a5ebaafef3f2de13",
+  "themes": [
+    {
+      "id": "Aura 2026 Dark",
+      "label": "Aura Dark",
+      "path": "./themes/aura-dark-color-theme.json",
+      "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-dark-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#A277FF",
+          "hoverBackground": "#12DADD",
+          "foreground": "#09080D",
+          "border": "#241F31"
+        },
+        "badge": {
+          "background": "#A277FF",
+          "foreground": "#09080D"
+        },
+        "focus": "#A277FFB3"
+      }
+    },
+    {
+      "id": "Aura Light 2026",
+      "label": "Aura Light",
+      "path": "./themes/aura-light-2026-color-theme.json",
+      "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-light-2026-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#61FFCA",
+          "hoverBackground": "#12DADD",
+          "foreground": "#123B2D",
+          "border": "#00000000"
+        },
+        "badge": {
+          "background": "#61FFCA",
+          "foreground": "#123B2D"
+        },
+        "focus": "#7043C1"
+      }
+    },
+    {
+      "id": "Aura Aqua Light 2026",
+      "label": "Aura Aqua Light",
+      "path": "./themes/aura-aqua-light-2026-color-theme.json",
+      "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json",
+      "action": {
+        "normal": {
+          "fill": {
+            "angle": 105,
+            "stops": [
+              {
+                "color": "#64EBAF",
+                "position": 0
+              },
+              {
+                "color": "#12DADD",
+                "position": 46
+              },
+              {
+                "color": "#12DADD",
+                "position": 58
+              },
+              {
+                "color": "#64EBAF",
+                "position": 100
+              }
+            ]
+          },
+          "edge": "#FFFFFF",
+          "shine": "#FFFFFF70",
+          "shadow": "#14384418"
+        },
+        "hover": {
+          "fill": {
+            "angle": 105,
+            "stops": [
+              {
+                "color": "#64EBAF",
+                "position": 0
+              },
+              {
+                "color": "#0FC9CE",
+                "position": 26
+              },
+              {
+                "color": "#0FC9CE",
+                "position": 74
+              },
+              {
+                "color": "#64EBAF",
+                "position": 100
+              }
+            ]
+          },
+          "shadow": "#14384426"
+        },
+        "focus": {
+          "glow": "#64EBAF60"
+        }
+      },
+      "badge": {
+        "fill": {
+          "angle": 180,
+          "stops": [
+            {
+              "color": "#50F5E2",
+              "position": 0
+            },
+            {
+              "color": "#64EBAF",
+              "position": 52
+            },
+            {
+              "color": "#75F79E",
+              "position": 100
+            }
+          ]
+        },
+        "edge": "#FFFFFFED",
+        "glow": "#50F5E266",
+        "labelShadow": "#126C7259"
+      },
+      "rules": [
+        {
+          "state": "action.normal",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"])",
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "linear-gradient(105deg, #64EBAF 0%, #12DADD 46%, #12DADD 58%, #64EBAF 100%)",
+              "important": true
+            },
+            {
+              "property": "border-color",
+              "value": "#FFFFFF",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 1px 0 #FFFFFF70, 0 1px 3px #14384418"
+            }
+          ]
+        },
+        {
+          "state": "action.hover",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):hover",
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "linear-gradient(105deg, #64EBAF 0%, #0FC9CE 26%, #0FC9CE 74%, #64EBAF 100%)",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 1px 0 #FFFFFF70, 0 2px 6px #14384426"
+            }
+          ]
+        },
+        {
+          "state": "action.focus",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible",
+          "declarations": [
+            {
+              "property": "outline",
+              "value": "1px solid var(--vscode-focusBorder, #4A80A7)",
+              "important": true
+            },
+            {
+              "property": "outline-offset",
+              "value": "2px"
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60"
+            }
+          ]
+        },
+        {
+          "state": "badge.emphasis",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-action-bar .badge:not(.progress-badge):not(.icon-badge) > .badge-content:not(:empty)",
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "linear-gradient(180deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266"
+            },
+            {
+              "property": "text-shadow",
+              "value": "0 1px 1px #126C7259"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "action": {
+          "background": "#12DADD",
+          "hoverBackground": "#0FC9CE",
+          "foreground": "#FFFFFF",
+          "border": "#FFFFFF"
+        },
+        "badge": {
+          "background": "#64EBAF",
+          "foreground": "#FFFFFF"
+        },
+        "focus": "#4A80A7"
+      }
+    },
+    {
+      "id": "Aura Aqua Dark 2026",
+      "label": "Aura Aqua Dark",
+      "path": "./themes/aura-aqua-dark-2026-color-theme.json",
+      "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-aqua-dark-2026-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#12DADD",
+          "hoverBackground": "#0FC9CE",
+          "foreground": "#09080D",
+          "border": "#E4EF82"
+        },
+        "badge": {
+          "background": "#64EBAF",
+          "foreground": "#09080D"
+        },
+        "focus": "#12DADDB3"
+      }
+    },
+    {
+      "id": "Aura Aqua Lime Light",
+      "label": "Aura Aqua Lime Light",
+      "path": "./themes/aura-aqua-lime-light-color-theme.json",
+      "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json",
+      "action": {
+        "normal": {
+          "fill": {
+            "angle": 105,
+            "stops": [
+              {
+                "color": "#64EBAF",
+                "position": 0
+              },
+              {
+                "color": "#12DADD",
+                "position": 46
+              },
+              {
+                "color": "#12DADD",
+                "position": 58
+              },
+              {
+                "color": "#64EBAF",
+                "position": 100
+              }
+            ]
+          },
+          "edge": "#FFFFFF",
+          "shine": "#FFFFFF70",
+          "shadow": "#14384418"
+        },
+        "hover": {
+          "fill": {
+            "angle": 105,
+            "stops": [
+              {
+                "color": "#64EBAF",
+                "position": 0
+              },
+              {
+                "color": "#0FC9CE",
+                "position": 26
+              },
+              {
+                "color": "#0FC9CE",
+                "position": 74
+              },
+              {
+                "color": "#64EBAF",
+                "position": 100
+              }
+            ]
+          },
+          "shadow": "#14384426"
+        },
+        "focus": {
+          "glow": "#64EBAF60"
+        }
+      },
+      "badge": {
+        "fill": {
+          "angle": 180,
+          "stops": [
+            {
+              "color": "#50F5E2",
+              "position": 0
+            },
+            {
+              "color": "#64EBAF",
+              "position": 52
+            },
+            {
+              "color": "#75F79E",
+              "position": 100
+            }
+          ]
+        },
+        "edge": "#FFFFFFED",
+        "glow": "#50F5E266",
+        "labelShadow": "#126C7259"
+      },
+      "rules": [
+        {
+          "state": "action.normal",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"])",
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "linear-gradient(105deg, #64EBAF 0%, #12DADD 46%, #12DADD 58%, #64EBAF 100%)",
+              "important": true
+            },
+            {
+              "property": "border-color",
+              "value": "#FFFFFF",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 1px 0 #FFFFFF70, 0 1px 3px #14384418"
+            }
+          ]
+        },
+        {
+          "state": "action.hover",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):hover",
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "linear-gradient(105deg, #64EBAF 0%, #0FC9CE 26%, #0FC9CE 74%, #64EBAF 100%)",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 1px 0 #FFFFFF70, 0 2px 6px #14384426"
+            }
+          ]
+        },
+        {
+          "state": "action.focus",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible",
+          "declarations": [
+            {
+              "property": "outline",
+              "value": "1px solid var(--vscode-focusBorder, #4A80A7)",
+              "important": true
+            },
+            {
+              "property": "outline-offset",
+              "value": "2px"
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60"
+            }
+          ]
+        },
+        {
+          "state": "badge.emphasis",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-action-bar .badge:not(.progress-badge):not(.icon-badge) > .badge-content:not(:empty)",
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "linear-gradient(180deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266"
+            },
+            {
+              "property": "text-shadow",
+              "value": "0 1px 1px #126C7259"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "action": {
+          "background": "#12DADD",
+          "hoverBackground": "#0FC9CE",
+          "foreground": "#FFFFFF",
+          "border": "#FFFFFF"
+        },
+        "badge": {
+          "background": "#64EBAF",
+          "foreground": "#FFFFFF"
+        },
+        "focus": "#4A80A7"
+      }
+    },
+    {
+      "id": "Aura Lime Light",
+      "label": "Aura Lime Light",
+      "path": "./themes/aura-lime-light-color-theme.json",
+      "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-lime-light-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#64EBAF",
+          "hoverBackground": "#00FED7",
+          "foreground": "#FFFFFF",
+          "border": "#F5DF72"
+        },
+        "badge": {
+          "background": "#64EBAF",
+          "foreground": "#FFFFFF"
+        },
+        "focus": "#397C76"
+      }
+    },
+    {
+      "id": "Aura Lime Dark",
+      "label": "Aura Lime Dark",
+      "path": "./themes/aura-lime-dark-color-theme.json",
+      "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-lime-dark-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#64EBAF",
+          "hoverBackground": "#00FED7",
+          "foreground": "#09080D",
+          "border": "#F5DF72"
+        },
+        "badge": {
+          "background": "#64EBAF",
+          "foreground": "#09080D"
+        },
+        "focus": "#E4EF82"
+      }
+    },
+    {
+      "id": "Aura 2026 Azure Light",
+      "label": "Aura Azure Light",
+      "path": "./themes/aura-azure-light-2026-color-theme.json",
+      "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-azure-light-2026-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#0F6CBD",
+          "hoverBackground": "#115EA3",
+          "foreground": "#FFFFFF",
+          "border": "#00000000"
+        },
+        "badge": {
+          "background": "#0F6CBD",
+          "foreground": "#FFFFFF"
+        },
+        "focus": "#0F6CBD"
+      }
+    },
+    {
+      "id": "Aura Azure 2026",
+      "label": "Aura Azure Dark",
+      "path": "./themes/aura-azure-2026-color-theme.json",
+      "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-azure-2026-color-theme-json",
+      "action": null,
+      "badge": null,
+      "rules": [],
+      "fallback": {
+        "action": {
+          "background": "#115EA3",
+          "hoverBackground": "#0F6CBD",
+          "foreground": "#FFFFFF",
+          "border": "#00000000"
+        },
+        "badge": {
+          "background": "#115EA3",
+          "foreground": "#FFFFFF"
+        },
+        "focus": "#62ABF5"
+      }
+    }
+  ]
+}

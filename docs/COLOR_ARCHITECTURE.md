@@ -68,6 +68,40 @@ flowchart TD
 
 ## Port Mapping
 
+### Optional UI effects (0.9.4)
+
+The desktop enhancement uses the same source-to-role compilation as ordinary
+theme colors. `source/aqua.ts` owns the reference samples and supporting inks;
+`roles/create-aqua-effects.ts` resolves color, opacity, and gradient distribution
+into optional `ui.action.enhancement` and `ui.badge.emphasis` groups. The plain
+foreground/background roles remain the CSS-off fallback.
+
+`create-template-vars.ts` serializes the structured effect groups as named data
+in the legacy string dictionary. It does not choose colors or encode CSS.
+`ports/vscode/enhancements.ts` maps the groups to native selectors and pixel
+geometry; `templates/enhancements.css` renders the resulting declarations.
+The ordinary port build writes `extension/aqua-gradients.css` and a matching
+`extension/aqua-effects.json` review inventory. There is no handwritten effect
+stylesheet in `extra` to overwrite generated output.
+
+The same theme registry and extension metadata determine CSS scope. Aqua Light
+opts in, Aqua Lime Light inherits the roles, and the separate Lime resolver
+explicitly opts out. Other appearances emit no effect rules. An absent effect
+group produces no corresponding selectors. Badge-only changes cannot alter
+action effects; both can deliberately reference the same source mint.
+
+Runtime code stages/applies/checks/removes the compiled stylesheet. Colors in
+the enhancement are resolved at build time; native foreground and focus styles
+remain in effect, including native focus-color overrides. User changes to the
+ordinary badge fill no longer recolor button gradients. The optional loader,
+installation-wide scope, reload requirement, and ordinary fallback are unchanged.
+
+The resolved review reads both generated artifacts, verifies their version,
+CSS hash and exact declarations, and shows normal, hover, focus, combined
+hover/focus, marker, and CSS-off specimens. It includes the full effect roles
+and selectors alongside the complete theme JSON inventory. These remain
+configuration specimens, not substitutes for native UI checks.
+
 - VS Code
   - `src/ports/vscode/templates/theme.json`
   - Maps VS Code UI keys, TextMate scopes, semantic token colors, and integrated terminal colors to template variables.

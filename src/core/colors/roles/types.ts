@@ -163,6 +163,29 @@ export interface AuraSyntaxPalette {
   variableSpecial: string
 }
 
+export interface AuraGradientFill {
+  angle: number
+  stops: Array<{ color: string; position: number }>
+}
+
+export interface AuraActionEnhancement {
+  normal: {
+    fill: AuraGradientFill
+    edge: string
+    shine: string
+    shadow: string
+  }
+  hover: { fill: AuraGradientFill; shadow: string }
+  focus: { glow: string }
+}
+
+export interface AuraBadgeEmphasis {
+  fill: AuraGradientFill
+  edge: string
+  glow: string
+  labelShadow: string
+}
+
 export interface AuraUiPalette {
   chrome: {
     background: string
@@ -210,6 +233,7 @@ export interface AuraUiPalette {
   badge: {
     background: string
     foreground: string
+    emphasis?: AuraBadgeEmphasis
   }
   action: {
     background: string
@@ -219,6 +243,7 @@ export interface AuraUiPalette {
     hoverBackground: string
     hoverForeground: string
     secondaryHoverBackground: string
+    enhancement?: AuraActionEnhancement
   }
   linkRole: {
     foreground: string
@@ -242,6 +267,7 @@ export interface AuraUiPalette {
   }
   status: {
     modified: string
+    modifiedUnfocused: string
     conflict: string
     info: string
     success: string

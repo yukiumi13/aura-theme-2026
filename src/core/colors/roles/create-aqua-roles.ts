@@ -7,6 +7,10 @@ import {
 } from './types'
 import { createAuraPalette } from './create-aura-roles'
 import { createAuraSyntax } from './create-aura-syntax'
+import {
+  createAquaActionEnhancement,
+  createAquaBadgeEmphasis,
+} from './create-aqua-effects'
 import { withAlpha } from './utils'
 import { auraDefaultFamily } from '../source/aura'
 import {
@@ -23,11 +27,13 @@ import {
 // Lime shares Aqua's interaction layout and syntax. Resolve its source inputs
 // before deriving roles, so nested surfaces and terminal colors stay coherent.
 interface AquaPaletteOptions {
+  enhancements?: boolean
   base?: AuraBasePalette
   family?: AuraVariantFamily
   semantic?: AuraSemanticPalette
   tabs?: string
   titleBorder?: string
+  activeBorder?: string
   activityAccent?: string
   activityHoverBackground?: string
   selection?: string
@@ -40,6 +46,7 @@ export function createAquaPalette(
   options: AquaPaletteOptions = {}
 ): AuraPalette {
   const isLight = appearance === 'light'
+  const enhanced = isLight && options.enhancements !== false
   const auraDark = isLight ? undefined : createAuraPalette(auraDefaultFamily)
   const colors = isLight ? auraAquaColors.light : auraAquaColors.dark
   const palette = createAuraPalette(
@@ -90,7 +97,11 @@ export function createAquaPalette(
       errorSurface,
       infoSurface,
       modified: auraDark?.ui.modified ?? ui.modified,
-      badge: { ...ui.badge, background: auraAquaColors.mint },
+      badge: {
+        ...ui.badge,
+        background: auraAquaColors.mint,
+        ...(enhanced ? { emphasis: createAquaBadgeEmphasis() } : {}),
+      },
       chrome: {
         ...ui.chrome,
         background: isLight ? base.appBackground : ui.chrome.background,
@@ -99,7 +110,11 @@ export function createAquaPalette(
           (isLight
             ? auraAquaColors.light.titleBorder
             : ui.chrome.titleBorder),
-        activeBorder: auraAquaColors.lime,
+        activeBorder:
+          options.activeBorder ??
+          (isLight
+            ? auraAquaColors.light.activeBorder
+            : auraAquaColors.lime),
         activeTabBackground: auraAquaColors.aqua,
         activeTabForeground: isLight
           ? auraAquaColors.onAquaLight
@@ -147,6 +162,9 @@ export function createAquaPalette(
       action: {
         ...ui.action,
         secondaryHoverBackground: base.surfaceHover,
+        ...(enhanced
+          ? { enhancement: createAquaActionEnhancement(ui.action) }
+          : {}),
       },
       remote: { ...ui.remote, compactHoverBackground: base.surfaceHover },
       linkRole: { ...ui.linkRole, hoverForeground: family.accentBright },
@@ -162,6 +180,10 @@ export function createAquaPalette(
       status: {
         ...ui.status,
         modified: auraDark?.ui.status.modified ?? ui.status.modified,
+        modifiedUnfocused: withAlpha(
+          auraDark?.ui.status.modified ?? ui.status.modified,
+          '7F'
+        ),
         info: semantic.status.info,
         infoSurface,
         conflict: semantic.status.orangeBright,

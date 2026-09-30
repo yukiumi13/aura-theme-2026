@@ -1,0 +1,56 @@
+/* Generated from resolved UI roles. Edit source/roles and the port renderer.
+   Optional installation-wide styles; only schemes with effect roles emit rules.
+   Tabs, typography, disabled and secondary buttons retain native treatment. */
+/* action.normal */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]) {
+  background-image: linear-gradient(105deg, #64EBAF 0%, #12DADD 46%, #12DADD 58%, #64EBAF 100%) !important;
+  border-color: #FFFFFF !important;
+  box-shadow: inset 0 1px 0 #FFFFFF70, 0 1px 3px #14384418;
+}
+
+/* action.hover */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):hover {
+  background-image: linear-gradient(105deg, #64EBAF 0%, #0FC9CE 26%, #0FC9CE 74%, #64EBAF 100%) !important;
+  box-shadow: inset 0 1px 0 #FFFFFF70, 0 2px 6px #14384426;
+}
+
+/* action.focus */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible {
+  outline: 1px solid var(--vscode-focusBorder, #4A80A7) !important;
+  outline-offset: 2px;
+  box-shadow: inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60;
+}
+
+/* badge.emphasis */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-action-bar .badge:not(.progress-badge):not(.icon-badge) > .badge-content:not(:empty) {
+  background-image: linear-gradient(180deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%) !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266;
+  text-shadow: 0 1px 1px #126C7259;
+}
+
+/* action.normal */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]) {
+  background-image: linear-gradient(105deg, #64EBAF 0%, #12DADD 46%, #12DADD 58%, #64EBAF 100%) !important;
+  border-color: #FFFFFF !important;
+  box-shadow: inset 0 1px 0 #FFFFFF70, 0 1px 3px #14384418;
+}
+
+/* action.hover */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):hover {
+  background-image: linear-gradient(105deg, #64EBAF 0%, #0FC9CE 26%, #0FC9CE 74%, #64EBAF 100%) !important;
+  box-shadow: inset 0 1px 0 #FFFFFF70, 0 2px 6px #14384426;
+}
+
+/* action.focus */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible {
+  outline: 1px solid var(--vscode-focusBorder, #4A80A7) !important;
+  outline-offset: 2px;
+  box-shadow: inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60;
+}
+
+/* badge.emphasis */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-action-bar .badge:not(.progress-badge):not(.icon-badge) > .badge-content:not(:empty) {
+  background-image: linear-gradient(180deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%) !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266;
+  text-shadow: 0 1px 1px #126C7259;
+}

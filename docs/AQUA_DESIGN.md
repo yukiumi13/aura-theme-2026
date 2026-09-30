@@ -1,5 +1,53 @@
 # Aura Aqua: design assessment and paired variants
 
+## 0.9.4 development update
+
+The accepted 0.9.3 appearance is now compiled from explicit effect roles.
+Claim-all buttons use `ui.action.enhancement` for normal, hover and focus states;
+the level-marker treatment uses `ui.badge.emphasis` for vertical cyan/green
+fill, white edge, soft glow and label shadow. Reference anchors live in source,
+opacity and fill relationships in roles, and native selectors/geometry in the
+VS Code port. Aqua Lime inherits these UI roles. The separate Lime pair and
+dark appearances retain their existing behavior.
+
+The numeric marker adapts regional screenshot samples `#50F5E2` and `#75F79E`,
+with the existing `#64EBAF` mint between them. These are sampled pixels rather
+than asserted original design tokens. The smaller native badge uses a bounded
+halo; it does not reproduce the rabbit artwork or enlarge the navigation.
+
+The generated review now includes the optional CSS and its plain-color
+fallback. Existing theme JSON values and the accepted default enhancement
+appearance are preserved. Sections below record earlier design stages.
+
+## 0.9.1 development update
+
+The user removed tabs from the enhancement scope after reviewing the first
+preview. Gradients and focus glow now apply only to primary buttons. Tab
+background and text/action color overrides have been removed completely;
+native theme styling and VS Code typography apply. The enhancement does not
+set font weight. The inspected desktop's Modern UI stylesheet supplies
+semibold tab and pane-title typography independently of Aura.
+
+## 0.9.0 development update
+
+The current direction replaces Aqua Light's continuous citrus edges with white
+button borders, mint selected accents and a neutral title divider. Aqua Lime
+Light shares this UI; its separately accepted syntax remains unchanged. Aqua
+Dark and the separate Lime pair retain their existing treatment.
+
+An optional, default-off desktop enhancement adds static mint/cyan gradients to
+primary buttons and a white-tinted gradient to the active editor tab. The
+claim-all reference informs buttons; the level-10 glow is adapted only as a
+small keyboard-focus glow. There are no animated effects or changes to reading
+surfaces. CSS uses the resolved theme's button, badge, foreground and focus
+variables; white layers and a bounded translucent glow provide the extra light.
+
+This requires the separate Custom CSS and JS Loader. The extension's setting
+controls preparation and reapplication, verifies the installed payload, and
+does not claim live rendering merely from a preference value. See the shipped
+README for setup and installation-wide limitations, and the
+[native design review](reviews/2026-09-29-aqua-gradients.md) for evidence.
+
 ## 0.7.0 update
 
 Aqua retains its original cold-white light surfaces, Aura Dark foundation,

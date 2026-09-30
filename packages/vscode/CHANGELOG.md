@@ -1,5 +1,16 @@
 # Aura Modern Changelog
 
+## 0.9.4 (September 29, 2026)
+
+- Add optional mint/cyan gradients to primary buttons in Aqua Light and Aqua Lime Light. Hover widens and deepens the cyan center; keyboard focus adds a soft mint glow.
+- Give numeric activity badges a vertical cyan-to-green fill, a fine white edge, and a small glow inspired by the reference's level marker.
+- Refine the two Aqua Light interfaces with white button borders, mint selection accents, and a neutral title separator. The nine themes retain their syntax and reading-surface colors.
+- Add **Aura: Apply Gradient Setting** and **Aura: Show Gradient Status**. The enhancement is off by default and requires Custom CSS and JS Loader on desktop VS Code. Tabs, secondary and disabled buttons, spinners, and icon badges keep their native treatment.
+- Compile the effects from shared colors and separate button/badge roles, with generated state and fallback reviews.
+- Document the Modern UI **Pill** tab setting for editor versions whose connected tabs show white labels on a pale surface.
+
+Requires VS Code 1.74 or newer. For gradient setup, reload instructions, and compatibility notes, see the README. Preview builds 0.9.0–0.9.3 were not published to the Marketplace; their final changes are included here.
+
 ## 0.8.0 (September 20, 2026)
 
 - Add Aura Aqua Lime Light, with brighter summer syntax and the same UI and terminal palette as Aqua Light.

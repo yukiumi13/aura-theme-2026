@@ -63,6 +63,7 @@ export function createAzurePalette(appearance: AuraAppearance): AuraPalette {
       status: {
         ...ui.status,
         modified: family.accent,
+        modifiedUnfocused: withAlpha(family.accent, '7F'),
         conflict: semantic.status.orangeBright,
         info: semantic.status.info,
         successSurface,

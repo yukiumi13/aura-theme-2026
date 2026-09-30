@@ -139,7 +139,7 @@ describe.each(
     )
   })
 
-  it('separates badges, family actions, navigation, citrus edges, and semantic status', () => {
+  it('separates badges, family actions, navigation, decorative edges, and semantic status', () => {
     expect(colors['badge.background']).toBe('#64EBAF')
     expect(colors['activityBarBadge.background']).toBe('#64EBAF')
     expect(colors['button.background']).toBe(isLime ? '#64EBAF' : '#12DADD')
@@ -201,7 +201,11 @@ describe.each(
       'panelTitle.activeBorder',
     ]) {
       expect(colors[key]).toBe(
-        isLime && key.toLowerCase().includes('button')
+        isLight && !isLime
+          ? key.toLowerCase().includes('button')
+            ? '#FFFFFF'
+            : '#64EBAF'
+          : isLime && key.toLowerCase().includes('button')
           ? '#F5DF72'
           : '#E4EF82'
       )

@@ -8,9 +8,9 @@ import {
 import { auraLightBase2026, auraLightSemantic2026 } from './light'
 import { AuraSemanticPalette, AuraVariantFamily } from '../roles/types'
 
-// Cyan navigation and actions, mint badges, and small citrus edge highlights.
-// The reference's claim-all control supplies the mint direction; citrus is
-// designed for editor chrome. No reference artwork is bundled.
+// Cyan navigation/actions and mint badges follow the summer reference.
+// Light controls use white inner edges and mint selection accents; the dark
+// appearance retains its accepted citrus detail. No reference art is bundled.
 export const auraAquaColors = {
   aqua: auraInteractionAqua,
   aquaHover: '#0FC9CE',
@@ -46,7 +46,9 @@ export const auraAquaColors = {
     tabs: '#EFF5F8',
     border: '#E1E9ED',
     borderStrong: '#BDCFD8',
-    titleBorder: '#DCEAB0',
+    titleBorder: '#E1E9ED',
+    actionBorder: '#FFFFFF',
+    activeBorder: '#64EBAF',
     foreground: '#4A5861',
     foregroundStrong: '#394952',
     foregroundMuted: '#6B7D86',
@@ -66,6 +68,18 @@ export const auraAquaColors = {
 
 const { light, dark } = auraAquaColors
 const syntax = auraAquaColors.syntax
+
+// Regional samples from the supplied September 28 level-marker screenshot.
+// White, mint and shadow inks retain the accepted 0.9.3 design. The shadow
+// inks are designed adaptations, not claims about the reference's source art.
+export const auraAquaEffectColors = {
+  markerCyan: '#50F5E2',
+  markerGreen: '#75F79E',
+  mint: auraAquaColors.mint,
+  white: auraAquaColors.light.actionBorder,
+  shadowInk: '#143844',
+  labelShadowInk: '#126C72',
+}
 
 // Type/constant and control-flow accents can differ from the UI family.
 export const auraAquaSyntaxAccents = {
@@ -107,7 +121,10 @@ const aquaAction = (foreground: string) => ({
 
 export const auraAquaLightSemantic: AuraSemanticPalette = {
   ...auraLightSemantic2026,
-  action: aquaAction(auraAquaColors.onAquaLight),
+  action: {
+    ...aquaAction(auraAquaColors.onAquaLight),
+    border: light.actionBorder,
+  },
   brand: {
     ...auraLightSemantic2026.brand,
     blue: syntax.light.blueMuted,

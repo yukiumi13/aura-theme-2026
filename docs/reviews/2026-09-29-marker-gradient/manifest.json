@@ -1,0 +1,53 @@
+{
+  "version": "0.9.3",
+  "themesEqualTo": "0.9.2",
+  "cssSha256": "613375e65ef7ba433af4ff04a83c7c9188faaeebb6e9fb1f5f8dbd04b0fd82fb",
+  "vsixSha256": "d0540a124e017b3243158579db56b5e1070164e0cac673b66d5465ee8606a878",
+  "themes": [
+    {
+      "name": "Aura Aqua Dark",
+      "file": "extension/themes/aura-aqua-dark-2026-color-theme.json",
+      "sha256": "dc12054d8a90e82dddd905a88447ee7548de97509dda392a9d0fc2a3bad1e350"
+    },
+    {
+      "name": "Aura Aqua Light",
+      "file": "extension/themes/aura-aqua-light-2026-color-theme.json",
+      "sha256": "d981653c801d12ba0f04db81598ff183392f9352ecb09c5b85129b34c87f7cc0"
+    },
+    {
+      "name": "Aura Aqua Lime Light",
+      "file": "extension/themes/aura-aqua-lime-light-color-theme.json",
+      "sha256": "36e73943d5b7ad7d48d2c31e53755a6fc0a2c10d376998edafcdd252523dbab1"
+    },
+    {
+      "name": "Aura Azure Dark",
+      "file": "extension/themes/aura-azure-2026-color-theme.json",
+      "sha256": "a69d3542e7399313eb10d5d7c2a61498f5c84b46f3f743db85fb8b04982a4365"
+    },
+    {
+      "name": "Aura Azure Light",
+      "file": "extension/themes/aura-azure-light-2026-color-theme.json",
+      "sha256": "36d2db39513ce2fe6e5896aaf50b32d58636755acb9716480498f470f350316a"
+    },
+    {
+      "name": "Aura Dark",
+      "file": "extension/themes/aura-dark-color-theme.json",
+      "sha256": "dfd876ea96649f16d5bbde1b7a4a773360b17a8a1c078cbd7516e14f82031254"
+    },
+    {
+      "name": "Aura Light",
+      "file": "extension/themes/aura-light-2026-color-theme.json",
+      "sha256": "f0ea865078c1b8106a9786cc4d8e4e268ed9e3d451c4bb2c8924ad0e7ef4ff4e"
+    },
+    {
+      "name": "Aura Lime Dark",
+      "file": "extension/themes/aura-lime-dark-color-theme.json",
+      "sha256": "9003665a7f40288a9ed784ebaa138fb7bed81d97f9cd49c4639cfc7c4d98234f"
+    },
+    {
+      "name": "Aura Lime Light",
+      "file": "extension/themes/aura-lime-light-color-theme.json",
+      "sha256": "0fb75dae89ec1304ccf0f92139b32ba4f4d8c4e2bec2b74dc8138dbd389e7c23"
+    }
+  ]
+}

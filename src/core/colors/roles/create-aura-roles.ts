@@ -1,4 +1,8 @@
-import { auraBase2026, auraSemantic2026 } from '../source/aura'
+import {
+  auraBase2026,
+  auraSemantic2026,
+  auraDarkDecorationColors,
+} from '../source/aura'
 import {
   auraLightBase2026,
   auraLightColors,
@@ -100,12 +104,16 @@ export function createAuraPalette(
         activeIndentGuide: isLight
           ? base.borderStrong
           : base.foregroundSubtle,
-        rangeHighlight: isLight ? withAlpha(accentSoft, '0D') : '#24222c88',
+        rangeHighlight: isLight
+          ? withAlpha(accentSoft, '0D')
+          : withAlpha(auraDarkDecorationColors.rangeHighlight, '88'),
         inlayHintForeground: isLight
           ? base.foregroundMuted
           : base.foreground,
       },
-      chartGrid: isLight ? withAlpha(base.borderStrong, '80') : '#3b334b80',
+      chartGrid: isLight
+        ? withAlpha(base.borderStrong, '80')
+        : withAlpha(auraDarkDecorationColors.chartGrid, '80'),
       onAccent,
       onError: isLight ? base.elevated : base.foregroundStrong,
       onDebug: isLight ? base.foregroundStrong : base.background,
@@ -157,6 +165,7 @@ export function createAuraPalette(
       },
       status: {
         modified: accentBright,
+        modifiedUnfocused: withAlpha(accentBright, '7F'),
         conflict: isLight ? status.orangeBright : accentBright,
         info: accent,
         success: status.success,
@@ -219,8 +228,12 @@ export function createAuraPalette(
       scrollbar: withAlpha(base.foregroundSubtle, '33'),
       scrollbarHover: withAlpha(base.foregroundSubtle, '66'),
       scrollbarActive: withAlpha(base.foregroundSubtle, '99'),
-      debugBackground: isLight ? auraLightColors.debug : '#A19C77',
-      breakpointBackground: isLight ? auraLightColors.breakpoint : '#353424',
+      debugBackground: isLight
+        ? auraLightColors.debug
+        : auraDarkDecorationColors.debug,
+      breakpointBackground: isLight
+        ? auraLightColors.breakpoint
+        : auraDarkDecorationColors.breakpoint,
     },
     ansi: {
       black: isLight ? base.foregroundStrong : base.appBackground,

@@ -29,6 +29,14 @@ export const auraInkBase2026: AuraBasePalette = {
   ...auraBase2026,
 }
 
+// Preserved dark decoration anchors, centralized from the legacy role resolver.
+export const auraDarkDecorationColors = {
+  rangeHighlight: '#24222c',
+  chartGrid: '#3b334b',
+  debug: '#A19C77',
+  breakpoint: '#353424',
+}
+
 // Shared brand anchor: appearance-specific ink colors must not replace it.
 export const auraMint = '#61FFCA'
 export const auraInteractionAqua = '#12DADD'

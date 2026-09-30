@@ -18,8 +18,11 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "vscode": "^1.47.0"
+    "vscode": "^1.74.0"
   },
+  "main": "./extension/extension.js",
+  "extensionKind": ["ui"],
+  "activationEvents": ["onStartupFinished"],
   "categories": [
     "Themes"
   ],
@@ -34,6 +37,27 @@
     "color-theme"
   ],
   "contributes": {
+    "configuration": {
+      "title": "Aura Modern",
+      "properties": {
+        "aura.experimental.gradients": {
+          "type": "boolean",
+          "default": false,
+          "scope": "machine",
+          "markdownDescription": "Enable experimental mint/cyan gradients on primary buttons and cyan-to-green numeric activity badges in Aqua Light and Aqua Lime Light. Tabs and font weights are unchanged. Requires **Custom CSS and JS Loader** (be5invis.vscode-custom-css), which modifies your local VS Code installation. Use **Aura: Apply Gradient Setting** and reload after changing this setting. Updates to VS Code can require reapplying. Desktop only; styles affect matching themes in all windows of this installation."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "aura.gradients.apply",
+        "title": "Aura: Apply Gradient Setting"
+      },
+      {
+        "command": "aura.gradients.status",
+        "title": "Aura: Show Gradient Status"
+      }
+    ],
     "themes": [
       {{{ variantThemes }}}
     ]

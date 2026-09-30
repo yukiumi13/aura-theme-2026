@@ -1,0 +1,49 @@
+{
+  "version": "0.9.4",
+  "baseline": "0.9.3",
+  "themePayloadsEqual": 9,
+  "effects": [
+    {
+      "theme": "Aura Aqua Light",
+      "state": "action.normal",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Light",
+      "state": "action.hover",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Light",
+      "state": "action.focus",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Light",
+      "state": "badge.emphasis",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Lime Light",
+      "state": "action.normal",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Lime Light",
+      "state": "action.hover",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Lime Light",
+      "state": "action.focus",
+      "defaultResolvedDeclarations": "equal"
+    },
+    {
+      "theme": "Aura Aqua Lime Light",
+      "state": "badge.emphasis",
+      "defaultResolvedDeclarations": "equal"
+    }
+  ],
+  "cssSha256": "4fe78060885318895501d49170c02b275562f5210d7ee92161c6cd41169594f2",
+  "vsixSha256": "2c13e1e8ae8321ee5f9ca904b31ef3ce851965af077f3dc349e930ea2ac26279"
+}

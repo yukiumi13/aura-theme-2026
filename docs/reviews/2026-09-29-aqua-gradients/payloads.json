@@ -1,0 +1,171 @@
+{
+  "baseline": "b6c8ed285545d752953d0ba8edf725db2363109b",
+  "version": "0.9.0",
+  "themes": [
+    {
+      "name": "Aura Dark",
+      "sha256": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767",
+      "baselineSha256": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Light",
+      "sha256": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320",
+      "baselineSha256": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Aqua Light",
+      "sha256": "d382c62eb0feca44eda905ba4209771cdc14e0a90a06679ed2ab199b573863d1",
+      "baselineSha256": "db9ae16c8b2be9ef0233b792f9fc31cdc85ff32a63835de65010caabb1329cc5",
+      "byteIdentical": false,
+      "changedColors": [
+        {
+          "key": "button.border",
+          "before": "#E4EF82",
+          "after": "#FFFFFF"
+        },
+        {
+          "key": "button.secondaryBorder",
+          "before": "#E4EF82",
+          "after": "#FFFFFF"
+        },
+        {
+          "key": "activityBar.activeBorder",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "activityBarTop.activeBorder",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "titleBar.border",
+          "before": "#DCEAB0",
+          "after": "#E1E9ED"
+        },
+        {
+          "key": "panelTitle.activeBorder",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "tab.activeBorderTop",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "tab.selectedBorderTop",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "extensionButton.border",
+          "before": "#E4EF82",
+          "after": "#FFFFFF"
+        }
+      ],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Aqua Dark",
+      "sha256": "184e4b30ae447381e752f5c116102dea8d8bbb0252c25887c7bdebd63e34d0f1",
+      "baselineSha256": "184e4b30ae447381e752f5c116102dea8d8bbb0252c25887c7bdebd63e34d0f1",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Aqua Lime Light",
+      "sha256": "8f0966383e051f563ef1522cfc5c6c9c9b20dc75922c65c6be54d0285152be2d",
+      "baselineSha256": "38e998c730f9a1fbe8841da1a837242a2d66a6a53daca4174df4779607beb35a",
+      "byteIdentical": false,
+      "changedColors": [
+        {
+          "key": "button.border",
+          "before": "#E4EF82",
+          "after": "#FFFFFF"
+        },
+        {
+          "key": "button.secondaryBorder",
+          "before": "#E4EF82",
+          "after": "#FFFFFF"
+        },
+        {
+          "key": "activityBar.activeBorder",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "activityBarTop.activeBorder",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "titleBar.border",
+          "before": "#DCEAB0",
+          "after": "#E1E9ED"
+        },
+        {
+          "key": "panelTitle.activeBorder",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "tab.activeBorderTop",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "tab.selectedBorderTop",
+          "before": "#E4EF82",
+          "after": "#64EBAF"
+        },
+        {
+          "key": "extensionButton.border",
+          "before": "#E4EF82",
+          "after": "#FFFFFF"
+        }
+      ],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Lime Light",
+      "sha256": "b0c8f9536de3c0968794fc1950be00d9f6912b2e0c2befe706096daf1f5a47c3",
+      "baselineSha256": "b0c8f9536de3c0968794fc1950be00d9f6912b2e0c2befe706096daf1f5a47c3",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Lime Dark",
+      "sha256": "c4881bcabad5726763feb43b11774e20178882d8464d9048cd9834945e8bef9a",
+      "baselineSha256": "c4881bcabad5726763feb43b11774e20178882d8464d9048cd9834945e8bef9a",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Azure Light",
+      "sha256": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f",
+      "baselineSha256": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    },
+    {
+      "name": "Aura Azure Dark",
+      "sha256": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b",
+      "baselineSha256": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b",
+      "byteIdentical": true,
+      "changedColors": [],
+      "syntaxIdentical": true
+    }
+  ],
+  "vsixSha256": "97d9d9027778af3cfbda568fcfd74ce5ab229eb55237ab3ff3d4a07c803c352e"
+}

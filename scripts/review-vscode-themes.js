@@ -1,7 +1,8 @@
-/* Generate a review aid from shipped JSON, never from source palette aliases. */
+/* Generate a review aid from shipped theme and effect artifacts. */
 const fs = require('fs')
 const path = require('path')
 const crypto = require('crypto')
+const { reviewEnhancements } = require('./review-vscode-effects')
 
 const root = path.resolve(__dirname, '..')
 const packageDir = path.join(root, 'packages/vscode')
@@ -184,6 +185,8 @@ const pairs = [
 ]
 
 const inventory = { version: manifest.version, themes: [] }
+const enhancementReview = reviewEnhancements(packageDir, manifest, escape)
+inventory.effects = enhancementReview.inventory
 let totalUi = 0,
   totalTextMate = 0,
   totalSemantic = 0
@@ -322,7 +325,9 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta n
   manifest.contributes.themes.length
 } themes · ${totalUi} UI entries · ${totalTextMate} TextMate rules · ${totalSemantic} semantic tokens. Every entry appears below. State specimens composite alpha against the named parent; generic chips use a checkerboard. Runtime grammar precedence, omitted tokens, and user overrides require separate inspection.</p><nav>${manifest.contributes.themes
   .map((entry, i) => `<a href="#theme-${i}">${escape(entry.label)}</a>`)
-  .join('')}</nav>${sections}</body></html>`
+  .join('')}<a href="#enhancements">Optional effects</a></nav>${sections}${
+  enhancementReview.html
+}</body></html>`
 fs.mkdirSync(outputDir, { recursive: true })
 fs.writeFileSync(path.join(outputDir, 'resolved-themes.html'), html)
 fs.writeFileSync(
