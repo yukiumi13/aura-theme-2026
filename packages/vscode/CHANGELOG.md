@@ -1,5 +1,11 @@
 # Aura Modern Changelog
 
+## 0.9.7 (September 30, 2026)
+
+- Organize the optional Aqua effects guide around features, dependencies, setup, updates and removal. Explain which effects share the Gradients setting and how to set up another computer.
+- Clarify that all nine themes work independently; Custom CSS and JS Loader is a separately installed, optional requirement for enhanced buttons, numeric badges and focus rings.
+- Synchronize the GitHub overview with the current effects and Modern UI tab behavior. Theme palettes, effect styles and extension behavior are unchanged from 0.9.6.
+
 ## 0.9.6 (September 30, 2026)
 
 - Add a shared cyan-to-mint focus treatment to inputs, primary buttons, toolbar icons and notification cards in the two Aqua Light themes. Vary glow density by control size and let notification cards relinquish their ring when a child control receives focus.

@@ -2,7 +2,7 @@
   "name": "aura-theme-2026",
   "displayName": "Aura Modern",
   "description": "Dark and light themes: Aura, Aqua, Lime, and Azure, plus Aqua Lime Light with brighter summer syntax. An independent fork of Aura by Dalton Menezes.",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "scripts": {
     "publish": "vsce publish"
   },

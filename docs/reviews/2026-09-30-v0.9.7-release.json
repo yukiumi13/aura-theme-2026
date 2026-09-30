@@ -1,0 +1,21 @@
+{
+  "version": "0.9.7",
+  "themeFilesAndStylesAndRuntimeIdenticalTo": "0.9.6",
+  "dependencyPolicy": "optional; loader installed separately",
+  "changedFiles": [
+    "extension.vsixmanifest",
+    "extension/changelog.md",
+    "extension/package.json",
+    "extension/readme.md",
+    "extension/extension/aqua-effects.json"
+  ],
+  "inventoryChanges": [
+    {
+      "path": ".version",
+      "from": "0.9.6",
+      "to": "0.9.7"
+    }
+  ],
+  "zipCrcPassed": true,
+  "archiveSha256": "633ed7e0745bd431b631ef220566c9b1b0ee4c645e86747c45159318340ea31f"
+}

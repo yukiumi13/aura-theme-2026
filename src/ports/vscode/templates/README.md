@@ -12,6 +12,8 @@ Install [Aura Modern from the Marketplace](https://marketplace.visualstudio.com/
 
 To switch with your system appearance, enable **Window: Auto Detect Color Scheme** in Settings and choose your preferred light and dark themes.
 
+All nine themes work without additional extensions. For mint/cyan button gradients, glowing numeric badges and shared focus rings in the two Aqua Light themes, see [Optional Aqua effects](#optional-aqua-effects-desktop).
+
 ## Previews
 
 Real VS Code screenshots of a fictional sample project. Aqua and Lime show the experimental Modern UI; Aura and Azure show the traditional interface.
@@ -90,24 +92,51 @@ The default applies to every theme while Aura Modern is enabled, because VS Code
 }
 ```
 
-## Experimental Aqua gradients (desktop)
+## Optional Aqua effects (desktop)
 
-Aqua Light and Aqua Lime Light can optionally use mint/cyan gradients on primary buttons. Hover expands the cyan center for a clear response. Numeric activity badges use a vertical cyan-to-green gradient with a fine white edge and soft glow.
+**Aura Aqua Light** and **Aura Aqua Lime Light** offer optional mint/cyan accents for everyday controls:
 
-Focus uses the same cyan-to-mint edge across text inputs, primary buttons, toolbar icons and notification cards. Small icons have a tighter glow; large cards use a lighter one. Buttons and icons use the browser's visible-focus behavior, typically during keyboard navigation. When a notification card has focus, it shows the outline; when focus enters one of its buttons, the button takes over. Text, severity icons and validation colors keep their native treatment.
+- **Buttons:** mint/cyan fills with a wider cyan center on hover.
+- **Numeric activity badges:** cyan-to-green gradients, a fine white edge and a soft glow.
+- **Focus:** a shared cyan/mint/green ring on text inputs, primary buttons, toolbar icons and notification cards. Small icons use a compact glow; cards use a lighter one. The card yields its outline when focus moves to an internal button.
 
-The default-off enhancement is static: no animation, no changes to tabs, font weights or code colors, and no gradients on secondary or disabled buttons, spinners, or icon badges. With it off, the themes retain their native focus indicators, white button borders and mint accents.
+The effects are static and off by default. Buttons and icons show focus when VS Code requests a visible focus indicator, typically during keyboard navigation. Validation, severity, disabled controls and secondary buttons keep their native treatment. Editor colors, typography and tabs use the normal theme.
 
-1. Install and enable [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) on the computer running the VS Code desktop window. Aura does not install it automatically.
-2. In User Settings, enable **Aura › Experimental: Gradients** (`aura.experimental.gradients`). Choose **Apply setting**, or run **Aura: Apply Gradient Setting**.
-3. Review the first-use notice and apply. The loader needs permission to modify the VS Code installation and can cause an installation-integrity warning. Use its reload prompt afterward.
-4. After setup, switching the setting on or off reapplies the loader configuration. Reload all windows to see the result. Other CSS/JS imports are retained and reapplied by the loader. Changing those imports or the installation asks for confirmation again.
+### Requirements
 
-**Aura: Show Gradient Status** checks the installed stylesheet against this extension's current version. It distinguishes missing setup, pending application and installed styles; it cannot verify whether every open window has reloaded. After a VS Code or Aura update, run **Apply Gradient Setting** again if needed. Disable the setting, apply it and reload **before uninstalling Aura or the loader**.
+| Feature | Additional extension |
+| --- | --- |
+| All nine color themes, syntax, terminal colors and Modern UI tab colors | None |
+| Optional Aqua button, numeric-badge and focus effects | [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) (`be5invis.vscode-custom-css`) |
 
-This is an experimental customization, not a supported VS Code theme API. It uses internal CSS selectors and may need adjustment after editor updates. Styles are scoped to the two Aqua Light themes, but injection is installation-wide: all matching windows and profiles are affected. Manage it from one local profile; separate profiles do not have independent visual on/off states. The setting is machine-specific and is not synced. In Remote SSH sessions the integration runs locally; it does not patch the remote server. Web VS Code is unsupported. Workspace-level loader imports must be moved to User Settings before applying.
+The loader is an **optional dependency**, installed separately. Aura neither bundles nor automatically installs it. Install and enable it on the computer running desktop VS Code, including when working over Remote SSH. Modern UI is a separate VS Code setting, not an extension dependency.
 
-Enhanced fills, focus edges and shadows use the theme's compiled effect palette. Ordinary color customizations do not recolor those effects; native text and icon foregrounds still apply. Turn the enhancement off and apply the setting to use ordinary VS Code button, badge and focus colors throughout.
+The loader changes the local VS Code installation and needs write permission to it. This can trigger VS Code's installation-integrity warning; Aura does not suppress that warning. The enhancement is experimental and can require maintenance after editor updates.
+
+### Enable
+
+1. Install and enable **Custom CSS and JS Loader** locally, then select **Aura Aqua Light** or **Aura Aqua Lime Light**.
+2. In User Settings, enable **Aura › Experimental: Gradients** (`aura.experimental.gradients`). This one setting controls buttons, numeric badges and focus effects together.
+3. Run **Aura: Apply Gradient Setting**, review the first-use notice, and choose **Apply**.
+4. Follow the loader's reload prompt. Reload other open VS Code windows using either Aqua Light theme as well.
+
+After initial setup, changing the switch can apply automatically when the installation and other loader imports are unchanged. The reload is still required. Aura preserves other CSS/JS imports; applying the loader reapplies those imports too.
+
+### Update or use another computer
+
+After updating Aura or VS Code, run **Aura: Apply Gradient Setting** and reload to apply the current effects. **Aura: Show Gradient Status** reports missing setup, pending application or an installed stylesheet. It checks the installed payload, not whether every window has reloaded.
+
+Setup is required on **each computer**: install the loader, enable the setting, apply and reload. The switch is machine-specific and does not sync. In Remote SSH sessions, Aura applies the effects to the local desktop window; the remote server needs no CSS patch.
+
+### Turn off or uninstall
+
+Disable **Aura › Experimental: Gradients**, run **Aura: Apply Gradient Setting**, and reload all affected windows. Do this **before uninstalling Aura or the loader**. Turning the setting off without applying and reloading can leave the installed effects visible. The themes then use their native focus, button and badge colors.
+
+### Compatibility
+
+Effects use internal desktop CSS and are unavailable in web VS Code. They affect matching Aqua Light windows across the whole VS Code installation, including other profiles; manage them from one local profile. Workspace-level loader imports must be moved to User Settings before applying.
+
+Enhanced fills, focus edges and shadows use Aura's effect palette. Ordinary color customizations do not recolor those effects; native text and icon foregrounds still apply. The Modern UI Pill tab default works independently of the loader.
 
 ## Feedback
 
