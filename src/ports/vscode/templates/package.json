@@ -37,6 +37,9 @@
     "color-theme"
   ],
   "contributes": {
+    "configurationDefaults": {
+      "workbench.experimental.modernUIEditorTabStyle": "pill"
+    },
     "configuration": {
       "title": "Aura Modern",
       "properties": {

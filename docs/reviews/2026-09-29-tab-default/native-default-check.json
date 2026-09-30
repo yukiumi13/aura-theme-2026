@@ -1,0 +1,21 @@
+{
+  "vscode": "1.139.1",
+  "initial": {
+    "effective": "pill",
+    "defaultValue": "pill",
+    "globalValue": null,
+    "workspaceValue": null
+  },
+  "explicitChoice": {
+    "effective": "connected",
+    "defaultValue": "pill",
+    "globalValue": "connected",
+    "workspaceValue": null
+  },
+  "afterReset": {
+    "effective": "pill",
+    "defaultValue": "pill",
+    "globalValue": null,
+    "workspaceValue": null
+  }
+}

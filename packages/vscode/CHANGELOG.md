@@ -1,5 +1,11 @@
 # Aura Modern Changelog
 
+## 0.9.5 (September 29, 2026)
+
+- Default Modern UI tabs to **Pill**, so fresh installations retain theme-colored active tabs without a separate setup step or CSS loader.
+- Respect explicit tab-style preferences. This editor-wide default applies while Aura Modern is enabled and does not change settings files or enable Modern UI.
+- Keep all nine theme palettes and the optional button/badge effects unchanged.
+
 ## 0.9.4 (September 29, 2026)
 
 - Add optional mint/cyan gradients to primary buttons in Aqua Light and Aqua Lime Light. Hover widens and deepens the cyan center; keyboard focus adds a soft mint glow.

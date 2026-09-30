@@ -80,7 +80,9 @@ On supported VS Code versions, enable **Workbench › Experimental: Modern UI**:
 
 Aqua and Lime Light use white icons on the selected cyan or mint activity tile, and dark icons on a pale tile when hovering over an unselected item. Their dark appearances use bright icons on subdued surfaces. The traditional interface is also supported; this experimental setting changes parts of VS Code's layout and styling too.
 
-If a recent VS Code version shows a white active-tab label on a pale background, choose **Workbench › Experimental: Modern UI Editor Tab Style → Pill**. The connected-tab style in VS Code 1.139.1 replaces the theme's active fill with the editor surface. Pill tabs retain Aqua's cyan fill and white text:
+Aura Modern defaults **Workbench › Experimental: Modern UI Editor Tab Style** to **Pill**. This lets Modern UI display each theme's active-tab fill, including Aqua's cyan background and white text. Modern UI itself remains controlled by your existing setting; the tab default does not require the gradient enhancement or a CSS loader.
+
+The default applies to every theme while Aura Modern is enabled, because VS Code exposes tab style as an editor setting. It does not write to your settings file. Your explicit User, Remote or Workspace choice takes precedence, and disabling or uninstalling Aura removes its default contribution. If an existing `connected` override leaves white text on a pale tab, reset that setting or select **Pill**:
 
 ```json
 {
