@@ -47,7 +47,7 @@
           "type": "boolean",
           "default": false,
           "scope": "machine",
-          "markdownDescription": "Enable experimental mint/cyan gradients on primary buttons and cyan-to-green numeric activity badges in Aqua Light and Aqua Lime Light. Tabs and font weights are unchanged. Requires **Custom CSS and JS Loader** (be5invis.vscode-custom-css), which modifies your local VS Code installation. Use **Aura: Apply Gradient Setting** and reload after changing this setting. Updates to VS Code can require reapplying. Desktop only; styles affect matching themes in all windows of this installation."
+          "markdownDescription": "Enable experimental mint/cyan button gradients, cyan-to-green numeric activity badges, and shared focus rings on inputs, primary buttons, toolbar icons and notification cards in Aqua Light and Aqua Lime Light. Requires **Custom CSS and JS Loader** (be5invis.vscode-custom-css), which modifies your local VS Code installation. Use **Aura: Apply Gradient Setting** and reload after changing this setting or updating Aura. Updates to VS Code can require reapplying. Desktop only; styles affect matching themes in all windows of this installation."
         }
       }
     },

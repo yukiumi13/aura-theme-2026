@@ -10,6 +10,7 @@ import { createAuraSyntax } from './create-aura-syntax'
 import {
   createAquaActionEnhancement,
   createAquaBadgeEmphasis,
+  createAquaFocusEmphasis,
 } from './create-aqua-effects'
 import { withAlpha } from './utils'
 import { auraDefaultFamily } from '../source/aura'
@@ -87,6 +88,7 @@ export function createAquaPalette(
       ...ui,
       accent: auraAquaColors.aqua,
       focusBorder: options.focusBorder ?? ui.focusBorder,
+      ...(enhanced ? { focusEmphasis: createAquaFocusEmphasis() } : {}),
       interactionForeground: base.foreground,
       onError: isLight ? base.elevated : base.background,
       listSelectionFocus: listFocus,

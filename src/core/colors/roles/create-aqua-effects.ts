@@ -2,6 +2,7 @@ import { auraAquaEffectColors } from '../source/aqua'
 import {
   AuraActionEnhancement,
   AuraBadgeEmphasis,
+  AuraFocusEmphasis,
   AuraUiPalette,
 } from './types'
 import { withAlpha } from './utils'
@@ -31,7 +32,29 @@ export function createAquaActionEnhancement(
       fill: fill(action.hoverBackground, 26, 74),
       shadow: withAlpha(colors.shadowInk, '26'),
     },
-    focus: { glow: withAlpha(colors.mint, '60') },
+  }
+}
+
+// One focus language; receiving surfaces use different glow densities.
+// Badge attention and action fills remain independent semantic roles.
+export function createAquaFocusEmphasis(
+  colors = auraAquaEffectColors
+): AuraFocusEmphasis {
+  return {
+    ring: {
+      angle: 135,
+      stops: [
+        { color: colors.markerCyan, position: 0 },
+        { color: colors.mint, position: 52 },
+        { color: colors.markerGreen, position: 100 },
+      ],
+    },
+    glow: {
+      control: withAlpha(colors.markerCyan, '66'),
+      compact: withAlpha(colors.mint, '45'),
+      surface: withAlpha(colors.markerCyan, '45'),
+    },
+    innerEdge: withAlpha(colors.white, 'ED'),
   }
 }
 

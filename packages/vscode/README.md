@@ -92,7 +92,11 @@ The default applies to every theme while Aura Modern is enabled, because VS Code
 
 ## Experimental Aqua gradients (desktop)
 
-Aqua Light and Aqua Lime Light can optionally use mint/cyan gradients on primary buttons and a small button-focus glow. Hover expands the cyan center and uses the theme's hover cyan for a clear response. Numeric activity badges use a vertical cyan-to-green gradient with a fine white edge and soft mint glow. The default-off enhancement is static: no animation, no changes to tabs, font weights or code colors, and no gradients on secondary or disabled buttons, spinners, or icon badges. With it off, the themes retain white button borders and mint accents.
+Aqua Light and Aqua Lime Light can optionally use mint/cyan gradients on primary buttons. Hover expands the cyan center for a clear response. Numeric activity badges use a vertical cyan-to-green gradient with a fine white edge and soft glow.
+
+Focus uses the same cyan-to-mint edge across text inputs, primary buttons, toolbar icons and notification cards. Small icons have a tighter glow; large cards use a lighter one. Buttons and icons use the browser's visible-focus behavior, typically during keyboard navigation. When a notification card has focus, it shows the outline; when focus enters one of its buttons, the button takes over. Text, severity icons and validation colors keep their native treatment.
+
+The default-off enhancement is static: no animation, no changes to tabs, font weights or code colors, and no gradients on secondary or disabled buttons, spinners, or icon badges. With it off, the themes retain their native focus indicators, white button borders and mint accents.
 
 1. Install and enable [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) on the computer running the VS Code desktop window. Aura does not install it automatically.
 2. In User Settings, enable **Aura › Experimental: Gradients** (`aura.experimental.gradients`). Choose **Apply setting**, or run **Aura: Apply Gradient Setting**.
@@ -103,7 +107,7 @@ Aqua Light and Aqua Lime Light can optionally use mint/cyan gradients on primary
 
 This is an experimental customization, not a supported VS Code theme API. It uses internal CSS selectors and may need adjustment after editor updates. Styles are scoped to the two Aqua Light themes, but injection is installation-wide: all matching windows and profiles are affected. Manage it from one local profile; separate profiles do not have independent visual on/off states. The setting is machine-specific and is not synced. In Remote SSH sessions the integration runs locally; it does not patch the remote server. Web VS Code is unsupported. Workspace-level loader imports must be moved to User Settings before applying.
 
-Enhanced fills, edges and shadows use the theme's compiled effect palette. Ordinary color customizations do not recolor those effects; the native foreground and focus indicator still apply. Turn the enhancement off and apply the setting to use ordinary VS Code button and badge colors throughout.
+Enhanced fills, focus edges and shadows use the theme's compiled effect palette. Ordinary color customizations do not recolor those effects; native text and icon foregrounds still apply. Turn the enhancement off and apply the setting to use ordinary VS Code button, badge and focus colors throughout.
 
 ## Feedback
 

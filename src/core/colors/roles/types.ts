@@ -176,7 +176,12 @@ export interface AuraActionEnhancement {
     shadow: string
   }
   hover: { fill: AuraGradientFill; shadow: string }
-  focus: { glow: string }
+}
+
+export interface AuraFocusEmphasis {
+  ring: AuraGradientFill
+  glow: { control: string; compact: string; surface: string }
+  innerEdge: string
 }
 
 export interface AuraBadgeEmphasis {
@@ -304,6 +309,7 @@ export interface AuraUiPalette {
     foreground: string
   }
   focusBorder: string
+  focusEmphasis?: AuraFocusEmphasis
   selection: string
   selectionSoft: string
   selectionStrong: string

@@ -1,6 +1,6 @@
 /* Generated from resolved UI roles. Edit source/roles and the port renderer.
    Optional installation-wide styles; only schemes with effect roles emit rules.
-   Tabs, typography, disabled and secondary buttons retain native treatment. */
+   Tabs, typography, validation, disabled and secondary buttons retain native treatment. */
 /* action.normal */
 .monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]) {
   background-image: linear-gradient(105deg, #64EBAF 0%, #12DADD 46%, #12DADD 58%, #64EBAF 100%) !important;
@@ -14,11 +14,116 @@
   box-shadow: inset 0 1px 0 #FFFFFF70, 0 2px 6px #14384426;
 }
 
-/* action.focus */
-.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible {
-  outline: 1px solid var(--vscode-focusBorder, #4A80A7) !important;
-  outline-offset: 2px;
-  box-shadow: inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60;
+/* focus.surface */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) {
+  position: relative;
+  box-shadow: 0 0 7px #50F5E245;
+}
+
+/* focus.surface.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.surface.row */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list-row.focused {
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED;
+}
+
+/* focus.surface.list */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:focus {
+  outline-color: transparent !important;
+}
+
+/* focus.surface.listBoundary */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:not(.element-focused):focus::before {
+  outline-color: transparent !important;
+}
+
+/* focus.input */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid="true"])):has(> .ibwrapper > .input:focus) {
+  position: relative;
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266 !important;
+}
+
+/* focus.input.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid="true"])):has(> .ibwrapper > .input:focus)::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.action */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible {
+  position: relative;
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266 !important;
+}
+
+/* focus.action.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.icon */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled="true"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled="true"]):focus-visible {
+  position: relative;
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 3px #64EBAF45 !important;
+}
+
+/* focus.icon.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled="true"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled="true"]):focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.input.text */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid="true"])):has(> .ibwrapper > .input:focus) > .ibwrapper > .input:focus {
+  outline-color: transparent !important;
 }
 
 /* badge.emphasis */
@@ -41,11 +146,116 @@
   box-shadow: inset 0 1px 0 #FFFFFF70, 0 2px 6px #14384426;
 }
 
-/* action.focus */
-.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible {
-  outline: 1px solid var(--vscode-focusBorder, #4A80A7) !important;
-  outline-offset: 2px;
-  box-shadow: inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60;
+/* focus.surface */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) {
+  position: relative;
+  box-shadow: 0 0 7px #50F5E245;
+}
+
+/* focus.surface.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.surface.row */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list-row.focused {
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED;
+}
+
+/* focus.surface.list */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:focus {
+  outline-color: transparent !important;
+}
+
+/* focus.surface.listBoundary */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:not(.element-focused):focus::before {
+  outline-color: transparent !important;
+}
+
+/* focus.input */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid="true"])):has(> .ibwrapper > .input:focus) {
+  position: relative;
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266 !important;
+}
+
+/* focus.input.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid="true"])):has(> .ibwrapper > .input:focus)::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.action */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible {
+  position: relative;
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266 !important;
+}
+
+/* focus.action.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled="true"]):focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.icon */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled="true"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled="true"]):focus-visible {
+  position: relative;
+  outline: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px #FFFFFFED, 0 0 3px #64EBAF45 !important;
+}
+
+/* focus.icon.ring */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled="true"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled="true"]):focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* focus.input.text */
+.monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid="true"])):has(> .ibwrapper > .input:focus) > .ibwrapper > .input:focus {
+  outline-color: transparent !important;
 }
 
 /* badge.emphasis */

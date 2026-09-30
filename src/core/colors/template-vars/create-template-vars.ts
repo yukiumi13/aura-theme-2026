@@ -236,6 +236,9 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
       ? { uiActionEnhancement: JSON.stringify(ui.action.enhancement) }
       : {}),
     uiFocusBorder: ui.focusBorder,
+    ...(ui.focusEmphasis
+      ? { uiFocusEmphasis: JSON.stringify(ui.focusEmphasis) }
+      : {}),
     uiActionBackground: ui.action.background,
     uiActionProminentBackground: ui.action.prominentBackground,
     uiActionBorder: ui.action.border,

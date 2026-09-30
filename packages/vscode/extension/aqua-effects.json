@@ -1,7 +1,7 @@
 {
-  "version": "0.9.5",
+  "version": "0.9.6",
   "stylesheet": "./extension/aqua-gradients.css",
-  "sha256": "ba21eee97916c4565eeeb48be9e8e9b04f67861c36a3fe18a5ebaafef3f2de13",
+  "sha256": "5662bcd04ec2983c7bc1d1f3fe962db54acdb8c5b2fa0c688b256583fb6004fd",
   "themes": [
     {
       "id": "Aura 2026 Dark",
@@ -10,6 +10,7 @@
       "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-dark-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {
@@ -32,6 +33,7 @@
       "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-light-2026-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {
@@ -102,9 +104,6 @@
             ]
           },
           "shadow": "#14384426"
-        },
-        "focus": {
-          "glow": "#64EBAF60"
         }
       },
       "badge": {
@@ -128,6 +127,31 @@
         "edge": "#FFFFFFED",
         "glow": "#50F5E266",
         "labelShadow": "#126C7259"
+      },
+      "focus": {
+        "ring": {
+          "angle": 135,
+          "stops": [
+            {
+              "color": "#50F5E2",
+              "position": 0
+            },
+            {
+              "color": "#64EBAF",
+              "position": 52
+            },
+            {
+              "color": "#75F79E",
+              "position": 100
+            }
+          ]
+        },
+        "glow": {
+          "control": "#50F5E266",
+          "compact": "#64EBAF45",
+          "surface": "#50F5E245"
+        },
+        "innerEdge": "#FFFFFFED"
       },
       "rules": [
         {
@@ -166,21 +190,340 @@
           ]
         },
         {
-          "state": "action.focus",
-          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible",
+          "state": "focus.surface",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus)",
           "declarations": [
             {
-              "property": "outline",
-              "value": "1px solid var(--vscode-focusBorder, #4A80A7)",
-              "important": true
-            },
-            {
-              "property": "outline-offset",
-              "value": "2px"
+              "property": "position",
+              "value": "relative"
             },
             {
               "property": "box-shadow",
-              "value": "inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60"
+              "value": "0 0 7px #50F5E245"
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus)::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "0"
+            },
+            {
+              "property": "padding",
+              "value": "2px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.row",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list-row.focused",
+          "declarations": [
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED"
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.list",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:focus",
+          "declarations": [
+            {
+              "property": "outline-color",
+              "value": "transparent",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.listBoundary",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:not(.element-focused):focus::before",
+          "declarations": [
+            {
+              "property": "outline-color",
+              "value": "transparent",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.input",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid=\"true\"])):has(> .ibwrapper > .input:focus)",
+          "declarations": [
+            {
+              "property": "position",
+              "value": "relative"
+            },
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.input.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid=\"true\"])):has(> .ibwrapper > .input:focus)::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "-1px"
+            },
+            {
+              "property": "padding",
+              "value": "2px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.action",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible",
+          "declarations": [
+            {
+              "property": "position",
+              "value": "relative"
+            },
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.action.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "0"
+            },
+            {
+              "property": "padding",
+              "value": "2px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.icon",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled=\"true\"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled=\"true\"]):focus-visible",
+          "declarations": [
+            {
+              "property": "position",
+              "value": "relative"
+            },
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 3px #64EBAF45",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.icon.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled=\"true\"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled=\"true\"]):focus-visible::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "0"
+            },
+            {
+              "property": "padding",
+              "value": "1.5px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.input.text",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-light-2026-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid=\"true\"])):has(> .ibwrapper > .input:focus) > .ibwrapper > .input:focus",
+          "declarations": [
+            {
+              "property": "outline-color",
+              "value": "transparent",
+              "important": true
             }
           ]
         },
@@ -225,6 +568,7 @@
       "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-aqua-dark-2026-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {
@@ -295,9 +639,6 @@
             ]
           },
           "shadow": "#14384426"
-        },
-        "focus": {
-          "glow": "#64EBAF60"
         }
       },
       "badge": {
@@ -321,6 +662,31 @@
         "edge": "#FFFFFFED",
         "glow": "#50F5E266",
         "labelShadow": "#126C7259"
+      },
+      "focus": {
+        "ring": {
+          "angle": 135,
+          "stops": [
+            {
+              "color": "#50F5E2",
+              "position": 0
+            },
+            {
+              "color": "#64EBAF",
+              "position": 52
+            },
+            {
+              "color": "#75F79E",
+              "position": 100
+            }
+          ]
+        },
+        "glow": {
+          "control": "#50F5E266",
+          "compact": "#64EBAF45",
+          "surface": "#50F5E245"
+        },
+        "innerEdge": "#FFFFFFED"
       },
       "rules": [
         {
@@ -359,21 +725,340 @@
           ]
         },
         {
-          "state": "action.focus",
-          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible",
+          "state": "focus.surface",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus)",
           "declarations": [
             {
-              "property": "outline",
-              "value": "1px solid var(--vscode-focusBorder, #4A80A7)",
-              "important": true
-            },
-            {
-              "property": "outline-offset",
-              "value": "2px"
+              "property": "position",
+              "value": "relative"
             },
             {
               "property": "box-shadow",
-              "value": "inset 0 1px 0 #FFFFFF70, 0 0 7px #64EBAF60"
+              "value": "0 0 7px #50F5E245"
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus)::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "0"
+            },
+            {
+              "property": "padding",
+              "value": "2px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.row",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list-row.focused",
+          "declarations": [
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED"
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.list",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:focus",
+          "declarations": [
+            {
+              "property": "outline-color",
+              "value": "transparent",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.surface.listBoundary",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .notifications-toasts .notification-toast:has(.monaco-list:focus) .monaco-list:not(.element-focused):focus::before",
+          "declarations": [
+            {
+              "property": "outline-color",
+              "value": "transparent",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.input",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid=\"true\"])):has(> .ibwrapper > .input:focus)",
+          "declarations": [
+            {
+              "property": "position",
+              "value": "relative"
+            },
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.input.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid=\"true\"])):has(> .ibwrapper > .input:focus)::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "-1px"
+            },
+            {
+              "property": "padding",
+              "value": "2px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.action",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible",
+          "declarations": [
+            {
+              "property": "position",
+              "value": "relative"
+            },
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 5px #50F5E266",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.action.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json :is(.monaco-button:not(.secondary):not(.wizard-segmented-main), .extension-action.label.prominent):not(.disabled):not([aria-disabled=\"true\"]):focus-visible::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "0"
+            },
+            {
+              "property": "padding",
+              "value": "2px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.icon",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled=\"true\"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled=\"true\"]):focus-visible",
+          "declarations": [
+            {
+              "property": "position",
+              "value": "relative"
+            },
+            {
+              "property": "outline",
+              "value": "1px solid transparent",
+              "important": true
+            },
+            {
+              "property": "box-shadow",
+              "value": "inset 0 0 0 1px #FFFFFFED, 0 0 3px #64EBAF45",
+              "important": true
+            }
+          ]
+        },
+        {
+          "state": "focus.icon.ring",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-toolbar .action-item:not(.disabled):not([aria-disabled=\"true\"]) > .action-label.codicon:not(.codicon-testing-autorun):not(.model-picker-split):not([aria-disabled=\"true\"]):focus-visible::after",
+          "declarations": [
+            {
+              "property": "content",
+              "value": "\"\""
+            },
+            {
+              "property": "position",
+              "value": "absolute"
+            },
+            {
+              "property": "inset",
+              "value": "0"
+            },
+            {
+              "property": "padding",
+              "value": "1.5px"
+            },
+            {
+              "property": "border-radius",
+              "value": "inherit"
+            },
+            {
+              "property": "pointer-events",
+              "value": "none"
+            },
+            {
+              "property": "z-index",
+              "value": "1"
+            },
+            {
+              "property": "background",
+              "value": "linear-gradient(135deg, #50F5E2 0%, #64EBAF 52%, #75F79E 100%)"
+            },
+            {
+              "property": "-webkit-mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "-webkit-mask-composite",
+              "value": "xor"
+            },
+            {
+              "property": "mask",
+              "value": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)"
+            },
+            {
+              "property": "mask-composite",
+              "value": "exclude"
+            }
+          ]
+        },
+        {
+          "state": "focus.input.text",
+          "selector": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-aqua-lime-light-color-theme-json .monaco-inputbox:not(.error):not(.warning):not(.info):not(.disabled):not(:has(:disabled, [aria-invalid=\"true\"])):has(> .ibwrapper > .input:focus) > .ibwrapper > .input:focus",
+          "declarations": [
+            {
+              "property": "outline-color",
+              "value": "transparent",
+              "important": true
             }
           ]
         },
@@ -418,6 +1103,7 @@
       "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-lime-light-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {
@@ -440,6 +1126,7 @@
       "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-lime-dark-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {
@@ -462,6 +1149,7 @@
       "scope": ".monaco-workbench.vs.yukiumi13-aura-theme-2026-themes-aura-azure-light-2026-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {
@@ -484,6 +1172,7 @@
       "scope": ".monaco-workbench.vs-dark.yukiumi13-aura-theme-2026-themes-aura-azure-2026-color-theme-json",
       "action": null,
       "badge": null,
+      "focus": null,
       "rules": [],
       "fallback": {
         "action": {

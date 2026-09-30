@@ -1,0 +1,43 @@
+{
+  "version": "0.9.6",
+  "baseline": "bf53bde51b122f3241bcd36342b00c060671a270",
+  "archiveSha256": "dc5c905f1ab91f2fa8407654c3ed57073b558ea8ce3dd4b6806f5a67a5c7752d",
+  "cssSha256": "5662bcd04ec2983c7bc1d1f3fe962db54acdb8c5b2fa0c688b256583fb6004fd",
+  "zipCrcPassed": true,
+  "crcMethod": "Node zlib.crc32 against each ZIP central-directory CRC",
+  "themeCount": 9,
+  "unchangedNativeEntries": {
+    "ui": 4500,
+    "textMate": 432,
+    "semantic": 270
+  },
+  "runtimeAndEffectFilesMatchAcceptedPreview": true,
+  "changedSincePreview": [
+    "extension/changelog.md",
+    "extension/package.json",
+    "extension/readme.md"
+  ],
+  "files": [
+    "extension.vsixmanifest",
+    "[Content_Types].xml",
+    "extension/changelog.md",
+    "extension/LICENSE.txt",
+    "extension/logo.png",
+    "extension/package.json",
+    "extension/readme.md",
+    "extension/THIRD_PARTY_NOTICES.md",
+    "extension/extension/aqua-effects.json",
+    "extension/extension/aqua-gradients.css",
+    "extension/extension/extension.js",
+    "extension/extension/gradients.js",
+    "extension/themes/aura-aqua-dark-2026-color-theme.json",
+    "extension/themes/aura-aqua-light-2026-color-theme.json",
+    "extension/themes/aura-aqua-lime-light-color-theme.json",
+    "extension/themes/aura-azure-2026-color-theme.json",
+    "extension/themes/aura-azure-light-2026-color-theme.json",
+    "extension/themes/aura-dark-color-theme.json",
+    "extension/themes/aura-light-2026-color-theme.json",
+    "extension/themes/aura-lime-dark-color-theme.json",
+    "extension/themes/aura-lime-light-color-theme.json"
+  ]
+}

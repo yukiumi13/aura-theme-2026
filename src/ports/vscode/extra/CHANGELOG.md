@@ -1,5 +1,11 @@
 # Aura Modern Changelog
 
+## 0.9.6 (September 30, 2026)
+
+- Add a shared cyan-to-mint focus treatment to inputs, primary buttons, toolbar icons and notification cards in the two Aqua Light themes. Vary glow density by control size and let notification cards relinquish their ring when a child control receives focus.
+- Compile focus independently of action fills and numeric badge emphasis. Retain validation, severity, disabled states and all nine native theme palettes from 0.9.5.
+- Focus effects are part of the optional Aqua gradient enhancement. After updating, run **Aura: Apply Gradient Setting** and reload VS Code to apply the new stylesheet.
+
 ## 0.9.5 (September 29, 2026)
 
 - Default Modern UI tabs to **Pill**, so fresh installations retain theme-colored active tabs without a separate setup step or CSS loader.

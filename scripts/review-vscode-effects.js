@@ -38,7 +38,8 @@ exports.reviewEnhancements = function (packageDir, manifest, escape) {
       ).colors
       if (
         theme.fallback.action.background !== actual['button.background'] ||
-        theme.fallback.badge.background !== actual['badge.background']
+        theme.fallback.badge.background !== actual['badge.background'] ||
+        theme.fallback.focus !== actual.focusBorder
       )
         throw Error('Effect fallback differs from theme JSON')
       for (const rule of theme.rules) {
@@ -71,12 +72,16 @@ exports.reviewEnhancements = function (packageDir, manifest, escape) {
           if (state.includes('hover'))
             declarations.push(...(byState['action.hover'] || []))
           if (state.includes('focus'))
-            declarations.push(...(byState['action.focus'] || []))
+            declarations.push(...(byState['focus.action'] || []))
           return `<div class="sample"><strong>Action ${state}</strong><span style="--vscode-focusBorder:${escape(
             actual.focusBorder
-          )};${escape(
-            actionBase + styles(declarations)
-          )}">Open Folder</span></div>`
+          )};${escape(actionBase + styles(declarations))}">Open Folder${
+            state.includes('focus')
+              ? `<span aria-hidden="true" style="${escape(
+                  styles(byState['focus.action.ring'] || [])
+                )}"></span>`
+              : ''
+          }</span></div>`
         })
         .join('')
       const badgeStyle = `display:inline-block;width:16px;height:16px;line-height:16px;text-align:center;font-size:11px;border-radius:50%;background:${
@@ -91,7 +96,35 @@ exports.reviewEnhancements = function (packageDir, manifest, escape) {
       )};color:${escape(
         actual['badge.foreground']
       )};padding:2px 6px;border-radius:12px">1</span></p>`
-      const roleRows = flatten({ action: theme.action, badge: theme.badge })
+      const notificationSamples = ['normal', 'focused', 'CSS off']
+        .map(
+          (state) =>
+            `<div class="sample"><strong>Notification ${state}</strong><span style="display:inline-block;padding:14px;border-radius:10px;background:${escape(
+              actual['notifications.background']
+            )};color:${escape(
+              actual['notifications.foreground']
+            )};border:1px solid ${escape(
+              state === 'CSS off'
+                ? actual['list.focusOutline']
+                : actual['notificationToast.border']
+            )};${escape(
+              state === 'focused'
+                ? styles(byState['focus.surface'] || [])
+                : ''
+            )}">Sample task is ready.${
+              state === 'focused'
+                ? `<span aria-hidden="true" style="${escape(
+                    styles(byState['focus.surface.ring'] || [])
+                  )}"></span>`
+                : ''
+            }</span></div>`
+        )
+        .join('')
+      const roleRows = flatten({
+        action: theme.action,
+        badge: theme.badge,
+        focus: theme.focus,
+      })
         .map(
           ([key, value]) =>
             `<tr><th>${escape(key)}</th><td>${
@@ -102,11 +135,25 @@ exports.reviewEnhancements = function (packageDir, manifest, escape) {
             }${escape(value)}</td></tr>`
         )
         .join('')
+      const controlSamples = ['input', 'icon']
+        .map(
+          (kind) =>
+            `<div class="sample"><strong>Focus ${kind}</strong><span style="display:inline-block;padding:6px 9px;border-radius:4px;background:${escape(
+              actual['input.background']
+            )};color:${escape(actual['input.foreground'])};${escape(
+              styles(byState[`focus.${kind}`] || [])
+            )}">${
+              kind === 'input' ? 'Search the sample' : '…'
+            }<span aria-hidden="true" style="${escape(
+              styles(byState[`focus.${kind}.ring`] || [])
+            )}"></span></span></div>`
+        )
+        .join('')
       return `<details open><summary>${escape(
         theme.label
       )} · generated effects</summary><p><code>${escape(
         theme.scope
-      )}</code></p><div class="samples">${samples}<div class="sample"><strong>Numeric marker</strong><span style="${escape(
+      )}</code></p><div class="samples">${samples}${notificationSamples}${controlSamples}<div class="sample"><strong>Numeric marker</strong><span style="${escape(
         badgeStyle
       )}">1</span> <span style="${escape(
         badgeStyle
@@ -117,7 +164,7 @@ exports.reviewEnhancements = function (packageDir, manifest, escape) {
     .join('')
   return {
     inventory,
-    html: `<section id="enhancements"><h2>Optional UI effects</h2><p>Generated CSS and plain-theme fallbacks. These are configuration specimens, not native VS Code screenshots. CSS SHA-256: <code>${sha}</code>. Native focus color overrides still apply; other effect colors are owned by their roles. Secondary/disabled buttons, progress indicators and icon badges retain native styling.</p>${sections}<details><summary>Complete shipped stylesheet</summary><pre style="white-space:pre-wrap">${escape(
+    html: `<section id="enhancements"><h2>Optional UI effects</h2><p>Generated CSS and plain-theme fallbacks. These are configuration specimens, not native VS Code screenshots. CSS SHA-256: <code>${sha}</code>. One focus role defines shared ring colors and control/compact/surface glow densities. Notification surfaces relinquish emphasis to their focused child controls. Native fallback palettes remain unchanged; severity, validation, disabled states and notification-center lists retain native treatment.</p>${sections}<details><summary>Complete shipped stylesheet</summary><pre style="white-space:pre-wrap">${escape(
       stylesheet
     )}</pre></details></section>`,
   }

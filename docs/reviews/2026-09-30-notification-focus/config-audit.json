@@ -1,86 +1,77 @@
 {
-  "version": "0.9.6",
+  "baseline": "bf53bde51b122f3241bcd36342b00c060671a270",
   "themes": [
     {
-      "id": "Aura 2026 Dark",
-      "label": "Aura Dark",
-      "path": "./themes/aura-dark-color-theme.json",
-      "sha256": "118e24c4db87b03a44f1d89b9a908159a4106414ca5ecaae702c9cf42460605e",
-      "ui": 500,
-      "textMate": 48,
-      "semantic": 30
-    },
-    {
-      "id": "Aura Light 2026",
-      "label": "Aura Light",
-      "path": "./themes/aura-light-2026-color-theme.json",
-      "sha256": "52c71021208d84c46e67b8807920a55d2dc7ff62191af7b9857b8e702f3482da",
-      "ui": 500,
-      "textMate": 48,
-      "semantic": 30
-    },
-    {
-      "id": "Aura Aqua Light 2026",
-      "label": "Aura Aqua Light",
-      "path": "./themes/aura-aqua-light-2026-color-theme.json",
-      "sha256": "35b7a94feb964e940082e2a6d29177052ea9fdd3e6a04f090a2278ef72b43923",
-      "ui": 500,
-      "textMate": 48,
-      "semantic": 30
-    },
-    {
-      "id": "Aura Aqua Dark 2026",
-      "label": "Aura Aqua Dark",
-      "path": "./themes/aura-aqua-dark-2026-color-theme.json",
+      "file": "aura-aqua-dark-2026-color-theme.json",
       "sha256": "3f6b6ea42de4434645a6edf0870490ce9c75eafbe89aed91f47adc1cf844807d",
       "ui": 500,
       "textMate": 48,
-      "semantic": 30
+      "semantic": 30,
+      "unchanged": true
     },
     {
-      "id": "Aura Aqua Lime Light",
-      "label": "Aura Aqua Lime Light",
-      "path": "./themes/aura-aqua-lime-light-color-theme.json",
+      "file": "aura-aqua-light-2026-color-theme.json",
+      "sha256": "35b7a94feb964e940082e2a6d29177052ea9fdd3e6a04f090a2278ef72b43923",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30,
+      "unchanged": true
+    },
+    {
+      "file": "aura-aqua-lime-light-color-theme.json",
       "sha256": "13ad40dedca9c8f99ceb6204ef09122426713d5d0c6718447908ccf6a8575e23",
       "ui": 500,
       "textMate": 48,
-      "semantic": 30
+      "semantic": 30,
+      "unchanged": true
     },
     {
-      "id": "Aura Lime Light",
-      "label": "Aura Lime Light",
-      "path": "./themes/aura-lime-light-color-theme.json",
-      "sha256": "e832f661e65cd8b619a7f35b24fee9305a46d0d65d72e5c152d1962e28ce5a47",
-      "ui": 500,
-      "textMate": 48,
-      "semantic": 30
-    },
-    {
-      "id": "Aura Lime Dark",
-      "label": "Aura Lime Dark",
-      "path": "./themes/aura-lime-dark-color-theme.json",
-      "sha256": "38bf65d32cc80d073bd4bbfe0fadc9e0513a8cf79d3943d3256e87d695a37926",
-      "ui": 500,
-      "textMate": 48,
-      "semantic": 30
-    },
-    {
-      "id": "Aura 2026 Azure Light",
-      "label": "Aura Azure Light",
-      "path": "./themes/aura-azure-light-2026-color-theme.json",
-      "sha256": "3b37605f6b9769a1f1b844c5d27cc06a3a0e572926f82216d2906d0fd41d24ac",
-      "ui": 500,
-      "textMate": 48,
-      "semantic": 30
-    },
-    {
-      "id": "Aura Azure 2026",
-      "label": "Aura Azure Dark",
-      "path": "./themes/aura-azure-2026-color-theme.json",
+      "file": "aura-azure-2026-color-theme.json",
       "sha256": "b1e97caa6da586d5fd23089eb53b36573582ef604a72433da004faf6bfd17d8a",
       "ui": 500,
       "textMate": 48,
-      "semantic": 30
+      "semantic": 30,
+      "unchanged": true
+    },
+    {
+      "file": "aura-azure-light-2026-color-theme.json",
+      "sha256": "3b37605f6b9769a1f1b844c5d27cc06a3a0e572926f82216d2906d0fd41d24ac",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30,
+      "unchanged": true
+    },
+    {
+      "file": "aura-dark-color-theme.json",
+      "sha256": "118e24c4db87b03a44f1d89b9a908159a4106414ca5ecaae702c9cf42460605e",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30,
+      "unchanged": true
+    },
+    {
+      "file": "aura-light-2026-color-theme.json",
+      "sha256": "52c71021208d84c46e67b8807920a55d2dc7ff62191af7b9857b8e702f3482da",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30,
+      "unchanged": true
+    },
+    {
+      "file": "aura-lime-dark-color-theme.json",
+      "sha256": "38bf65d32cc80d073bd4bbfe0fadc9e0513a8cf79d3943d3256e87d695a37926",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30,
+      "unchanged": true
+    },
+    {
+      "file": "aura-lime-light-color-theme.json",
+      "sha256": "e832f661e65cd8b619a7f35b24fee9305a46d0d65d72e5c152d1962e28ce5a47",
+      "ui": 500,
+      "textMate": 48,
+      "semantic": 30,
+      "unchanged": true
     }
   ],
   "effects": {
@@ -1274,5 +1265,20 @@
         }
       }
     ]
-  }
+  },
+  "visualInspection": false,
+  "effectComparison": [
+    {
+      "theme": "Aura Aqua Light",
+      "actionNormalUnchanged": true,
+      "actionHoverUnchanged": true,
+      "badgeUnchanged": true
+    },
+    {
+      "theme": "Aura Aqua Lime Light",
+      "actionNormalUnchanged": true,
+      "actionHoverUnchanged": true,
+      "badgeUnchanged": true
+    }
+  ]
 }

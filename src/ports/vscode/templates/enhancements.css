@@ -1,6 +1,6 @@
 /* Generated from resolved UI roles. Edit source/roles and the port renderer.
    Optional installation-wide styles; only schemes with effect roles emit rules.
-   Tabs, typography, disabled and secondary buttons retain native treatment. */
+   Tabs, typography, validation, disabled and secondary buttons retain native treatment. */
 {{#themes}}
 {{#rules}}
 /* {{state}} */
