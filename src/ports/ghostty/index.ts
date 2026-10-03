@@ -1,100 +1,46 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
-import {
-  terminalAnsiLabel,
-  terminalAnsiSuffix,
-  withTerminalAuraAnsi,
-  withTerminalSemanticAnsi,
-} from '../shared/terminal-ansi'
-
-type VariantScheme = typeof import('core/colors/schemes').variants[number]
+import { modernThemes } from '../shared/modern-themes'
 
 export async function GhosttyPort(Aura: AuraAPI) {
-  const { createPort, createReadme, colorSchemes, constants } = Aura
-  const { info, packageVersion } = constants
-
-  const portName = 'Ghostty'
-  const version = packageVersion
+  const { createPort, createReadme, copyExtraFiles, colorSchemes } = Aura
   const templateFolder = resolve(__dirname, 'templates')
-  const template = resolve(templateFolder, 'aura-theme.conf')
+  const themes = modernThemes(colorSchemes)
+  await copyExtraFiles(__dirname)
 
-  const names = {
-    auraDark: `${info.shortName} Dark`,
-    auraDarkSoftText: `${info.shortName} Dark (Soft Text)`,
-    auraSoftDark: `${info.shortName} Soft Dark`,
-    auraSoftDarkSoftText: `${info.shortName} Soft Dark (Soft Text)`,
+  for (const theme of themes) {
+    await createPort({
+      template: resolve(templateFolder, 'aura-theme.conf'),
+      outputFileName: theme.name.toLowerCase().replace(/ /g, '-'),
+      replacements: { ...theme.scheme, name: theme.name },
+    })
   }
 
-  await createPort({
-    template,
-    outputFileName: 'aura-dark',
-    replacements: {
-      ...info,
-      ...colorSchemes.dark,
-      name: names.auraDark,
-    },
-  })
-
-  await createPort({
-    template,
-    outputFileName: 'aura-dark-soft-text',
-    replacements: {
-      ...info,
-      ...colorSchemes.darkSoft,
-      name: names.auraDarkSoftText,
-    },
-  })
-
-  await createPort({
-    template,
-    outputFileName: 'aura-soft-dark',
-    replacements: {
-      ...info,
-      ...colorSchemes.softDark,
-      name: names.auraSoftDark,
-    },
-  })
-
-  await createPort({
-    template,
-    outputFileName: 'aura-soft-dark-soft-text',
-    replacements: {
-      ...info,
-      ...colorSchemes.softDarkSoft,
-      name: names.auraSoftDarkSoftText,
-    },
-  })
-
-  await Promise.all(
-    [...colorSchemes.variants, colorSchemes.inkVariant]
-      .map(({ family, scheme }: VariantScheme) => [
-        createPort({
-          template,
-          outputFileName: family.slug,
-          replacements: {
-            ...info,
-            ...withTerminalAuraAnsi(scheme),
-            name: family.name,
-          },
-        }),
-        createPort({
-          template,
-          outputFileName: family.slug + '-' + terminalAnsiSuffix,
-          replacements: {
-            ...info,
-            ...withTerminalSemanticAnsi(scheme),
-            name: family.name + ' ' + terminalAnsiLabel,
-          },
-        }),
-      ])
-      .reduce((ports, pair) => [...ports, ...pair], [])
-  )
+  // Optional Herdr surface corrections; its text and status colors continue
+  // to inherit the host ANSI palette. Aqua Lime shares Aqua's terminal roles.
+  for (const family of [...new Set(themes.map((theme) => theme.family))]) {
+    const light = themes.find(
+      (theme) => theme.family === family && theme.appearance === 'light'
+    )!
+    const dark = themes.find(
+      (theme) => theme.family === family && theme.appearance === 'dark'
+    )!
+    await createPort({
+      template: resolve(templateFolder, 'herdr.toml'),
+      outputFileName: `herdr/${family}`,
+      replacements: { light: light.scheme, dark: dark.scheme },
+    })
+  }
 
   await createReadme({
     template: resolve(templateFolder, 'README.md'),
     replacements: {
-      portName,
-      version,
+      themeRows: themes
+        .map(
+          ({ name }) =>
+            `| ${name} | \`${name.toLowerCase().replace(/ /g, '-')}.conf\` |`
+        )
+        .join('\n'),
     },
   })
 }

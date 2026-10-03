@@ -1,6 +1,6 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
-import { withTerminalAuraAnsi } from '../shared/terminal-ansi'
+import { modernThemes } from '../shared/modern-themes'
 import { promises as fs } from 'fs'
 import { compileVscodeEnhancements } from './enhancements'
 
@@ -16,57 +16,7 @@ export async function VscodePort(Aura: AuraAPI) {
   const { info, folders, packageVersion } = constants
   const templateFolder = resolve(__dirname, 'templates')
   const outputDist = resolve(folders.distFolder, 'vscode', 'themes')
-  // IDs preserve saved selections and theme-specific customizations across renames.
-  const themes = [
-    {
-      id: 'Aura 2026 Dark',
-      slug: 'aura-dark',
-      scheme: colorSchemes.dark,
-      name: 'Aura Dark',
-      appearance: 'dark',
-    },
-    {
-      id: 'Aura Light 2026',
-      slug: colorSchemes.light.paletteSlug,
-      scheme: withTerminalAuraAnsi(colorSchemes.light),
-      name: colorSchemes.light.paletteName,
-      appearance: 'light',
-    },
-    ...colorSchemes.aquaVariants.map((scheme) => ({
-      id:
-        scheme.paletteAppearance === 'light'
-          ? 'Aura Aqua Light 2026'
-          : 'Aura Aqua Dark 2026',
-      slug: scheme.paletteSlug,
-      scheme: withTerminalAuraAnsi(scheme),
-      name: scheme.paletteName,
-      appearance: scheme.paletteAppearance,
-    })),
-    {
-      id: colorSchemes.aquaLimeLight.paletteName,
-      slug: colorSchemes.aquaLimeLight.paletteSlug,
-      scheme: withTerminalAuraAnsi(colorSchemes.aquaLimeLight),
-      name: colorSchemes.aquaLimeLight.paletteName,
-      appearance: colorSchemes.aquaLimeLight.paletteAppearance,
-    },
-    ...colorSchemes.limeVariants.map((scheme) => ({
-      id: scheme.paletteName,
-      slug: scheme.paletteSlug,
-      scheme: withTerminalAuraAnsi(scheme),
-      name: scheme.paletteName,
-      appearance: scheme.paletteAppearance,
-    })),
-    ...colorSchemes.azureVariants.map((scheme) => ({
-      id:
-        scheme.paletteAppearance === 'light'
-          ? 'Aura 2026 Azure Light'
-          : 'Aura Azure 2026',
-      slug: scheme.paletteSlug,
-      scheme: withTerminalAuraAnsi(scheme),
-      name: scheme.paletteName,
-      appearance: scheme.paletteAppearance,
-    })),
-  ]
+  const themes = modernThemes(colorSchemes)
   await copyExtraFiles(__dirname)
   await createPort({
     template: resolve(templateFolder, 'package.json'),

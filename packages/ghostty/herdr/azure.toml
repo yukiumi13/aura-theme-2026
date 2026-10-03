@@ -1,0 +1,19 @@
+# Optional Herdr surface overrides for the matching Aura Ghostty family.
+# Merge this theme section into Herdr's config; keep your other settings.
+# Generated from semantic roles. Text, accents and status colors remain ANSI.
+# If [theme] or these subtables already exist, merge keys rather than duplicating.
+[theme]
+name = "terminal"
+auto_switch = true
+light_name = "terminal"
+dark_name = "terminal"
+
+[theme.custom.light]
+active_row_bg = "#EBF3FC"
+selection_bg = "#EBF3FC"
+surface1 = "#EBEBEB"
+
+[theme.custom.dark]
+active_row_bg = "#082338"
+selection_bg = "#082338"
+surface1 = "#333333"

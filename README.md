@@ -62,7 +62,9 @@ The loader modifies VS Code installation files and can trigger its integrity war
 
 ## Other editors
 
-This repository also maintains [Zed](packages/zed), [Ghostty](packages/ghostty), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) packages. These ports retain their existing dark variant sets; the nine-theme lineup above is for VS Code.
+The [Ghostty package](packages/ghostty) shares all nine current themes, terminal colors and semantic roles with VS Code. It supports Ghostty 1.3+, including selection and search colors, and includes optional Herdr `terminal` theme surface overrides. See its README for installation and automatic light/dark switching.
+
+[Zed](packages/zed), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) retain their existing dark variant sets.
 
 See [GitHub Releases](https://github.com/yukiumi13/aura-theme-2026/releases) for bundles. Inherited upstream ports remain under `legacy/` and are outside the maintained build path.
 

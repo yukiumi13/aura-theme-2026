@@ -1,20 +1,7 @@
 const path = require('path')
 const fs = require('fs/promises')
 const { constants } = require('fs')
-const { execFile } = require('child_process')
-
-function run(command, args, options = {}) {
-  return new Promise((resolve, reject) => {
-    execFile(command, args, options, (error, stdout, stderr) => {
-      if (error) {
-        reject(new Error(stderr || stdout || error.message))
-        return
-      }
-
-      resolve({ stdout, stderr })
-    })
-  })
-}
+const AdmZip = require('adm-zip')
 
 async function exists(filePath) {
   try {
@@ -28,7 +15,6 @@ async function exists(filePath) {
 async function bundlePort({ rootDir, sourceName, bundleName }) {
   const sourceDir = path.join(rootDir, 'packages', sourceName)
   const outputDir = path.join(rootDir, 'dist', sourceName)
-  const stagedDir = path.join(outputDir, bundleName)
   const zipFile = path.join(outputDir, `${bundleName}.zip`)
   const licenseFile = path.join(rootDir, 'LICENSE')
 
@@ -38,19 +24,15 @@ async function bundlePort({ rootDir, sourceName, bundleName }) {
     )
   }
 
-  await fs.rm(outputDir, { force: true, recursive: true })
   await fs.mkdir(outputDir, { recursive: true })
-  await fs.cp(sourceDir, stagedDir, { recursive: true })
+  const zip = new AdmZip()
+  zip.addLocalFolder(sourceDir, bundleName)
 
   if (await exists(licenseFile)) {
-    await fs.copyFile(licenseFile, path.join(stagedDir, 'LICENSE'))
+    zip.addLocalFile(licenseFile, bundleName)
   }
 
-  await run('zip', ['-rq', zipFile, bundleName], { cwd: outputDir })
-
-  console.log(
-    `${sourceName} themes staged at: ${path.relative(rootDir, stagedDir)}`
-  )
+  zip.writeZip(zipFile)
   console.log(
     `${sourceName} themes zip created at: ${path.relative(rootDir, zipFile)}`
   )
@@ -59,23 +41,23 @@ async function bundlePort({ rootDir, sourceName, bundleName }) {
 async function main() {
   const rootDir = path.resolve(__dirname, '..')
 
-  await bundlePort({
-    rootDir,
-    sourceName: 'ghostty',
-    bundleName: 'aura-theme-2026-ghostty-themes',
-  })
-
-  await bundlePort({
-    rootDir,
-    sourceName: 'windows-terminal',
-    bundleName: 'aura-theme-2026-windows-terminal-themes',
-  })
-
-  await bundlePort({
-    rootDir,
-    sourceName: 'wezterm',
-    bundleName: 'aura-theme-2026-wezterm-themes',
-  })
+  const ports = ['ghostty', 'windows-terminal', 'wezterm']
+  const args = process.argv.slice(2)
+  if (
+    args.length &&
+    (args.length !== 2 || args[0] !== '--only' || !ports.includes(args[1]))
+  ) {
+    throw new Error(
+      'Usage: package-terminal-bundles.js [--only ghostty|windows-terminal|wezterm]'
+    )
+  }
+  for (const sourceName of args.length ? [args[1]] : ports) {
+    await bundlePort({
+      rootDir,
+      sourceName,
+      bundleName: `aura-theme-2026-${sourceName}-themes`,
+    })
+  }
 }
 
 main().catch((error) => {

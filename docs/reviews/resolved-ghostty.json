@@ -1,0 +1,744 @@
+{
+  "baseline": "d2422b7f6aec5587a974d8a5261fb88d1727be6c",
+  "runtimeNote": "See 2026-10-03-ghostty.md for actual runtime validation. This sheet is a decoded configuration preview.",
+  "themes": [
+    {
+      "name": "Aura Dark",
+      "file": "aura-dark.conf",
+      "family": "aura",
+      "appearance": "dark",
+      "sha256LF": "fbffc2447f876741f00b026b7752610dead6203500eea43c5be191e935192177",
+      "colors": {
+        "background": "#09080D",
+        "foreground": "#DDD9E7",
+        "cursor-color": "#A277FF",
+        "cursor-text": "#09080D",
+        "selection-background": "#6F4FD8",
+        "selection-foreground": "#F2F0F5",
+        "search-background": "#433080",
+        "search-foreground": "#F2F0F5",
+        "search-selected-background": "#A277FF",
+        "search-selected-foreground": "#09080D",
+        "split-divider-color": "#241F31",
+        "unfocused-split-fill": "#09080D",
+        "window-titlebar-background": "#09080D",
+        "window-titlebar-foreground": "#ADACAE",
+        "palette.0": "#0A090F",
+        "palette.1": "#FF6767",
+        "palette.2": "#61FFCA",
+        "palette.3": "#FFCA85",
+        "palette.4": "#A277FF",
+        "palette.5": "#61FFCA",
+        "palette.6": "#A277FF",
+        "palette.7": "#DDD9E7",
+        "palette.8": "#6D6D6D",
+        "palette.9": "#FF6767",
+        "palette.10": "#61FFCA",
+        "palette.11": "#FFCA85",
+        "palette.12": "#C4B5FD",
+        "palette.13": "#9FFFE2",
+        "palette.14": "#C4B5FD",
+        "palette.15": "#F2F0F5"
+      },
+      "vscode": {
+        "sha256LF": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 14.4,
+        "cursor": 6.29,
+        "selection": 4.9,
+        "search": 9.41,
+        "activeSearch": 6.29
+      },
+      "ansiContrast": [
+        1.01,
+        7.02,
+        15.84,
+        13.34,
+        6.29,
+        15.84,
+        6.29,
+        14.4,
+        3.86,
+        7.02,
+        15.84,
+        13.34,
+        10.81,
+        16.99,
+        10.81,
+        17.64
+      ],
+      "herdr": {
+        "defaultActiveRow": "#6D6D6D",
+        "defaultActiveRowContrast": 3.73,
+        "companion": {
+          "active_row_bg": "#1B1532",
+          "selection_bg": "#241B43",
+          "surface1": "#1B1724"
+        },
+        "contrast": {
+          "active_row_bg": 12.63,
+          "selection_bg": 11.54,
+          "surface1": 12.68
+        }
+      }
+    },
+    {
+      "name": "Aura Light",
+      "file": "aura-light.conf",
+      "family": "aura",
+      "appearance": "light",
+      "sha256LF": "2cb948fac6595b29988cd468a10b218f435f19ab2ade3c8fa856bb5da5b1f2f4",
+      "colors": {
+        "background": "#F8F9FA",
+        "foreground": "#30323C",
+        "cursor-color": "#61FFCA",
+        "cursor-text": "#22242E",
+        "selection-background": "#E9E5F3",
+        "selection-foreground": "#22242E",
+        "search-background": "#EEEBF6",
+        "search-foreground": "#22242E",
+        "search-selected-background": "#61FFCA",
+        "search-selected-foreground": "#22242E",
+        "split-divider-color": "#DCE1E7",
+        "unfocused-split-fill": "#F8F9FA",
+        "window-titlebar-background": "#F0F2F5",
+        "window-titlebar-foreground": "#59616F",
+        "palette.0": "#22242E",
+        "palette.1": "#B93844",
+        "palette.2": "#007A58",
+        "palette.3": "#90620F",
+        "palette.4": "#7043C1",
+        "palette.5": "#914587",
+        "palette.6": "#097567",
+        "palette.7": "#59616F",
+        "palette.8": "#687381",
+        "palette.9": "#AD303E",
+        "palette.10": "#43751E",
+        "palette.11": "#80540A",
+        "palette.12": "#5F35AB",
+        "palette.13": "#A23098",
+        "palette.14": "#066B88",
+        "palette.15": "#22242E"
+      },
+      "vscode": {
+        "sha256LF": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 12.09,
+        "cursor": 12.26,
+        "selection": 12.48,
+        "search": 13.13,
+        "activeSearch": 12.26
+      },
+      "ansiContrast": [
+        14.65,
+        5.37,
+        5.08,
+        5.06,
+        6.11,
+        5.85,
+        5.31,
+        5.92,
+        4.57,
+        6.09,
+        5.24,
+        6.24,
+        7.71,
+        5.84,
+        5.75,
+        14.65
+      ],
+      "herdr": {
+        "defaultActiveRow": "#687381",
+        "defaultActiveRowContrast": 2.65,
+        "companion": {
+          "active_row_bg": "#F0EEF7",
+          "selection_bg": "#EBE7F5",
+          "surface1": "#E5E9EF"
+        },
+        "contrast": {
+          "active_row_bg": 11.1,
+          "selection_bg": 10.49,
+          "surface1": 10.46
+        }
+      }
+    },
+    {
+      "name": "Aura Aqua Light",
+      "file": "aura-aqua-light.conf",
+      "family": "aqua",
+      "appearance": "light",
+      "sha256LF": "0662d958978ec3d2f12de44fa70084574ecbd8e2d1e4ba1ce8ae08e31c44e6f9",
+      "colors": {
+        "background": "#F8FCFE",
+        "foreground": "#4A5861",
+        "cursor-color": "#12DADD",
+        "cursor-text": "#394952",
+        "selection-background": "#DDF6F7",
+        "selection-foreground": "#394952",
+        "search-background": "#E6F1F4",
+        "search-foreground": "#394952",
+        "search-selected-background": "#12DADD",
+        "search-selected-foreground": "#394952",
+        "split-divider-color": "#E1E9ED",
+        "unfocused-split-fill": "#F8FCFE",
+        "window-titlebar-background": "#F5F9FB",
+        "window-titlebar-foreground": "#6B7D86",
+        "palette.0": "#394952",
+        "palette.1": "#B93844",
+        "palette.2": "#007A58",
+        "palette.3": "#90620F",
+        "palette.4": "#4A80A7",
+        "palette.5": "#A06A89",
+        "palette.6": "#097567",
+        "palette.7": "#6B7D86",
+        "palette.8": "#80919A",
+        "palette.9": "#AD303E",
+        "palette.10": "#43751E",
+        "palette.11": "#80540A",
+        "palette.12": "#39749D",
+        "palette.13": "#AD6B91",
+        "palette.14": "#5F829B",
+        "palette.15": "#394952"
+      },
+      "vscode": {
+        "sha256LF": "d382c62eb0feca44eda905ba4209771cdc14e0a90a06679ed2ab199b573863d1",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 7.12,
+        "cursor": 5.38,
+        "selection": 8.27,
+        "search": 8.12,
+        "activeSearch": 5.38
+      },
+      "ansiContrast": [
+        9.05,
+        5.48,
+        5.18,
+        5.16,
+        4.12,
+        4.14,
+        5.42,
+        4.15,
+        3.16,
+        6.22,
+        5.35,
+        6.38,
+        4.89,
+        3.85,
+        3.95,
+        9.05
+      ],
+      "herdr": {
+        "defaultActiveRow": "#80919A",
+        "defaultActiveRowContrast": 2.25,
+        "companion": {
+          "active_row_bg": "#E9F3F6",
+          "selection_bg": "#E1EEF1",
+          "surface1": "#ECF1F5"
+        },
+        "contrast": {
+          "active_row_bg": 6.51,
+          "selection_bg": 6.19,
+          "surface1": 6.46
+        }
+      }
+    },
+    {
+      "name": "Aura Aqua Dark",
+      "file": "aura-aqua-dark.conf",
+      "family": "aqua",
+      "appearance": "dark",
+      "sha256LF": "5cdccb27bf31bbeee6cefd549705a2686708c184fe74f901e32ece958dc0aa4a",
+      "colors": {
+        "background": "#09080D",
+        "foreground": "#DDD9E7",
+        "cursor-color": "#12DADD",
+        "cursor-text": "#09080D",
+        "selection-background": "#13282D",
+        "selection-foreground": "#F2F0F5",
+        "search-background": "#0F1A1F",
+        "search-foreground": "#F2F0F5",
+        "search-selected-background": "#12DADD",
+        "search-selected-foreground": "#09080D",
+        "split-divider-color": "#241F31",
+        "unfocused-split-fill": "#09080D",
+        "window-titlebar-background": "#09080D",
+        "window-titlebar-foreground": "#ADACAE",
+        "palette.0": "#0A090F",
+        "palette.1": "#FF6767",
+        "palette.2": "#61FFCA",
+        "palette.3": "#FFCA85",
+        "palette.4": "#A277FF",
+        "palette.5": "#C17AC8",
+        "palette.6": "#72DCC6",
+        "palette.7": "#DDD9E7",
+        "palette.8": "#6D6D6D",
+        "palette.9": "#FF6767",
+        "palette.10": "#9DFF65",
+        "palette.11": "#FFCA85",
+        "palette.12": "#C4B5FD",
+        "palette.13": "#F694FF",
+        "palette.14": "#82E2FF",
+        "palette.15": "#F2F0F5"
+      },
+      "vscode": {
+        "sha256LF": "184e4b30ae447381e752f5c116102dea8d8bbb0252c25887c7bdebd63e34d0f1",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 14.4,
+        "cursor": 11.5,
+        "selection": 13.55,
+        "search": 15.62,
+        "activeSearch": 11.5
+      },
+      "ansiContrast": [
+        1.01,
+        7.02,
+        15.84,
+        13.34,
+        6.29,
+        6.54,
+        12.14,
+        14.4,
+        3.86,
+        7.02,
+        16.09,
+        13.34,
+        10.81,
+        10.07,
+        13.56,
+        17.64
+      ],
+      "herdr": {
+        "defaultActiveRow": "#6D6D6D",
+        "defaultActiveRowContrast": 3.73,
+        "companion": {
+          "active_row_bg": "#0B0E13",
+          "selection_bg": "#13282D",
+          "surface1": "#1B1724"
+        },
+        "contrast": {
+          "active_row_bg": 13.95,
+          "selection_bg": 11.07,
+          "surface1": 12.68
+        }
+      }
+    },
+    {
+      "name": "Aura Aqua Lime Light",
+      "file": "aura-aqua-lime-light.conf",
+      "family": "aqua",
+      "appearance": "light",
+      "sha256LF": "fece30c4defefaf5f40e54eafaa764786dbcc55a69aafd0aafdd99360bee1c69",
+      "colors": {
+        "background": "#F8FCFE",
+        "foreground": "#4A5861",
+        "cursor-color": "#12DADD",
+        "cursor-text": "#394952",
+        "selection-background": "#DDF6F7",
+        "selection-foreground": "#394952",
+        "search-background": "#E6F1F4",
+        "search-foreground": "#394952",
+        "search-selected-background": "#12DADD",
+        "search-selected-foreground": "#394952",
+        "split-divider-color": "#E1E9ED",
+        "unfocused-split-fill": "#F8FCFE",
+        "window-titlebar-background": "#F5F9FB",
+        "window-titlebar-foreground": "#6B7D86",
+        "palette.0": "#394952",
+        "palette.1": "#B93844",
+        "palette.2": "#007A58",
+        "palette.3": "#90620F",
+        "palette.4": "#4A80A7",
+        "palette.5": "#A06A89",
+        "palette.6": "#097567",
+        "palette.7": "#6B7D86",
+        "palette.8": "#80919A",
+        "palette.9": "#AD303E",
+        "palette.10": "#43751E",
+        "palette.11": "#80540A",
+        "palette.12": "#39749D",
+        "palette.13": "#AD6B91",
+        "palette.14": "#5F829B",
+        "palette.15": "#394952"
+      },
+      "vscode": {
+        "sha256LF": "8f0966383e051f563ef1522cfc5c6c9c9b20dc75922c65c6be54d0285152be2d",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 7.12,
+        "cursor": 5.38,
+        "selection": 8.27,
+        "search": 8.12,
+        "activeSearch": 5.38
+      },
+      "ansiContrast": [
+        9.05,
+        5.48,
+        5.18,
+        5.16,
+        4.12,
+        4.14,
+        5.42,
+        4.15,
+        3.16,
+        6.22,
+        5.35,
+        6.38,
+        4.89,
+        3.85,
+        3.95,
+        9.05
+      ],
+      "herdr": {
+        "defaultActiveRow": "#80919A",
+        "defaultActiveRowContrast": 2.25,
+        "companion": {
+          "active_row_bg": "#E9F3F6",
+          "selection_bg": "#E1EEF1",
+          "surface1": "#ECF1F5"
+        },
+        "contrast": {
+          "active_row_bg": 6.51,
+          "selection_bg": 6.19,
+          "surface1": 6.46
+        }
+      }
+    },
+    {
+      "name": "Aura Lime Light",
+      "file": "aura-lime-light.conf",
+      "family": "lime",
+      "appearance": "light",
+      "sha256LF": "b20bad93921b44ba11d999cafbe97b0441c3b2233c52f46dcfad649e76501560",
+      "colors": {
+        "background": "#FBFDFB",
+        "foreground": "#4A5861",
+        "cursor-color": "#64EBAF",
+        "cursor-text": "#394952",
+        "selection-background": "#E8F5D6",
+        "selection-foreground": "#394952",
+        "search-background": "#EDF3EE",
+        "search-foreground": "#394952",
+        "search-selected-background": "#64EBAF",
+        "search-selected-foreground": "#394952",
+        "split-divider-color": "#E2EBCF",
+        "unfocused-split-fill": "#FBFDFB",
+        "window-titlebar-background": "#F5F9F3",
+        "window-titlebar-foreground": "#6B7D86",
+        "palette.0": "#394952",
+        "palette.1": "#B93844",
+        "palette.2": "#007A58",
+        "palette.3": "#90620F",
+        "palette.4": "#4A80A7",
+        "palette.5": "#A06A89",
+        "palette.6": "#097567",
+        "palette.7": "#6B7D86",
+        "palette.8": "#80919A",
+        "palette.9": "#AD303E",
+        "palette.10": "#43751E",
+        "palette.11": "#80540A",
+        "palette.12": "#39749D",
+        "palette.13": "#AD6B91",
+        "palette.14": "#5F829B",
+        "palette.15": "#394952"
+      },
+      "vscode": {
+        "sha256LF": "b0c8f9536de3c0968794fc1950be00d9f6912b2e0c2befe706096daf1f5a47c3",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 7.18,
+        "cursor": 6.25,
+        "selection": 8.21,
+        "search": 8.3,
+        "activeSearch": 6.25
+      },
+      "ansiContrast": [
+        9.14,
+        5.53,
+        5.23,
+        5.21,
+        4.16,
+        4.18,
+        5.48,
+        4.19,
+        3.19,
+        6.28,
+        5.4,
+        6.44,
+        4.94,
+        3.88,
+        3.99,
+        9.14
+      ],
+      "herdr": {
+        "defaultActiveRow": "#80919A",
+        "defaultActiveRowContrast": 2.25,
+        "companion": {
+          "active_row_bg": "#EFF5F1",
+          "selection_bg": "#E8F5D6",
+          "surface1": "#EDF5EA"
+        },
+        "contrast": {
+          "active_row_bg": 6.64,
+          "selection_bg": 6.46,
+          "surface1": 6.59
+        }
+      }
+    },
+    {
+      "name": "Aura Lime Dark",
+      "file": "aura-lime-dark.conf",
+      "family": "lime",
+      "appearance": "dark",
+      "sha256LF": "ce6a379874cbac32cc4fc27f3815f97b8e580635839813094564c1eab5e59810",
+      "colors": {
+        "background": "#09080D",
+        "foreground": "#DDD9E7",
+        "cursor-color": "#64EBAF",
+        "cursor-text": "#09080D",
+        "selection-background": "#17352F",
+        "selection-foreground": "#F2F0F5",
+        "search-background": "#0F1B1A",
+        "search-foreground": "#F2F0F5",
+        "search-selected-background": "#64EBAF",
+        "search-selected-foreground": "#09080D",
+        "split-divider-color": "#241F31",
+        "unfocused-split-fill": "#09080D",
+        "window-titlebar-background": "#09080D",
+        "window-titlebar-foreground": "#ADACAE",
+        "palette.0": "#0A090F",
+        "palette.1": "#FF6767",
+        "palette.2": "#61FFCA",
+        "palette.3": "#FFCA85",
+        "palette.4": "#A277FF",
+        "palette.5": "#C17AC8",
+        "palette.6": "#72DCC6",
+        "palette.7": "#DDD9E7",
+        "palette.8": "#6D6D6D",
+        "palette.9": "#FF6767",
+        "palette.10": "#9DFF65",
+        "palette.11": "#FFCA85",
+        "palette.12": "#C4B5FD",
+        "palette.13": "#F694FF",
+        "palette.14": "#82E2FF",
+        "palette.15": "#F2F0F5"
+      },
+      "vscode": {
+        "sha256LF": "c4881bcabad5726763feb43b11774e20178882d8464d9048cd9834945e8bef9a",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 14.4,
+        "cursor": 13.35,
+        "selection": 11.7,
+        "search": 15.57,
+        "activeSearch": 13.35
+      },
+      "ansiContrast": [
+        1.01,
+        7.02,
+        15.84,
+        13.34,
+        6.29,
+        6.54,
+        12.14,
+        14.4,
+        3.86,
+        7.02,
+        16.09,
+        13.34,
+        10.81,
+        10.07,
+        13.56,
+        17.64
+      ],
+      "herdr": {
+        "defaultActiveRow": "#6D6D6D",
+        "defaultActiveRowContrast": 3.73,
+        "companion": {
+          "active_row_bg": "#0B0E11",
+          "selection_bg": "#17352F",
+          "surface1": "#1B1724"
+        },
+        "contrast": {
+          "active_row_bg": 13.96,
+          "selection_bg": 9.55,
+          "surface1": 12.68
+        }
+      }
+    },
+    {
+      "name": "Aura Azure Light",
+      "file": "aura-azure-light.conf",
+      "family": "azure",
+      "appearance": "light",
+      "sha256LF": "a1d19f15d29bb04345f0685d2c1cd886ec040e544eabcd62cf690afeaa58ec04",
+      "colors": {
+        "background": "#FAFAFA",
+        "foreground": "#424242",
+        "cursor-color": "#0F6CBD",
+        "cursor-text": "#FFFFFF",
+        "selection-background": "#EBF3FC",
+        "selection-foreground": "#292929",
+        "search-background": "#E6EEF5",
+        "search-foreground": "#292929",
+        "search-selected-background": "#0F6CBD",
+        "search-selected-foreground": "#FFFFFF",
+        "split-divider-color": "#E0E0E0",
+        "unfocused-split-fill": "#FAFAFA",
+        "window-titlebar-background": "#F0F0F0",
+        "window-titlebar-foreground": "#616161",
+        "palette.0": "#292929",
+        "palette.1": "#BC2F32",
+        "palette.2": "#00723B",
+        "palette.3": "#835B00",
+        "palette.4": "#0F6CBD",
+        "palette.5": "#80215D",
+        "palette.6": "#037679",
+        "palette.7": "#616161",
+        "palette.8": "#757575",
+        "palette.9": "#9F282B",
+        "palette.10": "#0E7A0B",
+        "palette.11": "#835B00",
+        "palette.12": "#6656D1",
+        "palette.13": "#AD2D7E",
+        "palette.14": "#115EA3",
+        "palette.15": "#292929"
+      },
+      "vscode": {
+        "sha256LF": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 9.63,
+        "cursor": 5.38,
+        "selection": 13,
+        "search": 12.41,
+        "activeSearch": 5.38
+      },
+      "ansiContrast": [
+        13.94,
+        5.6,
+        5.8,
+        5.81,
+        5.16,
+        8.77,
+        5.2,
+        5.93,
+        4.41,
+        7.15,
+        5.28,
+        5.81,
+        5.27,
+        5.83,
+        6.38,
+        13.94
+      ],
+      "herdr": {
+        "defaultActiveRow": "#757575",
+        "defaultActiveRowContrast": 2.18,
+        "companion": {
+          "active_row_bg": "#EBF3FC",
+          "selection_bg": "#EBF3FC",
+          "surface1": "#EBEBEB"
+        },
+        "contrast": {
+          "active_row_bg": 8.98,
+          "selection_bg": 8.98,
+          "surface1": 8.43
+        }
+      }
+    },
+    {
+      "name": "Aura Azure Dark",
+      "file": "aura-azure-dark.conf",
+      "family": "azure",
+      "appearance": "dark",
+      "sha256LF": "bf038b7e9eeb4ba839f07ecdb3a351c8f34781b09a186a791d57b49d77073d00",
+      "colors": {
+        "background": "#1F1F1F",
+        "foreground": "#D6D6D6",
+        "cursor-color": "#115EA3",
+        "cursor-text": "#F0F0F0",
+        "selection-background": "#082338",
+        "selection-foreground": "#F0F0F0",
+        "search-background": "#27313A",
+        "search-foreground": "#F0F0F0",
+        "search-selected-background": "#115EA3",
+        "search-selected-foreground": "#F0F0F0",
+        "split-divider-color": "#333333",
+        "unfocused-split-fill": "#1F1F1F",
+        "window-titlebar-background": "#141414",
+        "window-titlebar-foreground": "#B3B3B3",
+        "palette.0": "#141414",
+        "palette.1": "#E37D80",
+        "palette.2": "#5AE0A0",
+        "palette.3": "#FFBA66",
+        "palette.4": "#62ABF5",
+        "palette.5": "#F7C0E3",
+        "palette.6": "#9BD9DB",
+        "palette.7": "#D6D6D6",
+        "palette.8": "#999999",
+        "palette.9": "#F1BBBC",
+        "palette.10": "#A7E3A5",
+        "palette.11": "#FFDDB3",
+        "palette.12": "#A79CF1",
+        "palette.13": "#EF85C8",
+        "palette.14": "#77B7F7",
+        "palette.15": "#F0F0F0"
+      },
+      "vscode": {
+        "sha256LF": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b",
+        "unchanged": true
+      },
+      "contrast": {
+        "text": 11.34,
+        "cursor": 5.84,
+        "selection": 14.09,
+        "search": 11.61,
+        "activeSearch": 5.84
+      },
+      "ansiContrast": [
+        1.12,
+        5.9,
+        9.89,
+        9.79,
+        6.8,
+        10.68,
+        10.47,
+        11.34,
+        5.79,
+        9.87,
+        11.13,
+        12.75,
+        6.8,
+        6.95,
+        7.77,
+        14.46
+      ],
+      "herdr": {
+        "defaultActiveRow": "#999999",
+        "defaultActiveRowContrast": 1.96,
+        "companion": {
+          "active_row_bg": "#082338",
+          "selection_bg": "#082338",
+          "surface1": "#333333"
+        },
+        "contrast": {
+          "active_row_bg": 11.05,
+          "selection_bg": 11.05,
+          "surface1": 8.69
+        }
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { createTerminalSurface } from '../roles/create-terminal-surface'
 import {
   AuraPalette,
   AuraVariantFamily,
@@ -10,6 +11,7 @@ import { createAuraPalette } from '../roles/create-aura-roles'
 export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
   const { base, semantic, ui, terminal, syntax, ansi } = palette
   const { brand, status } = semantic
+  const terminalSurface = createTerminalSurface(palette)
 
   return {
     accent0: base.shadow,
@@ -76,6 +78,25 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     accent61: syntax.label,
 
     terminalBackground: terminal.background,
+    terminalSurfaceBackground: terminalSurface.background,
+    terminalSurfaceForeground: terminalSurface.foreground,
+    terminalCursor: terminalSurface.cursor,
+    terminalCursorText: terminalSurface.cursorText,
+    terminalSelectionBackground: terminalSurface.selectionBackground,
+    terminalSelectionForeground: terminalSurface.selectionForeground,
+    terminalSearchBackground: terminalSurface.searchBackground,
+    terminalSearchForeground: terminalSurface.searchForeground,
+    terminalSearchSelectedBackground:
+      terminalSurface.searchSelectedBackground,
+    terminalSearchSelectedForeground:
+      terminalSurface.searchSelectedForeground,
+    terminalSplitDivider: terminalSurface.splitDivider,
+    terminalUnfocusedSplitFill: terminalSurface.unfocusedSplitFill,
+    terminalTitlebarBackground: terminalSurface.titlebarBackground,
+    terminalTitlebarForeground: terminalSurface.titlebarForeground,
+    terminalListBackground: terminalSurface.listBackground,
+    terminalListFocusBackground: terminalSurface.listFocusBackground,
+    terminalHoverBackground: terminalSurface.hoverBackground,
     terminalForeground: terminal.foreground,
     terminalForegroundBright: terminal.foregroundBright,
     terminalMuted: terminal.muted,

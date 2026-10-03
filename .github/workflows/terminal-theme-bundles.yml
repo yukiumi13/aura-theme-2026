@@ -15,6 +15,7 @@ on:
       - 'src/ports/ghostty/**'
       - 'src/ports/windows-terminal/**'
       - 'src/ports/wezterm/**'
+      - 'src/ports/shared/**'
       - 'src/core/colors/schemes/**'
       - 'src/core/colors/palettes/**'
       - 'src/core/colors/roles/**'
