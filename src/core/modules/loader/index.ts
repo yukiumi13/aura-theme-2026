@@ -1,5 +1,6 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
+import { existsSync } from 'fs'
 import { fileSystemService } from 'services'
 import { allowedPorts } from './allowed-ports'
 import * as constants from 'shared/constants'
@@ -18,6 +19,12 @@ export async function loader(Aura: AuraAPI) {
 
   for (const portFolderName of sanitizedAllowedPortList) {
     const portPath = resolve(constants.folders.portsFolder, portFolderName)
+    // Shared helpers live beside ports but have no port entrypoint.
+    if (
+      !existsSync(resolve(portPath, 'index.ts')) &&
+      !existsSync(resolve(portPath, 'index.js'))
+    )
+      continue
     const portModule = await import(portPath)
     const [key] = Object.keys(portModule)
 

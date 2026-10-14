@@ -2,7 +2,7 @@ import { AuraPalette } from './types'
 
 // Resolve after the family has finished overriding UI roles (Aqua/Lime/Azure).
 // These are terminal interaction roles, independent of editor syntax and ANSI.
-export function createTerminalSurface({ base, ui }: AuraPalette) {
+export function createTerminalSurface({ base, ui, semantic }: AuraPalette) {
   const background = base.background
   const onFill = (fill: string) =>
     [base.background, base.foregroundStrong, base.elevated].sort(
@@ -23,6 +23,20 @@ export function createTerminalSurface({ base, ui }: AuraPalette) {
     unfocusedSplitFill: background,
     titlebarBackground: composite(ui.chrome.background, background),
     titlebarForeground: base.foregroundMuted,
+    tabBarBackground: composite(ui.chrome.tabStripBackground, background),
+    activeTabBackground: composite(
+      ui.chrome.activeTabBackground,
+      background
+    ),
+    activeTabForeground: ui.chrome.activeTabForeground,
+    inactiveTabBackground: composite(
+      ui.chrome.inactiveTabBackground,
+      background
+    ),
+    inactiveTabForeground: base.foregroundMuted,
+    activeBorder: composite(ui.focusBorder, background),
+    bellBorder: semantic.status.warning,
+    url: ui.linkRole.foreground,
     // TUI lists keep the normal text color, unlike terminal text selections.
     listBackground: composite(ui.selectionRole.list, background),
     listFocusBackground: composite(ui.selectionRole.listFocus, background),
@@ -30,7 +44,7 @@ export function createTerminalSurface({ base, ui }: AuraPalette) {
   }
 }
 
-// Ghostty color fields accept RGB, not RGBA. Preserve the existing role's
+// Terminal color fields use resolved RGB. Preserve the existing role's
 // appearance on its actual reading surface instead of dropping its alpha.
 function composite(foreground: string, background: string): string {
   if (foreground.length !== 9) return foreground

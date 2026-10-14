@@ -41,14 +41,14 @@ async function bundlePort({ rootDir, sourceName, bundleName }) {
 async function main() {
   const rootDir = path.resolve(__dirname, '..')
 
-  const ports = ['ghostty', 'windows-terminal', 'wezterm']
+  const ports = ['ghostty', 'kitty', 'windows-terminal', 'wezterm']
   const args = process.argv.slice(2)
   if (
     args.length &&
     (args.length !== 2 || args[0] !== '--only' || !ports.includes(args[1]))
   ) {
     throw new Error(
-      'Usage: package-terminal-bundles.js [--only ghostty|windows-terminal|wezterm]'
+      'Usage: package-terminal-bundles.js [--only ghostty|kitty|windows-terminal|wezterm]'
     )
   }
   for (const sourceName of args.length ? [args[1]] : ports) {

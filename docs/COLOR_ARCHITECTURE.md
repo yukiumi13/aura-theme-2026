@@ -28,6 +28,7 @@ flowchart TD
   D --> D3[Ghostty]
   D --> D4[Windows Terminal]
   D --> D5[WezTerm]
+  D --> D6[Kitty]
 
   D --> E[packages/* generated themes]
 ```
@@ -112,9 +113,11 @@ configuration specimens, not substitutes for native UI checks.
 
 - Terminal ports
   - `src/ports/ghostty/templates/aura-theme.conf`
+  - `src/ports/kitty/templates/aura-theme.conf`
   - `src/ports/windows-terminal/templates/aura-theme.json`
   - `src/ports/wezterm/templates/aura-theme.lua`
   - Terminal ANSI colors come from explicit `ansi*` variables so bright colors stay aligned with their normal hue.
+  - Ghostty and Kitty use `modernThemes` for the current nine-theme lineup. Shared terminal surface roles resolve reading, selection, cursor and chrome colors; Kitty's optional interface preset supplies geometry and tab-label typography without changing body fonts or key bindings. See `docs/KITTY_DESIGN.md`.
 
 ## Variant Rules
 
@@ -142,7 +145,7 @@ Do not make every syntax role use the variant accent. Aura variants should feel 
 
 `createAuraPalette(family, baseOverride?, appearance = 'dark', semanticOverride?)` selects the neutral and semantic palette for an appearance. Existing callers continue to use the dark palette. `schemes/light.ts` explicitly selects `auraLightFamily` and the light appearance, then uses the same role resolver and template-variable adapter as the dark variants.
 
-The light theme is currently registered only by the VS Code port, with `type: "light"` and extension `uiTheme: "vs"`. It is not appended to the dark accent-family array, so other ports do not accidentally render a light palette under dark appearance metadata.
+VS Code registers the light theme with `type: "light"` and extension `uiTheme: "vs"`. The shared `modernThemes` registry also selects paired light/dark appearances for Ghostty and Kitty. Light themes are not appended to the legacy dark accent-family array, so the other terminal and Zed ports retain their existing dark-only sets.
 
 The daylight hierarchy is:
 

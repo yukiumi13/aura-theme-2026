@@ -10,9 +10,11 @@ on:
     paths:
       - '.github/workflows/terminal-theme-bundles.yml'
       - 'packages/ghostty/**'
+      - 'packages/kitty/**'
       - 'packages/windows-terminal/**'
       - 'packages/wezterm/**'
       - 'src/ports/ghostty/**'
+      - 'src/ports/kitty/**'
       - 'src/ports/windows-terminal/**'
       - 'src/ports/wezterm/**'
       - 'src/ports/shared/**'
@@ -51,6 +53,9 @@ jobs:
       - name: Build Windows Terminal port
         run: yarn build only windows-terminal
 
+      - name: Build Kitty port
+        run: yarn build only kitty
+
       - name: Build WezTerm port
         run: yarn build only wezterm
 
@@ -63,6 +68,7 @@ jobs:
           name: aura-theme-2026-terminal-themes
           path: |
             dist/ghostty/aura-theme-2026-ghostty-themes.zip
+            dist/kitty/aura-theme-2026-kitty-themes.zip
             dist/windows-terminal/aura-theme-2026-windows-terminal-themes.zip
             dist/wezterm/aura-theme-2026-wezterm-themes.zip
 
@@ -72,5 +78,6 @@ jobs:
         with:
           files: |
             dist/ghostty/aura-theme-2026-ghostty-themes.zip
+            dist/kitty/aura-theme-2026-kitty-themes.zip
             dist/windows-terminal/aura-theme-2026-windows-terminal-themes.zip
             dist/wezterm/aura-theme-2026-wezterm-themes.zip

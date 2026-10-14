@@ -1,3 +1,9 @@
+# Archived Kitty theme
+
+This inherited single Soft Dark theme is outside the maintained build path.
+The current nine-theme port and optional interface preset are in
+[`packages/kitty`](../../../packages/kitty).
+
 <p align="center">
   <img src="https://github.com/daltonmenezes/assets/blob/master/images/aura-theme/new-heading.png?raw=true" alt="Aura Theme" width="70%" />
 </p>
