@@ -111,6 +111,15 @@ export function createAuraPalette(
           ? base.foregroundMuted
           : base.foreground,
       },
+      // Data series stay distinct from status meaning and action fills.
+      // Each family supplies its own semantic brand inks.
+      chartSeries: [
+        brand.lavender,
+        brand.mintText,
+        status.orange,
+        brand.blue,
+        brand.pink,
+      ],
       chartGrid: isLight
         ? withAlpha(base.borderStrong, '80')
         : withAlpha(auraDarkDecorationColors.chartGrid, '80'),

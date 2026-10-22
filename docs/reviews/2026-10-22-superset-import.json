@@ -1,0 +1,20 @@
+{
+  "cliVersion": "1.39.0",
+  "scope": "Isolated SUPERSET_HOME_DIR; no connected desktop runtime",
+  "imported": [
+    "aura-dark",
+    "aura-light",
+    "aura-aqua-light",
+    "aura-aqua-dark",
+    "aura-aqua-lime-light",
+    "aura-lime-light",
+    "aura-lime-dark",
+    "aura-azure-light",
+    "aura-azure-dark"
+  ],
+  "issues": [],
+  "roundTripColorsEqual": true,
+  "allThemeSelectionsPersisted": true,
+  "systemLightThemeId": "aura-aqua-light",
+  "systemDarkThemeId": "aura-aqua-dark"
+}

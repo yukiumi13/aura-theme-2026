@@ -66,6 +66,8 @@ The [Ghostty package](packages/ghostty) shares all nine current themes, terminal
 
 The [Kitty package](packages/kitty) shares the same nine themes and terminal palette, with family-specific tab, border and link colors. An optional interface preset adds flat top tabs and regular-weight labels. Personal body fonts, shortcuts and remote file-opening rules stay in your own configuration. See its README for installation and light/dark switching.
 
+The [Superset package](packages/superset) provides all nine current themes as an import pack and individual JSON files, including application UI, editor/diff syntax and the shared terminal palette. See its README for Appearance import and CLI setup.
+
 [Zed](packages/zed), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) retain their existing dark variant sets.
 
 See [GitHub Releases](https://github.com/yukiumi13/aura-theme-2026/releases) for bundles. Inherited upstream ports remain under `legacy/` and are outside the maintained build path.
@@ -88,8 +90,8 @@ Every design iteration includes a review of the full generated configuration and
 - Design notes: [Aqua](docs/AQUA_DESIGN.md), [Lime](docs/LIME_DESIGN.md), [Azure](docs/AZURE_DESIGN.md).
 - Latest interaction review: [shared Aqua focus roles](docs/reviews/2026-09-30-notification-focus.md).
 - Zed setup: [semantic-token settings](packages/zed/semantic-token-settings.json) and [mapping notes](docs/ZED_SEMANTIC_TOKENS.md).
-- Other builds: `yarn build only zed`, `ghostty`, `kitty`, `windows-terminal`, or `wezterm`.
-- Release bundles: `yarn package:zed` and `yarn package:terminals`. The workflows under `.github/workflows` attach bundles to `v*` tag releases.
+- Other builds: `yarn build only zed`, `ghostty`, `kitty`, `superset`, `windows-terminal`, or `wezterm`.
+- Release bundles: `yarn package:zed`, `yarn package:terminals`, and `yarn package:superset`. The workflows under `.github/workflows` attach bundles to `v*` tag releases.
 
 ## Feedback
 

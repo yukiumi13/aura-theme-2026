@@ -14,6 +14,27 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
   const terminalSurface = createTerminalSurface(palette)
 
   return {
+    // Named base tokens expose the final family/appearance foundation to new
+    // ports. Numeric accent aliases below remain a compatibility adapter.
+    baseShadow: base.shadow,
+    baseBackground: base.background,
+    baseAppBackground: base.appBackground,
+    baseSidebar: base.sidebar,
+    basePanel: base.panel,
+    baseSurface: base.surface,
+    baseSurfaceAlt: base.surfaceAlt,
+    baseSurfaceHover: base.surfaceHover,
+    baseElevated: base.elevated,
+    baseBorder: base.border,
+    baseBorderStrong: base.borderStrong,
+    baseForeground: base.foreground,
+    baseForegroundStrong: base.foregroundStrong,
+    baseForegroundMuted: base.foregroundMuted,
+    baseForegroundSubtle: base.foregroundSubtle,
+    baseDisabled: base.disabled,
+    baseComment: base.comment,
+    baseTransparent: base.transparent,
+
     accent0: base.shadow,
     accent1: ui.accentBright,
     accent2: syntax.string,
@@ -225,6 +246,11 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     uiInlayHintForeground: ui.editorDecoration.inlayHintForeground,
     uiChartGrid: ui.chartGrid,
     uiChartPurple: brand.lavender,
+    uiChartSeries1: ui.chartSeries[0],
+    uiChartSeries2: ui.chartSeries[1],
+    uiChartSeries3: ui.chartSeries[2],
+    uiChartSeries4: ui.chartSeries[3],
+    uiChartSeries5: ui.chartSeries[4],
     uiOnAccent: ui.onAccent,
     uiOnError: ui.onError,
     uiOnDebug: ui.onDebug,
@@ -294,6 +320,7 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     uiStatusConflict: ui.status.conflict,
     uiStatusInfoForeground: ui.status.info,
     uiStatusInfoBorder: ui.status.info,
+    uiStatusError: status.error,
     uiStatusSuccess: ui.status.success,
     uiStatusSuccessBright: ui.status.successBright,
     uiStatusSuccessSurface: ui.status.successSurface,

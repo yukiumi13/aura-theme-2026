@@ -29,6 +29,7 @@ flowchart TD
   D --> D4[Windows Terminal]
   D --> D5[WezTerm]
   D --> D6[Kitty]
+  D --> D7[Superset]
 
   D --> E[packages/* generated themes]
 ```
@@ -62,7 +63,8 @@ flowchart TD
 - `src/core/colors/template-vars/create-template-vars.ts`
   - Converts role tokens into flat Mustache variables used by the current template engine.
   - Explicit aliases such as `syntaxFunctionDeclaration`, `uiEditorSelection`, and `ansiBrightGreen` are preferred for new templates.
-  - Numeric `accentXX` aliases exist only for compatibility with inherited templates. They are not source palette names and should not be used for new ports.
+  - Named `base*` variables expose the final neutral foundation after family and appearance resolution. New ports can map neutral surfaces without borrowing numeric syntax/terminal aliases.
+- Numeric `accentXX` aliases exist only for compatibility with inherited templates. They are not source palette names and should not be used for new ports.
 
 - `src/core/colors/palettes/*`
   - Compatibility re-exports for older imports. Prefer `source`, `roles`, and `template-vars` for new code.
@@ -118,6 +120,32 @@ configuration specimens, not substitutes for native UI checks.
   - `src/ports/wezterm/templates/aura-theme.lua`
   - Terminal ANSI colors come from explicit `ansi*` variables so bright colors stay aligned with their normal hue.
   - Ghostty and Kitty use `modernThemes` for the current nine-theme lineup. Shared terminal surface roles resolve reading, selection, cursor and chrome colors; Kitty's optional interface preset supplies geometry and tab-label typography without changing body fonts or key bindings. See `docs/KITTY_DESIGN.md`.
+
+### Superset and complete color coverage
+
+`src/ports/superset/templates/theme.json` maps the current shared nine-theme
+registry to Superset's UI, terminal and editor schema. Superset `accent` is a
+hover surface, so it maps to `ui.surfaceRole.hover`; primary and sidebar-primary
+fills map to paired action roles, while highlight badges use the independent
+badge pair. Editor syntax is explicit rather than derived from terminal ANSI.
+The five data-series colors belong to `ui.chartSeries` in the shared role layer;
+the template adapter serializes them without choosing colors.
+
+For new maintained ports, compile every publicly supported color field whose
+meaning can be mapped, including optional fields, state pairs, syntax, diff and
+all terminal ANSI slots. Track the exact upstream schema and record unsupported
+or app-derived states. Leaving a supported field implicit must be an explicit
+design decision, not an accidental inheritance from the app's built-in theme.
+Do not manufacture a separate palette in the port or change unrelated personal
+settings to fill gaps. Reuse source colors and generic roles; add a shared role
+when a genuine color decision is missing. App-specific names and serialization
+belong in the port. This does not migrate the older ports' variant sets.
+
+Superset currently has 101 color fields: 41 UI, 22 terminal, 24 editor/diff and
+14 syntax. All are explicit. Its single-theme JSON files and import pack come
+from one in-memory compiler result. The current upstream contract is recorded
+in `docs/superset-theme-contract.json`; see `docs/SUPERSET_DESIGN.md` for the
+source revision, receiving surfaces, runtime limitations and verification.
 
 ## Variant Rules
 

@@ -225,6 +225,7 @@ export interface AuraUiPalette {
     inlayHintForeground: string
   }
   chartGrid: string
+  chartSeries: [string, string, string, string, string]
   onAccent: string
   onError: string
   onDebug: string

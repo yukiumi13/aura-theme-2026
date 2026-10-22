@@ -24,6 +24,7 @@
     "dev": "DEBUG=aura* NODE_ENV=development yarn aura:dev dev",
     "build": "DEBUG=aura* NODE_ENV=production yarn aura build",
     "make": "yarn aura make",
+    "package:superset": "node scripts/package-superset-bundle.js",
     "package:zed": "node scripts/package-zed-bundle.js",
     "package:terminals": "node scripts/package-terminal-bundles.js",
     "tokenize": "yarn aura tokenize",

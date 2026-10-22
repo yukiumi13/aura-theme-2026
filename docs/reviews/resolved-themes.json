@@ -5,7 +5,7 @@
       "id": "Aura 2026 Dark",
       "label": "Aura Dark",
       "path": "./themes/aura-dark-color-theme.json",
-      "sha256": "118e24c4db87b03a44f1d89b9a908159a4106414ca5ecaae702c9cf42460605e",
+      "sha256": "a953023e3afbb0d78cc5ec99d00c69c312c7fde484383c56d461cb31d9762767",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -14,7 +14,7 @@
       "id": "Aura Light 2026",
       "label": "Aura Light",
       "path": "./themes/aura-light-2026-color-theme.json",
-      "sha256": "52c71021208d84c46e67b8807920a55d2dc7ff62191af7b9857b8e702f3482da",
+      "sha256": "b34cd9d3d2058b4683fe19f71dda4b55f5f3dcedc66ac61443507a3a854a3320",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -23,7 +23,7 @@
       "id": "Aura Aqua Light 2026",
       "label": "Aura Aqua Light",
       "path": "./themes/aura-aqua-light-2026-color-theme.json",
-      "sha256": "35b7a94feb964e940082e2a6d29177052ea9fdd3e6a04f090a2278ef72b43923",
+      "sha256": "d382c62eb0feca44eda905ba4209771cdc14e0a90a06679ed2ab199b573863d1",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -32,7 +32,7 @@
       "id": "Aura Aqua Dark 2026",
       "label": "Aura Aqua Dark",
       "path": "./themes/aura-aqua-dark-2026-color-theme.json",
-      "sha256": "3f6b6ea42de4434645a6edf0870490ce9c75eafbe89aed91f47adc1cf844807d",
+      "sha256": "184e4b30ae447381e752f5c116102dea8d8bbb0252c25887c7bdebd63e34d0f1",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -41,7 +41,7 @@
       "id": "Aura Aqua Lime Light",
       "label": "Aura Aqua Lime Light",
       "path": "./themes/aura-aqua-lime-light-color-theme.json",
-      "sha256": "13ad40dedca9c8f99ceb6204ef09122426713d5d0c6718447908ccf6a8575e23",
+      "sha256": "8f0966383e051f563ef1522cfc5c6c9c9b20dc75922c65c6be54d0285152be2d",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -50,7 +50,7 @@
       "id": "Aura Lime Light",
       "label": "Aura Lime Light",
       "path": "./themes/aura-lime-light-color-theme.json",
-      "sha256": "e832f661e65cd8b619a7f35b24fee9305a46d0d65d72e5c152d1962e28ce5a47",
+      "sha256": "b0c8f9536de3c0968794fc1950be00d9f6912b2e0c2befe706096daf1f5a47c3",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -59,7 +59,7 @@
       "id": "Aura Lime Dark",
       "label": "Aura Lime Dark",
       "path": "./themes/aura-lime-dark-color-theme.json",
-      "sha256": "38bf65d32cc80d073bd4bbfe0fadc9e0513a8cf79d3943d3256e87d695a37926",
+      "sha256": "c4881bcabad5726763feb43b11774e20178882d8464d9048cd9834945e8bef9a",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -68,7 +68,7 @@
       "id": "Aura 2026 Azure Light",
       "label": "Aura Azure Light",
       "path": "./themes/aura-azure-light-2026-color-theme.json",
-      "sha256": "3b37605f6b9769a1f1b844c5d27cc06a3a0e572926f82216d2906d0fd41d24ac",
+      "sha256": "e6ad45e70e5e3f521b8c99f590ebcc291eef3fe7d8dcd43ff3b3d6b45960e21f",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -77,7 +77,7 @@
       "id": "Aura Azure 2026",
       "label": "Aura Azure Dark",
       "path": "./themes/aura-azure-2026-color-theme.json",
-      "sha256": "b1e97caa6da586d5fd23089eb53b36573582ef604a72433da004faf6bfd17d8a",
+      "sha256": "d4261a8cd8af339b42a6b10e37c389f0e091a03bd5402942d383c19a54ca703b",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
