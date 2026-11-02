@@ -66,7 +66,7 @@ The [Ghostty package](packages/ghostty) shares all nine current themes, terminal
 
 The [Kitty package](packages/kitty) shares the same nine themes and terminal palette, with family-specific tab, border and link colors. An optional interface preset adds flat top tabs and regular-weight labels. Personal body fonts, shortcuts and remote file-opening rules stay in your own configuration. See its README for installation and light/dark switching.
 
-[Zed](packages/zed), [Windows Terminal](packages/windows-terminal), and [WezTerm](packages/wezterm) retain their existing dark variant sets.
+[Zed](packages/zed) now shares the nine Modern appearances and explicitly covers the current Zed color contract. [Windows Terminal](packages/windows-terminal) and [WezTerm](packages/wezterm) retain their existing dark variant sets. Retired Zed themes are preserved under `legacy/packages/zed`.
 
 See [GitHub Releases](https://github.com/yukiumi13/aura-theme-2026/releases) for bundles. Inherited upstream ports remain under `legacy/` and are outside the maintained build path.
 

@@ -1,0 +1,23 @@
+{
+  "nativeZed": {
+    "inspected": false,
+    "reason": "No Zed executable on PATH; DISPLAY and WAYLAND_DISPLAY unset."
+  },
+  "renderedSpecimen": "overview.png",
+  "stableVersion": "1.26.2",
+  "scalarColorsPerTheme": 186,
+  "syntaxStylesPerTheme": 85,
+  "zipSha256": "aa5de39a5022d5fed94b87a771261572d7a676da6199f46bdcddbb093f141aca",
+  "payloads": {
+    "Aura Aqua Dark": "d5e9e738a1d937c947dcb3147f0570b04ff41846aaa884ea1907e87b556e5bf1",
+    "Aura Aqua Light": "3e88a9a5bb8fed4d7bdba3d15f86c121e6c3289e0a097852f2e45d6370c1b284",
+    "Aura Aqua Lime Light": "a7a32bcc8fd01765ab9dc2cd1e1ba2736c35616b02de1ae1f50fa89ed6be3b5a",
+    "Aura Azure Dark": "c6d9b9159355b4d2c397572a7f923756d09f3a2c283985e5180c4e9501fb8390",
+    "Aura Azure Light": "c74c3fdf7e87999b38dfd79ec514bfc98e13ade3f91753d8819d628b47572272",
+    "Aura Dark": "a55f16416e6464f0f73b848f9c39099b897e61b0f253a814734b1ee138d0d90e",
+    "Aura Light": "1e048cd3e058aa484880cdade324f07d5a096bab5b6e2659306969352cd94f55",
+    "Aura Lime Dark": "4e6df7b8a919721252386eac108ee71d882618034cfdae22e003a91a33b556f2",
+    "Aura Lime Light": "85d7240a4f1ce48e30b2524502cb54c46bff795135ef18e0f2089e4adf266780"
+  },
+  "vscodeRegression": "All generated files byte-identical to pre-task snapshot after rebuild."
+}

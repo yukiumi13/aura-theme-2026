@@ -109,7 +109,8 @@ configuration specimens, not substitutes for native UI checks.
 
 - Zed
   - `src/ports/zed/templates/theme.json`
-  - Maps Zed UI keys, syntax styles, semantic-token style targets, and terminal colors to template variables.
+  - Maps every non-deprecated scalar color in the pinned Zed contract through named shared variables.
+  - `createEditorSurface` resolves state/background pairs after family overrides for hosts that share global foregrounds. See [Zed design](ZED_DESIGN.md).
 
 - Terminal ports
   - `src/ports/ghostty/templates/aura-theme.conf`
@@ -145,7 +146,7 @@ Do not make every syntax role use the variant accent. Aura variants should feel 
 
 `createAuraPalette(family, baseOverride?, appearance = 'dark', semanticOverride?)` selects the neutral and semantic palette for an appearance. Existing callers continue to use the dark palette. `schemes/light.ts` explicitly selects `auraLightFamily` and the light appearance, then uses the same role resolver and template-variable adapter as the dark variants.
 
-VS Code registers the light theme with `type: "light"` and extension `uiTheme: "vs"`. The shared `modernThemes` registry also selects paired light/dark appearances for Ghostty and Kitty. Light themes are not appended to the legacy dark accent-family array, so the other terminal and Zed ports retain their existing dark-only sets.
+VS Code registers the light theme with `type: "light"` and extension `uiTheme: "vs"`. The shared `modernThemes` registry also selects paired light/dark appearances for Ghostty, Kitty and Zed. Light themes are not appended to the legacy dark accent-family array; the remaining terminal ports retain their existing sets.
 
 The daylight hierarchy is:
 

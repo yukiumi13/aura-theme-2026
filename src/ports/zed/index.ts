@@ -1,135 +1,50 @@
 import { AuraAPI } from 'core'
 import { resolve } from 'path'
-import { withTerminalAuraAnsi } from '../shared/terminal-ansi'
-import { colorsService, functionCompositionService } from 'services'
-import { folders } from 'shared/constants'
-
-type VariantScheme = typeof import('core/colors/schemes').variants[number]
-
-const { shade, desaturate } = colorsService()
-const { compose } = functionCompositionService()
-const shadeAndDesaturate = compose(shade(0.63), desaturate(0.2))
+import { modernThemes } from '../shared/modern-themes'
 
 export async function ZedPort(Aura: AuraAPI) {
-  const { createPort, createReadme, colorSchemes, constants } = Aura
-  const { info, packageVersion } = constants
-
-  const portName: string = 'Zed'
-  const version = packageVersion
-  const type = 'dark'
+  const {
+    createPort,
+    createReadme,
+    copyExtraFiles,
+    colorSchemes,
+    constants,
+  } = Aura
+  const { info, packageVersion, folders } = constants
   const templateFolder = resolve(__dirname, 'templates')
-  const template = resolve(templateFolder, 'theme.json')
-  const outputDist = resolve(folders.distFolder, 'zed', 'themes')
-
-  const names = {
-    auraDark: `${info.shortName} Dark`,
-    auraDarkSoftText: `${info.shortName} Dark (Soft Text)`,
-    auraSoftDark: `${info.shortName} Soft Dark`,
-    auraSoftDarkSoftText: `${info.shortName} Soft Dark (Soft Text)`,
-  }
-
+  const themes = modernThemes(colorSchemes)
+  await copyExtraFiles(__dirname)
   await createPort({
     template: resolve(templateFolder, 'extension.toml'),
-    outputFileName: `extension`,
-    replacements: {
-      ...info,
-      portName,
-      version,
-    },
+    outputFileName: 'extension',
+    replacements: { ...info, portName: 'Zed', version: packageVersion },
   })
-
   await createPort({
     template: resolve(templateFolder, 'semantic-token-settings.json'),
-    outputFileName: `semantic-token-settings`,
+    outputFileName: 'semantic-token-settings',
     replacements: {},
   })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-dark`,
-    replacements: {
-      ...info,
-      type,
-      ...colorSchemes.dark,
-      name: names.auraDark,
-      ...createTransparentAccents(colorSchemes.dark),
-    },
-  })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-dark-soft-text`,
-    replacements: {
-      ...info,
-      type,
-      ...colorSchemes.darkSoft,
-      name: names.auraDarkSoftText,
-      ...createTransparentAccents(colorSchemes.darkSoft),
-    },
-  })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-soft-dark`,
-    replacements: {
-      ...info,
-      type,
-      ...colorSchemes.softDark,
-      name: names.auraSoftDark,
-      ...createTransparentAccents(colorSchemes.softDark),
-    },
-  })
-
-  await createPort({
-    template,
-    outputDist,
-    outputFileName: `aura-soft-dark-soft-text`,
-    replacements: {
-      ...info,
-      type,
-      ...colorSchemes.softDarkSoft,
-      name: names.auraSoftDarkSoftText,
-      ...createTransparentAccents(colorSchemes.softDarkSoft),
-    },
-  })
-
-  await Promise.all(
-    [...colorSchemes.variants, colorSchemes.inkVariant].map(
-      ({ family, scheme }: VariantScheme) =>
-        createPort({
-          template,
-          outputDist,
-          outputFileName: family.slug,
-          replacements: {
-            ...info,
-            type,
-            ...withTerminalAuraAnsi(scheme),
-            name: family.name,
-            ...createTransparentAccents(scheme),
-          },
-        })
-    )
-  )
-
+  for (const theme of themes) {
+    await createPort({
+      template: resolve(templateFolder, 'theme.json'),
+      outputDist: resolve(folders.distFolder, 'zed', 'themes'),
+      outputFileName: theme.name.toLowerCase().replace(/ /g, '-'),
+      replacements: {
+        ...info,
+        ...theme.scheme,
+        name: theme.name,
+        type: theme.appearance,
+      },
+    })
+  }
   await createReadme({
     template: resolve(templateFolder, 'README.md'),
     replacements: {
-      portName,
-      version,
+      portName: 'Zed',
+      version: packageVersion,
+      themeRows: themes
+        .map(({ name, appearance }) => `| ${name} | ${appearance} |`)
+        .join('\n'),
     },
   })
-}
-
-function createTransparentAccents(colorScheme: Record<string, string>) {
-  return {
-    accent2Transparent: shadeAndDesaturate(colorScheme.accent2) + '7f',
-    accent3Transparent: shadeAndDesaturate(colorScheme.accent3) + '7f',
-    accent4Transparent: shadeAndDesaturate(colorScheme.accent4) + '7f',
-    accent5Transparent: shadeAndDesaturate(colorScheme.accent5) + '7f',
-    accent6Transparent: shadeAndDesaturate(colorScheme.accent6) + '7f',
-    accent32Transparent: shadeAndDesaturate(colorScheme.accent32) + '7f',
-  }
 }

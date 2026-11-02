@@ -11,8 +11,12 @@ on:
       - '.github/workflows/zed-extension-bundle.yml'
       - 'packages/zed/**'
       - 'src/ports/zed/**'
-      - 'src/core/colors/schemes/**'
-      - 'src/core/colors/palettes/**'
+      - 'src/core/colors/**'
+      - 'src/core/modules/**'
+      - 'src/ports/shared/**'
+      - 'scripts/*zed*'
+      - 'docs/zed-theme-*.json'
+      - 'tests/unit/ports/zed/**'
       - 'package.json'
       - 'yarn.lock'
 
@@ -38,6 +42,11 @@ jobs:
 
       - name: Build Zed port
         run: yarn build only zed
+
+      - name: Validate Zed contract and interactions
+        run: |
+          node scripts/validate-zed-themes.js
+          yarn test tests/unit/ports/zed
 
       - name: Package Zed extension bundle
         run: yarn package:zed

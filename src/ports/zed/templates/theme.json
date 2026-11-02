@@ -7,583 +7,755 @@
       "appearance": "{{ type }}",
       "name": "{{ name }}",
       "style": {
-        "accents": [
-          "{{ accent1 }}",
-          "{{ accent2 }}",
-          "{{ accent3 }}",
-          "{{ accent6 }}",
-          "{{ accent32 }}",
-          "{{ accent5 }}",
-          "{{ accent31 }}"
-        ],
-        "background": "{{ accent12 }}",
-        "background.appearance": "opaque",
-        "drop_target.background": "{{ accent38 }}",
-        "editor.active_line.background": "{{ accent17 }}",
-        "editor.active_line_number": "{{ accent7 }}",
-        "editor.hover_line_number": "{{ accent10 }}",
-        "editor.active_wrap_guide": "{{ accent15 }}",
-        "editor.background": "{{ accent12 }}",
-        "editor.document_highlight.bracket_background": "{{ accent45 }}",
-        "editor.document_highlight.read_background": "{{ accent20 }}",
-        "editor.document_highlight.write_background": "{{ accent20 }}",
-        "editor.foreground": "{{ accent59 }}",
-        "editor.gutter.background": "{{ accent12 }}",
-        "editor.highlighted_line.background": "{{ accent17 }}",
-        "editor.indent_guide": "{{ accent15 }}",
-        "editor.indent_guide_active": "{{ accent22 }}",
-        "editor.invisible": "{{ accent22 }}",
-        "editor.line_number": "{{ accent17 }}",
-        "editor.subheader.background": "{{ accent21 }}",
-        "editor.wrap_guide": "{{ accent15 }}",
-        "elevated_surface.background": "{{ accent21 }}",
-        "pane.focused_border": "{{ accent7 }}",
-        "pane_group.border": "{{ accent11 }}",
-        "panel.background": "{{ accent21 }}",
-        "panel.focused_border": "{{ accent7 }}",
-        "panel.indent_guide": "{{ accent15 }}",
-        "panel.indent_guide_active": "{{ accent22 }}",
-        "panel.indent_guide_hover": "{{ accent23 }}",
-        "search.match_background": "{{ accent20 }}",
-        "search.active_match_background": "{{ accent42 }}",
-        "status_bar.background": "{{ accent24 }}",
-        "surface.background": "{{ accent12 }}",
-        "tab.active_background": "{{ accent12 }}",
-        "tab.inactive_background": "{{ accent21 }}",
-        "tab_bar.background": "{{ accent21 }}",
-        "title_bar.background": "{{ accent21 }}",
-        "title_bar.inactive_background": "{{ accent30 }}",
-        "toolbar.background": "{{ accent12 }}",
-        "text": "{{ accent7 }}",
-        "text.accent": "{{ accent1 }}",
-        "text.disabled": "{{ accent22 }}",
-        "text.muted": "{{ accent8 }}",
-        "text.placeholder": "{{ accent14 }}",
-        "border": "{{ accent11 }}",
-        "border.variant": "{{ accent14 }}",
-        "border.focused": "{{ accent17 }}",
-        "border.selected": "{{ accent1 }}",
-        "border.disabled": "{{ accent22}}",
-        "border.transparent": "{{ accent2}}",
-        "element.active": "{{ accent20 }}",
-        "element.background": "{{ accent21 }}",
-        "element.disabled": "{{ accent22 }}",
-        "element.hover": "{{ accent33 }}",
-        "element.selected": "{{ accent20 }}",
-        "ghost_element.active": "{{ accent17 }}",
-        "ghost_element.background": "{{ accent34 }}",
-        "ghost_element.disabled": "{{ accent22 }}",
-        "ghost_element.hover": "{{ accent23 }}",
-        "ghost_element.selected": "{{ accent33 }}",
-        "icon": "{{ accent35 }}",
-        "icon.accent": "{{ accent2 }}",
-        "icon.disabled": "{{ accent22 }}",
-        "icon.muted": "{{ accent10 }}",
-        "icon.placeholder": "{{ accent14 }}",
-        "scrollbar.thumb.border": "{{ accent23 }}",
-        "scrollbar.thumb.hover_background": "{{ accent53 }}",
-        "scrollbar.thumb.background": "{{ accent52 }}",
-        "scrollbar.track.border": "{{ accent23 }}",
-        "scrollbar.track.background": "{{ accent16 }}",
-        "terminal.ansi.background": "{{ accent12 }}",
+        "border": "{{ baseBorder }}",
+        "border.variant": "{{ baseBorder }}",
+        "border.focused": "{{ uiFocusBorder }}",
+        "border.selected": "{{ uiLinkForeground }}",
+        "border.transparent": "{{ baseTransparent }}",
+        "border.disabled": "{{ baseBorder }}",
+        "elevated_surface.background": "{{ uiSurfaceElevated }}",
+        "surface.background": "{{ baseSurface }}",
+        "background": "{{ baseAppBackground }}",
+        "element.background": "{{ editorSurfaceControl }}",
+        "element.hover": "{{ editorSurfaceHover }}",
+        "element.active": "{{ editorSurfacePressed }}",
+        "element.selected": "{{ editorSurfaceSelected }}",
+        "element.disabled": "{{ editorSurfaceDisabled }}",
+        "element.selection_background": "{{ uiEditorSelection }}",
+        "drop_target.background": "{{ uiEditorSelection }}",
+        "drop_target.border": "{{ uiFocusBorder }}",
+        "ghost_element.background": "{{ baseTransparent }}",
+        "ghost_element.hover": "{{ editorSurfaceHover }}",
+        "ghost_element.active": "{{ editorSurfacePressed }}",
+        "ghost_element.selected": "{{ editorSurfaceSelected }}",
+        "ghost_element.disabled": "{{ editorSurfaceDisabled }}",
+        "text": "{{ baseForeground }}",
+        "text.muted": "{{ baseForegroundMuted }}",
+        "text.placeholder": "{{ baseForegroundSubtle }}",
+        "text.disabled": "{{ baseDisabled }}",
+        "text.accent": "{{ uiLinkForeground }}",
+        "icon": "{{ baseForeground }}",
+        "icon.muted": "{{ baseForegroundMuted }}",
+        "icon.disabled": "{{ baseDisabled }}",
+        "icon.placeholder": "{{ baseForegroundSubtle }}",
+        "icon.accent": "{{ uiLinkForeground }}",
+        "debugger.accent": "{{ statusWarning }}",
+        "status_bar.background": "{{ baseAppBackground }}",
+        "title_bar.background": "{{ baseAppBackground }}",
+        "title_bar.inactive_background": "{{ baseAppBackground }}",
+        "toolbar.background": "{{ baseBackground }}",
+        "tab_bar.background": "{{ uiTabStripBackground }}",
+        "tab.inactive_background": "{{ uiInactiveTabBackground }}",
+        "tab.active_background": "{{ editorSurfaceActiveTab }}",
+        "search.match_background": "{{ editorSurfaceSearch }}",
+        "search.active_match_background": "{{ editorSurfaceSearchActive }}",
+        "panel.background": "{{ baseSidebar }}",
+        "panel.focused_border": "{{ uiFocusBorder }}",
+        "panel.indent_guide": "{{ uiTreeGuide }}",
+        "panel.indent_guide_hover": "{{ baseBorderStrong }}",
+        "panel.indent_guide_active": "{{ uiEditorActiveIndentGuide }}",
+        "panel.overlay_background": "{{ uiSurfaceElevated }}",
+        "panel.overlay_hover": "{{ editorSurfaceHover }}",
+        "pane.focused_border": "{{ uiFocusBorder }}",
+        "pane_group.border": "{{ baseBorder }}",
+        "scrollbar.thumb.background": "{{ uiScrollbar }}",
+        "scrollbar.thumb.hover_background": "{{ uiScrollbarHover }}",
+        "scrollbar.thumb.active_background": "{{ uiScrollbarActive }}",
+        "scrollbar.thumb.border": "{{ baseTransparent }}",
+        "scrollbar.track.background": "{{ baseTransparent }}",
+        "scrollbar.track.border": "{{ baseTransparent }}",
+        "minimap.thumb.background": "{{ uiScrollbar }}",
+        "minimap.thumb.hover_background": "{{ uiScrollbarHover }}",
+        "minimap.thumb.active_background": "{{ uiScrollbarActive }}",
+        "minimap.thumb.border": "{{ baseTransparent }}",
+        "editor.foreground": "{{ baseForeground }}",
+        "editor.code_lens.foreground": "{{ uiInlayHintForeground }}",
+        "editor.background": "{{ baseBackground }}",
+        "editor.gutter.background": "{{ baseBackground }}",
+        "editor.subheader.background": "{{ uiSectionHeaderBackground }}",
+        "editor.active_line.background": "{{ uiEditorLineHighlight }}",
+        "editor.highlighted_line.background": "{{ uiEditorRangeHighlight }}",
+        "editor.debugger_active_line.background": "{{ editorSurfaceDebuggerLine }}",
+        "editor.line_number": "{{ editorSurfaceLineNumber }}",
+        "editor.active_line_number": "{{ baseForegroundStrong }}",
+        "editor.hover_line_number": "{{ uiLinkForeground }}",
+        "editor.invisible": "{{ uiEditorWhitespace }}",
+        "editor.wrap_guide": "{{ uiEditorIndentGuide }}",
+        "editor.active_wrap_guide": "{{ uiEditorActiveIndentGuide }}",
+        "editor.indent_guide": "{{ uiEditorIndentGuide }}",
+        "editor.indent_guide_active": "{{ uiEditorActiveIndentGuide }}",
+        "editor.document_highlight.read_background": "{{ uiEditorRangeHighlight }}",
+        "editor.document_highlight.write_background": "{{ uiEditorSelectionStrong }}",
+        "editor.document_highlight.bracket_background": "{{ uiEditorSelection }}",
+        "editor.diff_hunk.added.background": "{{ editorSurfaceDiffAdded }}",
+        "editor.diff_hunk.added.hollow_background": "{{ editorSurfaceDiffAdded }}",
+        "editor.diff_hunk.added.hollow_border": "{{ editorSurfaceDiffAddedBorder }}",
+        "editor.diff_hunk.deleted.background": "{{ editorSurfaceDiffDeleted }}",
+        "editor.diff_hunk.deleted.hollow_background": "{{ editorSurfaceDiffDeleted }}",
+        "editor.diff_hunk.deleted.hollow_border": "{{ editorSurfaceDiffDeletedBorder }}",
+        "terminal.background": "{{ terminalBackground }}",
+        "terminal.foreground": "{{ terminalForeground }}",
+        "terminal.ansi.background": "{{ terminalBackground }}",
+        "terminal.bright_foreground": "{{ terminalForegroundBright }}",
+        "terminal.dim_foreground": "{{ terminalMuted }}",
         "terminal.ansi.black": "{{ ansiBlack }}",
-        "terminal.ansi.blue": "{{ ansiBlue }}",
         "terminal.ansi.bright_black": "{{ ansiBrightBlack }}",
-        "terminal.ansi.bright_blue": "{{ ansiBrightBlue }}",
-        "terminal.ansi.bright_cyan": "{{ ansiBrightCyan }}",
-        "terminal.ansi.bright_green": "{{ ansiBrightGreen }}",
-        "terminal.ansi.bright_magenta": "{{ ansiBrightMagenta }}",
-        "terminal.ansi.bright_red": "{{ ansiBrightRed }}",
-        "terminal.ansi.bright_white": "{{ ansiBrightWhite }}",
-        "terminal.ansi.bright_yellow": "{{ ansiBrightYellow }}",
-        "terminal.ansi.cyan": "{{ ansiCyan }}",
         "terminal.ansi.dim_black": "{{ ansiDimBlack }}",
-        "terminal.ansi.dim_blue": "{{ ansiDimBlue }}",
-        "terminal.ansi.dim_cyan": "{{ ansiDimCyan }}",
-        "terminal.ansi.dim_green": "{{ ansiDimGreen }}",
-        "terminal.ansi.dim_magenta": "{{ ansiDimMagenta }}",
-        "terminal.ansi.dim_red": "{{ ansiDimRed }}",
-        "terminal.ansi.dim_white": "{{ ansiDimWhite }}",
-        "terminal.ansi.dim_yellow": "{{ ansiDimYellow }}",
-        "terminal.ansi.green": "{{ ansiGreen }}",
-        "terminal.ansi.magenta": "{{ ansiMagenta }}",
         "terminal.ansi.red": "{{ ansiRed }}",
-        "terminal.ansi.white": "{{ ansiWhite }}",
+        "terminal.ansi.bright_red": "{{ ansiBrightRed }}",
+        "terminal.ansi.dim_red": "{{ ansiDimRed }}",
+        "terminal.ansi.green": "{{ ansiGreen }}",
+        "terminal.ansi.bright_green": "{{ ansiBrightGreen }}",
+        "terminal.ansi.dim_green": "{{ ansiDimGreen }}",
         "terminal.ansi.yellow": "{{ ansiYellow }}",
-        "terminal.background": "{{ accent12 }}",
-        "terminal.bright_foreground": "{{ accent7 }}",
-        "terminal.dim_foreground": "{{ accent10 }}",
-        "terminal.foreground": "{{ accent9 }}",
-        "error": "{{ accent5 }}",
-        "error.background": "{{ accent43 }}",
-        "error.border": "{{ accent5 }}",
-        "hint": "{{ accent8 }}",
-        "hint.background": "{{ accent50 }}",
-        "hint.border": "{{ accent23 }}",
-        "info": "{{ accent32 }}",
-        "info.background": "{{ accent44 }}",
-        "info.border": "{{ accent32 }}",
+        "terminal.ansi.bright_yellow": "{{ ansiBrightYellow }}",
+        "terminal.ansi.dim_yellow": "{{ ansiDimYellow }}",
+        "terminal.ansi.blue": "{{ ansiBlue }}",
+        "terminal.ansi.bright_blue": "{{ ansiBrightBlue }}",
+        "terminal.ansi.dim_blue": "{{ ansiDimBlue }}",
+        "terminal.ansi.magenta": "{{ ansiMagenta }}",
+        "terminal.ansi.bright_magenta": "{{ ansiBrightMagenta }}",
+        "terminal.ansi.dim_magenta": "{{ ansiDimMagenta }}",
+        "terminal.ansi.cyan": "{{ ansiCyan }}",
+        "terminal.ansi.bright_cyan": "{{ ansiBrightCyan }}",
+        "terminal.ansi.dim_cyan": "{{ ansiDimCyan }}",
+        "terminal.ansi.white": "{{ ansiWhite }}",
+        "terminal.ansi.bright_white": "{{ ansiBrightWhite }}",
+        "terminal.ansi.dim_white": "{{ ansiDimWhite }}",
         "link_text.hover": "{{ uiLinkHoverForeground }}",
-        "version_control.added": "{{ accent2 }}",
-        "version_control.modified": "{{ accent3 }}",
-        "version_control.deleted": "{{ accent5 }}",
-        "version_control.renamed": "{{ accent32 }}",
-        "version_control.conflict": "{{ accent1 }}",
-        "version_control.ignored": "{{ accent8 }}",
-        "version_control.word_added": "{{ accent41 }}",
-        "version_control.word_deleted": "{{ accent43 }}",
-        "version_control.conflict_marker.ours": "{{ accent41 }}",
-        "version_control.conflict_marker.theirs": "{{ accent45 }}",
-        "predictive": "{{ accent8 }}",
-        "predictive.background": "{{ accent45 }}",
-        "predictive.border": "{{ accent33 }}",
-        "renamed": "{{ accent32 }}",
-        "renamed.background": "{{ accent44 }}",
-        "renamed.border": "{{ accent32 }}",
-        "success": "{{ accent2 }}",
-        "success.background": "{{ accent41 }}",
-        "success.border": "{{ accent2 }}",
-        "unreachable": "{{ accent5 }}",
-        "unreachable.background": "{{ accent50 }}",
-        "unreachable.border": "{{ accent5 }}",
-        "warning": "{{ accent3 }}",
-        "warning.background": "{{ accent42 }}",
-        "warning.border": "{{ accent3 }}",
-        "conflict": "{{ accent1 }}",
-        "conflict.background": "{{ accent45 }}",
-        "conflict.border": "{{ accent1 }}",
-        "created": "{{ accent2 }}",
-        "created.background": "{{ accent41 }}",
-        "created.border": "{{ accent2 }}",
-        "deleted": "{{ accent5 }}",
-        "deleted.background": "{{ accent43 }}",
-        "deleted.border": "{{ accent5 }}",
-        "hidden": "{{ accent8 }}",
-        "hidden.background": "{{ accent50 }}",
-        "hidden.border": "{{ accent8 }}",
-        "ignored": "{{ accent22 }}",
-        "ignored.background": "{{ accent50 }}",
-        "ignored.border": "{{ accent22 }}",
-        "modified": "{{ accent3 }}",
-        "modified.background": "{{ accent42 }}",
-        "modified.border": "{{ accent3 }}",
+        "version_control.added": "{{ uiStatusSuccess }}",
+        "version_control.deleted": "{{ statusError }}",
+        "version_control.modified": "{{ uiStatusModified }}",
+        "version_control.renamed": "{{ uiStatusInfoForeground }}",
+        "version_control.conflict": "{{ uiStatusConflict }}",
+        "version_control.ignored": "{{ baseForegroundSubtle }}",
+        "version_control.word_added": "{{ editorSurfaceDiffAddedWord }}",
+        "version_control.word_deleted": "{{ editorSurfaceDiffDeletedWord }}",
+        "version_control.conflict_marker.ours": "{{ editorSurfaceDiffAdded }}",
+        "version_control.conflict_marker.theirs": "{{ uiStatusInfoSurface }}",
+        "vim.normal.background": "{{ editorSurfaceNormalMode }}",
+        "vim.insert.background": "{{ editorSurfaceInsertMode }}",
+        "vim.replace.background": "{{ editorSurfaceReplaceMode }}",
+        "vim.visual.background": "{{ editorSurfaceVisualMode }}",
+        "vim.visual_line.background": "{{ editorSurfaceVisualMode }}",
+        "vim.visual_block.background": "{{ editorSurfaceVisualMode }}",
+        "vim.yank.background": "{{ editorSurfaceYank }}",
+        "vim.helix_jump_label.foreground": "{{ uiLinkForeground }}",
+        "vim.helix_normal.background": "{{ editorSurfaceNormalMode }}",
+        "vim.helix_select.background": "{{ editorSurfaceVisualMode }}",
+        "vim.normal.foreground": "{{ editorSurfaceNormalModeText }}",
+        "vim.insert.foreground": "{{ editorSurfaceInsertModeText }}",
+        "vim.replace.foreground": "{{ editorSurfaceReplaceModeText }}",
+        "vim.visual.foreground": "{{ editorSurfaceVisualModeText }}",
+        "vim.visual_line.foreground": "{{ editorSurfaceVisualModeText }}",
+        "vim.visual_block.foreground": "{{ editorSurfaceVisualModeText }}",
+        "vim.helix_normal.foreground": "{{ editorSurfaceNormalModeText }}",
+        "vim.helix_select.foreground": "{{ editorSurfaceVisualModeText }}",
+        "conflict": "{{ uiStatusConflict }}",
+        "conflict.background": "{{ editorSurfaceConflictTint }}",
+        "conflict.border": "{{ uiStatusConflict }}",
+        "created": "{{ uiStatusSuccess }}",
+        "created.background": "{{ uiStatusSuccessSurface }}",
+        "created.border": "{{ uiStatusSuccess }}",
+        "deleted": "{{ statusError }}",
+        "deleted.background": "{{ uiStatusErrorSurface }}",
+        "deleted.border": "{{ statusError }}",
+        "error": "{{ statusError }}",
+        "error.background": "{{ uiStatusErrorSurface }}",
+        "error.border": "{{ statusError }}",
+        "hidden": "{{ baseForegroundSubtle }}",
+        "hidden.background": "{{ baseTransparent }}",
+        "hidden.border": "{{ baseBorder }}",
+        "hint": "{{ uiStatusInfoForeground }}",
+        "hint.background": "{{ uiStatusInfoSurface }}",
+        "hint.border": "{{ uiStatusInfoForeground }}",
+        "ignored": "{{ baseForegroundSubtle }}",
+        "ignored.background": "{{ baseTransparent }}",
+        "ignored.border": "{{ baseBorder }}",
+        "info": "{{ uiStatusInfoForeground }}",
+        "info.background": "{{ editorSurfaceActionTint }}",
+        "info.border": "{{ editorSurfaceActionBorder }}",
+        "modified": "{{ uiStatusModified }}",
+        "modified.background": "{{ editorSurfaceModifiedTint }}",
+        "modified.border": "{{ uiStatusModified }}",
+        "predictive": "{{ baseForegroundMuted }}",
+        "predictive.background": "{{ editorSurfacePredictiveTint }}",
+        "predictive.border": "{{ baseBorder }}",
+        "renamed": "{{ uiStatusInfoForeground }}",
+        "renamed.background": "{{ uiStatusInfoSurface }}",
+        "renamed.border": "{{ uiStatusInfoForeground }}",
+        "success": "{{ uiStatusSuccess }}",
+        "success.background": "{{ uiStatusSuccessSurface }}",
+        "success.border": "{{ uiStatusSuccess }}",
+        "unreachable": "{{ baseForegroundSubtle }}",
+        "unreachable.background": "{{ baseTransparent }}",
+        "unreachable.border": "{{ baseBorder }}",
+        "warning": "{{ uiStatusWarning }}",
+        "warning.background": "{{ uiStatusWarningSurface }}",
+        "warning.border": "{{ uiStatusWarning }}",
+        "background.appearance": "opaque",
+        "accents": [
+          "{{ uiActionBackground }}",
+          "{{ uiBadgeBackground }}",
+          "{{ syntaxType }}",
+          "{{ syntaxFunction }}",
+          "{{ syntaxProperty }}",
+          "{{ syntaxNumber }}",
+          "{{ statusError }}",
+          "{{ uiCompanion }}"
+        ],
         "players": [
           {
-            "cursor": "{{ accent1 }}",
-            "background": "{{ accent1 }}",
-            "selection": "{{ accent20 }}"
+            "cursor": "{{ uiLinkForeground }}",
+            "background": "{{ uiLinkForeground }}",
+            "selection": "{{ uiEditorSelection }}"
           },
           {
-            "cursor": "{{ accent2 }}",
-            "background": "{{ accent2 }}",
-            "selection": "{{ accent2Transparent }}"
+            "cursor": "{{ syntaxString }}",
+            "background": "{{ syntaxString }}",
+            "selection": "{{ playerSelection1 }}"
           },
           {
-            "cursor": "{{ accent3 }}",
-            "background": "{{ accent3 }}",
-            "selection": "{{ accent3Transparent }}"
+            "cursor": "{{ syntaxType }}",
+            "background": "{{ syntaxType }}",
+            "selection": "{{ playerSelection2 }}"
           },
           {
-            "cursor": "{{ accent4 }}",
-            "background": "{{ accent4 }}",
-            "selection": "{{ accent4Transparent }}"
+            "cursor": "{{ syntaxFunction }}",
+            "background": "{{ syntaxFunction }}",
+            "selection": "{{ playerSelection3 }}"
           },
           {
-            "cursor": "{{ accent5 }}",
-            "background": "{{ accent5 }}",
-            "selection": "{{ accent5Transparent }}"
+            "cursor": "{{ syntaxProperty }}",
+            "background": "{{ syntaxProperty }}",
+            "selection": "{{ playerSelection4 }}"
           },
           {
-            "cursor": "{{ accent6 }}",
-            "background": "{{ accent6 }}",
-            "selection": "{{ accent6Transparent }}"
+            "cursor": "{{ syntaxNumber }}",
+            "background": "{{ syntaxNumber }}",
+            "selection": "{{ playerSelection5 }}"
           },
           {
-            "cursor": "{{ accent32 }}",
-            "background": "{{ accent32 }}",
-            "selection": "{{ accent32Transparent }}"
+            "cursor": "{{ statusError }}",
+            "background": "{{ statusError }}",
+            "selection": "{{ playerSelection6 }}"
+          },
+          {
+            "cursor": "{{ uiCompanion }}",
+            "background": "{{ uiCompanion }}",
+            "selection": "{{ playerSelection7 }}"
           }
         ],
         "syntax": {
           "attribute": {
             "color": "{{ syntaxAttribute }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "boolean": {
             "color": "{{ syntaxBoolean }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "comment": {
             "color": "{{ syntaxComment }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "comment.doc": {
             "color": "{{ syntaxCommentDoc }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "comment.documentation": {
             "color": "{{ syntaxCommentDoc }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "constant": {
             "color": "{{ syntaxConstant }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "constant.builtin": {
             "color": "{{ syntaxVariableSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "constant.numeric": {
             "color": "{{ syntaxNumber }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "constructor": {
             "color": "{{ syntaxConstructor }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "decorator": {
             "color": "{{ syntaxDecorator }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "embedded": {
             "color": "{{ syntaxEmbedded }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "emphasis": {
             "color": "{{ syntaxKeyword }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "italic",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "emphasis.strong": {
             "color": "{{ syntaxKeyword }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 700,
+            "background_color": "{{ baseTransparent }}"
           },
           "class": {
             "color": "{{ syntaxClass }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "enum": {
             "color": "{{ syntaxEnum }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "enumMember": {
             "color": "{{ syntaxEnumMember }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "function": {
             "color": "{{ syntaxFunction }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "function.definition": {
             "color": "{{ syntaxFunctionDeclaration }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "function.method": {
             "color": "{{ syntaxMethodDeclaration }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "function.special": {
             "color": "{{ syntaxFunctionSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "function.kwargs": {
             "color": "{{ syntaxParameter }}",
             "font_style": "italic",
-            "font_weight": null
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "hint": {
-            "color": "{{ syntaxType }}",
-            "font_style": null,
-            "font_weight": null
+            "color": "{{ uiStatusInfoForeground }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "interface": {
             "color": "{{ syntaxType }}",
             "font_style": "italic",
-            "font_weight": null
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "keyword": {
             "color": "{{ syntaxKeyword }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "keyword.control": {
             "color": "{{ syntaxKeyword }}",
-            "font_style": null,
-            "font_weight": null
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "keyword.operator": {
             "color": "{{ syntaxOperator }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "keyword.return": {
             "color": "{{ syntaxKeyword }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "link_text": {
             "color": "{{ syntaxLink }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "link_uri": {
             "color": "{{ syntaxLink }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "number": {
             "color": "{{ syntaxNumber }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "method": {
             "color": "{{ syntaxMethod }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "module": {
             "color": "{{ syntaxNamespace }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "namespace": {
             "color": "{{ syntaxNamespace }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "operator": {
             "color": "{{ syntaxOperator }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "parameter": {
             "color": "{{ syntaxParameter }}",
             "font_style": "italic",
-            "font_weight": null
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "label": {
             "color": "{{ syntaxLabel }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "preproc": {
-            "color": "{{ syntaxMacro }}",
-            "font_style": null,
-            "font_weight": null
+            "color": "{{ syntaxKeyword }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "preproc.directive": {
             "color": "{{ syntaxMacro }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "predictive": {
-            "color": "{{ accent10 }}",
-            "font_style": "italic",
-            "font_weight": null
+            "color": "{{ baseForegroundMuted }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "primary": {
-            "color": "{{ syntaxVariable }}",
-            "font_style": null,
-            "font_weight": null
+            "color": "{{ baseForeground }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "property": {
             "color": "{{ syntaxProperty }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "property.definition": {
             "color": "{{ syntaxProperty }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "punctuation": {
             "color": "{{ syntaxPunctuation }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "punctuation.bracket": {
             "color": "{{ syntaxPunctuationMuted }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "punctuation.delimiter": {
             "color": "{{ syntaxPunctuationMuted }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "punctuation.list_marker": {
-            "color": "{{ syntaxTitle }}",
-            "font_style": null,
-            "font_weight": null
+            "color": "{{ syntaxPunctuation }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "punctuation.markup": {
-            "color": "{{ syntaxProperty }}",
-            "font_style": null,
-            "font_weight": null
+            "color": "{{ syntaxPunctuation }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "punctuation.special": {
-            "color": "{{ accent5 }}",
-            "font_style": null,
-            "font_weight": null
+            "color": "{{ statusError }}",
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "selector": {
             "color": "{{ syntaxSelector }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "selector.pseudo": {
             "color": "{{ syntaxSelector }}",
-            "font_style": null,
-            "font_weight": null
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "string": {
             "color": "{{ syntaxString }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "string.doc": {
             "color": "{{ syntaxString }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "string.escape": {
             "color": "{{ syntaxStringEscape }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "string.regex": {
             "color": "{{ syntaxRegexp }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "string.special": {
             "color": "{{ syntaxStringSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "string.special.symbol": {
             "color": "{{ syntaxStringSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "tag": {
             "color": "{{ syntaxTag }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "text.literal": {
             "color": "{{ syntaxString }}",
-            "font_style": null,
-            "font_weight": null
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "title": {
             "color": "{{ syntaxTitle }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 700,
+            "background_color": "{{ baseTransparent }}"
           },
           "type": {
             "color": "{{ syntaxType }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "type.class": {
             "color": "{{ syntaxClass }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "type.builtin": {
             "color": "{{ syntaxType }}",
-            "font_style": null,
-            "font_weight": null
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           },
           "type.defaultLibrary": {
             "color": "{{ syntaxType }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "type.interface": {
             "color": "{{ syntaxType }}",
             "font_style": "italic",
-            "font_weight": null
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "typeParameter": {
             "color": "{{ syntaxType }}",
             "font_style": "italic",
-            "font_weight": null
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable": {
             "color": "{{ syntaxVariable }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.builtin": {
             "color": "{{ syntaxVariableSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.member": {
             "color": "{{ syntaxProperty }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.mutable": {
             "color": "{{ syntaxVariable }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.parameter": {
             "color": "{{ syntaxParameter }}",
             "font_style": "italic",
-            "font_weight": null
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.defaultLibrary": {
             "color": "{{ syntaxVariableSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.readonly": {
             "color": "{{ syntaxVariableSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variable.special": {
             "color": "{{ syntaxVariableSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "property.readonly": {
             "color": "{{ syntaxVariableSpecial }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "struct": {
             "color": "{{ syntaxType }}",
-            "font_style": null,
-            "font_weight": null
+            "font_style": "normal",
+            "font_weight": 400,
+            "background_color": "{{ baseTransparent }}"
           },
           "variant": {
             "color": "{{ syntaxEnumMember }}",
-            "font_style": null,
-            "font_weight": null
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "diff.plus": {
+            "color": "{{ uiStatusSuccess }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "diff.minus": {
+            "color": "{{ statusError }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "diff.delta": {
+            "color": "{{ uiStatusModified }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "diff.range": {
+            "color": "{{ syntaxDiffRange }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "markup.heading": {
+            "color": "{{ syntaxTitle }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 700
+          },
+          "markup.raw": {
+            "color": "{{ syntaxString }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "markup.link": {
+            "color": "{{ syntaxLink }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "markup.list": {
+            "color": "{{ syntaxPunctuation }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
+          },
+          "property.json": {
+            "color": "{{ syntaxProperty }}",
+            "background_color": "{{ baseTransparent }}",
+            "font_style": "normal",
+            "font_weight": 400
           }
         }
       }
