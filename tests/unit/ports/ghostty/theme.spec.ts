@@ -108,14 +108,19 @@ it.each(themes)(
   }
 )
 
-it('keeps Aqua Lime identical in terminal roles while its editor syntax remains independent', () => {
+it('gives Aqua Lime neutral terminal surfaces with the Aqua ANSI palette', () => {
   const aqua = decode(
     readFileSync('packages/ghostty/aura-aqua-light.conf', 'utf8')
   )
   const lime = decode(
     readFileSync('packages/ghostty/aura-aqua-lime-light.conf', 'utf8')
   )
-  expect(lime).toEqual(aqua)
+  expect(lime.background).toBe('#FFFFFF')
+  expect(lime['unfocused-split-fill']).toBe(lime.background)
+  expect(lime['window-titlebar-background']).toBe('#FBFBFB')
+  for (let slot = 0; slot < 16; slot++) {
+    expect(lime['palette.' + slot]).toBe(aqua['palette.' + slot])
+  }
   expect(schemes.aquaLimeLight.syntaxString).not.toBe(
     schemes.aquaLight.syntaxString
   )

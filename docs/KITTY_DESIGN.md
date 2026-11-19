@@ -4,7 +4,7 @@
 
 Kitty is a maintained port in `src/ports/kitty`, compiled to `packages/kitty` by `yarn build only kitty` or the full build. The old upstream Soft Dark/iTerm conversion stays archived in `legacy/ports/kitty` and `legacy/packages/kitty`. Active builds and release bundles never include it.
 
-The nine themes come from `src/ports/shared/modern-themes.ts`, also used by VS Code and Ghostty. Kitty consumes the same terminal ANSI mapping; Aqua Lime Light consequently has the same terminal and chrome colors as Aqua Light while retaining its independent VS Code syntax colors.
+The nine themes come from `src/ports/shared/modern-themes.ts`, also used by VS Code and Ghostty. Kitty uses Aqua's ANSI palette for Aqua Lime Light on a white terminal with neutral gray chrome.
 
 ```text
 source palettes + semantic roles

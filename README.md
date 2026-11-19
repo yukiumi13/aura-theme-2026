@@ -6,7 +6,7 @@ Nine themes for Visual Studio Code, with four dark/light pairs and an Aqua synta
 
 - **Aura** — purple and mint, with soft syntax colors.
 - **Aqua** — cyan interactions, mint badges, and small citrus accents.
-- **Aqua Lime Light** — Aqua Light's interface with brighter summer syntax.
+- **Aqua Lime Light** — a white editor and terminal, near-white sidebars, and bright summer syntax.
 - **Lime** — mint and green-cyan, a touch of lemon, and pale green-white light surfaces.
 - **Azure** — Microsoft Fluent blues on neutral surfaces.
 

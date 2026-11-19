@@ -2,12 +2,21 @@ import { createAquaPalette } from './create-aqua-roles'
 import { createAuraSyntax } from './create-aura-syntax'
 import { AuraPalette } from './types'
 import { auraAquaSyntaxAccents } from '../source/aqua'
-import { aquaLimeLightSyntaxSource as colors } from '../source/aqua-lime'
+import {
+  aquaLimeFrameBorder,
+  aquaLimeInactiveSelection,
+  aquaLimeLightBase as base,
+  aquaLimeLightInput,
+  aquaLimeLightSyntaxSource as colors,
+} from '../source/aqua-lime'
 
 export function createAquaLimePalette(): AuraPalette {
-  // Derive on every build so UI, terminal, diagnostics, and future Aqua fixes
-  // stay in sync. Only the inputs to the shared syntax role mapper differ.
-  const aqua = createAquaPalette('light')
+  const aqua = createAquaPalette('light', {
+    base,
+    tabs: base.appBackground,
+    titleBorder: aquaLimeFrameBorder,
+    inactiveSelection: aquaLimeInactiveSelection,
+  })
   const syntaxSemantic = {
     ...aqua.semantic,
     brand: {
@@ -21,6 +30,18 @@ export function createAquaLimePalette(): AuraPalette {
     ...aqua,
     name: 'Aura Aqua Lime Light',
     slug: 'aura-aqua-lime-light',
+    terminal: { ...aqua.terminal, background: base.background },
+    ui: {
+      ...aqua.ui,
+      chrome: {
+        ...aqua.ui.chrome,
+        inactiveBackground: base.appBackground,
+        border: aquaLimeFrameBorder,
+        activeTabBackground: base.background,
+        activeTabForeground: base.foregroundStrong,
+      },
+      surfaceRole: { ...aqua.ui.surfaceRole, input: aquaLimeLightInput },
+    },
     syntax: {
       ...createAuraSyntax(
         aqua.base,

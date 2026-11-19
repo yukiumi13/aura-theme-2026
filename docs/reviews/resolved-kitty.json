@@ -213,25 +213,25 @@
     {
       "name": "Aura Aqua Lime Light",
       "file": "aura-aqua-lime-light.conf",
-      "sha256": "6e29a2206a35970dc1fb5539f857252077af3d48f0a3e7f0a4b34402be935b27",
+      "sha256": "0d4a7914e950a0af7972215f83dcbbb57c3db22240cddfca76b680bfc469842c",
       "colors": {
-        "background": "#F8FCFE",
+        "background": "#FFFFFF",
         "foreground": "#4A5861",
         "cursor": "#12DADD",
         "cursor_text_color": "#394952",
         "selection_background": "#DDF6F7",
         "selection_foreground": "#394952",
         "active_border_color": "#4A80A7",
-        "inactive_border_color": "#E1E9ED",
+        "inactive_border_color": "#DFDFDF",
         "bell_border_color": "#90620F",
         "url_color": "#4A80A7",
-        "active_tab_background": "#12DADD",
-        "active_tab_foreground": "#FFFFFF",
-        "inactive_tab_background": "#EFF5F8",
+        "active_tab_background": "#FFFFFF",
+        "active_tab_foreground": "#394952",
+        "inactive_tab_background": "#FBFBFB",
         "inactive_tab_foreground": "#6B7D86",
-        "tab_bar_background": "#EFF5F8",
-        "tab_bar_margin_color": "#EFF5F8",
-        "macos_titlebar_color": "#F5F9FB",
+        "tab_bar_background": "#FBFBFB",
+        "tab_bar_margin_color": "#FBFBFB",
+        "macos_titlebar_color": "#FBFBFB",
         "color0": "#394952",
         "color1": "#B93844",
         "color2": "#007A58",
@@ -250,12 +250,12 @@
         "color15": "#394952"
       },
       "contrast": {
-        "body": 7.12,
+        "body": 7.34,
         "cursor": 5.38,
         "selection": 8.27,
-        "activeTab": 1.74,
-        "inactiveTab": 3.89,
-        "url": 4.12
+        "activeTab": 9.34,
+        "inactiveTab": 4.14,
+        "url": 4.25
       }
     },
     {

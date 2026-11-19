@@ -44,7 +44,9 @@ Cyan actions and navigation, mint badges, and a touch of citrus on cool white or
 
 #### Aura Aqua Lime Light
 
-Aqua's cool white workspace with brighter cyan, mint, yellow-green, and warm yellow syntax. It shares Aqua Light's interface and terminal colors; strings, tags, and quotes retain one consistent green.
+The editor, active tab and terminal share a white canvas. The file tree, title bar and inactive tabs share a faint neutral gray. Cyan actions and mint badges accompany bright summer syntax. The selected file keeps a pale aqua highlight while you edit.
+
+![Aqua Lime Light in VS Code with the selected Explorer file](https://raw.githubusercontent.com/yukiumi13/aura-theme-2026/v1.0.0/docs/assets/aura-aqua-lime-light-v1.png)
 
 ### Lime
 

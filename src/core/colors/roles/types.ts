@@ -194,6 +194,7 @@ export interface AuraBadgeEmphasis {
 export interface AuraUiPalette {
   chrome: {
     background: string
+    inactiveBackground: string
     border: string
     titleBorder: string
     activeBorder: string
@@ -286,6 +287,7 @@ export interface AuraUiPalette {
     infoSurface: string
   }
   surfaceRole: {
+    input: string
     elevated: string
     panel: string
     hover: string

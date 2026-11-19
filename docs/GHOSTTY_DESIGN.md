@@ -15,7 +15,7 @@ source colors
 
 `src/ports/shared/modern-themes.ts` owns the current lineup for VS Code and Ghostty. VS Code's saved theme IDs and file slugs remain stable. Ghostty uses the current display names for filenames. Old Ghostty outputs are frozen in `legacy/ghostty`; new builds do not mix them into the active bundle.
 
-`createTerminalSurface` resolves only after each family has finished overriding its roles. No independent Ghostty palette or numeric legacy accent mapping is maintained. Syntax changes therefore cannot accidentally redefine terminal colors. Aqua Lime Light shares Aqua Light's terminal roles, even though its editor syntax differs.
+`createTerminalSurface` resolves only after each family has finished overriding its roles. No independent Ghostty palette or numeric legacy accent mapping is maintained. Syntax changes therefore cannot accidentally redefine terminal colors. Aqua Lime Light shares Aqua's ANSI colors and uses its own white reading surface and gray chrome.
 
 ## Role mapping
 

@@ -258,10 +258,12 @@ export function createTemplateVars(palette: AuraPalette): LegacyAuraScheme {
     syntaxVariableSpecial: syntax.variableSpecial,
 
     uiChromeBackground: ui.chrome.background,
+    uiInactiveChromeBackground: ui.chrome.inactiveBackground,
     uiChromeBorder: ui.chrome.border,
     uiTitleBorder: ui.chrome.titleBorder,
     uiActiveBorder: ui.chrome.activeBorder,
     uiTabStripBackground: ui.chrome.tabStripBackground,
+    uiInputBackground: ui.surfaceRole.input,
     uiActiveTabBackground: ui.chrome.activeTabBackground,
     uiActiveTabForeground: ui.chrome.activeTabForeground,
     uiActiveActivityBackground: ui.chrome.activeActivityBackground,

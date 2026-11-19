@@ -1,5 +1,11 @@
 # Aura Modern Changelog
 
+## 1.0.0 (November 19, 2026)
+
+- Aqua Lime Light now uses white for the editor, terminal and active tab. A single near-white gray frames the Explorer, title bar and inactive tabs.
+- The current file keeps a pale aqua highlight when focus returns to the editor. Hovering another file gives that row a neutral gray background.
+- The other eight VS Code themes keep their previous palettes. Existing theme selections continue to work.
+
 ## 0.9.7 (September 30, 2026)
 
 - Organize the optional Aqua effects guide around features, dependencies, setup, updates and removal. Explain which effects share the Gradients setting and how to set up another computer.

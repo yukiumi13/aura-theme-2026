@@ -1,5 +1,5 @@
 {
-  "version": "0.9.8",
+  "version": "1.0.0",
   "themes": [
     {
       "id": "Aura 2026 Dark",
@@ -41,7 +41,7 @@
       "id": "Aura Aqua Lime Light",
       "label": "Aura Aqua Lime Light",
       "path": "./themes/aura-aqua-lime-light-color-theme.json",
-      "sha256": "8f0966383e051f563ef1522cfc5c6c9c9b20dc75922c65c6be54d0285152be2d",
+      "sha256": "2e17fccb67698ac4e875f24298b155b19fa31b478113d54ef8a82edb608a1cd7",
       "ui": 500,
       "textMate": 48,
       "semantic": 30
@@ -84,7 +84,7 @@
     }
   ],
   "effects": {
-    "version": "0.9.8",
+    "version": "1.0.0",
     "stylesheet": "./extension/aqua-gradients.css",
     "sha256": "5662bcd04ec2983c7bc1d1f3fe962db54acdb8c5b2fa0c688b256583fb6004fd",
     "themes": [

@@ -74,6 +74,7 @@ export function createAuraPalette(
     family,
     ui: {
       chrome: {
+        inactiveBackground: base.surface,
         background: isLight ? base.appBackground : base.background,
         border: isLight ? base.border : base.shadow,
         titleBorder: isLight ? base.border : base.shadow,
@@ -179,6 +180,7 @@ export function createAuraPalette(
         infoSurface,
       },
       surfaceRole: {
+        input: base.background,
         elevated: base.elevated,
         panel: base.surface,
         hover: base.surfaceHover,

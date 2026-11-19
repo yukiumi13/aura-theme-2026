@@ -20,19 +20,40 @@ const render = (scheme: Record<string, string>): Theme =>
   )
 const theme = render(aquaLimeLight)
 
-it('inherits every Aqua UI, semantic, terminal and ANSI role', () => {
+it('separates paper, chrome and input while preserving Aqua actions and ANSI', () => {
   const aqua = createAquaPalette('light')
   const lime = createAquaLimePalette()
-  for (const key of [
-    'base',
-    'ui',
-    'semantic',
-    'terminal',
-    'ansi',
-  ] as const) {
-    expect(lime[key]).toEqual(aqua[key])
-  }
-  expect(theme.colors).toEqual(render(aquaLight).colors)
+  expect(lime.semantic).toEqual(aqua.semantic)
+  expect(lime.ansi).toEqual(aqua.ansi)
+  expect(lime.ui.action).toEqual({
+    ...aqua.ui.action,
+    secondaryHoverBackground: lime.base.surfaceHover,
+  })
+  expect(lime.ui.chrome.modernActivity).toEqual(
+    aqua.ui.chrome.modernActivity
+  )
+  expect(theme.colors).toMatchObject({
+    'editor.background': '#FFFFFF',
+    'terminal.background': '#FFFFFF',
+    'tab.activeBackground': '#FFFFFF',
+    'tab.activeForeground': lime.base.foregroundStrong,
+    'modernEditorTab.activeHoverActionBackground': '#FFFFFF',
+    'sideBar.background': '#FBFBFB',
+    'auxiliaryBar.background': '#FBFBFB',
+    'titleBar.activeBackground': '#FBFBFB',
+    'editorGroupHeader.tabsBackground': '#FBFBFB',
+    'tab.inactiveBackground': '#FBFBFB',
+    'titleBar.inactiveBackground': '#FBFBFB',
+    'modernUI.inactiveShellBackground': '#FBFBFB',
+    'sideBar.border': '#E5E5E5',
+    'input.border': '#DFDFDF',
+    'input.background': '#F4F4F4',
+    'inlineChatInput.background': '#F4F4F4',
+    'list.inactiveSelectionBackground': '#E9F3F4',
+    'list.hoverBackground': '#E9E9E9',
+    'button.background': '#12DADD',
+    'activityBarBadge.background': '#64EBAF',
+  })
 })
 
 it('retains the accepted 67 percent source groups without splitting syntax roles', () => {
