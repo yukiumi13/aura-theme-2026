@@ -20,6 +20,8 @@ To follow your system appearance, enable **Window: Auto Detect Color Scheme** an
 
 All nine themes work without additional extensions. Aqua Light and Aqua Lime Light also offer [optional button, badge and focus effects](#optional-aqua-effects).
 
+Install [Aura Modern for Oh My Pi](packages/oh-my-pi) with `omp install github:yukiumi13/aura-theme-2026#omp-v1.0.0`. It includes all nine appearances and uses OMP’s native theme selector.
+
 ## Previews
 
 See the [VS Code theme gallery](packages/vscode/README.md#previews). The screenshots use a fictional sample workspace, with no personal files or account details.

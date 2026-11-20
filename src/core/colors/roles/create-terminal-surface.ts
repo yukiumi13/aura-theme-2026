@@ -1,4 +1,5 @@
 import { AuraPalette } from './types'
+import { composite } from './utils'
 
 // Resolve after the family has finished overriding UI roles (Aqua/Lime/Azure).
 // These are terminal interaction roles, independent of editor syntax and ANSI.
@@ -42,27 +43,6 @@ export function createTerminalSurface({ base, ui, semantic }: AuraPalette) {
     listFocusBackground: composite(ui.selectionRole.listFocus, background),
     hoverBackground: composite(ui.surfaceRole.hover, background),
   }
-}
-
-// Terminal color fields use resolved RGB. Preserve the existing role's
-// appearance on its actual reading surface instead of dropping its alpha.
-function composite(foreground: string, background: string): string {
-  if (foreground.length !== 9) return foreground
-  const alpha = parseInt(foreground.slice(7), 16) / 255
-  return (
-    '#' +
-    [1, 3, 5]
-      .map((offset) =>
-        Math.round(
-          parseInt(foreground.slice(offset, offset + 2), 16) * alpha +
-            parseInt(background.slice(offset, offset + 2), 16) * (1 - alpha)
-        )
-          .toString(16)
-          .padStart(2, '0')
-      )
-      .join('')
-      .toUpperCase()
-  )
 }
 
 function luminance(hex: string): number {

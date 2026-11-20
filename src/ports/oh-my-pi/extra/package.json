@@ -1,0 +1,14 @@
+{
+  "name": "omp-aura-modern",
+  "version": "1.0.0",
+  "description": "Nine Aura Modern light and dark themes for Oh My Pi",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yukiumi13/aura-theme-2026.git",
+    "directory": "packages/oh-my-pi"
+  },
+  "omp": { "extensions": ["./extension.js"] },
+  "files": ["extension.js", "sync.js", "themes", "LICENSE", "THIRD_PARTY_NOTICES.md", "README.md"]
+}
