@@ -1,7 +1,0 @@
-export * from './dark'
-export * from './soft-dark'
-export * from './light'
-export * from './aqua'
-export * from './aqua-lime'
-export * from './lime'
-export * from './azure'
